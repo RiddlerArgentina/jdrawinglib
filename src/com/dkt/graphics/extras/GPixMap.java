@@ -63,6 +63,7 @@ public final class GPixMap extends GraphicE {
         for (int i = 0, n = data.length; i < n; i++) {
             System.arraycopy(e.data[i], 0, data[i], 0, data[0].length);
         }
+        bounds = e.bounds.clone();
 
         e.copy(this);
     }
