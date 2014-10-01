@@ -43,7 +43,7 @@ public class LibUtils {
      * @return URL
      */
     public static String url(){
-        return "";
+        return "https://launchpad.net/jdrawinglib";
     }
 
     /**
