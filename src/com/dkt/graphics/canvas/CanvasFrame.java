@@ -43,6 +43,7 @@ public class CanvasFrame extends JFrame {
         setLayout(layout);
         add(canvas, BorderLayout.CENTER);
         canvas.setVisible(true);
+        canvas.setUseFullArea(true);
     }
 
     public Canvas getCanvas(){
