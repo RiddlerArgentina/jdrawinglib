@@ -39,6 +39,7 @@ public class Example10 implements IExample {
         cf.setSize(600, 600);
 
         final Canvas canvas = cf.getCanvas();
+        canvas.setUseFullArea(false);
         canvas.setDrawableSize(500, 500);
         canvas.setCenterBounds(true);
         canvas.setInvertYAxis(true);

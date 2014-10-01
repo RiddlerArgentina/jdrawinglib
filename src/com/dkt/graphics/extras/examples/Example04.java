@@ -34,6 +34,7 @@ public class Example04 implements IExample {
         frame.setSize(600, 600);
         Canvas canvas = frame.getCanvas();
         canvas.setCenterBounds(true);
+        canvas.setUseFullArea(false);
         canvas.setDrawableSize(500, 500);
 
         for (int x1 = 500, x2 = 10; x1 > 0; x1 -= 10, x2 += 10){

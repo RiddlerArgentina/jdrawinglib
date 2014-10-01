@@ -37,6 +37,7 @@ public class Example08 implements IExample {
         frame.setSize(600, 600);
         Canvas canvas = frame.getCanvas();
         canvas.setCenterBounds(true);
+        canvas.setUseFullArea(false);
         canvas.setDrawableSize(500, 500);
 
         BasicStroke bs = new BasicStroke(3);

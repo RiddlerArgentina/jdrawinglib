@@ -34,6 +34,7 @@ public class Example02 implements IExample {
         frame.setSize(600, 600);
         Canvas canvas = frame.getCanvas();
         canvas.setCenterBounds(true);
+        canvas.setUseFullArea(false);
         canvas.setDrawableSize(550, 550);
 
         GLine l1 = new GLine(0, 0, 0, 550);

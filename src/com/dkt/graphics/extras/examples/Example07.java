@@ -38,6 +38,7 @@ public class Example07 implements IExample {
         canvas.setCenterBounds(true);
         canvas.setCenterOrigin(true);
         canvas.setInvertYAxis(true);
+        canvas.setUseFullArea(false);
         canvas.setDrawableSize(500, 500);
 
         GAxis axis = new GAxis(-250, 250, -250, 250);
