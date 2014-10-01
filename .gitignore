@@ -16,7 +16,6 @@ hs_err_pid*
 
 # Ignore Netbeans Folders #
 nbproject/private/
-nbproject/
 build/
 nbbuild/
 dist/
@@ -24,4 +23,3 @@ nbdist/
 test2/
 nbactions.xml
 nb-configuration.xml
-build.xml
