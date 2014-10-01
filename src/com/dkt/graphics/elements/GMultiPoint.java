@@ -302,11 +302,11 @@ public abstract class GMultiPoint extends GFillableE
 
     /**
      * Appends a new point to the path. If the path has run out of space then
-     * it will call {@code incrementCapacity(size + 5)}
+     * it will call {@code ensureCapacity(size + 5)}
      *
      * @param x X coordinate of the point
      * @param y Y coordinate of the point
-     * @see GMultiPoint#incrementCapacity(int)
+     * @see GMultiPoint#ensureCapacity(int)
      */
     public void append(final int x, final int y) {
         mutex.lock();
@@ -329,11 +329,11 @@ public abstract class GMultiPoint extends GFillableE
     /**
      * Appends a new point to the path if and only if this point doesn't exist
      * within the array. If the path has run out of space then
-     * it will call {@code incrementCapacity(size + 5)}
+     * it will call {@code ensureCapacity(size + 5)}
      *
      * @param x X coordinate of the point
      * @param y Y coordinate of the point
-     * @see GMultiPoint#incrementCapacity(int)
+     * @see GMultiPoint#ensureCapacity(int)
      */
     public void appendNR(final int x, final int y) {
         if (indexOf(x, y) >= 0){
@@ -362,7 +362,7 @@ public abstract class GMultiPoint extends GFillableE
      *
      * @param p the {@link GPoint} to append
      * @throws NullPointerException if {@code p} is {@code null}
-     * @see GMultiPoint#incrementCapacity(int)
+     * @see GMultiPoint#ensureCapacity(int)
      */
     public void append(final GPoint p) {
         if (p == null){

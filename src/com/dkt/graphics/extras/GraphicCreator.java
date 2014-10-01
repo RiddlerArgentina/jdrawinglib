@@ -106,7 +106,6 @@ public class GraphicCreator {
      *
      * @param lines String representation of the graphic
      * @return {@code Graphic} object
-     * @see DrawingCreator#getDocumentation()
      */
     public Graphic parse(String... lines) {
         final Graphic graphic = new Graphic(lines.length + 10);

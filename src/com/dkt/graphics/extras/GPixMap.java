@@ -113,7 +113,7 @@ public final class GPixMap extends GraphicE {
     }
 
     /**
-     * Constructs a new {@code GPixMap} from a given {@link int} matrix
+     * Constructs a new {@code GPixMap} from a given {@code int} matrix
      *
      * @param data The data that will form the {@code GPixMap} all this data
      * will be converted to {@link Color} objects so they should have the form
@@ -275,7 +275,7 @@ public final class GPixMap extends GraphicE {
     }
 
     /**
-     * Tells the {@GPixMap} to draw the inner/outer lines
+     * Tells the {@code GPixMap} to draw the inner/outer lines
      *
      * @param draw {@code true} to draw the lines and {@code false} otherwise
      */

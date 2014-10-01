@@ -185,9 +185,9 @@ public class Config {
     private final LinkedList<WeakReference<ConfigListener>> listeners = new LinkedList<>();
 
     /**
-     * Adds a new {@link ConfigListener} to this {@config}, this listeners will
-     * be notified of all the changes that happen to the <b>{@code non-volatile}
-     * </b> field of this config.
+     * Adds a new {@link ConfigListener} to this {@code config}, this listeners
+     * will be notified of all the changes that happen to the <b>
+     * {@code non-volatile}</b> field of this config.
      *
      * @param listener
      */

@@ -18,8 +18,10 @@
  */
 package com.dkt.graphics.extras.formula;
 
+import com.dkt.graphics.extras.GFormula;
+
 /**
- * This class is used within {@link GFormula} representing 
+ * This class is used within {@link GFormula} representing
  * {@code ℝ → ℝ}<sup>2</sup> functions
  * 
  * @author Federico Vera <dktcoding [at] gmail>

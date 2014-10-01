@@ -677,7 +677,7 @@ public class GPointArray extends GMultiPoint {
 
     /**
      * Retrieves a new {@code GPointArray} containing all the points that are
-     * contained both in this array and in the {@link Gcircle} passed as an
+     * contained both in this array and in the {@link GCircle} passed as an
      * argument
      *
      * @param c the circle to intersect

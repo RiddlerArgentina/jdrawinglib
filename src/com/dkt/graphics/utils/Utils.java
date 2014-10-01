@@ -153,7 +153,8 @@ public class Utils {
      *
      * @param img The image to trim
      * @param omit The {@code Color} to omit when trimming (what to consider as
-     * not drawn). Usually is {@link Color.WHITE} or {@code new Color(0, true)}
+     * not drawn). Usually is {@link Color#WHITE} or
+     * {@code new Color(0, true)}
      * @return a {@link BufferedImage} result of trimming the original image
      * @throws NullPointerException If {@code img} is {@code null}
      */

@@ -50,10 +50,10 @@ public class GPVector extends GraphicE {
      * as argument. <br>
      * <i>Note:</i> this constructor uses a COPY of the vector, so if you need
      * to change some of the parameters of the vector, you'll need to use:<ul>
-     * <li>{@link GPVector#setVectorArgument(double)}
-     * <li>{@link GPVector#setVectorModulus(double)}
-     * <li>{@link GPVector#setVectorModulus(double, double)}
-     * <li>{@link GPVector#setVectorPaint(Paint)}</ul>
+     * <li>{@link GPVector#setArgument(double)}
+     * <li>{@link GPVector#setModulus(double)}
+     * <li>{@link GPVector#setModulus(double, double)}
+     * <li>{@link GPVector#setPaint(Paint)}</ul>
      *
      * @param v the vector used as base
      * @throws NullPointerException if {@code v} is {@code null}
