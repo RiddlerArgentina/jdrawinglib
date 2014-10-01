@@ -1,0 +1,51 @@
+jDrawingLib is a small library created by Federico Vera <dktcoding [at] gmail>
+as an aid for his Java students.
+
+The rationale behind this library is to enable student to visualize in the most
+graphic way possible what their code does, (I think) anyone who had to teach
+programming to beginners will agree that most students don't pick right away
+what a for-loop does... the original library was nothing but a simple way to
+draw lines and points on a canvas, as the years progressed, it was decided to
+increment the capabilities of the library with the new examples and classes that
+were written, and well, suddenly I had something close to a decent library to
+show.
+
+There are several classes devoted to geometric entities, and a canvas with a
+nice feature to center the origin of coordinates (students spend most time
+moving the origin from the top left corner to the center than actually plotting
+functions), and inverting the Y axis (this courses include a lot of first year
+engineering students, that didn't like the idea of converting, inverting and
+translating a function in order to plot it).
+
+This library is not recommended for anyone that needs to do serious work, it's
+simply a tool made for teaching, it's not optimized for performance, it's
+missing a lot of features and tests (actually it has no tests...), and it does
+not provide the same level of flexibility as the Graphics2D API provided by Java
+itself.
+
+In this code you'll find a lot of code that don't make much sense out of
+context such as multi-threaded 2D function plotting, saving pixmaps on text
+files and some classes like TPS.java, CalculableTimer.java, TicToc.java,
+Utils.java, etc. they were mostly examples created in class that I "felt"
+deserve a place in the library.
+
+The objects on this library are not serializable because java.awt.BasicStroke is
+not serializable. Since there are some amazing JSON serialization libraries out
+there there's no need to create another one. BTW I had tested this library with
+gson and json-io (the latter with a custom writer) and they work like a charm.
+
+If someone is looking or my QR and/or Barcode library, they will form part of
+jDrawingLib eventually, but I need to clean that code before releasing it, and
+I want it to be nicely integrated with jDrawingLib (now they work as separate
+entities and tend to fail miserably on some things that jDrawingLib does very
+well).
+
+Documentation of this library is mostly redundant, yes I know it's not the best
+but anyone is welcome to improve it.
+
+All of the code is in English, but as I'm not an English native speaker, it's
+very probable that some orthographic, semantic or syntactic issues exist.
+
+Share and enjoy!
+
+Federico Vera

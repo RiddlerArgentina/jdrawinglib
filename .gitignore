@@ -1,0 +1,27 @@
+# Ignore compiled sources #
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Ignore Backup Files #
+*~
+*.bak
+*.old
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Ignore Netbeans Folders #
+nbproject/private/
+nbproject/
+build/
+nbbuild/
+dist/
+nbdist/
+test2/
+nbactions.xml
+nb-configuration.xml
+build.xml
