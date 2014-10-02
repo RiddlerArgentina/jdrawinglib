@@ -103,6 +103,11 @@ public class TicToc {
         return String.format("%dns", (long)getNanoTime());
     }
 
+    /**
+     * Counts the number of {@link TicToc#toc()} calls
+     *
+     * @return number of calls
+     */
     public int getIterations() {
         return (int)iter;
     }

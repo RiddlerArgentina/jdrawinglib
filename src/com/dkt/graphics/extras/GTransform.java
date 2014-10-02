@@ -50,6 +50,7 @@ public class GTransform extends GraphicE {
     }
 
     /**
+     * Create a scaling {@code GTransform}
      *
      * @param sx horizontal scale
      * @param sy vertical scale
@@ -59,6 +60,7 @@ public class GTransform extends GraphicE {
     }
 
     /**
+     * Create a rotating {@code GTransform}
      *
      * @param x {@code x} coordinate of the pivot point
      * @param y {@code y} coordinate of the pivot point
