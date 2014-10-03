@@ -18,8 +18,6 @@
  */
 package com.dkt.graphics.extras;
 
-import com.dkt.graphics.elements.GFillableE;
-import com.dkt.graphics.elements.GMultiPoint;
 import com.dkt.graphics.elements.GPath;
 import com.dkt.graphics.elements.GPointArray;
 import com.dkt.graphics.elements.GPoly;
@@ -32,35 +30,16 @@ import java.awt.Paint;
 
 /**
  * This class represents a basic Formula.<br>
- * It translates a {@link Calculable} into a Graphic.<br>
- * <b>TODO:</b><ul>
- * <li><s>When the formula is scaled there's no real need to evaluate all the
- * points in the domain since most of them will be outside the interval.</s><br>
- * We ended up using the scale to determine the number of points, which means
- * that now we need to play with the interval as well as with the x scale, btw I
- * think this actually makes a lot of sense...
- * <li><s>We must investigate if it's really better to increment the step using
- * {@code xx = xs + i * step} instead of {@code xx += step}.</s><br> It was
- * decided to use {@code xx = xs + i * step}, it's a bit slower but not much,
- * and the interval points are uniformly distributed (very noticeable when using
- * a big X scale.
- * <li><s>Now that the implementation of {@link GMultiPoint} has changed, we
- * should take advantage of it.</s> I'm pretty sure this was taken care of.
- * <li><s>We are adding two {@link GPoly} elements instead of one (when using
- * {@link GFormula#calculateArea(double, double, double)} now that the
- * implementation of {@link GFillableE} has changed we can do the same with only
- * one {@link GPoly}.</s> Done!
- * <li><s>For some odd reason
- * {@link GFormula#calculate(double, double, double, GraphicE)} doesn't work if
- * the {@link GraphicE} is an instance of {@link GRegPoly}...</s><br>Oops, there
- * was a problem with the {@code clone()} implementation.
- * </ul>
+ * It translates a {@link Calculable} into a Graphic.
+ *
  * @author Federico Vera <dktcoding [at] gmail>
  */
 public class GFormula extends Graphic {
-    private Calculable formula;
+    private final Calculable formula;
 
-    private GFormula(){}
+    private GFormula(){
+        formula = null;
+    }
 
     /**
      * Creates a new {@code GFormula} for the given {@link Calculable} object
@@ -89,24 +68,23 @@ public class GFormula extends Graphic {
      * @throws IntervalException if {@code xs < xf} or {@code step < 0} or
      * {@code step > xf - xs}
      */
-    public void calculate(double xs, double xf, double step){
+    public void calculate(
+            final double xs,
+            final double xf,
+            final double step) throws IntervalException
+    {
         checkValues(xs, xf, step);
 
         removeAll();
 
-        final double sx  = formula.scaleX();
-        final double sy  = formula.scaleY();
-        final double ssx = step * sx;
-        final double xss = xs / sx;
-        final double xfs = xf / sx;
+        final double sx = formula.scaleX();
+        final double sy = formula.scaleY();
+        final int size  = getSize(xs, xf, step);
 
-        final int size = (int)((xf - xs) / (sx * step));
-
-        GPointArray array = new GPointArray(size);
-        array.setPaint(getPaint());
+        final GPointArray array = new GPointArray(size);
 
         int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
-        for (double xx = xss; xx < xfs; xx = xss + i * ssx, i++){
+        for (double xx = xs; xx < xf; xx = xs + i * sx, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
 
@@ -118,7 +96,8 @@ public class GFormula extends Graphic {
             }
         }
 
-        array.trimToSize();
+        array.setPaint(getPaint());
+
         add(array);
     }
 
@@ -144,26 +123,25 @@ public class GFormula extends Graphic {
      * @throws NullPointerException if {@code element} is {@code null}
      */
     public void calculate(
-            double xs,
-            double xf,
-            double step,
-            GraphicE element)
+            final double xs,
+            final double xf,
+            final double step,
+            final GraphicE element) throws IntervalException,
+                                           NullPointerException
     {
         checkValues(xs, xf, step);
+
         if (element == null){
             throw new NullPointerException("Element can't be null");
         }
 
         removeAll();
 
-        final double sx  = formula.scaleX();
-        final double sy  = formula.scaleY();
-        final double ssx = step * sx;
-        final double xss = xs / sx;
-        final double xfs = xf / sx;
+        final double sx = formula.scaleX();
+        final double sy = formula.scaleY();
 
         int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
-        for (double xx = xss; xx < xfs; xx = xss + i * ssx, i++){
+        for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
 
@@ -171,9 +149,9 @@ public class GFormula extends Graphic {
             if (lx != x | lfx != fx){
                 final GraphicE e = element.clone();
                 e.traslate(x, fx);
-                add(e);
                 lfx = fx;
                 lx  = x;
+                add(e);
             }
         }
     }
@@ -192,23 +170,23 @@ public class GFormula extends Graphic {
      * @throws IntervalException if {@code xs < xf} or {@code step < 0} or
      * {@code step > xf - xs}
      */
-    public void calculatePath(double xs, double xf, double step){
+    public void calculatePath(
+            final double xs,
+            final double xf,
+            final double step) throws IntervalException
+    {
         checkValues(xs, xf, step);
 
         removeAll();
 
         final double sx = formula.scaleX();
         final double sy = formula.scaleY();
-        final double ssx = step * sx;
-        final double xss = xs / sx;
-        final double xfs = xf / sx;
+        final int size  = getSize(xs, xf, step);
 
-        final int size = (int)((xf - xs) / (sx * step));
-
-        GPath path = new GPath(size);
+        final GPath path = new GPath(size);
 
         int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
-        for (double xx = xss; xx < xfs; xx = xss + i * ssx, i++){
+        for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
 
@@ -223,7 +201,6 @@ public class GFormula extends Graphic {
 
         path.setPaint(getPaint());
         path.setStroke(getStroke());
-        path.trimToSize();
 
         add(path);
     }
@@ -258,25 +235,25 @@ public class GFormula extends Graphic {
      * @throws IntervalException if {@code xs < xf} or {@code step < 0} or
      * {@code step > xf - xs}
      */
-    public void calculateArea(double xs, double xf, double step){
+    public void calculateArea(
+            final double xs,
+            final double xf,
+            final double step) throws IntervalException
+    {
         checkValues(xs, xf, step);
 
         removeAll();
 
         final double sx = formula.scaleX();
         final double sy = formula.scaleY();
-        final double ssx = step * sx;
-        final double xss = xs / sx;
-        final double xfs = xf / sx;
-
-        final int size = (int)((xf - xs) / (sx * step));
+        final int size  = getSize(xs, xf, step);
 
         final GPoly poly = new GPoly(size + 2);
 
         poly.append((int)(sx * xs), 0);
 
         int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
-        for (double xx = xss; xx < xfs; xx = xss + i * ssx, i++){
+        for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
 
@@ -287,11 +264,9 @@ public class GFormula extends Graphic {
                 lfx = fx;
                 lx  = x;
             }
-
         }
 
         poly.append(lx, 0);
-        poly.trimToSize();
 
         poly.setPaint(getPaint());
         poly.setFillPaint(area == null ? getPaint() : area);
@@ -315,6 +290,11 @@ public class GFormula extends Graphic {
             String msg = "The step can't be bigger than the interval!";
             throw new IntervalException(msg, xs, xf, step);
         }
+    }
+
+    private int getSize(double xs, double xf, double step) {
+        //The extra 2% is for good luck... =P
+        return (int)((xf - xs) / step * 1.02);
     }
 
 }
