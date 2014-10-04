@@ -42,7 +42,7 @@ import java.util.ArrayList;
  * @author Federico Vera <dktcoding [at] gmail>
  * @param <T> The {@link AbstractCalculable} instance that will be used
  */
-public abstract class AbstractTimer<T extends AbstractCalculable> extends Graphic {
+public abstract class AbstractTimer<T extends AbstractCalculable> extends GraphicE {
     /**
      * This interface contains all the methods that will be executed
      * after starting, pausing, resuming and stopping a timer.
@@ -79,6 +79,7 @@ public abstract class AbstractTimer<T extends AbstractCalculable> extends Graphi
     private volatile boolean isRunning;
     private volatile boolean isPaused;
     private int numberOfThreads = 1;
+    private boolean drawAsPath;
     private boolean drawPen;
     private Action action;
 
@@ -144,6 +145,29 @@ public abstract class AbstractTimer<T extends AbstractCalculable> extends Graphi
         checkRunning();
 
         this.drawPen = drawPen;
+    }
+
+    /**
+     * Tells the timer to draw the equation as a path o points
+     *
+     * @param drawAsPath {@code true} if the equation should be drawn as a path,
+     * and {@code false} in order to draw only the points
+     * @throws AlreadyRunningException if the Timer was already started
+     */
+    public void setDrawAsPath(boolean drawAsPath){
+        checkRunning();
+
+        this.drawAsPath = drawAsPath;
+    }
+
+    /**
+     * Tells if the equation will be drawn as a path
+     *
+     * @return {@code true} if the equation is drawn as a path and {@code false}
+     * if it's drawn as points
+     */
+    public boolean drawAsPath(){
+        return drawAsPath;
     }
 
     /**

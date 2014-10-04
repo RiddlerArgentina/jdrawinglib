@@ -19,15 +19,22 @@
 package com.dkt.graphics.extras.formula;
 
 import com.dkt.graphics.elements.GCircle;
-import com.dkt.graphics.elements.GPoint;
+import com.dkt.graphics.elements.GMultiPoint;
+import com.dkt.graphics.elements.GPath;
+import com.dkt.graphics.elements.GPointArray;
+import com.dkt.graphics.elements.Graphic;
+import com.dkt.graphics.elements.GraphicE;
 import com.dkt.graphics.utils.PThread;
 import com.dkt.graphics.utils.TicToc;
+import java.awt.Graphics2D;
 
 /**
  *
  * @author Federico Vera <dktcoding [at] gmail>
  */
 public class ParametricCalculableTimer extends AbstractTimer<ParametricCalculable> {
+    private final Graphic graphic = new Graphic();
+
     public ParametricCalculableTimer(ParametricCalculable calculable) {
         super(calculable);
     }
@@ -49,6 +56,7 @@ public class ParametricCalculableTimer extends AbstractTimer<ParametricCalculabl
 
     private class CalculatorThread extends PThread {
         private final ParametricCalculable calculable;
+        private final GMultiPoint points;
         private final boolean drawPen;
         private final GCircle pen;
 
@@ -88,12 +96,23 @@ public class ParametricCalculableTimer extends AbstractTimer<ParametricCalculabl
 
             sx = calculable.scaleX();
             sy = calculable.scaleY();
-            step  = calculable.step ();
+            step = calculable.step();
+
+            final int size = (int)((end - t) / step) + 100;
+
+            if (drawAsPath()) {
+                points = new GPath(size);
+            } else {
+                points = new GPointArray(size);
+            }
+
+            points.setPaint(getPaint());
+            graphic.add(points);
 
             if (drawPen){
                 pen = new GCircle(0, 0, 2);
                 pen.setFill(true);
-                add(pen);
+                graphic.add(pen);
             } else {
                 pen = null;
             }
@@ -115,9 +134,7 @@ public class ParametricCalculableTimer extends AbstractTimer<ParametricCalculabl
                         pen.move(x, y);
                     }
 
-                    GPoint p = new GPoint(x, y);
-                    p.setPaint(getPaint());
-                    add(p);
+                    points.append(x, y);
 
                     lx = x;
                     ly = y;
@@ -129,12 +146,27 @@ public class ParametricCalculableTimer extends AbstractTimer<ParametricCalculabl
             tt.toc();
 
             if (drawPen){
-                remove(pen);
+                graphic.remove(pen);
             }
 
             removeThread(this);
 
             System.out.format("%s ended in %s%n", getName(), tt);
         }
+    }
+
+    @Override
+    public void traslate(int x, int y) {
+        graphic.traslate(x, y);
+    }
+
+    @Override
+    public void draw(Graphics2D g) {
+        graphic.draw(g);
+    }
+
+    @Override
+    public GraphicE clone() {
+        throw new UnsupportedOperationException();
     }
 }
