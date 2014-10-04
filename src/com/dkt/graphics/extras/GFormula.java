@@ -268,6 +268,7 @@ public class GFormula extends Graphic {
 
         poly.append(lx, 0);
 
+        poly.setStroke(getStroke());
         poly.setPaint(getPaint());
         poly.setFillPaint(area == null ? getPaint() : area);
         poly.setFill(true);
