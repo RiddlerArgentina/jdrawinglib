@@ -30,7 +30,7 @@ public interface ConfigListener {
     /**
      * What to do when something changes on the {@link Config} for a given name
      *
-     * @param event
+     * @param event event that triggered the action
      * @see Config
      * @see ConfigEvent
      */

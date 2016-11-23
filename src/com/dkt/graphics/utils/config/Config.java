@@ -23,38 +23,52 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Set;
+import javax.swing.ImageIcon;
 
 /**
- * This class represents a generic Configuration class, with both notifiable
- * and temporary configs (the latter being more of a bucket to store objects
- * during the program's execution). This class supports a {@link ConfigListener}
- * that is fired when (non-temp) key-values are updates, added or removed.
+ * This class represents a generic Configuration class, with change listeners. 
+ * This class supports a {@link ConfigListener} that is fired when key-values 
+ * are updated, added or removed on a <i>per config</i> basis.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal <dktcoding [at] gmail>}
  */
 public class Config {
-    private static final HashMap<String, Config> CONFIGS = new HashMap<>(5);
+    private static final HashMap<String, Config> CONFIGS = new HashMap<>(8);
+    private final        HashMap<String, Object> data    = new HashMap<>(16);
+    
     /**
      * Don't let anyone else initialize this class
      */
     private Config () {
-
+        
     }
-
+    
+    /**
+     * A wrapper for {@link Config#on(String)}
+     * 
+     * @param name config name
+     * @return {@code Config} object
+     * @see Config#on(String) 
+     */
+    public static synchronized Config from(String name) {
+        return on(name);
+    }
+    
     /**
      * Retrieves a {@code Config} instance associated with a given {@code name},
-     * this is usually the program's name, or module/plugin name.<br>
+     * this is usually the module/plugin name.<br>
      * <pre>
      *
-     * Config myApp = Config.getConfig("my.application");
+     * Config myApp = Config.on("my.config");
      * myApp.set("key.1", "value.1");
      * ...
      * </pre>
      *
-     * @param name programs name
+     * @param name config name
      * @return {@code Config} object
      */
-    public static synchronized Config getConfig(String name) {
+    public static synchronized Config on(String name) {
         if (!CONFIGS.containsKey(name)) {
             CONFIGS.put(name, new Config());
         }
@@ -67,52 +81,60 @@ public class Config {
      * is useful when you have more than one application using this Class, and
      * they don't start and stop at the same time.
      *
-     * @param name program's name
+     * @param name config name
      */
-    public static synchronized void flushConfig(String name) {
-        final Config conf = CONFIGS.remove(name);
+    public static void remove(String name) {
+        final Config conf;
+        
+        synchronized(CONFIGS) {
+            conf = CONFIGS.remove(name);
+        }
 
         if (conf != null) {
-            conf.data.clear();
-            conf.temp.clear();
             conf.listeners.clear();
+            conf.data.clear();
         }
     }
-
-    private final HashMap<String, Object> data = new HashMap<>(32);
-    private final HashMap<String, Object> temp = new HashMap<>(32);
-
+    
     /**
-     * Set's a temporary {@code key,value} pair in the config
-     *
-     * @param key
-     * @param value
+     * Retrieves a {@link Set} with all the available {@link Config} objects
+     * @return Set of configs
      */
-    public void setTemp(String key, Object value) {
-        temp.put(key, value);
+    public static Set<String> configSet() {
+        return CONFIGS.keySet();
+    }
+    
+    /**
+     * Retrieves the number of created {@link Config} objects.
+     * @return number of configs
+     */
+    public static int size() {
+        return CONFIGS.size();
     }
 
     /**
-     * Retrieves a temporary {@code value} for a given key
-     *
-     * @param key
-     * @return value
+     * A wrapper for {@link Config#put(String,String)}
+     * 
+     * @param key {@code key} 
+     * @param value {@code value} 
+     * @see Config#put(String,String)
+     * @see Config#addListener(ConfigListener)
      */
-    public Object getTemp(String key) {
-        return temp.get(key);
+    public void set(String key, Object value) {
+        put(key, value);
     }
-
+    
     /**
      * Set's a config {@code key,value} pair. This values can be exported and
      * imported.<br>
      * <i>Note: </i> every <b>change</b> in this values will trigger a {@link
      * ConfigEvent} on all the registered {@link ConfigListener}s.
      *
-     * @param key
-     * @param value
+     * @param key {@code key} 
+     * @param value {@code value} 
      * @see Config#addListener(ConfigListener)
      */
-    public void set(String key, Object value) {
+    public void put(String key, Object value) {
         final Object old;
 
         synchronized (data) {
@@ -131,8 +153,7 @@ public class Config {
     /**
      * Retrieves a raw {@code value} for a given {@code key}
      *
-     * @param key
-     * @return value
+     * @param key {@code key} 
      */
     public Object get(String key) {
         return data.get(key);
@@ -152,29 +173,52 @@ public class Config {
     /**
      * Retrieves the {@code value} for a given {@code key} as a {@code boolean}
      *
-     * @param key
+     * @param key {@code key} 
      * @return value as {@link Boolean}
      * @throws ClassCastException if the {@code value} isn't a {@link Boolean}
      */
-    public boolean getBoolean(String key) throws ClassCastException {
+    public boolean getBool(String key) throws ClassCastException {
         return (Boolean)data.get(key);
+    }
+
+    /**
+     * Retrieves the {@code value} for a given {@code key} as a {@code double}
+     *
+     * @param key {@code key} 
+     * @return value as {@link Double}
+     * @throws ClassCastException if the {@code value} isn't a {@link Double}
+     */
+    public double getDouble(String key) throws ClassCastException {
+        return (Double)data.get(key);
+    }
+
+    /**
+     * Retrieves the {@code value} for a given {@code key} as an
+     * {@code ImageIcon}
+     *
+     * @param key {@code key} 
+     * @return value as {@link ImageIcon}
+     * @throws ClassCastException if the {@code value} isn't a {@link ImageIcon}
+     */
+    public ImageIcon getIcon(String key) throws ClassCastException {
+        return (ImageIcon)data.get(key);
     }
 
     /**
      * Retrieves the {@code value} for a given {@code key} as an {@code int}
      *
-     * @param key
+     * @param key {@code key} 
      * @return value as {@link Integer}
      * @throws ClassCastException if the {@code value} isn't a {@link Integer}
      */
-    public int getInteger(String key) throws ClassCastException {
+    public int getInt(String key) throws ClassCastException {
         return (Integer)data.get(key);
     }
 
     /**
      * Retrieves the {@code value} for a given {@code key} as a {@code String}
      *
-     * @param key
+     * @param key {@code key} 
      * @return value as {@link String}
      * @throws ClassCastException if the {@code value} isn't a {@link String}
      */
@@ -182,14 +226,15 @@ public class Config {
         return (String)data.get(key);
     }
 
-    private final LinkedList<WeakReference<ConfigListener>> listeners = new LinkedList<>();
+    private final LinkedList<WeakReference<ConfigListener>> listeners = new 
+LinkedList<>();
 
     /**
      * Adds a new {@link ConfigListener} to this {@code config}, this listeners
      * will be notified of all the changes that happen to the <b>
      * {@code non-volatile}</b> field of this config.
      *
-     * @param listener
+     * @param listener {@link ConfigListener}
      */
     public void addListener(ConfigListener listener) {
         synchronized (listeners) {
@@ -200,7 +245,7 @@ public class Config {
     /**
      * Removes a previously registered {@link ConfigListener}
      *
-     * @param listener
+     * @param listener {@link ConfigListener}
      */
     public void removeListener(ConfigListener listener) {
         synchronized (listeners) {
