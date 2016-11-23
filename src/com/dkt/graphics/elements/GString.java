@@ -283,5 +283,23 @@ public class GString extends GraphicE {
             a != other.a
         );
     }
+    
+    /**
+     * Retrieves the {@code x} coordinate of the string
+     * 
+     * @return x coordinate
+     */
+    public int getX() {
+        return x;
+    }
+
+    /**
+     * Retrieves the {@code y} coordinate of the string
+     * 
+     * @return y coordinate
+     */
+    public int getY() {
+        return y;
+    }
 
 }
