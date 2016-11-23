@@ -30,7 +30,7 @@ import java.awt.Stroke;
 /**
  * This class creates a simple line grid
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GGrid extends GraphicE {
     private final Graphic grid = new Graphic();

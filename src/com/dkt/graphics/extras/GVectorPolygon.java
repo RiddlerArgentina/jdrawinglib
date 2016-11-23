@@ -27,7 +27,7 @@ import java.util.ArrayList;
  * This class creates a Resultant Vector as a result of the sum of a finite
  * number of vectors.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GVectorPolygon extends GraphicE {
     private final ArrayList<GVector> vectors = new ArrayList<>(5);

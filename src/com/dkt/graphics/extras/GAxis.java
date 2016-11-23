@@ -32,7 +32,7 @@ import java.util.Objects;
 /**
  * This class represents a pair of Cartesian axis.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GAxis extends GraphicE {
     private final Graphic axis = new Graphic();

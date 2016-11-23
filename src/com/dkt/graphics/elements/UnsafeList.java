@@ -28,7 +28,7 @@ import java.util.Iterator;
  * <i>Note:</i> This class does not implement the {@link java.util.List}
  * interface.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 class UnsafeList implements Iterable<GraphicE> {
     private final Object mutex = new Object();

@@ -22,7 +22,7 @@ import com.dkt.graphics.utils.MathUtils;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GRegPoly extends GPoly {
     private int x, y, r, n;

@@ -30,7 +30,7 @@ import java.util.LinkedList;
  * during the program's execution). This class supports a {@link ConfigListener}
  * that is fired when (non-temp) key-values are updates, added or removed.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class Config {
     private static final HashMap<String, Config> CONFIGS = new HashMap<>(5);

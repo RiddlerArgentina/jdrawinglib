@@ -24,7 +24,7 @@ import com.dkt.graphics.extras.GFormula;
  * This class is used within {@link GFormula} representing
  * {@code ℝ → ℝ}<sup>2</sup> functions
  * 
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public abstract class ParametricCalculable extends AbstractCalculable {    
     /**

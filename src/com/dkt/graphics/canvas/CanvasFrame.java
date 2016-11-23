@@ -23,7 +23,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class CanvasFrame extends JFrame {
     private final Canvas canvas = new Canvas();

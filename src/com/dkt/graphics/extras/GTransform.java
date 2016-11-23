@@ -29,7 +29,7 @@ import java.util.Objects;
  * This class wraps a {@link AffineTransform} in a {@link GraphicE}, in order to
  * give a bit more "flexibility" to {@link Graphic} objects
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GTransform extends GraphicE {
     private AffineTransform transform;

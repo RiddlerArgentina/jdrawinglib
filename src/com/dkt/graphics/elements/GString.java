@@ -27,7 +27,7 @@ import java.util.Objects;
 /**
  * This class wraps a {@link String} in a {@link GraphicE}
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GString extends GraphicE {
     private static final Font DEFAULT = new Font(Font.DIALOG, Font.PLAIN, 14);
@@ -131,7 +131,7 @@ public class GString extends GraphicE {
     /**
      * Set's the {@code String} to print in the screen
      *
-     * @param string
+     * @param string {@code String} to be printed
      * @throws NullPointerException if {@code string} is {@code null}
      */
     public void setString(final String string) throws NullPointerException {

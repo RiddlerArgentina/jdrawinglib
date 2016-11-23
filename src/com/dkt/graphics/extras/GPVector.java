@@ -29,7 +29,7 @@ import java.awt.Paint;
  * physics problems where you need to print how the orthogonal components of
  * a vector changes
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GPVector extends GraphicE {
     private final Graphic vector = new Graphic(3);

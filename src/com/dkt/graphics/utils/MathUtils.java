@@ -20,7 +20,7 @@ package com.dkt.graphics.utils;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class MathUtils {
     /**
@@ -32,7 +32,7 @@ public class MathUtils {
      * This class is the Heaviside step function omitting the value of
      * {@code 1/2} for {@code t = 0}
      *
-     * @param t
+     * @param t parameter
      * @return {@code 0} if {@code t < 0} and {@code 1} otherwise
      */
     public static double H(double t) {
@@ -45,7 +45,7 @@ public class MathUtils {
     /**
      * Rectangular function
      *
-     * @param t
+     * @param t parameter
      * @return {@code 1} if {@code -0.5 <= t <= 0.5} and {@code 0} otherwise
      * @see MathUtils#boxcar(double, double, double)
      */
@@ -56,7 +56,7 @@ public class MathUtils {
     /**
      * Boxcar function
      *
-     * @param t
+     * @param t parameter
      * @param a the left bound
      * @param b the right bound
      * @return {@code 1} if {@code a <= t <= b} and {@code 0} otherwise

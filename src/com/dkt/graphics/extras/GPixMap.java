@@ -40,7 +40,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public final class GPixMap extends GraphicE {
     private GPoint p = new GPoint(0, 0);
@@ -474,7 +474,7 @@ public final class GPixMap extends GraphicE {
      *                            +-----+
      *       +-------+            | *** |
      *       | ***** |            |   * |
-     *       | *     |     ->     |   * |
+     *       | *     |     -&gt;     |   * |
      *       | *     |            |   * |
      *       +-------+            |   * |
      *                            +-----+</pre>
@@ -503,7 +503,7 @@ public final class GPixMap extends GraphicE {
      * clockwise 180°.<pre>
      *       +-------+            +-------+
      *       | ***** |            |     * |
-     *       | *     |     ->     |     * |
+     *       | *     |     -&gt;     |     * |
      *       | *     |            | ***** |
      *       +-------+            +-------+</pre>
      *
@@ -532,7 +532,7 @@ public final class GPixMap extends GraphicE {
      *                            +-----+
      *       +-------+            | *   |
      *       | ***** |            | *   |
-     *       | *     |     ->     | *   |
+     *       | *     |     -&gt;     | *   |
      *       | *     |            | *   |
      *       +-------+            | *** |
      *                            +-----+</pre>
@@ -561,7 +561,7 @@ public final class GPixMap extends GraphicE {
      * version of this one.<pre>
      *       +------+            +------+
      *       | **** |            | **** |
-     *       | *    |     ->     |    * |
+     *       | *    |     -&gt;     |    * |
      *       | **** |            | **** |
      *       +------+            +------+</pre>
      *
@@ -589,7 +589,7 @@ public final class GPixMap extends GraphicE {
      * of this one.<pre>
      *       +------+            +------+
      *       | *  * |            | **** |
-     *       | *  * |     ->     | *  * |
+     *       | *  * |     -&gt;     | *  * |
      *       | **** |            | *  * |
      *       +------+            +------+</pre>
      *
@@ -620,7 +620,7 @@ public final class GPixMap extends GraphicE {
      * with {@link GTransform}s.<br>
      * <i>Note 2:</i> There are some issues when the traslation step is
      * different than the pixel size, but that should be a non issue, since it's
-     * a <s>very rare</s> scenario, and that's why we have a
+     * a <u>"very rare"</u> scenario, and that's why we have a
      * {@link GPixMap#traslateUnits(int, int)} method.
      * Oops... it appears to be a more common scenario than predicted... my bad.
      * If someone actually wants to take care of this, that would be great.

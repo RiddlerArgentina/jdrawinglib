@@ -26,7 +26,7 @@ import java.awt.Color;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class Example07 implements IExample {
     @Override

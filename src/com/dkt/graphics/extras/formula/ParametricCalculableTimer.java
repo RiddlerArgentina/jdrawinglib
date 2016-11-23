@@ -30,7 +30,7 @@ import java.awt.Graphics2D;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class ParametricCalculableTimer extends AbstractTimer<ParametricCalculable> {
     private final Graphic graphic = new Graphic();

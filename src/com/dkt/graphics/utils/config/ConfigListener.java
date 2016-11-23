@@ -24,7 +24,7 @@ package com.dkt.graphics.utils.config;
  * Since configs are individual objects for each name, this objects must be
  * registered against every configuration that should be controlled
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public interface ConfigListener {
     /**

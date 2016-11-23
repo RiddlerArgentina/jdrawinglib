@@ -54,7 +54,7 @@ import java.util.regex.Pattern;
  * is not meant to be a programming language, it's simply a way of creating
  * simple (and not so simple) graphics.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GraphicCreator {
     private final Pattern linespl = Pattern.compile("\\s+");

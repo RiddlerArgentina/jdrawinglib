@@ -36,7 +36,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * <i>Note:</i> even though this class extends from {@link GFillableE} it's the
  * subclass option to enforce the fill methods
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public abstract class GMultiPoint extends GFillableE
                                implements Iterable<GPoint> {

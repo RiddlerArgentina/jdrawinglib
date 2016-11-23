@@ -23,7 +23,7 @@ import java.awt.Graphics2D;
 /**
  * This class represents a line segment
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GLine extends GraphicE {
     private int x1, y1, x2, y2;

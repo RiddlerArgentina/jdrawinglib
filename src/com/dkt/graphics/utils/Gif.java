@@ -43,7 +43,7 @@ import org.w3c.dom.Node;
  * The purpose of this class is to create animated GIFs from a series of canvas
  * snapshots
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  * @since 0.1.10
  */
 public class Gif {
@@ -164,7 +164,7 @@ public class Gif {
      * Writes the image to a file, if this method fails it will return {@code
      * false} and the exception will be saved.
      *
-     * @param path
+     * @param path {@link String} representing the path and name of the file
      * @return {@code true} id the {@code gif} was correctly written and {@code
      * false} if something goes wrong.
      * @throws NullPointerException if {@code path} is {@code null}

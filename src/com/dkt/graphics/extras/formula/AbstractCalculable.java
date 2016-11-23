@@ -20,7 +20,7 @@ package com.dkt.graphics.extras.formula;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public abstract class AbstractCalculable {
     private static final String NO_NAME = "NO_NAME";

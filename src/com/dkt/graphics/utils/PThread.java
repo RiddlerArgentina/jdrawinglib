@@ -26,7 +26,7 @@ import java.util.concurrent.Semaphore;
  * release any of the locks the thread might hold, it will simply pause the
  * thread.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public abstract class PThread extends Thread {
     private final Semaphore lock = new Semaphore(1);
@@ -59,7 +59,7 @@ public abstract class PThread extends Thread {
      * implementation could be:
      * <pre>
      *      class MyThread extends PThread {
-     *          &#64Override
+     *          &#64;Override
      *          public void run() {
      *              //Init code
      *              while(!interrupted() &amp;&amp; condition){

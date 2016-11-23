@@ -22,7 +22,7 @@ package com.dkt.graphics.utils.config;
  * This events are triggered from the {@link Config} class each time something
  * is added, updated or removed.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public interface ConfigEvent {
     /**

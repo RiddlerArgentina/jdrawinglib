@@ -32,7 +32,7 @@ import java.awt.Paint;
  * This class represents a basic Formula.<br>
  * It translates a {@link Calculable} into a Graphic.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GFormula extends Graphic {
     private final Calculable formula;

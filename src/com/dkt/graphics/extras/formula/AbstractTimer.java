@@ -39,7 +39,7 @@ import java.util.ArrayList;
  * in that case, the perceived speed of the application is somewhat more
  * important than the real speed.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  * @param <T> The {@link AbstractCalculable} instance that will be used
  */
 public abstract class AbstractTimer<T extends AbstractCalculable> extends GraphicE {

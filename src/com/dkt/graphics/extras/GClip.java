@@ -28,7 +28,7 @@ import java.util.ArrayList;
  * This class wraps an {@link Area} in a {@link GraphicE}, in order to create
  * a clipping area from {@link GFillableE}.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GClip extends GraphicE {
     private final ArrayList<Action> elements = new ArrayList<>();
@@ -61,7 +61,7 @@ public class GClip extends GraphicE {
      * <br>If you really need to traslate a {@code GClip}, then you should
      * previously add a {@link GTransform} to the graphic
      *
-     * @param area
+     * @param area {@link Area} object to be used as clip
      * @throws NullPointerException if {@code area} is {@code null}
      */
     public GClip(Area area) {

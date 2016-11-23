@@ -33,7 +33,7 @@ import javax.swing.Timer;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class Example17  implements IExample {
     @Override

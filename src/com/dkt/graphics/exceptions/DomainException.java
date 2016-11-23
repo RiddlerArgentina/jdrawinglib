@@ -22,7 +22,7 @@ package com.dkt.graphics.exceptions;
  * This exception is usually thrown when one attempts to calculate {@code f(x)}
  * and {@code x} is not a part of the domain of {@code f}
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class DomainException extends RuntimeException {
     /**

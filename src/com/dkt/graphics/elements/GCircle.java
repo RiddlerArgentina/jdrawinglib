@@ -24,7 +24,7 @@ import java.awt.geom.Ellipse2D;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GCircle extends GFillableE {
     private int x, y, d, r;

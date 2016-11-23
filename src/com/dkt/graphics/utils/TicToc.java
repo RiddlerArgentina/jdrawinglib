@@ -22,7 +22,7 @@ package com.dkt.graphics.utils;
  * Implements a Tic-Toc mechanism.<br>
  * This class is very basic, but at least it's easy...
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class TicToc {
     private long iter;

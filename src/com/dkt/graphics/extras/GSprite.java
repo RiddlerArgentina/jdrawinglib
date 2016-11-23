@@ -29,7 +29,7 @@ import java.util.Iterator;
  * Creates a simple sprite, if you need help creating the pixmaps, you should
  * probably try out PixmapCreator
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GSprite extends GraphicE implements Iterable<GPixMap> {
     private final ArrayList<GPixMap> frames = new ArrayList<>(10);

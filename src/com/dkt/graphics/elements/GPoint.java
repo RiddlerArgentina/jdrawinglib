@@ -23,7 +23,7 @@ import java.awt.Graphics2D;
 /**
  * This class represents a <b>mutable</b> point
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GPoint extends GraphicE {
     private final boolean drawCross;

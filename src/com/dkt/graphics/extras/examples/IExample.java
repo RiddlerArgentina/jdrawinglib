@@ -20,7 +20,7 @@ package com.dkt.graphics.extras.examples;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public interface IExample extends Runnable {
     /**

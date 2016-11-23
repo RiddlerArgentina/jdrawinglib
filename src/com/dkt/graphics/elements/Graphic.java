@@ -31,7 +31,7 @@ import java.util.Objects;
  * <i>Note:</i> this class is a {@link GraphicE} on itself, so you can add it to
  * Graphics.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class Graphic extends GraphicE implements Iterable<GraphicE> {
     private final UnsafeList components;

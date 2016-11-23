@@ -27,7 +27,7 @@ import java.util.Random;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class Example12 implements IExample {
     @Override

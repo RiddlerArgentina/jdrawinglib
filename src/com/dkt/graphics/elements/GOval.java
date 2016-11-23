@@ -25,7 +25,7 @@ import java.awt.geom.Ellipse2D;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GOval extends GFillableE {
     private final int w, h;

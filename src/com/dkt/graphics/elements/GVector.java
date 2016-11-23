@@ -27,7 +27,7 @@ import java.util.Arrays;
  * If the modulus of the vector is {@code 0} then not even the triangle is
  * drawn.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GVector extends GraphicE {
     private int[] xs = new int[3];

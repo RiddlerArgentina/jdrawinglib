@@ -24,7 +24,7 @@ import java.awt.geom.Area;
 /**
  * This represents an abstract fillable element
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public abstract class GFillableE extends GraphicE {
     private boolean fill;

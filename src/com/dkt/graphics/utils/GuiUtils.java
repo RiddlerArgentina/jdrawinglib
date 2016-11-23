@@ -25,7 +25,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GuiUtils {
     private GuiUtils() {

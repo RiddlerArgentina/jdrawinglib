@@ -27,7 +27,7 @@ package com.dkt.graphics.utils;
  * {@link System#nanoTime()} so if the elapsed time between the calls to
  * {@link TPS#action()} is very big, it might yield wrong results
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class TPS {
     private final int SIZE = 50;

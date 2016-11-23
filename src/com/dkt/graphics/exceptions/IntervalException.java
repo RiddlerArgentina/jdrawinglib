@@ -21,7 +21,7 @@ package com.dkt.graphics.exceptions;
 /**
  * This exception is usually thrown when something goes wrong with an interval
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class IntervalException extends RuntimeException {
     /**

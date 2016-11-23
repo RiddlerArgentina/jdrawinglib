@@ -51,7 +51,7 @@ import javax.swing.Timer;
  * fixed elements are only redrawn when the canvas is resized or when 
  * specifically told to.
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class Canvas extends JPanel implements ActionListener {
     private final LinkedList<GraphicE> elements = new LinkedList<>();
@@ -202,7 +202,7 @@ public class Canvas extends JPanel implements ActionListener {
      * Sends the selected {@link GraphicE} to the bottom of the canvas, so other
      * elements will be painted on top
      *
-     * @param element
+     * @param element {@link GraphicE} to be send to the bottom
      */
     public void sendToBottom(GraphicE element){
         synchronized (elements){
@@ -219,7 +219,7 @@ public class Canvas extends JPanel implements ActionListener {
      * be painted on top of all the other elements.<br>
      * <i>Note:</i> if a new element is added it will land on top of this one.
      *
-     * @param element
+     * @param element {@link GraphicE} to be send to the front
      */
     public void sendToFront(GraphicE element){
         synchronized (elements){

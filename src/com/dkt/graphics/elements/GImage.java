@@ -37,7 +37,7 @@ import javax.imageio.ImageIO;
 /**
  * Wraps a {@link BufferedImage} into a {@link GraphicE} object
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GImage extends GraphicE implements Paint {
     private final BufferedImage original;

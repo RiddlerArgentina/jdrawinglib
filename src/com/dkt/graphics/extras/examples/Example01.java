@@ -24,7 +24,7 @@ import com.dkt.graphics.elements.GArc;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class Example01 implements IExample {
     @Override

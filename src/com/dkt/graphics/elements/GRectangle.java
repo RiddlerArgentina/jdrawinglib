@@ -25,7 +25,7 @@ import java.awt.geom.Area;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GRectangle extends GFillableE {
     protected int x, y, w, h, cx, cy;

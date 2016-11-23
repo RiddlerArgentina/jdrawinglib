@@ -28,7 +28,7 @@ import java.util.Objects;
 /**
  * This class represents an abstract Graphical Element
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public abstract class GraphicE implements Cloneable {
     /**

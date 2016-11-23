@@ -20,7 +20,7 @@ package com.dkt.graphics.exceptions;
 
 /**
  *
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class AlreadyRunningException extends RuntimeException {
     public AlreadyRunningException(String msg){

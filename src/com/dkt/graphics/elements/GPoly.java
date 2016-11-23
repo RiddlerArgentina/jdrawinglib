@@ -23,7 +23,7 @@ import java.awt.Graphics2D;
 
 /**
  * http://erich.realtimerendering.com/ptinpoly/
- * @author Federico Vera <dktcoding [at] gmail>
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GPoly extends GMultiPoint {
 
