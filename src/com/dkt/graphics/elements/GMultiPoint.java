@@ -22,6 +22,7 @@ import com.dkt.graphics.exceptions.InvalidArgumentException;
 import java.awt.Polygon;
 import java.awt.geom.Area;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -444,6 +445,48 @@ public abstract class GMultiPoint extends GFillableE
         } finally {
             mutex.unlock();
         }
+    }
+
+    /**
+     * Sorts all the points in this array by it's {@code X} value, and breaks
+     * ties with the {@code Y} value
+     */
+    public void sortByX() {
+        sort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer n1, Integer n2) {
+                final int status = Integer.compare(xs[n1], xs[n2]);
+                return status == 0 ? Integer.compare(ys[n1], ys[n2]) : status;
+            }
+        });
+    }
+ 
+    private void sort(final Comparator<Integer> comparator) {
+        final Integer[] idxs = new Integer[size];
+        for( int i = 0 ; i < size; i++ ) {
+            idxs[i] = i;
+        }
+
+        mutex.lock();
+        try{
+            Arrays.sort(idxs, comparator);
+
+            //@FIXME this can be done without generating a new array
+            final int[] xxs = new int[xs.length];
+            final int[] yys = new int[xs.length];
+
+            for (int i = 0; i < size; i++){
+                xxs[i] = xs[idxs[i]];
+                yys[i] = ys[idxs[i]];
+            }
+
+            xs = xxs;
+            ys = yys;
+        } finally {
+            mutex.unlock();
+        }
+
+        modCount.incrementAndGet();
     }
 
     @Override
