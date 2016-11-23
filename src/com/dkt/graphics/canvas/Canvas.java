@@ -775,7 +775,7 @@ public class Canvas extends JPanel implements ActionListener {
         }
 
         //Paint the FPS number on the screen
-        if (autoRepaint & showFPS){
+        if (showFPS){
             tps.action();
             g2d.setTransform(emptyTran);
             fps.setString(formatter.format(tps.ctps()));
