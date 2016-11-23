@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2014 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
