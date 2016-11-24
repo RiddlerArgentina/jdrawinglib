@@ -113,11 +113,11 @@ public class Config {
     }
 
     /**
-     * A wrapper for {@link Config#put(String,String)}
+     * A wrapper for {@code Config.put(String,Object)}
      * 
      * @param key {@code key} 
      * @param value {@code value} 
-     * @see Config#put(String,String)
+     * @see Config#put(String,Object)
      * @see Config#addListener(ConfigListener)
      */
     public void set(String key, Object value) {
@@ -154,6 +154,7 @@ public class Config {
      * Retrieves a raw {@code value} for a given {@code key}
      *
      * @param key {@code key} 
+     * @return {@code value}
      */
     public Object get(String key) {
         return data.get(key);
@@ -162,7 +163,7 @@ public class Config {
     /**
      * Retrieves the {@code value} for a given {@code key} as a {@link Color}
      *
-     * @param key
+     * @param key {@code key}
      * @return value as {@link Color}
      * @throws ClassCastException if the {@code value} isn't a {@link Color}
      */
