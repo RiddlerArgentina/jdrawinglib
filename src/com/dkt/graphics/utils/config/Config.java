@@ -19,6 +19,7 @@
 package com.dkt.graphics.utils.config;
 
 import java.awt.Color;
+import java.io.Serializable;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -33,7 +34,7 @@ import javax.swing.ImageIcon;
  *
  * @author Federico Vera {@literal <dktcoding [at] gmail>}
  */
-public class Config {
+public class Config implements Serializable {
     private static final HashMap<String, Config> CONFIGS = new HashMap<>(8);
     private final        HashMap<String, Object> data    = new HashMap<>(16);
     
