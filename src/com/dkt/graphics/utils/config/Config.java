@@ -19,6 +19,12 @@
 package com.dkt.graphics.utils.config;
 
 import java.awt.Color;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
 import java.io.Serializable;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -321,5 +327,63 @@ LinkedList<>();
         listeners.clear();
         listeners.addAll(foo);
         foo.clear();
+    }
+    
+    /**
+     * Saves all the available Configs in the given {@code OutputStream}.
+     * <p><i>Note:</i> all of the values of the {@code Config} object must be {@link Serializable} 
+     * for this to work</p>
+     * @param os {@code OutputStream} on which to write
+     * @throws IOException in case an I/O error occurs
+     * @see Config#save(java.io.OutputStream) 
+     * @see Config#read(java.io.InputStream, java.lang.String) 
+     */
+    public static void saveAll(OutputStream os) throws IOException {
+        try (ObjectOutputStream oos = new ObjectOutputStream(os)) {
+            oos.writeObject(CONFIGS);
+        }
+    }
+
+    /**
+     * Saves {@code this} {@code Config} in the given {@code OutputStream}.
+     * <p><i>Note:</i> all of the values of the {@code Config} object must be {@link Serializable} 
+     * for this to work</p>
+     * @param os {@code OutputStream} on which to write
+     * @throws IOException in case an I/O error occurs
+     * @see Config#saveAll(java.io.OutputStream) 
+     * @see Config#read(java.io.InputStream, java.lang.String) 
+     */
+    public void save(OutputStream os) throws IOException {
+        try (ObjectOutputStream oos = new ObjectOutputStream(os)) {
+            oos.writeObject(this);
+        }
+    }
+    
+    /**
+     * Read a {@code Config} or {@code Map} of configs from the given {@link InputStream}.
+     * 
+     * @param is {@code InputStream} from which to read
+     * @param name If reading a single {@code Config} this is the name it will have when calling
+     * {@link Config#from(java.lang.String)}, it should be {@code null} when reading a set of 
+     * configs.
+     * @throws IOException in case an I/O error occurs
+     * @throws ClassNotFoundException If the {@code InputStream} doesn't point to an appropriate 
+     * {@code Config}
+     * @see Config#save(java.io.OutputStream) 
+     * @see Config#saveAll(java.io.OutputStream) 
+     */
+    @SuppressWarnings("unchecked")
+    public static void read(InputStream is, String name) throws IOException, ClassNotFoundException {
+        try (ObjectInputStream ois = new ObjectInputStream(is)) {
+            Object obj = ois.readObject();
+            if (obj instanceof Config) {
+                CONFIGS.put(name, (Config)obj);
+            } else if (obj instanceof HashMap) {
+                CONFIGS.putAll((HashMap<String, Config>)obj);
+            } else {
+                String msg = "This Input Stream doesn't contain a valid Config object";
+                throw new IllegalArgumentException(msg);
+            }
+        }
     }
 }
