@@ -23,6 +23,21 @@
         </license>
     </licenses>
     
+    <developers>
+        <developer>
+            <name>Federico Vera</name>
+            <email>dktcoding@gmail.com</email>
+            <organization>Federico Vera</organization>
+            <organizationUrl>https://github.com/dktcoding/</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/dktcoding/jdrawinglib.git</connection>
+        <developerConnection>scm:git:git@github.com:dktcoding/jdrawinglib.git</developerConnection>
+        <url>https://github.com/dktcoding/jdrawinglib</url>
+    </scm>
+
     <build>
         <plugins>
             <plugin>
