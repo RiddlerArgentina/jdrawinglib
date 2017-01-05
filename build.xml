@@ -1,7 +1,7 @@
  <project name="jdrawinglib" basedir="." default="main">
 
     <property name="main.build.dir" value="build/main"/>
-    <property name="main.src.dir"   value="src"/>
+    <property name="main.src.dir"   value="src/main/java"/>
     <property name="doc.dir"        value="doc"/>
     <property name="jar.dir"        value="dist"/>
     <property name="proj.ver"       value ="0.2"/>

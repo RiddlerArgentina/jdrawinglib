@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.dkt.graphics</groupId>
+    <artifactId>jdrawinglib</artifactId>
+    <version>0.3</version>
+    
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <name>jDrawinLib</name>
+    <description>Small library for drawing written in Java</description>
+    <url>https://github.com/dktcoding/jdrawinglib/</url>
+    
+    <licenses>
+        <license>
+            <name>GNU GENERAL PUBLIC LICENSE, Version 3</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <developers>
+        <developer>
+            <name>Federico Vera</name>
+            <email>dktcoding@gmail.com</email>
+            <organization>Federico Vera</organization>
+            <organizationUrl>https://github.com/dktcoding/</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/dktcoding/jdrawinglib.git</connection>
+        <developerConnection>scm:git:git@github.com:dktcoding/jdrawinglib.git</developerConnection>
+        <url>https://github.com/dktcoding/jdrawinglib</url>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.4</version>
+                <configuration>
+                    <show>public</show>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                  <archive>
+                    <manifest>
+                      <addClasspath>true</addClasspath>
+                      <mainClass>com.dkt.graphics.Main</mainClass>
+                    </manifest>
+                  </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
