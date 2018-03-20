@@ -16,7 +16,4 @@ java -jar jDrawingLib.jar
 java -jar jDrawingLib.jar Example01
 ```
 
-## Download Compiled Files
-* Your can download the library directly from: https://launchpad.net/jdrawinglib/+download
-
 [Ant]: http://ant.apache.org/manual/install.html
