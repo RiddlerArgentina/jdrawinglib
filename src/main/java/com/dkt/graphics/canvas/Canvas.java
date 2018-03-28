@@ -34,6 +34,7 @@ import java.awt.RenderingHints;
 import java.awt.Transparency;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.awt.geom.AffineTransform;
@@ -82,7 +83,7 @@ public class Canvas extends JPanel implements ActionListener {
         
         setBackground(Color.LIGHT_GRAY);
         setIgnoreRepaint(true);
-        addComponentListener(new ComponentListener() {
+        addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
                 if (fullArea) {
@@ -94,10 +95,6 @@ public class Canvas extends JPanel implements ActionListener {
                     redraw(true);
                 }
             }
-
-            @Override public void componentMoved(ComponentEvent e) {}
-            @Override public void componentShown(ComponentEvent e) {}
-            @Override public void componentHidden(ComponentEvent e) {}
         });
     }
 
