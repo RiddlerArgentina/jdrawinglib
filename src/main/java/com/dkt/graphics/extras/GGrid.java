@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -30,7 +30,7 @@ import java.awt.Stroke;
 /**
  * This class creates a simple line grid
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GGrid extends GraphicE {
     private final Graphic grid = new Graphic();
@@ -43,7 +43,7 @@ public class GGrid extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GGrid} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GGrid(GGrid e) {
         c = e.c.clone();

@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -39,10 +39,20 @@ import java.util.ArrayList;
  * in that case, the perceived speed of the application is somewhat more
  * important than the real speed.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  * @param <T> The {@link AbstractCalculable} instance that will be used
  */
 public abstract class AbstractTimer<T extends AbstractCalculable> extends GraphicE {
+    private final ArrayList<PThread> threads = new ArrayList<>(1);
+    private final GPointArray pointArray = new GPointArray();
+    private final T calculable;
+    private volatile boolean isRunning;
+    private volatile boolean isPaused;
+    private int numberOfThreads = 1;
+    private boolean drawAsPath;
+    private boolean drawPen;
+    private Action action;
+    
     /**
      * This interface contains all the methods that will be executed
      * after starting, pausing, resuming and stopping a timer.
@@ -73,23 +83,13 @@ public abstract class AbstractTimer<T extends AbstractCalculable> extends Graphi
         void stop();
     }
 
-    private final ArrayList<PThread> threads = new ArrayList<>(1);
-    private final GPointArray pointArray = new GPointArray();
-    private final T calculable;
-    private volatile boolean isRunning;
-    private volatile boolean isPaused;
-    private int numberOfThreads = 1;
-    private boolean drawAsPath;
-    private boolean drawPen;
-    private Action action;
-
     /**
      * @param calculable object that will be used on the calculations
-     * @throws NullPointerException if {@code calculable} is {@code null}
+     * @throws IllegalArgumentException if {@code calculable} is {@code null}
      */
     protected AbstractTimer(T calculable){
         if (calculable == null){
-            throw new NullPointerException("You must pass a formula!");
+            throw new IllegalArgumentException("You must pass a formula!");
         }
 
         this.calculable = calculable;

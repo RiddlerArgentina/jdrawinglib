@@ -34,7 +34,8 @@ public class MathUtilsTest {
     @Test
     @DisplayName("a < b")
     public void testMin1() {
-        int a = 10, b = 20;
+        int a = 10;
+        int b = 20;
         int result = MathUtils.min(a, b);
         int expected = Math.min(a, b);
         assertEquals(expected, result);
@@ -43,7 +44,8 @@ public class MathUtilsTest {
     @Test
     @DisplayName("a > b")
     public void testMin2() {
-        int a = 20, b = 10;
+        int a = 20;
+        int b = 10;
         int result = MathUtils.min(a, b);
         int expected = Math.min(a, b);
         assertEquals(expected, result);
@@ -52,7 +54,8 @@ public class MathUtilsTest {
     @Test
     @DisplayName("a = b")
     public void testMin3() {
-        int a = 0, b = 0;
+        int a = 0;
+        int b = 0;
         int result = MathUtils.min(a, b);
         int expected = Math.min(a, b);
         assertEquals(expected, result);
@@ -61,7 +64,8 @@ public class MathUtilsTest {
     @Test
     @DisplayName("a > b")
     public void testMax1() {
-        int a = 10, b = 20;
+        int a = 10;
+        int b = 20;
         int result = MathUtils.max(a, b);
         int expected = Math.max(a, b);
         assertEquals(expected, result);
@@ -70,7 +74,8 @@ public class MathUtilsTest {
     @Test
     @DisplayName("a < b")
     public void testMax2() {
-        int a = 20, b = 10;
+        int a = 20;
+        int b = 10;
         int result = MathUtils.max(a, b);
         int expected = Math.max(a, b);
         assertEquals(expected, result);
@@ -79,7 +84,8 @@ public class MathUtilsTest {
     @Test
     @DisplayName("a = b")
     public void testMax3() {
-        int a = 0, b = 0;
+        int a = 0;
+        int b = 0;
         int result = MathUtils.max(a, b);
         int expected = Math.max(a, b);
         assertEquals(expected, result);

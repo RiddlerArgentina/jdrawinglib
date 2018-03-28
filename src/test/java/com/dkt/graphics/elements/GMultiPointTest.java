@@ -50,6 +50,7 @@ public class GMultiPointTest {
                 @Override public GFillableE clone() {return null;}
                 @Override public void draw(Graphics2D g) {}
             };
+            mp.clear();
         });
     }
 
@@ -59,7 +60,7 @@ public class GMultiPointTest {
         int[] XX = {0, 1, 2, 3, 4, 5};
         int[] YY = {0, 1, 2, 3, 4, 5, 6};
         assertThrows(InvalidArgumentException.class, () -> {
-            GMultiPoint mp = new GMultiPoint(XX, YY) {
+            new GMultiPoint(XX, YY) {
                 @Override public GFillableE clone() {return null;}
                 @Override public void draw(Graphics2D g) {}
             };
@@ -72,9 +73,9 @@ public class GMultiPointTest {
         int[] XX = {0, 1, 2, 3, 4, 5, 6};
         int[] YY = {0, 1, 2, 3, 4, 5};
         assertThrows(InvalidArgumentException.class, () -> {
-            GMultiPoint mp = new GMultiPoint(XX, YY) {
+            new GMultiPoint(XX, YY) {
                 @Override public GFillableE clone() {return null;}
-                @Override public void draw(Graphics2D g) {}
+                @Override public void draw(Graphics2D g) {/*nothing*/}
             };
         });
     }
@@ -86,7 +87,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -100,7 +101,7 @@ public class GMultiPointTest {
     public void testIndexOf1() {
         GMultiPoint mp = new GMultiPoint(10) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -114,7 +115,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -129,7 +130,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -145,7 +146,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -162,7 +163,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -181,7 +182,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -198,7 +199,7 @@ public class GMultiPointTest {
     public void testRemove3() {
         GMultiPoint mp = new GMultiPoint(4) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -217,7 +218,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -243,7 +244,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -269,7 +270,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -295,7 +296,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -321,7 +322,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -347,7 +348,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -371,7 +372,7 @@ public class GMultiPointTest {
     public void testAppend1() {
         GMultiPoint mp = new GMultiPoint(0) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -400,7 +401,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -423,7 +424,7 @@ public class GMultiPointTest {
     public void testAppendNR1() {
         GMultiPoint mp = new GMultiPoint(0) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -451,7 +452,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -474,7 +475,7 @@ public class GMultiPointTest {
         int[] YY = {5, 6, 7, 8, 9, 8};
         GMultiPoint mp = new GMultiPoint(XX, YY) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
 
         assertNotNull(mp);
@@ -490,6 +491,5 @@ public class GMultiPointTest {
         assertEquals(4, mp.indexOf(3, 8), 4);
         assertEquals(5, mp.indexOf(4, 9));
     }
-
 
 }

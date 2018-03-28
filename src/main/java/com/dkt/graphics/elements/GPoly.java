@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -23,7 +23,7 @@ import java.awt.Graphics2D;
 
 /**
  * http://erich.realtimerendering.com/ptinpoly/
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GPoly extends GMultiPoint {
 
@@ -31,7 +31,7 @@ public class GPoly extends GMultiPoint {
      * Copy constructor
      *
      * @param e {@code GPoly} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GPoly(GPoly e) {
         super(e);
@@ -56,7 +56,7 @@ public class GPoly extends GMultiPoint {
     /**
      * @param xs array containing all the x coordinates
      * @param ys array containing all the y coordinates
-     * @throws NullPointerException if either array is {@code null}
+     * @throws IllegalArgumentException if either array is {@code null}
      * @throws InvalidArgumentException if the array size doesn't match
      */
     public GPoly(final int[] xs, final int[]ys) {

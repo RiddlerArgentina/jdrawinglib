@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -23,7 +23,7 @@ import java.awt.Graphics2D;
 /**
  * This class represents a line segment
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GLine extends GraphicE {
     private int x1, y1, x2, y2;
@@ -32,7 +32,7 @@ public class GLine extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GLine} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GLine(GLine e) {
         super(e);
@@ -51,7 +51,7 @@ public class GLine extends GraphicE {
      */
     public GLine(
             final GPoint p1,
-            final GPoint p2) throws NullPointerException
+            final GPoint p2) throws IllegalArgumentException
     {
         this(p1.x(), p1.y(), p2.x(), p2.y());
     }
@@ -194,11 +194,11 @@ public class GLine extends GraphicE {
      * @param p point to check
      * @return {@code true} if the point is contained in the segment and
      * {@code false} otherwise
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      */
     public boolean contains(final GPoint p){
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         return contains(p.x(), p.y());

@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -36,7 +36,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * <i>Note:</i> even though this class extends from {@link GFillableE} it's the
  * subclass option to enforce the fill methods
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public abstract class GMultiPoint extends GFillableE
                                implements Iterable<GPoint> {
@@ -50,7 +50,7 @@ public abstract class GMultiPoint extends GFillableE
      * Copy constructor
      *
      * @param e {@code GMultiPoint} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     protected GMultiPoint(GMultiPoint e) {
         super(e);
@@ -75,12 +75,12 @@ public abstract class GMultiPoint extends GFillableE
     /**
      * @param xs list of X coordinates
      * @param ys list of Y coordinates
-     * @throws NullPointerException if either array is {@code null}
-     * @throws InvalidArgumentException if the array size doesn't match
+     * @throws IllegalArgumentException if either array is {@code null} or if
+     * the array size doesn't match
      */
     protected GMultiPoint(final int[] xs, final int[] ys) {
         if (xs == null || ys == null){
-            throw new NullPointerException("Neither array can be null");
+            throw new IllegalArgumentException("Neither array can be null");
         }
 
         if (xs.length != ys.length){
@@ -116,11 +116,11 @@ public abstract class GMultiPoint extends GFillableE
      * @param point point to check
      * @return first index of the point or -1 if the point is not one of the
      * paths 's vertices
-     * @throws NullPointerException if {@code point} is {@code null}
+     * @throws IllegalArgumentException if {@code point} is {@code null}
      */
     public int indexOf(final GPoint point) {
         if (point == null){
-            throw new NullPointerException("Point can't be null");
+            throw new IllegalArgumentException("Point can't be null");
         }
 
         return indexOf(point.x(), point.y(), 0);
@@ -134,11 +134,11 @@ public abstract class GMultiPoint extends GFillableE
      * @param start starting point of the search
      * @return first index of the point or -1 if the point is not one of the
      * paths 's vertices
-     * @throws NullPointerException if {@code point} is {@code null}
+     * @throws IllegalArgumentException if {@code point} is {@code null}
      */
     public int indexOf(final GPoint point, final int start) {
         if (point == null){
-            throw new NullPointerException("Point can't be null");
+            throw new IllegalArgumentException("Point can't be null");
         }
 
         return indexOf(point.x(), point.y(), start);
@@ -198,11 +198,11 @@ public abstract class GMultiPoint extends GFillableE
      * @param point the point to check
      * @return {@code true} if the point was contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code point} is {@code null}
+     * @throws IllegalArgumentException if {@code point} is {@code null}
      */
     public boolean remove(final GPoint point) {
         if (point == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         return remove(point.x(), point.y());
@@ -361,12 +361,12 @@ public abstract class GMultiPoint extends GFillableE
      * Appends a new point to the path
      *
      * @param p the {@link GPoint} to append
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      * @see GMultiPoint#ensureCapacity(int)
      */
     public void append(final GPoint p) {
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         append(p.x(), p.y());

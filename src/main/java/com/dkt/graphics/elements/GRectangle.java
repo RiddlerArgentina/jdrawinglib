@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -25,7 +25,7 @@ import java.awt.geom.Area;
 
 /**
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GRectangle extends GFillableE {
     protected int x, y, w, h, cx, cy;
@@ -34,7 +34,7 @@ public class GRectangle extends GFillableE {
      * Copy constructor
      *
      * @param e {@code GRectangle} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GRectangle(GRectangle e) {
         super(e);
@@ -106,11 +106,11 @@ public class GRectangle extends GFillableE {
      * @param r {@link GRectangle} to check
      * @return {@code true} if the rectangles intersect and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code r} is {@code null}
+     * @throws IllegalArgumentException if {@code r} is {@code null}
      */
     public boolean intersects(final GRectangle r) {
         if (r == null){
-            throw new NullPointerException("The rectangle can't be null");
+            throw new IllegalArgumentException("The rectangle can't be null");
         }
 
         return !((x + w < r.x) | (r.x + r.w < x) |
@@ -123,11 +123,11 @@ public class GRectangle extends GFillableE {
      * @param r {@link GRectangle} to check
      * @return {@code true} if the rectangle is contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code r} is {@code null}
+     * @throws IllegalArgumentException if {@code r} is {@code null}
      */
     public boolean contains(final GRectangle r) {
         if (r == null){
-            throw new NullPointerException("The rectangle can't be null");
+            throw new IllegalArgumentException("The rectangle can't be null");
         }
 
         return contains(   r.x   ,    r.y   ) & contains(r.x + r.w,    r.y   ) &
@@ -139,11 +139,11 @@ public class GRectangle extends GFillableE {
      *
      * @param l {@link GLine} to check
      * @return {@code true} if the line is contained and {@code false} otherwise
-     * @throws NullPointerException if {@code l} is {@code null}
+     * @throws IllegalArgumentException if {@code l} is {@code null}
      */
     public boolean contains(final GLine l) {
         if (l == null){
-            throw new NullPointerException("The line can't be null");
+            throw new IllegalArgumentException("The line can't be null");
         }
 
         return contains(l.getStartPoint()) && contains(l.getEndPoint());
@@ -155,11 +155,11 @@ public class GRectangle extends GFillableE {
      * @param p {@link GPoint} to check
      * @return {@code true} if the point is contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      */
     public boolean contains(final GPoint p) {
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         return contains(p.x(), p.y());

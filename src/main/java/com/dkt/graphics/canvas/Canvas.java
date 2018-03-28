@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -34,8 +34,8 @@ import java.awt.RenderingHints;
 import java.awt.Transparency;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.text.DecimalFormat;
@@ -51,23 +51,40 @@ import javax.swing.Timer;
  * fixed elements are only redrawn when the canvas is resized or when 
  * specifically told to.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class Canvas extends JPanel implements ActionListener {
     private final LinkedList<GraphicE> elements = new LinkedList<>();
     private final LinkedList<GraphicE> fixed    = new LinkedList<>();
 
     private boolean centerBounds, fullArea, invert;
-    private int xSize = 100, ySize = 100;
-    private int xO, yO;
+    private int xSize = 100;
+    private int ySize = 100;
+    private int xO;
+    private int yO;
     private Paint drawableAreaPaint   = Color.WHITE;
     private Paint drawableBorderPaint = Color.BLACK;
     private boolean useAntiAliasing   = true;
+    private boolean autoRepaint;
+    private int repaintDelay = 50;
+    private final Timer repaintTimer = new Timer(500, this);
+    private boolean showFPS;
+    private final GString fps = new GString(10, 20, "");
+    private final TPS     tps = new TPS();
+    private final DecimalFormat formatter = new DecimalFormat("#.00");
+    private final AffineTransform emptyTran = new AffineTransform();
+    private static GraphicsConfiguration GFX_CFG;
+    private AffineTransform transform = new AffineTransform();
 
     public Canvas(){
+        //Init timer config
+        repaintTimer.setRepeats(true);
+        repaintTimer.setCoalesce(true);
+        repaintTimer.setDelay(repaintDelay);
+        
         setBackground(Color.LIGHT_GRAY);
         setIgnoreRepaint(true);
-        addComponentListener(new ComponentListener() {
+        addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
                 if (fullArea) {
@@ -79,10 +96,6 @@ public class Canvas extends JPanel implements ActionListener {
                     redraw(true);
                 }
             }
-
-            @Override public void componentMoved(ComponentEvent e) {}
-            @Override public void componentShown(ComponentEvent e) {}
-            @Override public void componentHidden(ComponentEvent e) {}
         });
     }
 
@@ -339,7 +352,7 @@ public class Canvas extends JPanel implements ActionListener {
     @Override
     public void setBackground(Color bg) {
         if (bg == null){
-            throw new NullPointerException("The background color can't be null");
+            throw new IllegalArgumentException("The background color can't be null");
         }
 
         super.setBackground(bg);
@@ -366,11 +379,11 @@ public class Canvas extends JPanel implements ActionListener {
      * Sets the background {@link Paint} of the drawable area of the canvas
      *
      * @param paint new paint
-     * @throws NullPointerException if the color is {@code null}
+     * @throws IllegalArgumentException if the color is {@code null}
      */
     public void setDrawableAreaPaint(Paint paint) {
         if (paint == null){
-            throw new NullPointerException("The paint can't be null");
+            throw new IllegalArgumentException("The paint can't be null");
         }
 
         drawableAreaPaint = paint;
@@ -390,11 +403,11 @@ public class Canvas extends JPanel implements ActionListener {
      * Sets the border {@link Paint} of the drawable area of the canvas
      *
      * @param paint new paint
-     * @throws NullPointerException if the paint is {@code null}
+     * @throws IllegalArgumentException if the paint is {@code null}
      */
     public void setDrawableBorderPaint(Paint paint) {
         if (paint == null){
-            throw new NullPointerException("The paint can't be null");
+            throw new IllegalArgumentException("The paint can't be null");
         }
 
         drawableBorderPaint = paint;
@@ -499,15 +512,6 @@ public class Canvas extends JPanel implements ActionListener {
         redraw(true);
     }
 
-    private boolean autoRepaint;
-    private int repaintDelay = 50;
-    private final Timer repaintTimer = new Timer(500, this);
-    {
-        repaintTimer.setRepeats(true);
-        repaintTimer.setCoalesce(true);
-        repaintTimer.setDelay(repaintDelay);
-    }
-
     /**
      * Tells the canvas to repaint itself automatically
      *
@@ -582,11 +586,6 @@ public class Canvas extends JPanel implements ActionListener {
         return centerOrigin;
     }
 
-    private boolean showFPS;
-    private final GString fps = new GString(10, 20, "");
-    private final TPS     tps = new TPS();
-    private final DecimalFormat formatter = new DecimalFormat("#.00");
-    private final AffineTransform emptyTran = new AffineTransform();
     /**
      * This method tells the canvas to print the current FPS value on the screen
      * (it will be painted on the upper left corner above all other elements).
@@ -616,8 +615,6 @@ public class Canvas extends JPanel implements ActionListener {
             }
         }
     }
-
-    private static GraphicsConfiguration GFX_CFG;
 
     private void createBackground() {
         //Release resourses
@@ -666,7 +663,8 @@ public class Canvas extends JPanel implements ActionListener {
         }
 
         //Calculate background offsets
-        final int xOff, yOff;
+        final int xOff;
+        final int yOff;
         if (centerBounds){
             xOff = (getWidth () - xSize) / 2;
             yOff = (getHeight() - ySize) / 2;
@@ -703,11 +701,11 @@ public class Canvas extends JPanel implements ActionListener {
      * @param back {@code true} if you want to paint the background and {@code
      * false} otherwise ({@code false} is needed when painting with transparent
      * components.
-     * @throws NullPointerException if the g2d is {@code null}
+     * @throws IllegalArgumentException if the g2d is {@code null}
      */
     public void paintDrawableArea(Graphics2D g2d, boolean back) {
         if (g2d == null){
-            throw new NullPointerException("Graphics can't be null");
+            throw new IllegalArgumentException("Graphics can't be null");
         }
 
         //Paint the background
@@ -741,13 +739,11 @@ public class Canvas extends JPanel implements ActionListener {
         }
     }
 
-    private BufferedImage content;
-    private AffineTransform transform = new AffineTransform();
     @Override
     public void paintComponent (Graphics g){
         super.paintComponent(g);
 
-        content = GFX_CFG.createCompatibleImage(
+        final BufferedImage content = GFX_CFG.createCompatibleImage(
                 xSize,
                 ySize,
                 Transparency.TRANSLUCENT

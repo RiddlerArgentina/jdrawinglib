@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -27,7 +27,7 @@ import java.util.Objects;
 /**
  * This class wraps a {@link String} in a {@link GraphicE}
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GString extends GraphicE {
     private static final Font DEFAULT = new Font(Font.DIALOG, Font.PLAIN, 14);
@@ -40,7 +40,7 @@ public class GString extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GString} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GString(GString e){
         super(e);
@@ -81,7 +81,7 @@ public class GString extends GraphicE {
             final String str,
             final Font font)
     {
-        this(x, y, 0, str, null);
+        this(x, y, 0, str, font);
     }
 
     /**
@@ -132,11 +132,11 @@ public class GString extends GraphicE {
      * Set's the {@code String} to print in the screen
      *
      * @param string {@code String} to be printed
-     * @throws NullPointerException if {@code string} is {@code null}
+     * @throws IllegalArgumentException if {@code string} is {@code null}
      */
-    public void setString(final String string) throws NullPointerException {
+    public void setString(final String string) throws IllegalArgumentException {
         if (string == null){
-            throw new NullPointerException("The string can't be null");
+            throw new IllegalArgumentException("The string can't be null");
         }
 
         this.string = string;
@@ -155,11 +155,11 @@ public class GString extends GraphicE {
      * Set's the font used to render this {@code String}
      *
      * @param font font
-     * @throws NullPointerException if {@code font} is {@code null}
+     * @throws IllegalArgumentException if {@code font} is {@code null}
      */
-    public void setFont(final Font font) throws NullPointerException {
+    public void setFont(final Font font) throws IllegalArgumentException {
         if (font == null){
-            throw new NullPointerException("The font can't be null");
+            throw new IllegalArgumentException("The font can't be null");
         }
 
         this.font = font;

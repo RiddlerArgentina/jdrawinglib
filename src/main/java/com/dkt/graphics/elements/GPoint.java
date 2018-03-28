@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -23,7 +23,7 @@ import java.awt.Graphics2D;
 /**
  * This class represents a <b>mutable</b> point
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GPoint extends GraphicE {
     private final boolean drawCross;
@@ -34,7 +34,7 @@ public class GPoint extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GPoint} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GPoint(GPoint e) {
         super(e);
@@ -97,11 +97,11 @@ public class GPoint extends GraphicE {
      *
      * @param p the reference point
      * @return distance between points
-     * @throws NullPointerException if point is {@code null}
+     * @throws IllegalArgumentException if point is {@code null}
      */
     public double distance(final GPoint p) {
         if (p == null){
-            throw new NullPointerException("Point can't be null");
+            throw new IllegalArgumentException("Point can't be null");
         }
 
         return distance(p.x, p.y);

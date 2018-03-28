@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -22,14 +22,14 @@ package com.dkt.graphics.utils;
  * Implements a Tic-Toc mechanism.<br>
  * This class is very basic, but at least it's easy...
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
-public class TicToc {
+public final class TicToc {
     private long iter;
     private long start;
     private long total;
 
-    {
+    public TicToc() {
         //Calling the methods before hand helps to get a better results
         //http://www.artima.com/insidejvm/ed2/jvmP.html
         tic();

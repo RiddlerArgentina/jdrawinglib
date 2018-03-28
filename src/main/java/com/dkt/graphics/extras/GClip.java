@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -28,7 +28,7 @@ import java.util.ArrayList;
  * This class wraps an {@link Area} in a {@link GraphicE}, in order to create
  * a clipping area from {@link GFillableE}.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GClip extends GraphicE {
     private final ArrayList<Action> elements = new ArrayList<>();
@@ -37,7 +37,7 @@ public class GClip extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GClip} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GClip(GClip e){
         super(e);
@@ -62,11 +62,11 @@ public class GClip extends GraphicE {
      * previously add a {@link GTransform} to the graphic
      *
      * @param area {@link Area} object to be used as clip
-     * @throws NullPointerException if {@code area} is {@code null}
+     * @throws IllegalArgumentException if {@code area} is {@code null}
      */
     public GClip(Area area) {
         if (area == null) {
-            throw new NullPointerException("The area can't be null");
+            throw new IllegalArgumentException("The area can't be null");
         }
         clip = area;
     }
@@ -126,8 +126,8 @@ public class GClip extends GraphicE {
     }
 
     private static class Action {
-        GFillableE e;
-        int a;
+        private final int a;
+        private GFillableE e;
 
         Action(GFillableE e, int a){
             this.e = e;

@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -32,17 +32,33 @@ import java.util.Objects;
 /**
  * This class represents a pair of Cartesian axis.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GAxis extends GraphicE {
     private final Graphic axis = new Graphic();
-    private int xs, xf, ys, yf;
+    private int xs;
+    private int xf;
+    private int ys;
+    private int yf;
+    
+    private int mtx = 10;
+    private int Mtx = 50;
+    private int mty = 10;
+    private int Mty = 50;
+    
+    private boolean drawLinesH;
+    private boolean drawLinesV;
+    
+    private Paint gridPaint = Color.LIGHT_GRAY;
+    
+    private int mTS = 2;
+    private int MTS = 5;
 
     /**
      * Copy constructor
      *
      * @param e {@code GAxis} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GAxis(GAxis e){
         super(e);
@@ -101,7 +117,6 @@ public class GAxis extends GraphicE {
         calc();
     }
 
-    private int mtx = 10, Mtx = 50, mty = 10, Mty = 50;
     /**
      * Tells the axis to draw the minor ticks of the horizontal axis with a
      * distance of 'h'
@@ -198,7 +213,6 @@ public class GAxis extends GraphicE {
         calc();
     }
 
-    private boolean drawLinesH;
     /**
      * Tells the Axis to draw the horizontal lines for the grid
      *
@@ -210,7 +224,6 @@ public class GAxis extends GraphicE {
         calc();
     }
 
-    private boolean drawLinesV;
     /**
      * Tells the Axis to draw the vertical lines for the grid
      *
@@ -222,17 +235,16 @@ public class GAxis extends GraphicE {
         calc();
     }
 
-    private Paint gridPaint = Color.LIGHT_GRAY;
     /**
      * Sets the color for the grid (if shown).<br>
      * The default value is {@link Color#LIGHT_GRAY}
      *
      * @param paint The new {@link Paint} for the grid
-     * @throws NullPointerException if the paint is {@code null}
+     * @throws IllegalArgumentException if the paint is {@code null}
      */
     public void setGridColor(final Paint paint) {
         if (paint == null){
-            throw new NullPointerException("Grid paint can't be null");
+            throw new IllegalArgumentException("Grid paint can't be null");
         }
 
         this.gridPaint = paint;
@@ -244,19 +256,17 @@ public class GAxis extends GraphicE {
      * in order for the Axis to be completely displayed.
      *
      * @param canvas canvas you want to set
-     * @throws NullPointerException if the canvas is {@code null}
+     * @throws IllegalArgumentException if the canvas is {@code null}
      */
     public void setOrigin(final Canvas canvas) {
         if (canvas == null){
-            throw new NullPointerException("Canvas can't be null");
+            throw new IllegalArgumentException("Canvas can't be null");
         }
 
         canvas.setCenterOrigin(false);
         canvas.moveOrigin(-xs, yf);
     }
 
-    private int mTS = 2;
-    private int MTS = 5;
     /**
      * Sets the minor tick size<br>
      * <i>Note:</i> This size is used at both sides of the axis so the final

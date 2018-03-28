@@ -33,7 +33,7 @@ public class GCircle extends GFillableE {
      * Copy constructor
      *
      * @param e {@code GCircle} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GCircle(GCircle e) {
         super(e);
@@ -91,11 +91,11 @@ public class GCircle extends GFillableE {
      * @param c the line to check
      * @return {@code true} if the circle is contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code circle} is {@code null}
+     * @throws IllegalArgumentException if {@code circle} is {@code null}
      */
     public boolean contains(final GCircle c) {
         if (c == null){
-            throw new NullPointerException("The circle can't be null");
+            throw new IllegalArgumentException("The circle can't be null");
         }
 
         final double cd = Math.hypot(x() - c.x(), y() - c.y());
@@ -111,11 +111,11 @@ public class GCircle extends GFillableE {
      * @param line the line to check
      * @return {@code true} if the line is contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code line} is {@code null}
+     * @throws IllegalArgumentException if {@code line} is {@code null}
      */
     public boolean contains(final GLine line) {
         if (line == null){
-            throw new NullPointerException("The line can't be null");
+            throw new IllegalArgumentException("The line can't be null");
         }
 
         return contains(line.getStartPoint()) &&
@@ -128,11 +128,11 @@ public class GCircle extends GFillableE {
      * @param point the point to check
      * @return {@code true} if the point is contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code point} is {@code null}
+     * @throws IllegalArgumentException if {@code point} is {@code null}
      */
     public boolean contains(final GPoint point) {
         if (point == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         return contains(point.x(), point.y());
@@ -155,11 +155,11 @@ public class GCircle extends GFillableE {
      *
      * @param c The circle to check
      * @return {@code true} if the circles intersect and {@code false} otherwise
-     * @throws NullPointerException if {@code circle} is {@code null}
+     * @throws IllegalArgumentException if {@code circle} is {@code null}
      */
     public boolean intersects(final GCircle c) {
         if (c == null){
-            throw new NullPointerException("The circle can't be null");
+            throw new IllegalArgumentException("The circle can't be null");
         }
 
         final double cd = Math.hypot(x() - c.x(), y() - c.y());
@@ -173,11 +173,11 @@ public class GCircle extends GFillableE {
      *
      * @param line The line to check
      * @return {@code true} if they intersect and {@code false} otherwise
-     * @throws NullPointerException if {@code line} is {@code null}
+     * @throws IllegalArgumentException if {@code line} is {@code null}
      */
     public boolean intersects(final GLine line) {
         if (line == null){
-            throw new NullPointerException("The line can't be null");
+            throw new IllegalArgumentException("The line can't be null");
         }
 
         return discriminant(line) >= 0;
@@ -207,11 +207,11 @@ public class GCircle extends GFillableE {
      *
      * @param circle the circle that intersects
      * @return area of the intersection
-     * @throws NullPointerException if {@code circle} is {@code null}
+     * @throws IllegalArgumentException if {@code circle} is {@code null}
      */
     public double intersectionArea(final GCircle circle) {
         if (circle == null){
-            throw new NullPointerException("The circle can't be null");
+            throw new IllegalArgumentException("The circle can't be null");
         }
         //@TODO implement me
         return 0;

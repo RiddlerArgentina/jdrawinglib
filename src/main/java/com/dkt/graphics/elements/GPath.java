@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -23,14 +23,14 @@ import java.awt.Graphics2D;
 
 /**
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GPath extends GMultiPoint {
     /**
      * Copy constructor
      *
      * @param e {@code GPath} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GPath(GPath e) {
         super(e);
@@ -47,7 +47,7 @@ public class GPath extends GMultiPoint {
     /**
      * @param xs list of X coordinates
      * @param ys list of Y coordinates
-     * @throws NullPointerException if either array is {@code null}
+     * @throws IllegalArgumentException if either array is {@code null}
      * @throws InvalidArgumentException if the array size doesn't match
      */
     public GPath(final int[] xs, final int[]ys) {

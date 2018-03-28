@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -33,9 +33,12 @@ import javax.swing.Timer;
 
 /**
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class Example17  implements IExample {
+    private final GString S1 = new GString(-240 , 230, "The theory behind this can be found at:");
+    private final GString S2 = new GString(-240 , 245, "http://www.jasondavies.com/random-polygon-ellipse/");
+    
     @Override
     public void run() {
         final CanvasFrame cf = new CanvasFrame(getName());
@@ -107,9 +110,6 @@ public class Example17  implements IExample {
         timer.start();
     }
 
-    private final GString S1 = new GString(-240 , 230, "The theory behind this can be found at:");
-    private final GString S2 = new GString(-240 , 245, "http://www.jasondavies.com/random-polygon-ellipse/");
-
     @Override
     public String getName() {
         return "Random point elipse";
@@ -138,7 +138,10 @@ public class Example17  implements IExample {
     private void transform(GPoint[] pts) {
         //We avoid using an affine transform since it also increases the size
         //of the stroke
-        int l = 250, r = -250, u = 250, d = -250;
+        int l =  250;
+        int r = -250;
+        int u =  250;
+        int d = -250;
 
         for (final GPoint p : pts) {
             l = Math.min(l, p.x());

@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -27,7 +27,7 @@ import java.util.Arrays;
  * If the modulus of the vector is {@code 0} then not even the triangle is
  * drawn.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GVector extends GraphicE {
     private int[] xs = new int[3];
@@ -35,15 +35,22 @@ public class GVector extends GraphicE {
 
     //It would be awesome if this could handle arrow angles >= 45°
     private double aa = Math.toRadians(25);
-    private int x1, y1, x2, y2;
-    private double l, a;
+    private int x1;
+    private int y1;
+    private int x2;
+    private int y2;
+    
+    private double l;
+    private double a;
+    
     private int aw = 10;
+    private int n = 3;
 
     /**
      * Copy constructor
      *
      * @param e {@code GVector} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GVector(GVector e) {
         super(e);
@@ -93,11 +100,11 @@ public class GVector extends GraphicE {
      * the application point.
      *
      * @param line the line to use as base for this {@code GVector}
-     * @throws NullPointerException if {@code line} is {@code null}
+     * @throws IllegalArgumentException if {@code line} is {@code null}
      */
-    public GVector(final GLine line) throws NullPointerException {
+    public GVector(final GLine line) throws IllegalArgumentException {
         if (line == null) {
-            throw new NullPointerException("The line can't be null");
+            throw new IllegalArgumentException("The line can't be null");
         }
 
         this.a = line.getRadArgument();
@@ -150,11 +157,11 @@ public class GVector extends GraphicE {
      *
      * @param v other vector
      * @return dot product
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public double dot(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
 
         final int xx1 =   getXComponent();
@@ -172,11 +179,11 @@ public class GVector extends GraphicE {
      *
      * @param v other vector
      * @return module of the cross product vector
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public double cross(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
 
         final int xx1 =   getXComponent();
@@ -192,11 +199,11 @@ public class GVector extends GraphicE {
      *
      * @param v other vector
      * @return Angle between vectors (in degrees)
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public double angleBetween(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
 
         return Math.toDegrees(radAngleBetween(v));
@@ -207,11 +214,11 @@ public class GVector extends GraphicE {
      *
      * @param v other vector
      * @return Angle between vectors (in radians)
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public double radAngleBetween(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
 
         return Math.asin(cross(v) / (modulus() * v.modulus()));
@@ -374,7 +381,6 @@ public class GVector extends GraphicE {
         calc();
     }
 
-    private int n = 3;
     private void calc() {
         final double sl =-Math.signum(l) * Math.abs(aw);
         final double ca = Math.cos(a);
@@ -406,14 +412,15 @@ public class GVector extends GraphicE {
      *
      * @param vectors the vectors to add
      * @return A new {@link GVector} equal to the resultant
-     * @throws NullPointerException if no vector is passed
+     * @throws IllegalArgumentException if no vector is passed
      */
     public GVector add(final GVector... vectors) {
         if (vectors == null){
-            throw new NullPointerException("You must add at least ONE vector");
+            throw new IllegalArgumentException("You must add at least ONE vector");
         }
 
-        int x = x2, y = y2;
+        int x = x2;
+        int y = y2;
         for (GVector vector : vectors){
             x += vector.x2 - vector.x1;
             y += vector.y2 - vector.y1;
@@ -427,7 +434,7 @@ public class GVector extends GraphicE {
 
     public GVector subtract(final GVector... vectors) {
         if (vectors == null){
-            throw new NullPointerException("You must add at least ONE vector");
+            throw new IllegalArgumentException("You must add at least ONE vector");
         }
 
         int x = x2, y = y2;
@@ -444,7 +451,7 @@ public class GVector extends GraphicE {
 
     public double distance(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
         //@TODO test me
         return subtract(v).modulus();

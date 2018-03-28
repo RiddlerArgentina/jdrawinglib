@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -22,7 +22,6 @@ import java.awt.Color;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
@@ -30,6 +29,7 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Set;
 import javax.swing.ImageIcon;
 
@@ -43,6 +43,9 @@ import javax.swing.ImageIcon;
 public class Config implements Serializable {
     private static final HashMap<String, Config> CONFIGS = new HashMap<>(8);
     private final        HashMap<String, Object> data    = new HashMap<>(16);
+    
+    private final LinkedList<WeakReference<ConfigListener>> listeners = new 
+LinkedList<>();
     
     /**
      * Don't let anyone else initialize this class
@@ -234,9 +237,6 @@ public class Config implements Serializable {
         return (String)data.get(key);
     }
 
-    private final LinkedList<WeakReference<ConfigListener>> listeners = new 
-LinkedList<>();
-
     /**
      * Adds a new {@link ConfigListener} to this {@code config}, this listeners
      * will be notified of all the changes that happen to the <b>
@@ -275,8 +275,7 @@ LinkedList<>();
             return;
         }
 
-        if (key  == null || key.isEmpty() ||
-            oval == nval || (oval != null && oval.equals(nval))){
+        if (key  == null || key.isEmpty() || Objects.equals(oval, nval)){
             return;
         }
 

@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -24,7 +24,7 @@ import java.awt.geom.Area;
 /**
  * This represents an abstract fillable element
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public abstract class GFillableE extends GraphicE {
     private boolean fill;
@@ -34,7 +34,7 @@ public abstract class GFillableE extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GFillableE} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     protected GFillableE(GFillableE e) {
         super(e);
@@ -60,11 +60,11 @@ public abstract class GFillableE extends GraphicE {
      * Sets the {@link Paint} that's used to fill this component
      *
      * @param paint The new {@code Paint} used to render this component
-     * @throws NullPointerException if {@code paint} is {@code null}
+     * @throws IllegalArgumentException if {@code paint} is {@code null}
      */
     public void setFillPaint(final Paint paint) {
         if (paint == null){
-            throw new NullPointerException("Paint can't be null");
+            throw new IllegalArgumentException("Paint can't be null");
         }
 
         fillPaint = paint;

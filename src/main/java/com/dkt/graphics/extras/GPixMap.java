@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -40,7 +40,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public final class GPixMap extends GraphicE {
     private GPoint p = new GPoint(0, 0);
@@ -54,7 +54,7 @@ public final class GPixMap extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GPixMap} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GPixMap(GPixMap e) {
         super(e);
@@ -94,13 +94,13 @@ public final class GPixMap extends GraphicE {
      * Constructs a new {@code GPixMap} from a given {@link Color} matrix
      *
      * @param data The data that will form the {@code GPixMap}
-     * @throws NullPointerException if {@code data} is {@code null} or if any
+     * @throws IllegalArgumentException if {@code data} is {@code null} or if any
      * of the rows are {@code null}
      * @throws InvalidArgumentException if the matrix isn't rectangular (given
      * that matrix implementations in Java are based on Iliffe vectors, it's
      * possible for the rows to have different sizes
      */
-    public GPixMap(Color[][] data) throws NullPointerException,
+    public GPixMap(Color[][] data) throws IllegalArgumentException,
                                           InvalidArgumentException
     {
         checkSize(data);
@@ -120,7 +120,7 @@ public final class GPixMap extends GraphicE {
      * will be converted to {@link Color} objects so they should have the form
      * {@code ARGB}
      * @param hasAlpha Tells if the ints represent a color with alpha
-     * @throws NullPointerException if {@code data} is {@code null} or if any
+     * @throws IllegalArgumentException if {@code data} is {@code null} or if any
      * of the rows are {@code null}
      * @throws InvalidArgumentException  if the matrix isn't rectangular (given
      * that matrix implementations in Java are based on Iliffe vectors, it's
@@ -128,7 +128,7 @@ public final class GPixMap extends GraphicE {
      */
     public GPixMap(
             int[][] data,
-            boolean hasAlpha) throws NullPointerException,
+            boolean hasAlpha) throws IllegalArgumentException,
                                      InvalidArgumentException
     {
         checkSize(data);
@@ -206,17 +206,17 @@ public final class GPixMap extends GraphicE {
      * @param col the color to set
      * @throws IntervalException if either {@code i} or {@code j} are out of
      * range
-     * @throws NullPointerException if {@code col} is {@code null}
+     * @throws IllegalArgumentException if {@code col} is {@code null}
      */
     public void setColorAt(
             int i,
             int j,
             Color col) throws IntervalException,
-                              NullPointerException
+                              IllegalArgumentException
     {
         checkInterval(i, j);
         if (col == null) {
-            throw new NullPointerException("The color can't be null");
+            throw new IllegalArgumentException("The color can't be null");
         }
 
         data[i][j] = col;
@@ -628,14 +628,14 @@ public final class GPixMap extends GraphicE {
      * @param map the {@code GPixMap} to check against
      * @return {@code true} if the two {@code GPixMap}s touch and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code map} is {@code null}
+     * @throws IllegalArgumentException if {@code map} is {@code null}
      * @throws InvalidArgumentException if the pixel sizes don't match
      * @see GPixMap#pixelSize()
      */
-    public boolean touches(GPixMap map) throws NullPointerException,
+    public boolean touches(GPixMap map) throws IllegalArgumentException,
                                                InvalidArgumentException {
         if (map == null) {
-            throw new NullPointerException("The map can't be null");
+            throw new IllegalArgumentException("The map can't be null");
         }
 
         if (pixelSize() != map.pixelSize()) {
@@ -783,7 +783,7 @@ public final class GPixMap extends GraphicE {
      * @param map {@code GPixMap} to export
      * @param file file in which to export
      * @throws IOException if something goes wrong when writing the file
-     * @throws NullPointerException if {@code file} or {@code map} are {@code
+     * @throws IllegalArgumentException if {@code file} or {@code map} are {@code
      * null}
      * @see GPixMap#importMap(java.io.File)
      * @see GPixMap#importMap(java.io.InputStream)
@@ -791,12 +791,12 @@ public final class GPixMap extends GraphicE {
     public static void exportMap(
             GPixMap map,
             File file) throws IOException,
-                              NullPointerException {
+                              IllegalArgumentException {
         if (file == null) {
-            throw new NullPointerException("The file can't be null");
+            throw new IllegalArgumentException("The file can't be null");
         }
         if (map == null) {
-            throw new NullPointerException("The map can't be null");
+            throw new IllegalArgumentException("The map can't be null");
         }
 
         try (PrintStream fps = new PrintStream(file)) {
@@ -820,15 +820,15 @@ public final class GPixMap extends GraphicE {
      * @param is {@link InputStream} of the file
      * @return a new {@code GPixMap} decoded from the {@link InputStream}
      * @throws IOException if something goes wrong when reading the file
-     * @throws NullPointerException if {@code is} is {@code null}
+     * @throws IllegalArgumentException if {@code is} is {@code null}
      * @see GPixMap#exportMap(com.dkt.graphics.extras.GPixMap, java.io.File)
      * @see GPixMap#importMap(java.io.File)
      */
     public static GPixMap importMap(InputStream is) throws IOException,
-                                                           NullPointerException {
+                                                           IllegalArgumentException {
 
         if (is == null) {
-            throw new NullPointerException("The stream can't be null");
+            throw new IllegalArgumentException("The stream can't be null");
         }
 
         try (InputStreamReader isr = new InputStreamReader(is);
@@ -870,15 +870,15 @@ public final class GPixMap extends GraphicE {
      * @return a new {@code GPixMap} decoded from the {@link File}
      * @throws FileNotFoundException if the file doesn't exist
      * @throws IOException if something goes wrong when reading the file
-     * @throws NullPointerException if {@code is} is {@code null}
+     * @throws IllegalArgumentException if {@code is} is {@code null}
      * @see GPixMap#exportMap(com.dkt.graphics.extras.GPixMap, java.io.File)
      * @see GPixMap#importMap(java.io.InputStream)
      */
     public static GPixMap importMap(File file) throws FileNotFoundException,
                                                       IOException,
-                                                      NullPointerException {
+                                                      IllegalArgumentException {
         if (file == null) {
-            throw new NullPointerException("The file can't be null");
+            throw new IllegalArgumentException("The file can't be null");
         }
 
         try (FileInputStream fis = new FileInputStream(file)) {
@@ -897,10 +897,10 @@ public final class GPixMap extends GraphicE {
         }
     }
 
-    private void checkSize(Object[] data) throws NullPointerException,
+    private void checkSize(Object[] data) throws IllegalArgumentException,
                                                  InvalidArgumentException {
         if (data == null) {
-            throw new NullPointerException("Data can't be null");
+            throw new IllegalArgumentException("Data can't be null");
         }
 
         if (data.length == 0) {
@@ -916,7 +916,7 @@ public final class GPixMap extends GraphicE {
 
         for (final Object row : data) {
             if (row == null) {
-                throw new NullPointerException("Data can't have null rows");
+                throw new IllegalArgumentException("Data can't have null rows");
             }
 
             int ns;

@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -25,7 +25,7 @@ import java.awt.geom.Ellipse2D;
 
 /**
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GOval extends GFillableE {
     private final int w, h;
@@ -35,7 +35,7 @@ public class GOval extends GFillableE {
      * Copy constructor
      *
      * @param e {@code GOval} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GOval(GOval e) {
         super(e);
@@ -49,11 +49,11 @@ public class GOval extends GFillableE {
      * Constructs an oval inscribed in a given rectangle
      *
      * @param r rectangle that will contain the oval
-     * @throws NullPointerException if the rectangle is {@code null}
+     * @throws IllegalArgumentException if the rectangle is {@code null}
      */
-    public GOval (GRectangle r) throws NullPointerException {
+    public GOval (GRectangle r) throws IllegalArgumentException {
         if (r == null) {
-            throw new NullPointerException("The rectangle can't be null");
+            throw new IllegalArgumentException("The rectangle can't be null");
         }
 
         this.x = r.x;

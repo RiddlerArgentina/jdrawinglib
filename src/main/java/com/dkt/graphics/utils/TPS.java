@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -27,7 +27,7 @@ package com.dkt.graphics.utils;
  * {@link System#nanoTime()} so if the elapsed time between the calls to
  * {@link TPS#action()} is very big, it might yield wrong results
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class TPS {
     private final int SIZE = 50;
@@ -35,10 +35,6 @@ public class TPS {
     private double average;
     private long lastTime;
     private int i = -1;
-
-    public TPS() {
-
-    }
 
     /**
      * This method is the one that tells the {@code TPS} instance that an action

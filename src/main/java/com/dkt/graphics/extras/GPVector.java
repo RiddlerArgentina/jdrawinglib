@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -29,7 +29,7 @@ import java.awt.Paint;
  * physics problems where you need to print how the orthogonal components of
  * a vector changes
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GPVector extends GraphicE {
     private final Graphic vector = new Graphic(3);
@@ -56,7 +56,7 @@ public class GPVector extends GraphicE {
      * <li>{@link GPVector#setPaint(Paint)}</ul>
      *
      * @param v the vector used as base
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public GPVector(GVector v){
         this(v.x(), v.y(), v.modulus(), v.argument());
@@ -125,7 +125,7 @@ public class GPVector extends GraphicE {
      * Sets the {@link Paint} for the main vector
      *
      * @param paint the paint use to render the main vector
-     * @throws NullPointerException if paint is {@code null}
+     * @throws IllegalArgumentException if paint is {@code null}
      */
     @Override
     public void setPaint(Paint paint){
@@ -136,7 +136,7 @@ public class GPVector extends GraphicE {
      * Sets the {@link Paint} for the horizontal component of this vector
      *
      * @param paint the paint use to render the horizontal component
-     * @throws NullPointerException if paint is {@code null}
+     * @throws IllegalArgumentException if paint is {@code null}
      */
     public void setHCompPaint(Paint paint){
         xPro.setPaint(paint);
@@ -146,7 +146,7 @@ public class GPVector extends GraphicE {
      * Sets the {@link Paint} for the vertical component of this vector
      *
      * @param paint the paint use to render the vertical component
-     * @throws NullPointerException if paint is {@code null}
+     * @throws IllegalArgumentException if paint is {@code null}
      */
     public void setVCompPaint(Paint paint){
         yPro.setPaint(paint);

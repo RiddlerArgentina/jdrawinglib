@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -32,10 +32,12 @@ import java.awt.Paint;
  * This class represents a basic Formula.<br>
  * It translates a {@link Calculable} into a Graphic.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GFormula extends Graphic {
     private final Calculable formula;
+    
+    private Paint area;
 
     private GFormula(){
         formula = null;
@@ -45,11 +47,11 @@ public class GFormula extends Graphic {
      * Creates a new {@code GFormula} for the given {@link Calculable} object
      *
      * @param formula the {@link Calculable} object that contains the relation
-     * @throws NullPointerException if formula is {@code null}
+     * @throws IllegalArgumentException if formula is {@code null}
      */
     public GFormula(Calculable formula){
         if (formula == null){
-            throw new NullPointerException("Formula can't be null");
+            throw new IllegalArgumentException("Formula can't be null");
         }
 
         this.formula = formula;
@@ -83,7 +85,10 @@ public class GFormula extends Graphic {
 
         final GPointArray array = new GPointArray(size);
 
-        int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
+        int i   = 0;
+        int lx  = Integer.MAX_VALUE;
+        int lfx = Integer.MAX_VALUE;
+        
         for (double xx = xs; xx < xf; xx = xs + i * sx, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
@@ -120,19 +125,19 @@ public class GFormula extends Graphic {
      * @see GFormula#calculatePath(double, double, double)
      * @throws IntervalException if {@code xs < xf} or {@code step < 0} or
      * {@code step > xf - xs}
-     * @throws NullPointerException if {@code element} is {@code null}
+     * @throws IllegalArgumentException if {@code element} is {@code null}
      */
     public void calculate(
             final double xs,
             final double xf,
             final double step,
             final GraphicE element) throws IntervalException,
-                                           NullPointerException
+                                           IllegalArgumentException
     {
         checkValues(xs, xf, step);
 
         if (element == null){
-            throw new NullPointerException("Element can't be null");
+            throw new IllegalArgumentException("Element can't be null");
         }
 
         removeAll();
@@ -140,7 +145,10 @@ public class GFormula extends Graphic {
         final double sx = formula.scaleX();
         final double sy = formula.scaleY();
 
-        int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
+        int i   = 0; 
+        int lx  = Integer.MAX_VALUE;
+        int lfx = Integer.MAX_VALUE;
+        
         for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
@@ -185,7 +193,10 @@ public class GFormula extends Graphic {
 
         final GPath path = new GPath(size);
 
-        int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
+        int i   = 0;
+        int lx  = Integer.MAX_VALUE;
+        int lfx = Integer.MAX_VALUE;
+        
         for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
@@ -205,16 +216,15 @@ public class GFormula extends Graphic {
         add(path);
     }
 
-    private Paint area;
     /**
      * Sets the {@link Paint} used for the area below the curve
      *
      * @param paint The {@link Paint} that will be used to render the area
-     * @throws NullPointerException if {@code paint} is {@code null}
+     * @throws IllegalArgumentException if {@code paint} is {@code null}
      */
     public void setAreaPaint(Paint paint) {
         if (paint == null){
-            throw new NullPointerException("Paint can't be null");
+            throw new IllegalArgumentException("Paint can't be null");
         }
         this.area = paint;
     }
@@ -252,7 +262,10 @@ public class GFormula extends Graphic {
 
         poly.append((int)(sx * xs), 0);
 
-        int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
+        int i   = 0;
+        int lx  = Integer.MAX_VALUE;
+        int lfx = Integer.MAX_VALUE;
+        
         for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));

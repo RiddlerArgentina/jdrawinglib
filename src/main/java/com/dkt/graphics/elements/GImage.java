@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -37,7 +37,7 @@ import javax.imageio.ImageIO;
 /**
  * Wraps a {@link BufferedImage} into a {@link GraphicE} object
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GImage extends GraphicE implements Paint {
     private final BufferedImage original;
@@ -48,7 +48,7 @@ public class GImage extends GraphicE implements Paint {
      * Copy constructor
      *
      * @param e {@code GImage} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GImage (GImage e) {
         super(e);

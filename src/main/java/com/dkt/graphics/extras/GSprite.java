@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -29,7 +29,7 @@ import java.util.Iterator;
  * Creates a simple sprite, if you need help creating the pixmaps, you should
  * probably try out PixmapCreator
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GSprite extends GraphicE implements Iterable<GPixMap> {
     private final ArrayList<GPixMap> frames = new ArrayList<>(10);
@@ -59,14 +59,14 @@ public class GSprite extends GraphicE implements Iterable<GPixMap> {
      * will skip all {@code GPixMap} that are already in the {@code GSprite}
      *
      * @param map {@code GPixMap} to add
-     * @throws NullPointerException if {@code map} is {@code null}
+     * @throws IllegalArgumentException if {@code map} is {@code null}
      * @throws InvalidArgumentException if the {@code map} doesn't have
      * the same size.
      */
-    public void append(GPixMap map) throws NullPointerException,
+    public void append(GPixMap map) throws IllegalArgumentException,
                                            InvalidArgumentException {
         if (map == null) {
-            throw new NullPointerException("The pixmap can't be null");
+            throw new IllegalArgumentException("The pixmap can't be null");
         }
 
         for (final GPixMap frame : frames) {
@@ -98,11 +98,11 @@ public class GSprite extends GraphicE implements Iterable<GPixMap> {
      * @param map Map to remove
      * @return {@code true} if the element was found and removed and
      * {@code false} otherwise
-     * @throws NullPointerException if {@code map} is {@code null}
+     * @throws IllegalArgumentException if {@code map} is {@code null}
      */
-    public boolean remove(GPixMap map) throws NullPointerException {
+    public boolean remove(GPixMap map) throws IllegalArgumentException {
         if (map == null) {
-            throw new NullPointerException("The pixmap can't be null");
+            throw new IllegalArgumentException("The pixmap can't be null");
         }
 
         final boolean res = frames.remove(map);

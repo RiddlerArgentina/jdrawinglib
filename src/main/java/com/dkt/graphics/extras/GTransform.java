@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -29,7 +29,7 @@ import java.util.Objects;
  * This class wraps a {@link AffineTransform} in a {@link GraphicE}, in order to
  * give a bit more "flexibility" to {@link Graphic} objects
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GTransform extends GraphicE {
     private AffineTransform transform;
@@ -38,7 +38,7 @@ public class GTransform extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GTransform} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GTransform(GTransform e) {
         super(e);

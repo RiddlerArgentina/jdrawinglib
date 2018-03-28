@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -31,10 +31,13 @@ import java.util.Objects;
  * <i>Note:</i> this class is a {@link GraphicE} on itself, so you can add it to
  * Graphics.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class Graphic extends GraphicE implements Iterable<GraphicE> {
     private final UnsafeList components;
+    private boolean visible = true;
+    private int xOff;
+    private int yOff;
 
     public Graphic() {
         this(20);
@@ -48,7 +51,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * Copy constructor
      *
      * @param e {@code Graphic} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public Graphic(Graphic e) {
         super(e);
@@ -86,13 +89,13 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * twice as much as the other elements.
      *
      * @param e element to add
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      * @throws InvalidArgumentException if {@code e} is this same object
      * @see Graphic#traslate(int, int)
      */
     public void add(final GraphicE e) {
         if (e == null){
-            throw new NullPointerException("The element can't be null");
+            throw new IllegalArgumentException("The element can't be null");
         }
         if (e == this){
             final String msg = "Graphics can't be added to themselves";
@@ -111,11 +114,11 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @param e element to test
      * @return {@code true} if the element is contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public boolean contains(final GraphicE e) {
         if (e == null){
-            throw new NullPointerException("The element can't be null");
+            throw new IllegalArgumentException("The element can't be null");
         }
 
         synchronized (components){
@@ -129,11 +132,11 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @param e element to remove
      * @return {@code true} if the element was contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public boolean remove(final GraphicE e) {
         if (e == null){
-            throw new NullPointerException("The element can't be null");
+            throw new IllegalArgumentException("The element can't be null");
         }
 
         synchronized (components){
@@ -147,11 +150,11 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @param e element
      * @return The index number of the first occurrence of the element, or
      * {@code -1} if the element wasn't found
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public int indexOf(final GraphicE e) {
         if (e == null){
-            throw new NullPointerException("The element can't be null");
+            throw new IllegalArgumentException("The element can't be null");
         }
 
         synchronized (components){
@@ -186,8 +189,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         g.setClip(clip);
         g.setTransform(at);
     }
-
-    private int xOff, yOff;
+    
     @Override
     public void traslate(final int x, final int y) {
         synchronized (components){
@@ -283,7 +285,6 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         return g;
     }
 
-    private boolean visible = true;
     /**
      * Tells if {@code Graphic} will be drawn in the canvas
      *

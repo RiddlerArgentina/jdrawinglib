@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -25,7 +25,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GPointArray extends GMultiPoint {
     private int cs;
@@ -34,7 +34,7 @@ public class GPointArray extends GMultiPoint {
      * Copy constructor
      *
      * @param e {@code GPointArray} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GPointArray(GPointArray e) {
         super(e);
@@ -44,7 +44,7 @@ public class GPointArray extends GMultiPoint {
 
     /**
      * @param points {@link GPoint} array containing all the points
-     * @throws NullPointerException if the array is {@code null}
+     * @throws IllegalArgumentException if the array is {@code null}
      */
     public GPointArray(final GPoint[] points) {
         this(points, 0);
@@ -53,12 +53,12 @@ public class GPointArray extends GMultiPoint {
     /**
      * @param points {@link GPoint} array containing all the points
      * @param cs cross size
-     * @throws NullPointerException if the array is {@code null}
+     * @throws IllegalArgumentException if the array is {@code null}
      */
     public GPointArray(final GPoint[] points, final int cs) {
         this(points.length);
         for (final GPoint p : points){
-            append(p);
+            append(new GPoint(p.x(), p.y(), cs));
         }
     }
 
@@ -80,7 +80,7 @@ public class GPointArray extends GMultiPoint {
     /**
      * @param xs array containing all the x coordinates
      * @param ys array containing all the y coordinates
-     * @throws NullPointerException if either array is {@code null}
+     * @throws IllegalArgumentException if either array is {@code null}
      * @throws InvalidArgumentException if the array size doesn't match
      */
     public GPointArray(final int[] xs, final int[] ys) {
@@ -91,7 +91,7 @@ public class GPointArray extends GMultiPoint {
      * @param xs array containing all the x coordinates
      * @param ys array containing all the y coordinates
      * @param cs the cross size of the point
-     * @throws NullPointerException if either array is {@code null}
+     * @throws IllegalArgumentException if either array is {@code null}
      * @throws InvalidArgumentException if the array size doesn't match
      */
     public GPointArray(
@@ -122,14 +122,14 @@ public class GPointArray extends GMultiPoint {
      * @param p {@link GPoint} of the center
      * @param r radius
      * @return a new {@code GPointArray} with the points of the intersection
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      */
     public GPointArray pointsInRadius(
             final GPoint p,
             final double r)
     {
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         return pointsInRadius(p.x(), p.y(), r);
@@ -185,11 +185,11 @@ public class GPointArray extends GMultiPoint {
      *
      * @param p {@link GPoint} that will be used to compare
      * @return a new {@code GPoint} representing the closest to {@code p}
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      */
     public GPoint closestPoint(final GPoint p) {
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         return closestPoint(p.x(), p.y());
@@ -210,7 +210,8 @@ public class GPointArray extends GMultiPoint {
         }
 
         double distance = Double.MAX_VALUE;
-        int nx = 0, ny = 0;
+        int nx = 0;
+        int ny = 0;
 
         mutex.lock();
         try{
@@ -244,7 +245,8 @@ public class GPointArray extends GMultiPoint {
             return null;
         }
 
-        int nx = 0, ny = Integer.MIN_VALUE;
+        int nx = 0;
+        int ny = Integer.MIN_VALUE;
 
         mutex.lock();
         try{
@@ -271,7 +273,8 @@ public class GPointArray extends GMultiPoint {
             return null;
         }
 
-        int nx = 0, ny = Integer.MAX_VALUE;
+        int nx = 0;
+        int ny = Integer.MAX_VALUE;
 
         mutex.lock();
         try{
@@ -298,7 +301,8 @@ public class GPointArray extends GMultiPoint {
             return null;
         }
 
-        int nx = Integer.MAX_VALUE, ny = 0;
+        int nx = Integer.MAX_VALUE;
+        int ny = 0;
 
         mutex.lock();
         try{
@@ -325,7 +329,8 @@ public class GPointArray extends GMultiPoint {
             return null;
         }
 
-        int nx = Integer.MIN_VALUE, ny = 0;
+        int nx = Integer.MIN_VALUE;
+        int ny = 0;
 
         mutex.lock();
         try{
@@ -384,11 +389,11 @@ public class GPointArray extends GMultiPoint {
      *
      * @param p {@link GPoint} that will be used to compare
      * @return {@code GPointArray} with all the higher points
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      */
     public GPointArray higherThan(final GPoint p) {
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         GPointArray array = new GPointArray();
@@ -422,11 +427,11 @@ public class GPointArray extends GMultiPoint {
      *
      * @param p {@link GPoint} that will be used to compare
      * @return {@code GPointArray} with all the lower points
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      */
     public GPointArray lowerThan(final GPoint p) {
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         GPointArray array = new GPointArray();
@@ -459,11 +464,11 @@ public class GPointArray extends GMultiPoint {
      *
      * @param p {@link GPoint} that will be used to compare
      * @return {@code GPointArray} with all the left points
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      */
     public GPointArray leftThan(final GPoint p) {
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         GPointArray array = new GPointArray();
@@ -496,11 +501,11 @@ public class GPointArray extends GMultiPoint {
      *
      * @param p {@link GPoint} that will be used to compare
      * @return {@code GPointArray} with all the right points
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      */
     public GPointArray rightThan(final GPoint p) {
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         GPointArray array = new GPointArray();
@@ -532,11 +537,11 @@ public class GPointArray extends GMultiPoint {
      * the array passed as an argument
      *
      * @param arr points to remove
-     * @throws NullPointerException if {@code array} is {@code null}
+     * @throws IllegalArgumentException if {@code array} is {@code null}
      */
     public void removeAll(final GPointArray arr) {
         if (arr == null){
-            throw new NullPointerException("The array can't be null");
+            throw new IllegalArgumentException("The array can't be null");
         }
 
         mutex.lock();
@@ -559,11 +564,11 @@ public class GPointArray extends GMultiPoint {
      * contained
      *
      * @param arr points to add
-     * @throws NullPointerException if {@code array} is {@code null}
+     * @throws IllegalArgumentException if {@code array} is {@code null}
      */
     public void append(final GPointArray arr) {
         if (arr == null){
-            throw new NullPointerException("The array can't be null");
+            throw new IllegalArgumentException("The array can't be null");
         }
 
         mutex.lock();
@@ -585,11 +590,11 @@ public class GPointArray extends GMultiPoint {
      *
      * @param array points to intersect
      * @return a new {@code GPointArray} with all the points of the intersection
-     * @throws NullPointerException if {@code array} is {@code null}
+     * @throws IllegalArgumentException if {@code array} is {@code null}
      */
     public GPointArray intersection(final GPointArray array) {
         if (array == null){
-            throw new NullPointerException("The array can't be null");
+            throw new IllegalArgumentException("The array can't be null");
         }
 
         //@FIXME this should be done more gracefully.
@@ -618,11 +623,11 @@ public class GPointArray extends GMultiPoint {
      *
      * @param r rectangle to intersect
      * @return a new {@code GPointArray} with all the points of the intersection
-     * @throws NullPointerException if {@code r} is {@code null}
+     * @throws IllegalArgumentException if {@code r} is {@code null}
      */
     public GPointArray intersection(final GRectangle r) {
         if (r == null){
-            throw new NullPointerException("The rectangle can't be null");
+            throw new IllegalArgumentException("The rectangle can't be null");
         }
 
         final GPointArray arr = new GPointArray();
@@ -650,11 +655,11 @@ public class GPointArray extends GMultiPoint {
      *
      * @param l the line to intersect
      * @return a new {@code GPointArray} with all the points of the intersection
-     * @throws NullPointerException if {@code l} is {@code null}
+     * @throws IllegalArgumentException if {@code l} is {@code null}
      */
     public GPointArray intersection(final GLine l) {
         if (l == null){
-            throw new NullPointerException("The line can't be null");
+            throw new IllegalArgumentException("The line can't be null");
         }
 
         final GPointArray arr = new GPointArray();
@@ -682,11 +687,11 @@ public class GPointArray extends GMultiPoint {
      *
      * @param c the circle to intersect
      * @return a new {@code GPointArray} with all the points of the intersection
-     * @throws NullPointerException if {@code c} is {@code null}
+     * @throws IllegalArgumentException if {@code c} is {@code null}
      */
     public GPointArray intersection(final GCircle c) {
         if (c == null){
-            throw new NullPointerException("The circle can't be null");
+            throw new IllegalArgumentException("The circle can't be null");
         }
 
         return pointsInRadius(c.x(), c.y(), c.getRadius());
