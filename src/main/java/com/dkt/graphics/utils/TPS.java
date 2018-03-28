@@ -36,10 +36,6 @@ public class TPS {
     private long lastTime;
     private int i = -1;
 
-    public TPS() {
-
-    }
-
     /**
      * This method is the one that tells the {@code TPS} instance that an action
      * has been performed. It should be called every time the action is executed
