@@ -1,4 +1,4 @@
-# jDrawingLib
+# jDrawingLib [![Build Status](https://travis-ci.org/dktcoding/jdrawinglib.svg?branch=master)](https://travis-ci.org/dktcoding/jdrawinglib)
 
 **jDrawingLib** is a small library that allows easy object oriented drawing.
 
