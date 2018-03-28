@@ -71,7 +71,8 @@ public class Example15 implements IExample {
             private int xx = 0, yy = 0;
             @Override
             public void actionPerformed(ActionEvent e) {
-                double a = 1, b = a / k;
+                double a = 1;
+                double b = a / k;
                 double scale = 100;
 
                 double x = (a - b) * Math.cos(t) + b*Math.cos(t*(k-1));

@@ -83,7 +83,10 @@ public class GFormula extends Graphic {
 
         final GPointArray array = new GPointArray(size);
 
-        int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
+        int i   = 0;
+        int lx  = Integer.MAX_VALUE;
+        int lfx = Integer.MAX_VALUE;
+        
         for (double xx = xs; xx < xf; xx = xs + i * sx, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
@@ -140,7 +143,10 @@ public class GFormula extends Graphic {
         final double sx = formula.scaleX();
         final double sy = formula.scaleY();
 
-        int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
+        int i   = 0; 
+        int lx  = Integer.MAX_VALUE;
+        int lfx = Integer.MAX_VALUE;
+        
         for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
@@ -185,7 +191,10 @@ public class GFormula extends Graphic {
 
         final GPath path = new GPath(size);
 
-        int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
+        int i   = 0;
+        int lx  = Integer.MAX_VALUE;
+        int lfx = Integer.MAX_VALUE;
+        
         for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
@@ -252,7 +261,10 @@ public class GFormula extends Graphic {
 
         poly.append((int)(sx * xs), 0);
 
-        int i = 0, lx = Integer.MAX_VALUE, lfx = Integer.MAX_VALUE;
+        int i   = 0;
+        int lx  = Integer.MAX_VALUE;
+        int lfx = Integer.MAX_VALUE;
+        
         for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));

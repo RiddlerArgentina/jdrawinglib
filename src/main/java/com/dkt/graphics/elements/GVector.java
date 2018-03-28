@@ -413,7 +413,8 @@ public class GVector extends GraphicE {
             throw new IllegalArgumentException("You must add at least ONE vector");
         }
 
-        int x = x2, y = y2;
+        int x = x2;
+        int y = y2;
         for (GVector vector : vectors){
             x += vector.x2 - vector.x1;
             y += vector.y2 - vector.y1;

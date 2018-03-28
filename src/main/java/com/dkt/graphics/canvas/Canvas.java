@@ -59,8 +59,10 @@ public class Canvas extends JPanel implements ActionListener {
     private final LinkedList<GraphicE> fixed    = new LinkedList<>();
 
     private boolean centerBounds, fullArea, invert;
-    private int xSize = 100, ySize = 100;
-    private int xO, yO;
+    private int xSize = 100;
+    private int ySize = 100;
+    private int xO;
+    private int yO;
     private Paint drawableAreaPaint   = Color.WHITE;
     private Paint drawableBorderPaint = Color.BLACK;
     private boolean useAntiAliasing   = true;
@@ -662,7 +664,8 @@ public class Canvas extends JPanel implements ActionListener {
         }
 
         //Calculate background offsets
-        final int xOff, yOff;
+        final int xOff;
+        final int yOff;
         if (centerBounds){
             xOff = (getWidth () - xSize) / 2;
             yOff = (getHeight() - ySize) / 2;

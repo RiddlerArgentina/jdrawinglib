@@ -138,7 +138,10 @@ public class Example17  implements IExample {
     private void transform(GPoint[] pts) {
         //We avoid using an affine transform since it also increases the size
         //of the stroke
-        int l = 250, r = -250, u = 250, d = -250;
+        int l =  250;
+        int r = -250;
+        int u =  250;
+        int d = -250;
 
         for (final GPoint p : pts) {
             l = Math.min(l, p.x());

@@ -174,7 +174,10 @@ public class Utils {
         final int[] data = img.getRGB(0, 0, w, h, null, 0, w);
 
         //Search for the image bounds
-        int l = w, r = 0, u = h, d = 0;
+        int l = w;
+        int r = 0;
+        int u = h;
+        int d = 0;
 
         for (int i = 0; i < h; i++) {
             for (int j = 0; j < w; j++) {

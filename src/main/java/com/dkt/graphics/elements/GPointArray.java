@@ -210,7 +210,8 @@ public class GPointArray extends GMultiPoint {
         }
 
         double distance = Double.MAX_VALUE;
-        int nx = 0, ny = 0;
+        int nx = 0;
+        int ny = 0;
 
         mutex.lock();
         try{
@@ -244,7 +245,8 @@ public class GPointArray extends GMultiPoint {
             return null;
         }
 
-        int nx = 0, ny = Integer.MIN_VALUE;
+        int nx = 0;
+        int ny = Integer.MIN_VALUE;
 
         mutex.lock();
         try{
@@ -271,7 +273,8 @@ public class GPointArray extends GMultiPoint {
             return null;
         }
 
-        int nx = 0, ny = Integer.MAX_VALUE;
+        int nx = 0;
+        int ny = Integer.MAX_VALUE;
 
         mutex.lock();
         try{
@@ -298,7 +301,8 @@ public class GPointArray extends GMultiPoint {
             return null;
         }
 
-        int nx = Integer.MAX_VALUE, ny = 0;
+        int nx = Integer.MAX_VALUE;
+        int ny = 0;
 
         mutex.lock();
         try{
@@ -325,7 +329,8 @@ public class GPointArray extends GMultiPoint {
             return null;
         }
 
-        int nx = Integer.MIN_VALUE, ny = 0;
+        int nx = Integer.MIN_VALUE;
+        int ny = 0;
 
         mutex.lock();
         try{
