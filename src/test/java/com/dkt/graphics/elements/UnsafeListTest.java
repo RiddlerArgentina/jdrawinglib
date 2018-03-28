@@ -41,7 +41,7 @@ public class UnsafeListTest {
     @DisplayName("Constructor < 0")
     public void testConstructor2() {
         assertThrows(NegativeArraySizeException.class, () -> {
-            UnsafeList list = new UnsafeList(-1);
+            new UnsafeList(-1);
         });
     }
 
@@ -459,9 +459,8 @@ public class UnsafeListTest {
     public void testIterator1() {
         UnsafeList list = new UnsafeList(10);
         for (GraphicE e : list) {
-            assertFalse(true);
+            fail("List not empty! " + e);
         }
-        assertTrue(true);
     }
     
     @Test

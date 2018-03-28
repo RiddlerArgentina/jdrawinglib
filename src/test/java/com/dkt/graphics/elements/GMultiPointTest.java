@@ -50,6 +50,7 @@ public class GMultiPointTest {
                 @Override public GFillableE clone() {return null;}
                 @Override public void draw(Graphics2D g) {}
             };
+            mp.clear();
         });
     }
 
@@ -59,7 +60,7 @@ public class GMultiPointTest {
         int[] XX = {0, 1, 2, 3, 4, 5};
         int[] YY = {0, 1, 2, 3, 4, 5, 6};
         assertThrows(InvalidArgumentException.class, () -> {
-            GMultiPoint mp = new GMultiPoint(XX, YY) {
+            new GMultiPoint(XX, YY) {
                 @Override public GFillableE clone() {return null;}
                 @Override public void draw(Graphics2D g) {}
             };
@@ -72,7 +73,7 @@ public class GMultiPointTest {
         int[] XX = {0, 1, 2, 3, 4, 5, 6};
         int[] YY = {0, 1, 2, 3, 4, 5};
         assertThrows(InvalidArgumentException.class, () -> {
-            GMultiPoint mp = new GMultiPoint(XX, YY) {
+            new GMultiPoint(XX, YY) {
                 @Override public GFillableE clone() {return null;}
                 @Override public void draw(Graphics2D g) {}
             };
