@@ -32,7 +32,7 @@ public class GRegPoly extends GPoly {
      * Copy constructor
      *
      * @param e {@code GRegPoly} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GRegPoly(GRegPoly e){
         super(e);
@@ -192,11 +192,11 @@ public class GRegPoly extends GPoly {
      * @param p {@code GPoint} to evaluate
      * @return {@code true} if the point is contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code p} is {@code null}
+     * @throws IllegalArgumentException if {@code p} is {@code null}
      */
-    public boolean contains(final GPoint p) throws NullPointerException {
+    public boolean contains(final GPoint p) throws IllegalArgumentException {
         if (p == null){
-            throw new NullPointerException("The point can't be null");
+            throw new IllegalArgumentException("The point can't be null");
         }
 
         return contains(p.x(), p.y());

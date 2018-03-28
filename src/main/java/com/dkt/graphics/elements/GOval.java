@@ -35,7 +35,7 @@ public class GOval extends GFillableE {
      * Copy constructor
      *
      * @param e {@code GOval} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GOval(GOval e) {
         super(e);
@@ -49,11 +49,11 @@ public class GOval extends GFillableE {
      * Constructs an oval inscribed in a given rectangle
      *
      * @param r rectangle that will contain the oval
-     * @throws NullPointerException if the rectangle is {@code null}
+     * @throws IllegalArgumentException if the rectangle is {@code null}
      */
-    public GOval (GRectangle r) throws NullPointerException {
+    public GOval (GRectangle r) throws IllegalArgumentException {
         if (r == null) {
-            throw new NullPointerException("The rectangle can't be null");
+            throw new IllegalArgumentException("The rectangle can't be null");
         }
 
         this.x = r.x;

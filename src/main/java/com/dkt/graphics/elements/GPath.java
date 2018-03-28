@@ -30,7 +30,7 @@ public class GPath extends GMultiPoint {
      * Copy constructor
      *
      * @param e {@code GPath} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GPath(GPath e) {
         super(e);
@@ -47,7 +47,7 @@ public class GPath extends GMultiPoint {
     /**
      * @param xs list of X coordinates
      * @param ys list of Y coordinates
-     * @throws NullPointerException if either array is {@code null}
+     * @throws IllegalArgumentException if either array is {@code null}
      * @throws InvalidArgumentException if the array size doesn't match
      */
     public GPath(final int[] xs, final int[]ys) {

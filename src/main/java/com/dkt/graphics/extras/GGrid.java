@@ -43,7 +43,7 @@ public class GGrid extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GGrid} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GGrid(GGrid e) {
         c = e.c.clone();

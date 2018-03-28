@@ -31,7 +31,7 @@ public class GPoly extends GMultiPoint {
      * Copy constructor
      *
      * @param e {@code GPoly} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GPoly(GPoly e) {
         super(e);
@@ -56,7 +56,7 @@ public class GPoly extends GMultiPoint {
     /**
      * @param xs array containing all the x coordinates
      * @param ys array containing all the y coordinates
-     * @throws NullPointerException if either array is {@code null}
+     * @throws IllegalArgumentException if either array is {@code null}
      * @throws InvalidArgumentException if the array size doesn't match
      */
     public GPoly(final int[] xs, final int[]ys) {

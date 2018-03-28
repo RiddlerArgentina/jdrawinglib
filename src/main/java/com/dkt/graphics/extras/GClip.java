@@ -37,7 +37,7 @@ public class GClip extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GClip} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GClip(GClip e){
         super(e);
@@ -62,11 +62,11 @@ public class GClip extends GraphicE {
      * previously add a {@link GTransform} to the graphic
      *
      * @param area {@link Area} object to be used as clip
-     * @throws NullPointerException if {@code area} is {@code null}
+     * @throws IllegalArgumentException if {@code area} is {@code null}
      */
     public GClip(Area area) {
         if (area == null) {
-            throw new NullPointerException("The area can't be null");
+            throw new IllegalArgumentException("The area can't be null");
         }
         clip = area;
     }

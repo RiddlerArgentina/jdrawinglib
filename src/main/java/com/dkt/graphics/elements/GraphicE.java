@@ -42,12 +42,12 @@ public abstract class GraphicE implements Cloneable {
      * Copy constructor
      *
      * @param e {@code GraphicE} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
-    public GraphicE(GraphicE e) throws NullPointerException {
+    public GraphicE(GraphicE e) throws IllegalArgumentException {
         if (e == null) {
             final String msg = "Copy constructor argument can't be null";
-            throw new NullPointerException(msg);
+            throw new IllegalArgumentException(msg);
         }
 
         paint  = e.paint;
@@ -72,11 +72,11 @@ public abstract class GraphicE implements Cloneable {
      * Sets the {@link Paint} for this component
      *
      * @param paint the paint use to render this {@link GraphicE}
-     * @throws NullPointerException if paint is {@code null}
+     * @throws IllegalArgumentException if paint is {@code null}
      */
     public void setPaint(final Paint paint) {
         if (paint == null){
-            throw new NullPointerException("Paint can't be null");
+            throw new IllegalArgumentException("Paint can't be null");
         }
 
         this.paint = paint;
@@ -95,11 +95,11 @@ public abstract class GraphicE implements Cloneable {
      * Sets a new {@link Stroke} for this component
      *
      * @param stroke the {@link Stroke} to use
-     * @throws NullPointerException if stroke is {@code null}
+     * @throws IllegalArgumentException if stroke is {@code null}
      */
     public void setStroke(final Stroke stroke) {
         if (stroke == null){
-            throw new NullPointerException("The stroke can't be null");
+            throw new IllegalArgumentException("The stroke can't be null");
         }
 
         this.stroke = stroke;

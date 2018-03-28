@@ -55,12 +55,12 @@ public class Gif {
      * Creates a new Gif object.
      *
      * @param canvas the canvas from which to create the images
-     * @throws NullPointerException if {@code canvas} is {@code null}
+     * @throws IllegalArgumentException if {@code canvas} is {@code null}
      * @see Gif#write(String, int, BufferedImage...)
      */
-    public Gif (Canvas canvas) throws NullPointerException {
+    public Gif (Canvas canvas) throws IllegalArgumentException {
         if (canvas == null) {
-            throw new NullPointerException("The canvas can't be null");
+            throw new IllegalArgumentException("The canvas can't be null");
         }
 
         this.canvas = canvas;
@@ -167,13 +167,13 @@ public class Gif {
      * @param path {@link String} representing the path and name of the file
      * @return {@code true} id the {@code gif} was correctly written and {@code
      * false} if something goes wrong.
-     * @throws NullPointerException if {@code path} is {@code null}
+     * @throws IllegalArgumentException if {@code path} is {@code null}
      * @see Gif#getLastException()
      * @see Gif#setDelay(int)
      */
-    public boolean write(String path) throws NullPointerException {
+    public boolean write(String path) throws IllegalArgumentException {
         if (path == null) {
-            throw new NullPointerException("The path can't be null");
+            throw new IllegalArgumentException("The path can't be null");
         }
 
         exception = null;
@@ -215,16 +215,16 @@ public class Gif {
      * @param path The path in which to save the {@code gif}
      * @param delay The delay between frames in hundredths of a second
      * @param imgs Array of images
-     * @throws NullPointerException if {@code path} is {@code null}
+     * @throws IllegalArgumentException if {@code path} is {@code null}
      * @throws IOException if something goes wrong when saving the image
      */
     public static void write(
             String path,
             int delay,
-            BufferedImage... imgs) throws NullPointerException, IOException
+            BufferedImage... imgs) throws IllegalArgumentException, IOException
     {
         if (path == null) {
-            throw new NullPointerException("The path can't be null");
+            throw new IllegalArgumentException("The path can't be null");
         }
 
         final File file = new File(path);

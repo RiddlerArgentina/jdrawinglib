@@ -51,11 +51,11 @@ public class Utils {
      * to 255, and if the value is smaller than 0 then it will be set to 0
      * @return A new color with the same RGB value as the argument but with the
      * specified alpha
-     * @throws NullPointerException if color is {@code null}
+     * @throws IllegalArgumentException if color is {@code null}
      */
     public static Color getColorWithAlpha(Color color, int a){
         if (color == null){
-            throw new NullPointerException("Color can't be null!");
+            throw new IllegalArgumentException("Color can't be null!");
         }
 
         //Ensure the value is within an interval
@@ -80,7 +80,7 @@ public class Utils {
      * false} otherwise ({@code false} is needed when painting with transparent
      * components.
      * @throws IOException If the image can't be written
-     * @throws NullPointerException If either the canvas or the path are
+     * @throws IllegalArgumentException If either the canvas or the path are
      * {@code null}
      */
     public static void saveScreenshot(
@@ -89,10 +89,10 @@ public class Utils {
             boolean back) throws IOException
     {
         if (canvas == null){
-            throw new NullPointerException("Canvas can't be null");
+            throw new IllegalArgumentException("Canvas can't be null");
         }
         if (path == null){
-            throw new NullPointerException("Path can't be null");
+            throw new IllegalArgumentException("Path can't be null");
         }
         if (!path.endsWith(".png")){
             path += ".png";
@@ -124,11 +124,11 @@ public class Utils {
      * false} otherwise ({@code false} is needed when painting with transparent
      * components.
      * @return a {@link BufferedImage} the same size of the canvas
-     * @throws NullPointerException If the canvas is {@code null}
+     * @throws IllegalArgumentException If the canvas is {@code null}
      */
     public static BufferedImage getImage(Canvas canvas, boolean back) {
         if (canvas == null){
-            throw new NullPointerException("Canvas can't be null");
+            throw new IllegalArgumentException("Canvas can't be null");
         }
 
         final int width  = canvas.getXSize();
@@ -156,11 +156,11 @@ public class Utils {
      * not drawn). Usually is {@link Color#WHITE} or
      * {@code new Color(0, true)}
      * @return a {@link BufferedImage} result of trimming the original image
-     * @throws NullPointerException If {@code img} is {@code null}
+     * @throws IllegalArgumentException If {@code img} is {@code null}
      */
     public static BufferedImage trimImage(BufferedImage img, Color omit) {
         if (img == null){
-            throw new NullPointerException("The image can't be null");
+            throw new IllegalArgumentException("The image can't be null");
         }
 
         if (omit == null){
@@ -199,11 +199,11 @@ public class Utils {
      * @return A {@link TexturePaint} for this file
      * @throws IOException If the image can't be read or if the file isn't a
      * valid image
-     * @throws NullPointerException If the path is {@code null}
+     * @throws IllegalArgumentException If the path is {@code null}
      */
     public static Paint getTexture(String path) throws IOException {
         if (path == null){
-            throw new NullPointerException("Path can't be null");
+            throw new IllegalArgumentException("Path can't be null");
         }
 
         final File file = new File(path);

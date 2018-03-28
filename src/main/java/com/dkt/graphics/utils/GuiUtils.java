@@ -36,11 +36,11 @@ public class GuiUtils {
      * Centers a frame on the screen
      *
      * @param frame the frame to center
-     * @throws NullPointerException if {@code frame} is {@code null}
+     * @throws IllegalArgumentException if {@code frame} is {@code null}
      */
-    public static void centerFrame(JFrame frame) throws NullPointerException {
+    public static void centerFrame(JFrame frame) throws IllegalArgumentException {
         if (frame == null) {
-            throw new NullPointerException("The frame can't be null");
+            throw new IllegalArgumentException("The frame can't be null");
         }
 
         final Dimension s = Toolkit.getDefaultToolkit().getScreenSize();
@@ -57,19 +57,19 @@ public class GuiUtils {
      *
      * @param dialog the dialog to center
      * @param frame the frame
-     * @throws NullPointerException if either {@code dialog} or {@code frame}
+     * @throws IllegalArgumentException if either {@code dialog} or {@code frame}
      * are {@code null}
      */
     public static void centerDialog(
             JDialog dialog,
-            JFrame frame) throws NullPointerException
+            JFrame frame) throws IllegalArgumentException
     {
         if (dialog == null) {
-            throw new NullPointerException("The dialog can't be null");
+            throw new IllegalArgumentException("The dialog can't be null");
         }
 
         if (frame == null) {
-            throw new NullPointerException("The frame can't be null");
+            throw new IllegalArgumentException("The frame can't be null");
         }
 
         final Dimension d = dialog.getSize();

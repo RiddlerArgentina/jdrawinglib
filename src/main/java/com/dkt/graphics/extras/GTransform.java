@@ -38,7 +38,7 @@ public class GTransform extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GTransform} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GTransform(GTransform e) {
         super(e);

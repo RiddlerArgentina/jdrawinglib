@@ -45,11 +45,11 @@ public class GFormula extends Graphic {
      * Creates a new {@code GFormula} for the given {@link Calculable} object
      *
      * @param formula the {@link Calculable} object that contains the relation
-     * @throws NullPointerException if formula is {@code null}
+     * @throws IllegalArgumentException if formula is {@code null}
      */
     public GFormula(Calculable formula){
         if (formula == null){
-            throw new NullPointerException("Formula can't be null");
+            throw new IllegalArgumentException("Formula can't be null");
         }
 
         this.formula = formula;
@@ -120,19 +120,19 @@ public class GFormula extends Graphic {
      * @see GFormula#calculatePath(double, double, double)
      * @throws IntervalException if {@code xs < xf} or {@code step < 0} or
      * {@code step > xf - xs}
-     * @throws NullPointerException if {@code element} is {@code null}
+     * @throws IllegalArgumentException if {@code element} is {@code null}
      */
     public void calculate(
             final double xs,
             final double xf,
             final double step,
             final GraphicE element) throws IntervalException,
-                                           NullPointerException
+                                           IllegalArgumentException
     {
         checkValues(xs, xf, step);
 
         if (element == null){
-            throw new NullPointerException("Element can't be null");
+            throw new IllegalArgumentException("Element can't be null");
         }
 
         removeAll();
@@ -210,11 +210,11 @@ public class GFormula extends Graphic {
      * Sets the {@link Paint} used for the area below the curve
      *
      * @param paint The {@link Paint} that will be used to render the area
-     * @throws NullPointerException if {@code paint} is {@code null}
+     * @throws IllegalArgumentException if {@code paint} is {@code null}
      */
     public void setAreaPaint(Paint paint) {
         if (paint == null){
-            throw new NullPointerException("Paint can't be null");
+            throw new IllegalArgumentException("Paint can't be null");
         }
         this.area = paint;
     }

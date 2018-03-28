@@ -85,11 +85,11 @@ public abstract class AbstractTimer<T extends AbstractCalculable> extends Graphi
 
     /**
      * @param calculable object that will be used on the calculations
-     * @throws NullPointerException if {@code calculable} is {@code null}
+     * @throws IllegalArgumentException if {@code calculable} is {@code null}
      */
     protected AbstractTimer(T calculable){
         if (calculable == null){
-            throw new NullPointerException("You must pass a formula!");
+            throw new IllegalArgumentException("You must pass a formula!");
         }
 
         this.calculable = calculable;

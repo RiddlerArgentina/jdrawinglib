@@ -42,7 +42,7 @@ public class GAxis extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GAxis} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GAxis(GAxis e){
         super(e);
@@ -228,11 +228,11 @@ public class GAxis extends GraphicE {
      * The default value is {@link Color#LIGHT_GRAY}
      *
      * @param paint The new {@link Paint} for the grid
-     * @throws NullPointerException if the paint is {@code null}
+     * @throws IllegalArgumentException if the paint is {@code null}
      */
     public void setGridColor(final Paint paint) {
         if (paint == null){
-            throw new NullPointerException("Grid paint can't be null");
+            throw new IllegalArgumentException("Grid paint can't be null");
         }
 
         this.gridPaint = paint;
@@ -244,11 +244,11 @@ public class GAxis extends GraphicE {
      * in order for the Axis to be completely displayed.
      *
      * @param canvas canvas you want to set
-     * @throws NullPointerException if the canvas is {@code null}
+     * @throws IllegalArgumentException if the canvas is {@code null}
      */
     public void setOrigin(final Canvas canvas) {
         if (canvas == null){
-            throw new NullPointerException("Canvas can't be null");
+            throw new IllegalArgumentException("Canvas can't be null");
         }
 
         canvas.setCenterOrigin(false);

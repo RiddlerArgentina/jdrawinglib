@@ -43,7 +43,7 @@ public class GVector extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GVector} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GVector(GVector e) {
         super(e);
@@ -93,11 +93,11 @@ public class GVector extends GraphicE {
      * the application point.
      *
      * @param line the line to use as base for this {@code GVector}
-     * @throws NullPointerException if {@code line} is {@code null}
+     * @throws IllegalArgumentException if {@code line} is {@code null}
      */
-    public GVector(final GLine line) throws NullPointerException {
+    public GVector(final GLine line) throws IllegalArgumentException {
         if (line == null) {
-            throw new NullPointerException("The line can't be null");
+            throw new IllegalArgumentException("The line can't be null");
         }
 
         this.a = line.getRadArgument();
@@ -150,11 +150,11 @@ public class GVector extends GraphicE {
      *
      * @param v other vector
      * @return dot product
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public double dot(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
 
         final int xx1 =   getXComponent();
@@ -172,11 +172,11 @@ public class GVector extends GraphicE {
      *
      * @param v other vector
      * @return module of the cross product vector
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public double cross(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
 
         final int xx1 =   getXComponent();
@@ -192,11 +192,11 @@ public class GVector extends GraphicE {
      *
      * @param v other vector
      * @return Angle between vectors (in degrees)
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public double angleBetween(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
 
         return Math.toDegrees(radAngleBetween(v));
@@ -207,11 +207,11 @@ public class GVector extends GraphicE {
      *
      * @param v other vector
      * @return Angle between vectors (in radians)
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public double radAngleBetween(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
 
         return Math.asin(cross(v) / (modulus() * v.modulus()));
@@ -406,11 +406,11 @@ public class GVector extends GraphicE {
      *
      * @param vectors the vectors to add
      * @return A new {@link GVector} equal to the resultant
-     * @throws NullPointerException if no vector is passed
+     * @throws IllegalArgumentException if no vector is passed
      */
     public GVector add(final GVector... vectors) {
         if (vectors == null){
-            throw new NullPointerException("You must add at least ONE vector");
+            throw new IllegalArgumentException("You must add at least ONE vector");
         }
 
         int x = x2, y = y2;
@@ -427,7 +427,7 @@ public class GVector extends GraphicE {
 
     public GVector subtract(final GVector... vectors) {
         if (vectors == null){
-            throw new NullPointerException("You must add at least ONE vector");
+            throw new IllegalArgumentException("You must add at least ONE vector");
         }
 
         int x = x2, y = y2;
@@ -444,7 +444,7 @@ public class GVector extends GraphicE {
 
     public double distance(final GVector v) {
         if (v == null){
-            throw new NullPointerException("The vector can't be null");
+            throw new IllegalArgumentException("The vector can't be null");
         }
         //@TODO test me
         return subtract(v).modulus();

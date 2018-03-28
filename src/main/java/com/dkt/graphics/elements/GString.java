@@ -40,7 +40,7 @@ public class GString extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GString} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GString(GString e){
         super(e);
@@ -132,11 +132,11 @@ public class GString extends GraphicE {
      * Set's the {@code String} to print in the screen
      *
      * @param string {@code String} to be printed
-     * @throws NullPointerException if {@code string} is {@code null}
+     * @throws IllegalArgumentException if {@code string} is {@code null}
      */
-    public void setString(final String string) throws NullPointerException {
+    public void setString(final String string) throws IllegalArgumentException {
         if (string == null){
-            throw new NullPointerException("The string can't be null");
+            throw new IllegalArgumentException("The string can't be null");
         }
 
         this.string = string;
@@ -155,11 +155,11 @@ public class GString extends GraphicE {
      * Set's the font used to render this {@code String}
      *
      * @param font font
-     * @throws NullPointerException if {@code font} is {@code null}
+     * @throws IllegalArgumentException if {@code font} is {@code null}
      */
-    public void setFont(final Font font) throws NullPointerException {
+    public void setFont(final Font font) throws IllegalArgumentException {
         if (font == null){
-            throw new NullPointerException("The font can't be null");
+            throw new IllegalArgumentException("The font can't be null");
         }
 
         this.font = font;

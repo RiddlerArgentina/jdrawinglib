@@ -34,7 +34,7 @@ public class GPoint extends GraphicE {
      * Copy constructor
      *
      * @param e {@code GPoint} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GPoint(GPoint e) {
         super(e);
@@ -97,11 +97,11 @@ public class GPoint extends GraphicE {
      *
      * @param p the reference point
      * @return distance between points
-     * @throws NullPointerException if point is {@code null}
+     * @throws IllegalArgumentException if point is {@code null}
      */
     public double distance(final GPoint p) {
         if (p == null){
-            throw new NullPointerException("Point can't be null");
+            throw new IllegalArgumentException("Point can't be null");
         }
 
         return distance(p.x, p.y);

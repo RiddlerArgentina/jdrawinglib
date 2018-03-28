@@ -48,7 +48,7 @@ public class GImage extends GraphicE implements Paint {
      * Copy constructor
      *
      * @param e {@code GImage} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public GImage (GImage e) {
         super(e);

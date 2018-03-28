@@ -48,7 +48,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * Copy constructor
      *
      * @param e {@code Graphic} to copy
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public Graphic(Graphic e) {
         super(e);
@@ -86,13 +86,13 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * twice as much as the other elements.
      *
      * @param e element to add
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      * @throws InvalidArgumentException if {@code e} is this same object
      * @see Graphic#traslate(int, int)
      */
     public void add(final GraphicE e) {
         if (e == null){
-            throw new NullPointerException("The element can't be null");
+            throw new IllegalArgumentException("The element can't be null");
         }
         if (e == this){
             final String msg = "Graphics can't be added to themselves";
@@ -111,11 +111,11 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @param e element to test
      * @return {@code true} if the element is contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public boolean contains(final GraphicE e) {
         if (e == null){
-            throw new NullPointerException("The element can't be null");
+            throw new IllegalArgumentException("The element can't be null");
         }
 
         synchronized (components){
@@ -129,11 +129,11 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @param e element to remove
      * @return {@code true} if the element was contained and {@code false}
      * otherwise
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public boolean remove(final GraphicE e) {
         if (e == null){
-            throw new NullPointerException("The element can't be null");
+            throw new IllegalArgumentException("The element can't be null");
         }
 
         synchronized (components){
@@ -147,11 +147,11 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @param e element
      * @return The index number of the first occurrence of the element, or
      * {@code -1} if the element wasn't found
-     * @throws NullPointerException if {@code e} is {@code null}
+     * @throws IllegalArgumentException if {@code e} is {@code null}
      */
     public int indexOf(final GraphicE e) {
         if (e == null){
-            throw new NullPointerException("The element can't be null");
+            throw new IllegalArgumentException("The element can't be null");
         }
 
         synchronized (components){

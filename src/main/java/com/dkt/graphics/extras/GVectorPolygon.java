@@ -48,9 +48,9 @@ public class GVectorPolygon extends GraphicE {
      * Creates a new {@code GVectorPolygon} based on a {@link GVector} array
      *
      * @param vectors that form the vector polygon
-     * @throws NullPointerException if {@code vectors} is {@code null}
+     * @throws IllegalArgumentException if {@code vectors} is {@code null}
      */
-    public GVectorPolygon(GVector... vectors) throws NullPointerException {
+    public GVectorPolygon(GVector... vectors) throws IllegalArgumentException {
         append(vectors);
     }
 
@@ -60,11 +60,11 @@ public class GVectorPolygon extends GraphicE {
      * they will be shown
      *
      * @param vector {@code GVector} containing the vectors to be added.
-     * @throws NullPointerException if {@code vector} is {@code null}
+     * @throws IllegalArgumentException if {@code vector} is {@code null}
      */
-    public void append(GVector... vector) throws NullPointerException {
+    public void append(GVector... vector) throws IllegalArgumentException {
         if (vector == null){
-            throw new NullPointerException("You must add at least ONE vector");
+            throw new IllegalArgumentException("You must add at least ONE vector");
         }
 
         vectors.ensureCapacity(vectors.size() + vector.length);

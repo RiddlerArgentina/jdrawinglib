@@ -56,7 +56,7 @@ public class GPVector extends GraphicE {
      * <li>{@link GPVector#setPaint(Paint)}</ul>
      *
      * @param v the vector used as base
-     * @throws NullPointerException if {@code v} is {@code null}
+     * @throws IllegalArgumentException if {@code v} is {@code null}
      */
     public GPVector(GVector v){
         this(v.x(), v.y(), v.modulus(), v.argument());
@@ -125,7 +125,7 @@ public class GPVector extends GraphicE {
      * Sets the {@link Paint} for the main vector
      *
      * @param paint the paint use to render the main vector
-     * @throws NullPointerException if paint is {@code null}
+     * @throws IllegalArgumentException if paint is {@code null}
      */
     @Override
     public void setPaint(Paint paint){
@@ -136,7 +136,7 @@ public class GPVector extends GraphicE {
      * Sets the {@link Paint} for the horizontal component of this vector
      *
      * @param paint the paint use to render the horizontal component
-     * @throws NullPointerException if paint is {@code null}
+     * @throws IllegalArgumentException if paint is {@code null}
      */
     public void setHCompPaint(Paint paint){
         xPro.setPaint(paint);
@@ -146,7 +146,7 @@ public class GPVector extends GraphicE {
      * Sets the {@link Paint} for the vertical component of this vector
      *
      * @param paint the paint use to render the vertical component
-     * @throws NullPointerException if paint is {@code null}
+     * @throws IllegalArgumentException if paint is {@code null}
      */
     public void setVCompPaint(Paint paint){
         yPro.setPaint(paint);
