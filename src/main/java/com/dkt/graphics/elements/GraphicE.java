@@ -136,6 +136,10 @@ public abstract class GraphicE implements Cloneable {
         if (obj == null) {
             return false;
         }
+        
+        if (this == obj) {
+            return true;
+        }
 
         if (getClass() != obj.getClass()) {
             return false;
