@@ -181,7 +181,7 @@ class UnsafeList implements Iterable<GraphicE> {
     }
 
     /**
-     * Removes a {@code GraphicE} from the list
+     * Removes all the instances of a {@code GraphicE} from the list
      *
      * @param e element to remove
      * @return {@code true} if an element was removed and {@code false} if the
