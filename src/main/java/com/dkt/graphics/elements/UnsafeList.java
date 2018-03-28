@@ -139,7 +139,6 @@ class UnsafeList implements Iterable<GraphicE> {
                 if (Objects.equals(elements[i], elm)) {
                     return i;
                 }
-                i++;
             }
 
             return -1;
@@ -183,7 +182,9 @@ class UnsafeList implements Iterable<GraphicE> {
      */
     public boolean remove(GraphicE e) {
         synchronized(mutex) {
-            return remove(indexOf(e)) != null;
+            boolean status = false;
+            while (remove(indexOf(e)) != null) status |= true;
+            return status;
         }
     }
 
