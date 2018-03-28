@@ -20,7 +20,6 @@ package com.dkt.graphics.elements;
 
 import com.dkt.graphics.exceptions.InvalidArgumentException;
 import java.awt.Graphics2D;
-import java.util.Random;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
