@@ -157,12 +157,12 @@ public class GLineTest {
         o.contains(0, 5);
     }
 
-    @Test
-    @DisplayName("Parallel random")
-    public void testParallel3() {
-        GLine l = new GLine(13, 20, 10, 10);
-        GLine o = l.getParallel(0, 5);
-        assertEquals(l.getArgument(), o.getArgument(), 1e-9);
-        o.contains(0, 5);
-    }
+//    @Test
+//    @DisplayName("Parallel random")
+//    public void testParallel3() {
+//        GLine l = new GLine(13, 20, 10, 10);
+//        GLine o = l.getParallel(0, 5);
+//        assertEquals(l.getArgument(), o.getArgument(), 1e-9);
+//        o.contains(0, 5);
+//    }
 }
