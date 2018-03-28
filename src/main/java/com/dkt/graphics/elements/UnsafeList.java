@@ -20,6 +20,7 @@ package com.dkt.graphics.elements;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.Objects;
 
 /**
  * This class creates an unsafe list, actually the only thing this list is
@@ -139,10 +140,8 @@ class UnsafeList implements Iterable<GraphicE> {
      */
     public int indexOf(GraphicE elm) {
         synchronized(mutex) {
-            int i = 0;
-
-            for (final GraphicE e : elements) {
-                if (e.equals(elm)) {
+            for (int i = 0; i < cursor; i++) {
+                if (Objects.equals(elements[i], elm)) {
                     return i;
                 }
                 i++;
