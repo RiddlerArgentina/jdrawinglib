@@ -271,12 +271,9 @@ public class GraphicCreator {
      * @return Font
      */
     public Font font(String[] args) {
-        if (args.length == 2) {
-            if (args[1] != null &&
-                args[1].equals("no")){
-                font = null;
-                return null;
-            }
+        if (args.length == 2 && args[1] != null && args[1].equals("no")){
+            font = null;
+            return null;
         }
 
         String name = concatenate(args, 1);
