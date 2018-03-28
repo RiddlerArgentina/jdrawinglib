@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -20,6 +20,7 @@ package com.dkt.graphics.elements;
 
 import java.util.Arrays;
 import java.util.Iterator;
+import java.util.Objects;
 
 /**
  * This class creates an unsafe list, actually the only thing this list is
@@ -28,7 +29,7 @@ import java.util.Iterator;
  * <i>Note:</i> This class does not implement the {@link java.util.List}
  * interface.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 class UnsafeList implements Iterable<GraphicE> {
     private final Object mutex = new Object();
@@ -52,18 +53,13 @@ class UnsafeList implements Iterable<GraphicE> {
      * @return {@code true} if the element was added, and {@code false} if the
      * element was omitted (it will be omitted if it's {@code null})
      */
-    public boolean add(GraphicE elm) throws NullPointerException{
+    public boolean add(GraphicE elm) {
         if (elm == null) {
             return false;
         }
 
         synchronized(mutex) {
-            if (cursor == elements.length) {
-                final GraphicE[] foo = new GraphicE[(cursor + 1) * 110 / 100];
-                System.arraycopy(elements, 0, foo, 0, elements.length);
-                elements = foo;
-            }
-
+            ensureCapacity((cursor + 1) * 110 / 100);
             elements[cursor++] = elm;
 
             return true;
@@ -132,20 +128,17 @@ class UnsafeList implements Iterable<GraphicE> {
     }
 
     /**
-     * Retrieves the index of the element in the list
+     * Retrieves the first index of the element in the list
      *
      * @param elm element to check
      * @return index of the element or {@code -1} if the element wasn't found
      */
     public int indexOf(GraphicE elm) {
         synchronized(mutex) {
-            int i = 0;
-
-            for (final GraphicE e : elements) {
-                if (e.equals(elm)) {
+            for (int i = 0; i < cursor; i++) {
+                if (Objects.equals(elements[i], elm)) {
                     return i;
                 }
-                i++;
             }
 
             return -1;
@@ -181,7 +174,7 @@ class UnsafeList implements Iterable<GraphicE> {
     }
 
     /**
-     * Removes a {@code GraphicE} from the list
+     * Removes all the instances of a {@code GraphicE} from the list
      *
      * @param e element to remove
      * @return {@code true} if an element was removed and {@code false} if the
@@ -189,7 +182,9 @@ class UnsafeList implements Iterable<GraphicE> {
      */
     public boolean remove(GraphicE e) {
         synchronized(mutex) {
-            return remove(indexOf(e)) != null;
+            boolean status = false;
+            while (remove(indexOf(e)) != null) status |= true;
+            return status;
         }
     }
 
