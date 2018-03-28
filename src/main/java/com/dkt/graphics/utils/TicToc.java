@@ -24,12 +24,12 @@ package com.dkt.graphics.utils;
  *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
-public class TicToc {
+public final class TicToc {
     private long iter;
     private long start;
     private long total;
 
-    {
+    public TicToc() {
         //Calling the methods before hand helps to get a better results
         //http://www.artima.com/insidejvm/ed2/jvmP.html
         tic();
