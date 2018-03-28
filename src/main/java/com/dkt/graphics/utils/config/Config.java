@@ -44,6 +44,9 @@ public class Config implements Serializable {
     private static final HashMap<String, Config> CONFIGS = new HashMap<>(8);
     private final        HashMap<String, Object> data    = new HashMap<>(16);
     
+    private final LinkedList<WeakReference<ConfigListener>> listeners = new 
+LinkedList<>();
+    
     /**
      * Don't let anyone else initialize this class
      */
@@ -233,9 +236,6 @@ public class Config implements Serializable {
     public String getString(String key) throws ClassCastException {
         return (String)data.get(key);
     }
-
-    private final LinkedList<WeakReference<ConfigListener>> listeners = new 
-LinkedList<>();
 
     /**
      * Adds a new {@link ConfigListener} to this {@code config}, this listeners

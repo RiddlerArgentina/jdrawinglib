@@ -51,6 +51,8 @@ public class Gif {
     private final Canvas canvas;
     private int delay = 10;
 
+    private Exception exception;
+
     /**
      * Creates a new Gif object.
      *
@@ -158,8 +160,7 @@ public class Gif {
             snapshots.add(new Wrapper(Utils.getImage(canvas, true), num));
         }
     }
-
-    private Exception exception;
+    
     /**
      * Writes the image to a file, if this method fails it will return {@code
      * false} and the exception will be saved.

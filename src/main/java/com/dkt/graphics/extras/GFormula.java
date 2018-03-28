@@ -36,6 +36,8 @@ import java.awt.Paint;
  */
 public class GFormula extends Graphic {
     private final Calculable formula;
+    
+    private Paint area;
 
     private GFormula(){
         formula = null;
@@ -214,7 +216,6 @@ public class GFormula extends Graphic {
         add(path);
     }
 
-    private Paint area;
     /**
      * Sets the {@link Paint} used for the area below the curve
      *

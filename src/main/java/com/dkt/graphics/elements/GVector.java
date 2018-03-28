@@ -35,9 +35,16 @@ public class GVector extends GraphicE {
 
     //It would be awesome if this could handle arrow angles >= 45°
     private double aa = Math.toRadians(25);
-    private int x1, y1, x2, y2;
-    private double l, a;
+    private int x1;
+    private int y1;
+    private int x2;
+    private int y2;
+    
+    private double l;
+    private double a;
+    
     private int aw = 10;
+    private int n = 3;
 
     /**
      * Copy constructor
@@ -374,7 +381,6 @@ public class GVector extends GraphicE {
         calc();
     }
 
-    private int n = 3;
     private void calc() {
         final double sl =-Math.signum(l) * Math.abs(aw);
         final double ca = Math.cos(a);

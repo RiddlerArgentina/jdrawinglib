@@ -36,6 +36,9 @@ import javax.swing.Timer;
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class Example17  implements IExample {
+    private final GString S1 = new GString(-240 , 230, "The theory behind this can be found at:");
+    private final GString S2 = new GString(-240 , 245, "http://www.jasondavies.com/random-polygon-ellipse/");
+    
     @Override
     public void run() {
         final CanvasFrame cf = new CanvasFrame(getName());
@@ -106,9 +109,6 @@ public class Example17  implements IExample {
         timer.setRepeats(true);
         timer.start();
     }
-
-    private final GString S1 = new GString(-240 , 230, "The theory behind this can be found at:");
-    private final GString S2 = new GString(-240 , 245, "http://www.jasondavies.com/random-polygon-ellipse/");
 
     @Override
     public String getName() {

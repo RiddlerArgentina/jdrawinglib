@@ -67,6 +67,11 @@ public class GraphicCreator {
     private Color color   = null;
     private Color colorf  = null;
     private Font font     = null;
+    
+    private static final Class<?> GCC = GraphicCreator.class;
+    private static final Class<?> SAC = String[].class;
+    private GClip clip;
+    private GTransform transf;
 
     public GraphicCreator() {
 
@@ -161,9 +166,7 @@ public class GraphicCreator {
 
         return graphic;
     }
-
-    private static final Class<?> gcc = GraphicCreator.class;
-    private static final Class<?> sac = String[].class;
+    
     private Object parseOne(String line) {
         if (line == null) {
             return null;
@@ -179,7 +182,7 @@ public class GraphicCreator {
             }
 
             final String[] foo  = linespl.split(line);
-            final Method method = gcc.getMethod(foo[0], sac);
+            final Method method = GCC.getMethod(foo[0], SAC);
             final Object out    = method.invoke(this, (Object)foo);
 
             return out;
@@ -526,7 +529,6 @@ public class GraphicCreator {
         return new GraphicCreator(this).parse(lines);
     }
 
-    private GClip clip;
     public GClip clipadd(String[] args) {
         if (clip == null) {
             clip = new GClip();
@@ -553,7 +555,6 @@ public class GraphicCreator {
         return new GClip();
     }
 
-    private GTransform transf;
     public GTransform scale(String[] args) {
         checkArgs(args, 2);
         if (transf == null) {

@@ -35,6 +35,9 @@ import java.util.Objects;
  */
 public class Graphic extends GraphicE implements Iterable<GraphicE> {
     private final UnsafeList components;
+    private boolean visible = true;
+    private int xOff;
+    private int yOff;
 
     public Graphic() {
         this(20);
@@ -186,8 +189,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         g.setClip(clip);
         g.setTransform(at);
     }
-
-    private int xOff, yOff;
+    
     @Override
     public void traslate(final int x, final int y) {
         synchronized (components){
@@ -283,7 +285,6 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         return g;
     }
 
-    private boolean visible = true;
     /**
      * Tells if {@code Graphic} will be drawn in the canvas
      *

@@ -36,7 +36,23 @@ import java.util.Objects;
  */
 public class GAxis extends GraphicE {
     private final Graphic axis = new Graphic();
-    private int xs, xf, ys, yf;
+    private int xs;
+    private int xf;
+    private int ys;
+    private int yf;
+    
+    private int mtx = 10;
+    private int Mtx = 50;
+    private int mty = 10;
+    private int Mty = 50;
+    
+    private boolean drawLinesH;
+    private boolean drawLinesV;
+    
+    private Paint gridPaint = Color.LIGHT_GRAY;
+    
+    private int mTS = 2;
+    private int MTS = 5;
 
     /**
      * Copy constructor
@@ -101,7 +117,6 @@ public class GAxis extends GraphicE {
         calc();
     }
 
-    private int mtx = 10, Mtx = 50, mty = 10, Mty = 50;
     /**
      * Tells the axis to draw the minor ticks of the horizontal axis with a
      * distance of 'h'
@@ -198,7 +213,6 @@ public class GAxis extends GraphicE {
         calc();
     }
 
-    private boolean drawLinesH;
     /**
      * Tells the Axis to draw the horizontal lines for the grid
      *
@@ -210,7 +224,6 @@ public class GAxis extends GraphicE {
         calc();
     }
 
-    private boolean drawLinesV;
     /**
      * Tells the Axis to draw the vertical lines for the grid
      *
@@ -222,7 +235,6 @@ public class GAxis extends GraphicE {
         calc();
     }
 
-    private Paint gridPaint = Color.LIGHT_GRAY;
     /**
      * Sets the color for the grid (if shown).<br>
      * The default value is {@link Color#LIGHT_GRAY}
@@ -255,8 +267,6 @@ public class GAxis extends GraphicE {
         canvas.moveOrigin(-xs, yf);
     }
 
-    private int mTS = 2;
-    private int MTS = 5;
     /**
      * Sets the minor tick size<br>
      * <i>Note:</i> This size is used at both sides of the axis so the final

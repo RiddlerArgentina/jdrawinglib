@@ -43,6 +43,16 @@ import java.util.ArrayList;
  * @param <T> The {@link AbstractCalculable} instance that will be used
  */
 public abstract class AbstractTimer<T extends AbstractCalculable> extends GraphicE {
+    private final ArrayList<PThread> threads = new ArrayList<>(1);
+    private final GPointArray pointArray = new GPointArray();
+    private final T calculable;
+    private volatile boolean isRunning;
+    private volatile boolean isPaused;
+    private int numberOfThreads = 1;
+    private boolean drawAsPath;
+    private boolean drawPen;
+    private Action action;
+    
     /**
      * This interface contains all the methods that will be executed
      * after starting, pausing, resuming and stopping a timer.
@@ -72,16 +82,6 @@ public abstract class AbstractTimer<T extends AbstractCalculable> extends Graphi
          */
         void stop();
     }
-
-    private final ArrayList<PThread> threads = new ArrayList<>(1);
-    private final GPointArray pointArray = new GPointArray();
-    private final T calculable;
-    private volatile boolean isRunning;
-    private volatile boolean isPaused;
-    private int numberOfThreads = 1;
-    private boolean drawAsPath;
-    private boolean drawPen;
-    private Action action;
 
     /**
      * @param calculable object that will be used on the calculations
