@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -28,7 +28,7 @@ import java.util.Iterator;
  * <i>Note:</i> This class does not implement the {@link java.util.List}
  * interface.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 class UnsafeList implements Iterable<GraphicE> {
     private final Object mutex = new Object();
@@ -52,7 +52,7 @@ class UnsafeList implements Iterable<GraphicE> {
      * @return {@code true} if the element was added, and {@code false} if the
      * element was omitted (it will be omitted if it's {@code null})
      */
-    public boolean add(GraphicE elm) throws NullPointerException{
+    public boolean add(GraphicE elm) {
         if (elm == null) {
             return false;
         }
