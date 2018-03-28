@@ -81,7 +81,7 @@ public class GString extends GraphicE {
             final String str,
             final Font font)
     {
-        this(x, y, 0, str, null);
+        this(x, y, 0, str, font);
     }
 
     /**
