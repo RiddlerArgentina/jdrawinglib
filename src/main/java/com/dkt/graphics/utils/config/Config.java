@@ -29,6 +29,7 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Objects;
 import java.util.Set;
 import javax.swing.ImageIcon;
 
@@ -274,8 +275,7 @@ LinkedList<>();
             return;
         }
 
-        if (key  == null || key.isEmpty() ||
-            oval == nval || (oval != null && oval.equals(nval))){
+        if (key  == null || key.isEmpty() || Objects.equals(oval, nval)){
             return;
         }
 
