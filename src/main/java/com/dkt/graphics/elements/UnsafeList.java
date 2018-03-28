@@ -133,7 +133,7 @@ class UnsafeList implements Iterable<GraphicE> {
     }
 
     /**
-     * Retrieves the index of the element in the list
+     * Retrieves the first index of the element in the list
      *
      * @param elm element to check
      * @return index of the element or {@code -1} if the element wasn't found
