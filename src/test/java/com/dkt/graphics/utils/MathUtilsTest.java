@@ -18,117 +18,116 @@
  */
 package com.dkt.graphics.utils;
 
-import org.junit.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * // @TODO should also test min and max with negative values
- * // @TODO test min and max with Integer.MAX_VALUE and Integer.MIN_VALUE
+ * // @TODO should also test min and max with negative values // @TODO test min
+ * and max with Integer.MAX_VALUE and Integer.MIN_VALUE
  *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class MathUtilsTest {
-	@Test
-	@DisplayName("a < b")
-	public void testMin1() {
-		int a = 10, b = 20;
-		int result = MathUtils.min(a, b);
-		int expected = Math.min(a, b);
-		assertEquals(expected, result);
-	}
 
-	@Test
-	@DisplayName("a > b")
-	public void testMin2() {
-		int a = 20, b = 10;
-		int result = MathUtils.min(a, b);
-		int expected = Math.min(a, b);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("a < b")
+    public void testMin1() {
+        int a = 10, b = 20;
+        int result = MathUtils.min(a, b);
+        int expected = Math.min(a, b);
+        assertEquals(expected, result);
+    }
 
-	@Test
-	@DisplayName("a = b")
-	public void testMin3() {
-		int a = 0, b = 0;
-		int result = MathUtils.min(a, b);
-		int expected = Math.min(a, b);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("a > b")
+    public void testMin2() {
+        int a = 20, b = 10;
+        int result = MathUtils.min(a, b);
+        int expected = Math.min(a, b);
+        assertEquals(expected, result);
+    }
 
-	@Test
-	@DisplayName("a > b")
-	public void testMax1() {
-		int a = 10, b = 20;
-		int result = MathUtils.max(a, b);
-		int expected = Math.max(a, b);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("a = b")
+    public void testMin3() {
+        int a = 0, b = 0;
+        int result = MathUtils.min(a, b);
+        int expected = Math.min(a, b);
+        assertEquals(expected, result);
+    }
 
-	@Test
-	@DisplayName("a < b")
-	public void testMax2() {
-		int a = 20, b = 10;
-		int result = MathUtils.max(a, b);
-		int expected = Math.max(a, b);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("a > b")
+    public void testMax1() {
+        int a = 10, b = 20;
+        int result = MathUtils.max(a, b);
+        int expected = Math.max(a, b);
+        assertEquals(expected, result);
+    }
 
-	@Test
-	@DisplayName("a = b")
-	public void testMax3() {
-		int a = 0, b = 0;
-		int result = MathUtils.max(a, b);
-		int expected = Math.max(a, b);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("a < b")
+    public void testMax2() {
+        int a = 20, b = 10;
+        int result = MathUtils.max(a, b);
+        int expected = Math.max(a, b);
+        assertEquals(expected, result);
+    }
 
-	@Test
-	@DisplayName("abs(0)")
-	public void testAbs1() {
-		int a = 0;
-		int result = MathUtils.abs(a);
-		int expected = Math.abs(a);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("a = b")
+    public void testMax3() {
+        int a = 0, b = 0;
+        int result = MathUtils.max(a, b);
+        int expected = Math.max(a, b);
+        assertEquals(expected, result);
+    }
 
-	@Test
-	@DisplayName("abs(>0)")
-	public void testAbs2() {
-		int a = 10;
-		int result = MathUtils.abs(a);
-		int expected = Math.abs(a);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("abs(0)")
+    public void testAbs1() {
+        int a = 0;
+        int result = MathUtils.abs(a);
+        int expected = Math.abs(a);
+        assertEquals(expected, result);
+    }
 
-	@Test
-	@DisplayName("abs(<0)")
-	public void testAbs3() {
-		int a = -10;
-		int result = MathUtils.abs(a);
-		int expected = Math.abs(a);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("abs(>0)")
+    public void testAbs2() {
+        int a = 10;
+        int result = MathUtils.abs(a);
+        int expected = Math.abs(a);
+        assertEquals(expected, result);
+    }
 
-	@Test
-	@DisplayName("abs(+Inf)")
-	public void testAbs4() {
-		int a = Integer.MAX_VALUE;
-		int result = MathUtils.abs(a);
-		int expected = Math.abs(a);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("abs(<0)")
+    public void testAbs3() {
+        int a = -10;
+        int result = MathUtils.abs(a);
+        int expected = Math.abs(a);
+        assertEquals(expected, result);
+    }
 
-	@Test
-	@DisplayName("abs(-Inf)")
-	public void testAbs5() {
-		int a = Integer.MIN_VALUE;
-		int result = MathUtils.abs(a);
-		int expected = Math.abs(a);
-		assertEquals(expected, result);
-	}
+    @Test
+    @DisplayName("abs(+Inf)")
+    public void testAbs4() {
+        int a = Integer.MAX_VALUE;
+        int result = MathUtils.abs(a);
+        int expected = Math.abs(a);
+        assertEquals(expected, result);
+    }
 
+    @Test
+    @DisplayName("abs(-Inf)")
+    public void testAbs5() {
+        int a = Integer.MIN_VALUE;
+        int result = MathUtils.abs(a);
+        int expected = Math.abs(a);
+        assertEquals(expected, result);
+    }
 
 }
