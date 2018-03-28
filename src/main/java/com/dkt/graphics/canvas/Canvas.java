@@ -63,6 +63,22 @@ public class Canvas extends JPanel implements ActionListener {
     private Paint drawableAreaPaint   = Color.WHITE;
     private Paint drawableBorderPaint = Color.BLACK;
     private boolean useAntiAliasing   = true;
+    private boolean autoRepaint;
+    private int repaintDelay = 50;
+    private final Timer repaintTimer = new Timer(500, this);
+    {
+        repaintTimer.setRepeats(true);
+        repaintTimer.setCoalesce(true);
+        repaintTimer.setDelay(repaintDelay);
+    }
+    private boolean showFPS;
+    private final GString fps = new GString(10, 20, "");
+    private final TPS     tps = new TPS();
+    private final DecimalFormat formatter = new DecimalFormat("#.00");
+    private final AffineTransform emptyTran = new AffineTransform();
+    private static GraphicsConfiguration GFX_CFG;
+    private BufferedImage content;
+    private AffineTransform transform = new AffineTransform();
 
     public Canvas(){
         setBackground(Color.LIGHT_GRAY);
@@ -499,15 +515,6 @@ public class Canvas extends JPanel implements ActionListener {
         redraw(true);
     }
 
-    private boolean autoRepaint;
-    private int repaintDelay = 50;
-    private final Timer repaintTimer = new Timer(500, this);
-    {
-        repaintTimer.setRepeats(true);
-        repaintTimer.setCoalesce(true);
-        repaintTimer.setDelay(repaintDelay);
-    }
-
     /**
      * Tells the canvas to repaint itself automatically
      *
@@ -582,11 +589,6 @@ public class Canvas extends JPanel implements ActionListener {
         return centerOrigin;
     }
 
-    private boolean showFPS;
-    private final GString fps = new GString(10, 20, "");
-    private final TPS     tps = new TPS();
-    private final DecimalFormat formatter = new DecimalFormat("#.00");
-    private final AffineTransform emptyTran = new AffineTransform();
     /**
      * This method tells the canvas to print the current FPS value on the screen
      * (it will be painted on the upper left corner above all other elements).
@@ -616,8 +618,6 @@ public class Canvas extends JPanel implements ActionListener {
             }
         }
     }
-
-    private static GraphicsConfiguration GFX_CFG;
 
     private void createBackground() {
         //Release resourses
@@ -741,8 +741,6 @@ public class Canvas extends JPanel implements ActionListener {
         }
     }
 
-    private BufferedImage content;
-    private AffineTransform transform = new AffineTransform();
     @Override
     public void paintComponent (Graphics g){
         super.paintComponent(g);
