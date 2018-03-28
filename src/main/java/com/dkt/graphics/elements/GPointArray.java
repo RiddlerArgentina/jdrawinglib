@@ -58,7 +58,7 @@ public class GPointArray extends GMultiPoint {
     public GPointArray(final GPoint[] points, final int cs) {
         this(points.length);
         for (final GPoint p : points){
-            append(p);
+            append(new GPoint(p.x(), p.y(), cs));
         }
     }
 
