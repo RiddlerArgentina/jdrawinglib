@@ -77,7 +77,6 @@ public class Canvas extends JPanel implements ActionListener {
     private final DecimalFormat formatter = new DecimalFormat("#.00");
     private final AffineTransform emptyTran = new AffineTransform();
     private static GraphicsConfiguration GFX_CFG;
-    private BufferedImage content;
     private AffineTransform transform = new AffineTransform();
 
     public Canvas(){
@@ -745,7 +744,7 @@ public class Canvas extends JPanel implements ActionListener {
     public void paintComponent (Graphics g){
         super.paintComponent(g);
 
-        content = GFX_CFG.createCompatibleImage(
+        final BufferedImage content = GFX_CFG.createCompatibleImage(
                 xSize,
                 ySize,
                 Transparency.TRANSLUCENT
