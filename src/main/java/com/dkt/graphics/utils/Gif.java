@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -43,7 +43,7 @@ import org.w3c.dom.Node;
  * The purpose of this class is to create animated GIFs from a series of canvas
  * snapshots
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  * @since 0.1.10
  */
 public class Gif {

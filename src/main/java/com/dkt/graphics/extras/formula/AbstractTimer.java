@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -39,7 +39,7 @@ import java.util.ArrayList;
  * in that case, the perceived speed of the application is somewhat more
  * important than the real speed.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  * @param <T> The {@link AbstractCalculable} instance that will be used
  */
 public abstract class AbstractTimer<T extends AbstractCalculable> extends GraphicE {

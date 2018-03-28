@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -29,7 +29,7 @@ import java.util.Iterator;
  * Creates a simple sprite, if you need help creating the pixmaps, you should
  * probably try out PixmapCreator
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GSprite extends GraphicE implements Iterable<GPixMap> {
     private final ArrayList<GPixMap> frames = new ArrayList<>(10);

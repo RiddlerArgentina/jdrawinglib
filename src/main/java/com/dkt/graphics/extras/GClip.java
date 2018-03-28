@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -28,7 +28,7 @@ import java.util.ArrayList;
  * This class wraps an {@link Area} in a {@link GraphicE}, in order to create
  * a clipping area from {@link GFillableE}.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GClip extends GraphicE {
     private final ArrayList<Action> elements = new ArrayList<>();

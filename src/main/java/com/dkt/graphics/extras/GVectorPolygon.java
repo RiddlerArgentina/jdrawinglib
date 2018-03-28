@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -27,7 +27,7 @@ import java.util.ArrayList;
  * This class creates a Resultant Vector as a result of the sum of a finite
  * number of vectors.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GVectorPolygon extends GraphicE {
     private final ArrayList<GVector> vectors = new ArrayList<>(5);
