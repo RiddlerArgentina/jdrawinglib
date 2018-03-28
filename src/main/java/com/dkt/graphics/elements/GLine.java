@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
+ * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -23,7 +23,7 @@ import java.awt.Graphics2D;
 /**
  * This class represents a line segment
  *
- * @author Federico Vera {@literal<fede@riddler.com.ar>}
+ * @author Federico Vera {@literal<dktcoding [at] gmail>}
  */
 public class GLine extends GraphicE {
     private int x1, y1, x2, y2;
@@ -126,16 +126,7 @@ public class GLine extends GraphicE {
      * @return Orthogonal {@code GLine}
      */
     public GLine getOrthogal(final int x, final int y) {
-        final GLine line = new GLine(this);
-
-        line.x2 -= line.x1;
-        line.y2 -= line.y1;
-        line.y2 = -line.y2;
-        line.x1 = 0;
-        line.y1 = 0;
-
-        line.traslate(x, y);
-
+        final GLine line = new GLine(x, y, modulus(), 90 + getArgument());
         return line;
     }
 
@@ -148,11 +139,7 @@ public class GLine extends GraphicE {
      * @return Orthogonal {@code GLine}
      */
     public GLine getParallel(final int x, final int y) {
-        final GLine line = new GLine(this);
-
-        line.traslate(-x1, -y1);
-        line.traslate(x, y);
-
+        final GLine line = new GLine(x, y, modulus(), getArgument());
         return line;
     }
 
