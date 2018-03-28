@@ -59,12 +59,7 @@ class UnsafeList implements Iterable<GraphicE> {
         }
 
         synchronized(mutex) {
-            if (cursor == elements.length) {
-                final GraphicE[] foo = new GraphicE[(cursor + 1) * 110 / 100];
-                System.arraycopy(elements, 0, foo, 0, elements.length);
-                elements = foo;
-            }
-
+            ensureCapacity((cursor + 1) * 110 / 100);
             elements[cursor++] = elm;
 
             return true;
