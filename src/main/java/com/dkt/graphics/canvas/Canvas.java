@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -51,7 +51,7 @@ import javax.swing.Timer;
  * fixed elements are only redrawn when the canvas is resized or when 
  * specifically told to.
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class Canvas extends JPanel implements ActionListener {
     private final LinkedList<GraphicE> elements = new LinkedList<>();
@@ -339,7 +339,7 @@ public class Canvas extends JPanel implements ActionListener {
     @Override
     public void setBackground(Color bg) {
         if (bg == null){
-            throw new NullPointerException("The background color can't be null");
+            throw new IllegalArgumentException("The background color can't be null");
         }
 
         super.setBackground(bg);
@@ -366,11 +366,11 @@ public class Canvas extends JPanel implements ActionListener {
      * Sets the background {@link Paint} of the drawable area of the canvas
      *
      * @param paint new paint
-     * @throws NullPointerException if the color is {@code null}
+     * @throws IllegalArgumentException if the color is {@code null}
      */
     public void setDrawableAreaPaint(Paint paint) {
         if (paint == null){
-            throw new NullPointerException("The paint can't be null");
+            throw new IllegalArgumentException("The paint can't be null");
         }
 
         drawableAreaPaint = paint;
@@ -390,11 +390,11 @@ public class Canvas extends JPanel implements ActionListener {
      * Sets the border {@link Paint} of the drawable area of the canvas
      *
      * @param paint new paint
-     * @throws NullPointerException if the paint is {@code null}
+     * @throws IllegalArgumentException if the paint is {@code null}
      */
     public void setDrawableBorderPaint(Paint paint) {
         if (paint == null){
-            throw new NullPointerException("The paint can't be null");
+            throw new IllegalArgumentException("The paint can't be null");
         }
 
         drawableBorderPaint = paint;
@@ -703,11 +703,11 @@ public class Canvas extends JPanel implements ActionListener {
      * @param back {@code true} if you want to paint the background and {@code
      * false} otherwise ({@code false} is needed when painting with transparent
      * components.
-     * @throws NullPointerException if the g2d is {@code null}
+     * @throws IllegalArgumentException if the g2d is {@code null}
      */
     public void paintDrawableArea(Graphics2D g2d, boolean back) {
         if (g2d == null){
-            throw new NullPointerException("Graphics can't be null");
+            throw new IllegalArgumentException("Graphics can't be null");
         }
 
         //Paint the background
