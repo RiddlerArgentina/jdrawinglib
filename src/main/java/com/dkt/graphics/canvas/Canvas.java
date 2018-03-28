@@ -66,11 +66,6 @@ public class Canvas extends JPanel implements ActionListener {
     private boolean autoRepaint;
     private int repaintDelay = 50;
     private final Timer repaintTimer = new Timer(500, this);
-    {
-        repaintTimer.setRepeats(true);
-        repaintTimer.setCoalesce(true);
-        repaintTimer.setDelay(repaintDelay);
-    }
     private boolean showFPS;
     private final GString fps = new GString(10, 20, "");
     private final TPS     tps = new TPS();
@@ -80,6 +75,11 @@ public class Canvas extends JPanel implements ActionListener {
     private AffineTransform transform = new AffineTransform();
 
     public Canvas(){
+        //Init timer config
+        repaintTimer.setRepeats(true);
+        repaintTimer.setCoalesce(true);
+        repaintTimer.setDelay(repaintDelay);
+        
         setBackground(Color.LIGHT_GRAY);
         setIgnoreRepaint(true);
         addComponentListener(new ComponentListener() {
