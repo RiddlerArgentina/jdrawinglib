@@ -213,6 +213,10 @@ public class GLine extends GraphicE {
      * {@code false} otherwise
      */
     public boolean contains(final int x, final int y) {
+        if ( (x == x1 && y == y1) || (x == x2 && y == y2)) {
+            return true;
+        }
+        
         //http://stackoverflow.com/questions/17581738/
         // check-if-a-point-projected-on-a-line-segment-is-not-outside-it
         final double m  = (y2 - y1) / (x2 - x1);
