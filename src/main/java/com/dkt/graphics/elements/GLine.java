@@ -126,16 +126,7 @@ public class GLine extends GraphicE {
      * @return Orthogonal {@code GLine}
      */
     public GLine getOrthogal(final int x, final int y) {
-        final GLine line = new GLine(this);
-
-        line.x2 -= line.x1;
-        line.y2 -= line.y1;
-        line.y2 = -line.y2;
-        line.x1 = 0;
-        line.y1 = 0;
-
-        line.traslate(x, y);
-
+        final GLine line = new GLine(x, y, modulus(), 90 + getArgument());
         return line;
     }
 
@@ -148,11 +139,7 @@ public class GLine extends GraphicE {
      * @return Orthogonal {@code GLine}
      */
     public GLine getParallel(final int x, final int y) {
-        final GLine line = new GLine(this);
-
-        line.traslate(-x1, -y1);
-        line.traslate(x, y);
-
+        final GLine line = new GLine(x, y, modulus(), getArgument());
         return line;
     }
 
@@ -226,6 +213,10 @@ public class GLine extends GraphicE {
      * {@code false} otherwise
      */
     public boolean contains(final int x, final int y) {
+        if ( (x == x1 && y == y1) || (x == x2 && y == y2)) {
+            return true;
+        }
+        
         //http://stackoverflow.com/questions/17581738/
         // check-if-a-point-projected-on-a-line-segment-is-not-outside-it
         final double m  = (y2 - y1) / (x2 - x1);
