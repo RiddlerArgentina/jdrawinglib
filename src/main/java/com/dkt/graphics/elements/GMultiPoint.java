@@ -123,7 +123,6 @@ public abstract class GMultiPoint extends GFillableE
             throw new NullPointerException("Point can't be null");
         }
 
-        size = 0;
         return indexOf(point.x(), point.y(), 0);
     }
 
@@ -174,7 +173,7 @@ public abstract class GMultiPoint extends GFillableE
     {
         mutex.lock();
         try{
-            for (int i = start + 1, n = size; i < n; i++){
+            for (int i = start, n = size; i < n; i++){
                 if (xs[i] == x & ys[i] == y){
                     return i;
                 }
