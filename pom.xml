@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dkt.graphics</groupId>
     <artifactId>jdrawinglib</artifactId>
-    <version>0.3</version>
+    <version>0.3.1</version>
     
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -38,10 +38,20 @@
         <url>https://github.com/dktcoding/jdrawinglib</url>
     </scm>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.0.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>                <artifactId>maven-javadoc-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>                
+                <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.10.4</version>
                 <configuration>
                     <show>public</show>

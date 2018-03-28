@@ -1,7 +1,7 @@
 /*
  *                      ..::jDrawingLib::..
  *
- * Copyright (C) Federico Vera 2012 - 2016 <dktcoding [at] gmail>
+ * Copyright (C) Federico Vera 2012 - 2018 <fede@riddler.com.ar>
  *
  * This program is free software: you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -20,7 +20,7 @@ package com.dkt.graphics.utils;
 
 /**
  *
- * @author Federico Vera {@literal<dktcoding [at] gmail>}
+ * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class LibUtils {
     /**
@@ -34,7 +34,7 @@ public class LibUtils {
      * @return version string
      */
     public static String versionString(){
-        return "0.2.0β";
+        return "0.3.1";
     }
 
     /**
@@ -53,7 +53,7 @@ public class LibUtils {
      */
     public static String[] authors(){
         return new String[]{
-            "Federico Vera <dktcoding [at] gmail>",
+            "Federico Vera <fede@riddler.com.ar>",
         };
     }
 
@@ -64,7 +64,7 @@ public class LibUtils {
      */
     public static String[] collaborators(){
         return new String[]{
-            "Eduardo Nieva <eduardognieva [at] gmail>",
+            "Eduardo Nieva <edu@riddler.com.ar>",
         };
     }
 
