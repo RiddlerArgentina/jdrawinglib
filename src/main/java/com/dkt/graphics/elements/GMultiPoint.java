@@ -534,8 +534,6 @@ public abstract class GMultiPoint extends GFillableE
     @Override
     public int hashCode() {
         int hash = super.hashCode();
-        hash = 53 * hash + Objects.hashCode(modCount);
-        hash = 53 * hash + Objects.hashCode(mutex);
         hash = 53 * hash + size;
         hash = 53 * hash + Arrays.hashCode(xs);
         hash = 53 * hash + Arrays.hashCode(ys);
