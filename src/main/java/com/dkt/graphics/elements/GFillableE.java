@@ -20,6 +20,7 @@ package com.dkt.graphics.elements;
 
 import java.awt.Paint;
 import java.awt.geom.Area;
+import java.util.Objects;
 
 /**
  * This represents an abstract fillable element
@@ -108,6 +109,7 @@ public abstract class GFillableE extends GraphicE {
     public int hashCode() {
         int hash = super.hashCode();
         hash = 79 * hash + (fill ? 1 : 0);
+        hash = 79 * hash + Objects.hash(fillPaint);
         return hash;
     }
 
@@ -118,6 +120,11 @@ public abstract class GFillableE extends GraphicE {
         }
 
         final GFillableE other = (GFillableE) obj;
-        return this.fill == other.fill;
+        
+        if (this.fill != other.fill) {
+            return false;
+        }
+        
+        return Objects.equals(fillPaint, other.fillPaint);
     }
 }

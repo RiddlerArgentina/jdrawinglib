@@ -27,7 +27,10 @@ import java.awt.geom.Ellipse2D;
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GCircle extends GFillableE {
-    private int x, y, d, r;
+    private int x;
+    private int y;
+    private int d;
+    private int r;
 
     /**
      * Copy constructor
@@ -50,11 +53,11 @@ public class GCircle extends GFillableE {
      * @param r radius
      */
     public GCircle(final int x, final int y, int r) {
-        r = Math.abs(r);
-        this.x = x - r;
-        this.y = y - r;
-        this.d = 2 * r;
-        this.r = r;
+        int rr = Math.abs(r);
+        this.x = x - rr;
+        this.y = y - rr;
+        this.d = 2 * rr;
+        this.r = rr;
     }
 
     /**
@@ -147,7 +150,7 @@ public class GCircle extends GFillableE {
      * otherwise
      */
     public boolean contains(final int x, final int y) {
-        return Math.hypot(this.x - x, this.y - y) <= r;
+        return Math.hypot(x() - x, y() - y) <= r;
     }
 
     /**
@@ -169,7 +172,9 @@ public class GCircle extends GFillableE {
     }
 
     /**
-     * Tells if this circle intersects with a line
+     * Tells if this circle intersects with a line.<br>
+     * <b>Note:</b> This will tell if the line intersects the circle NOT the line 
+     * segment!!!
      *
      * @param line The line to check
      * @return {@code true} if they intersect and {@code false} otherwise
@@ -199,22 +204,6 @@ public class GCircle extends GFillableE {
      */
     public double perimeter() {
         return Math.PI * d;
-    }
-
-    /**
-     * Calculates the area of the intersection of this circle and the one passed
-     * as an argument
-     *
-     * @param circle the circle that intersects
-     * @return area of the intersection
-     * @throws IllegalArgumentException if {@code circle} is {@code null}
-     */
-    public double intersectionArea(final GCircle circle) {
-        if (circle == null){
-            throw new IllegalArgumentException("The circle can't be null");
-        }
-        //@TODO implement me
-        return 0;
     }
 
     private double discriminant(final GLine line){

@@ -26,7 +26,6 @@ import java.util.Comparator;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -55,9 +54,9 @@ public abstract class GMultiPoint extends GFillableE
     protected GMultiPoint(GMultiPoint e) {
         super(e);
 
-        xs   = new int[size];
-        ys   = new int[size];
         size = e.size;
+        xs   = new int[e.xs.length];
+        ys   = new int[e.ys.length];
 
         System.arraycopy(e.xs, 0, xs, 0, size);
         System.arraycopy(e.ys, 0, ys, 0, size);
@@ -534,11 +533,11 @@ public abstract class GMultiPoint extends GFillableE
     @Override
     public int hashCode() {
         int hash = super.hashCode();
-        hash = 53 * hash + Objects.hashCode(modCount);
-        hash = 53 * hash + Objects.hashCode(mutex);
         hash = 53 * hash + size;
-        hash = 53 * hash + Arrays.hashCode(xs);
-        hash = 53 * hash + Arrays.hashCode(ys);
+        for (int i = 0; i < size(); i++) {
+            hash = 53 * hash + xs[i]; 
+            hash = 53 * hash + ys[i]; 
+        }
         return hash;
     }
 
@@ -552,11 +551,15 @@ public abstract class GMultiPoint extends GFillableE
         if (size != other.size) {
             return false;
         }
-        if (!Arrays.equals(xs, other.xs)) {
-            return false;
+        
+        for (int i = 0; i < size; i++) {
+            if (xs[i] != other.xs[i] ||
+                ys[i] != other.ys[i]) {
+                return false;
+            }
         }
 
-        return Arrays.equals(ys, other.ys);
+        return true;
     }
 
     @Override

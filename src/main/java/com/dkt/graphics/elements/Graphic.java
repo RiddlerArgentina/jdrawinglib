@@ -317,7 +317,9 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
     @Override
     public int hashCode() {
         int hash = super.hashCode();
-        hash = 47 * hash + Objects.hashCode(components);
+        for (int i = 0; i < components.size(); i++) {
+            hash = 47 * hash + components.get(i).hashCode(); 
+        }
         hash = 47 * hash + xOff;
         hash = 47 * hash + yOff;
         return hash;
@@ -330,8 +332,11 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         }
 
         final Graphic other = (Graphic) obj;
-        if (!Objects.equals(components, other.components)) {
-            return false;
+        
+        for (int i = 0; i < components.size(); i++) {
+            if (!Objects.equals(components.get(i), other.components.get(i))) {
+                return false;
+            } 
         }
 
         return !(

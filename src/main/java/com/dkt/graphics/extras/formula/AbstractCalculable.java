@@ -46,10 +46,7 @@ public abstract class AbstractCalculable {
      * @param name getName of the formula
      */
     public void setName(String name){
-        if (name == null){
-            name = NO_NAME;
-        }
-        this.name = name;
+        this.name = name == null ? NO_NAME : name;
     }
 
     /**

@@ -67,7 +67,7 @@ public class GraphicCreator {
     private Color color   = null;
     private Color colorf  = null;
     private Font font     = null;
-    
+
     private static final Class<?> GCC = GraphicCreator.class;
     private static final Class<?> SAC = String[].class;
     private GClip clip;
@@ -166,22 +166,22 @@ public class GraphicCreator {
 
         return graphic;
     }
-    
+
     private Object parseOne(String line) {
         if (line == null) {
             return null;
         }
 
-        line = line.trim();
+        String lline = line.trim();
 
         try {
-            if (line.isEmpty() ||
-                line.charAt(0) == '#' ||
-                line.charAt(0) == '!') {
+            if (lline.isEmpty() ||
+                lline.charAt(0) == '#' ||
+                lline.charAt(0) == '!') {
                 return null;
             }
 
-            final String[] foo  = linespl.split(line);
+            final String[] foo  = linespl.split(lline);
             final Method method = GCC.getMethod(foo[0], SAC);
             final Object out    = method.invoke(this, (Object)foo);
 
@@ -736,7 +736,7 @@ public class GraphicCreator {
         return new GCircle(x, y, r);
     }
 
-//* circle  [x, y, r]
+//* oval  [x, y, w, h]
     public GOval oval(String[] args) {
         checkArgs(args, 4);
 

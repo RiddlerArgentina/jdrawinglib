@@ -47,20 +47,20 @@ public class Utils {
      * alpha
      *
      * @param color the original color
-     * @param a the alpha value if the value is bigger than 255 it will be set
+     * @param alpha the alpha value if the value is bigger than 255 it will be set
      * to 255, and if the value is smaller than 0 then it will be set to 0
      * @return A new color with the same RGB value as the argument but with the
      * specified alpha
      * @throws IllegalArgumentException if color is {@code null}
      */
-    public static Color getColorWithAlpha(Color color, int a){
+    public static Color getColorWithAlpha(Color color, int alpha){
         if (color == null){
             throw new IllegalArgumentException("Color can't be null!");
         }
 
         //Ensure the value is within an interval
-        a = Math.max(a,  0 );
-        a = Math.min(a, 255);
+        int a = Math.max(alpha,  0 );
+            a = Math.min(a, 255);
 
         final int r = color.getRed  ();
         final int g = color.getGreen();
@@ -91,14 +91,12 @@ public class Utils {
         if (canvas == null){
             throw new IllegalArgumentException("Canvas can't be null");
         }
+
         if (path == null){
             throw new IllegalArgumentException("Path can't be null");
         }
-        if (!path.endsWith(".png")){
-            path += ".png";
-        }
 
-        final File file = new File(path);
+        final File file = new File(path.endsWith(".png") ? path : path + ".png");
 
         final int width  = canvas.getXSize();
         final int height = canvas.getYSize();
@@ -162,14 +160,10 @@ public class Utils {
         if (img == null){
             throw new IllegalArgumentException("The image can't be null");
         }
-
-        if (omit == null){
-            omit = new Color(0, 0, 0, 0);
-        }
-
+        
         final int w = img.getWidth ();
         final int h = img.getHeight();
-        final int c = omit.getRGB();
+        final int c = omit == null ? 0 : omit.getRGB();
 
         final int[] data = img.getRGB(0, 0, w, h, null, 0, w);
 

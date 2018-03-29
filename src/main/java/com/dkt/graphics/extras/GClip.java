@@ -33,6 +33,8 @@ import java.util.ArrayList;
 public class GClip extends GraphicE {
     private final ArrayList<Action> elements = new ArrayList<>();
 
+    private Area clip;
+
     /**
      * Copy constructor
      *
@@ -70,8 +72,6 @@ public class GClip extends GraphicE {
         }
         clip = area;
     }
-
-    private Area clip;
 
     @Override
     public void traslate(int x, int y) {

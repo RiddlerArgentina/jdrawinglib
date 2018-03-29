@@ -29,6 +29,54 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class GLineTest {
     @Test
+    @DisplayName("Copy constructor")
+    public void testConstructor1() {
+        GLine l1 = new GLine(0, 0, 1, 1);
+        GLine l2 = new GLine(l1);
+        assertNotNull(l1);
+        assertEquals(l1, l2);
+        assertEquals(l1.hashCode(), l2.hashCode());
+        l2.traslate(10, 10);
+        assertNotEquals(l1, l2);
+        assertNotEquals(l1.hashCode(), l2.hashCode());
+        l2.traslate(-10, -10);
+        assertEquals(l1, l2);
+        assertEquals(l1.hashCode(), l2.hashCode());
+    }
+    
+    @Test
+    @DisplayName("Copy constructor with point")
+    public void testConstructor2() {
+        GLine l1 = new GLine(new GPoint(0, 0), new GPoint(1, 1));
+        GLine l2 = new GLine(l1);
+        assertNotNull(l1);
+        assertEquals(l1, l2);
+        assertEquals(l1.hashCode(), l2.hashCode());
+        l2.traslate(10, 10);
+        assertNotEquals(l1, l2);
+        assertNotEquals(l1.hashCode(), l2.hashCode());
+        l2.traslate(-10, -10);
+        assertEquals(l1, l2);
+        assertEquals(l1.hashCode(), l2.hashCode());
+    }
+    
+    @Test
+    @DisplayName("Clone")
+    public void testClone() {
+        GLine l1 = new GLine(new GPoint(0, 0), new GPoint(1, 1));
+        GLine l2 = l1.clone();
+        assertNotNull(l1);
+        assertEquals(l1, l2);
+        assertEquals(l1.hashCode(), l2.hashCode());
+        l2.traslate(10, 10);
+        assertNotEquals(l1, l2);
+        assertNotEquals(l1.hashCode(), l2.hashCode());
+        l2.traslate(-10, -10);
+        assertEquals(l1, l2);
+        assertEquals(l1.hashCode(), l2.hashCode());
+    }
+    
+    @Test
     @DisplayName("Middle Point on zero lenght")
     public void testMiddlePoint1() {
         GLine l = new GLine(0, 0, 0, 0);
@@ -127,7 +175,7 @@ public class GLineTest {
         GLine l = new GLine(0, 0, 0, 10);
         GLine o = l.getOrthogal(0, 5);
         assertEquals(l.getArgument() + 90, o.getArgument(), 1e-9);
-        o.contains(0, 5);
+        assertTrue(o.contains(0, 5));
     }
 
     @Test
@@ -136,7 +184,7 @@ public class GLineTest {
         GLine l = new GLine(13, 20, 10, 10);
         GLine o = l.getOrthogal(0, 5);
         assertEquals(l.getArgument() + 90, o.getArgument(), 1e-9);
-        o.contains(0, 5);
+        assertTrue(o.contains(0, 5));
     }
 
     @Test
@@ -145,7 +193,8 @@ public class GLineTest {
         GLine l = new GLine(0, 0, 10, 0);
         GLine o = l.getParallel(5, 0);
         assertEquals(l.getArgument(), o.getArgument(), 1e-9);
-        o.contains(5, 0);
+        assertTrue(l.contains(5, 0));
+        assertTrue(o.contains(5, 0));
     }
 
     @Test
@@ -154,7 +203,7 @@ public class GLineTest {
         GLine l = new GLine(0, 0, 0, 10);
         GLine o = l.getParallel(0, 5);
         assertEquals(l.getArgument(), o.getArgument(), 1e-9);
-        o.contains(0, 5);
+        assertTrue(o.contains(0, 5));
     }
 
 //    @Test
@@ -163,6 +212,6 @@ public class GLineTest {
 //        GLine l = new GLine(13, 20, 10, 10);
 //        GLine o = l.getParallel(0, 5);
 //        assertEquals(l.getArgument(), o.getArgument(), 1e-9);
-//        o.contains(0, 5);
+//        assertTrue(o.contains(0, 5));
 //    }
 }
