@@ -134,7 +134,7 @@ public class GCircleTest {
     
     @Test
     @DisplayName("Circle intersects line") 
-    public void testIntersects() {
+    public void testIntersects1() {
         GCircle c = new GCircle(0, 0, 10);
         GLine   l = new GLine(-20, -20, 20, 20);
         assertTrue(c.intersects(l));
@@ -142,6 +142,26 @@ public class GCircleTest {
         assertFalse(c.intersects(l));
         assertThrows(IllegalArgumentException.class, () -> {
                 c.intersects((GLine)null);
+            }
+        );
+    }
+    
+    @Test
+    @DisplayName("Circle intersects circle") 
+    public void testIntersects2() {
+        GCircle c1 = new GCircle(0, 0, 100);
+        GCircle c2 = new GCircle(0, 0, 50);
+        GCircle c3 = new GCircle(100, 0, 50);
+        GCircle c4 = new GCircle(100, 100, 40);
+        assertTrue(c1.intersects(c2));
+        assertTrue(c1.contains(c2));
+        assertTrue(c1.intersects(c3));
+        assertFalse(c1.contains(c3));
+        assertFalse(c1.intersects(c4));
+        assertFalse(c1.contains(c4));
+        
+        assertThrows(IllegalArgumentException.class, () -> {
+                c1.intersects((GCircle)null);
             }
         );
     }
