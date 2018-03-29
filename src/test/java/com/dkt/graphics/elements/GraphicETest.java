@@ -94,7 +94,9 @@ public class GraphicETest {
         }
 
         public GraphicEImpl() {
+            super();
         }
+        
         @Override public void traslate(int x, int y) {/*do nothing*/}
         @Override public void draw(Graphics2D g) {/*do nothing*/}
         @Override public GraphicE clone() {return null;/*do nothing*/}
