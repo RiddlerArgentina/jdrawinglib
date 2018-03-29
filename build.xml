@@ -4,7 +4,7 @@
     <property name="main.src.dir"   value="src/main/java"/>
     <property name="doc.dir"        value="doc"/>
     <property name="jar.dir"        value="dist"/>
-    <property name="proj.ver"       value ="0.3.1"/>
+    <property name="proj.ver"       value ="0.4.1"/>
 
     <target name="compile">
         <mkdir dir="${main.build.dir}"/>
