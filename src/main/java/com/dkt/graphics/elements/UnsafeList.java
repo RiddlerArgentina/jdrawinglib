@@ -219,6 +219,43 @@ class UnsafeList implements Iterable<GraphicE> {
     }
 
     @Override
+    public int hashCode() {
+        int hash = 7;
+        for (int i = 0; i < size(); i++) {
+            hash = 79 * hash + elements[i].hashCode(); 
+        }
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        
+        if (obj == null) {
+            return false;
+        }
+        
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        
+        final UnsafeList other = (UnsafeList) obj;
+        if (size() != other.size()) {
+            return false;
+        }
+        
+        for (int i = 0; i < size(); i++) {
+            if (!Objects.equals(elements[i], other.elements[i])) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+    @Override
     public Iterator<GraphicE> iterator() {
         return new Iterator<GraphicE>() {
             private int idx = -1;

@@ -26,7 +26,6 @@ import java.util.Comparator;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -535,8 +534,10 @@ public abstract class GMultiPoint extends GFillableE
     public int hashCode() {
         int hash = super.hashCode();
         hash = 53 * hash + size;
-        hash = 53 * hash + Arrays.hashCode(xs);
-        hash = 53 * hash + Arrays.hashCode(ys);
+        for (int i = 0; i < size(); i++) {
+            hash = 53 * hash + xs[i]; 
+            hash = 53 * hash + ys[i]; 
+        }
         return hash;
     }
 
@@ -550,11 +551,15 @@ public abstract class GMultiPoint extends GFillableE
         if (size != other.size) {
             return false;
         }
-        if (!Arrays.equals(xs, other.xs)) {
-            return false;
+        
+        for (int i = 0; i < size; i++) {
+            if (xs[i] != other.xs[i] ||
+                ys[i] != other.ys[i]) {
+                return false;
+            }
         }
 
-        return Arrays.equals(ys, other.ys);
+        return true;
     }
 
     @Override
