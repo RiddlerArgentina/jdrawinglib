@@ -32,6 +32,24 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MathUtilsTest {
 
     @Test
+    @DisplayName("heavyside")
+    public void testHs() {
+        assertEquals(0, MathUtils.hs(-10));
+        assertEquals(1, MathUtils.hs(  0));
+        assertEquals(1, MathUtils.hs( 10));
+    }
+    
+    @Test
+    @DisplayName("boxcar")
+    public void testBoxCar() {
+        double a = -1;
+        double b = 1;
+        assertEquals(0, MathUtils.boxcar(a-1, a, b));
+        assertEquals(1, MathUtils.boxcar((b-a)/2, a, b));
+        assertEquals(0, MathUtils.boxcar(b+1, a, b));
+    }
+    
+    @Test
     @DisplayName("a < b")
     public void testMin1() {
         int a = 10;
