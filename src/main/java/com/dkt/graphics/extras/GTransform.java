@@ -67,8 +67,7 @@ public class GTransform extends GraphicE {
      * @param phi angle in degrees
      */
     public GTransform(int x, int y, double phi) {
-        phi = Math.toRadians(phi);
-        transform = AffineTransform.getRotateInstance(phi, x, y);
+        transform = AffineTransform.getRotateInstance(Math.toRadians(phi), x, y);
     }
 
     /**
@@ -89,8 +88,7 @@ public class GTransform extends GraphicE {
      * @param phi angle in degrees
      */
     public void rotate(int x, int y, double phi) {
-        phi = Math.toRadians(phi);
-        transform.rotate(phi, x, y);
+        transform.rotate(Math.toRadians(phi), x, y);
     }
 
     /**

@@ -75,6 +75,8 @@ public class Canvas extends JPanel implements ActionListener {
     private final AffineTransform emptyTran = new AffineTransform();
     private static GraphicsConfiguration GFX_CFG;
     private AffineTransform transform = new AffineTransform();
+    private boolean centerOrigin;
+    private transient BufferedImage background;
 
     public Canvas(){
         //Init timer config
@@ -473,7 +475,6 @@ public class Canvas extends JPanel implements ActionListener {
         }
     }
 
-    private boolean centerOrigin;
     /**
      * Tells the canvas to center the origin of coordinates within the drawable
      * area.
@@ -603,8 +604,7 @@ public class Canvas extends JPanel implements ActionListener {
         }
         this.showFPS = show;
     }
-
-    private transient BufferedImage background;
+    
     private void redraw(boolean with_background){
         calcTransform();
 
@@ -782,7 +782,8 @@ public class Canvas extends JPanel implements ActionListener {
         g2d.dispose();
 
         //Image bounds
-        final int xOff, yOff;
+        final int xOff;
+        final int yOff;
         if (centerBounds){
             xOff = (getWidth () - xSize) / 2;
             yOff = (getHeight() - ySize) / 2;

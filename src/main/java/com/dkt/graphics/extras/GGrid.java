@@ -97,13 +97,10 @@ public class GGrid extends GraphicE {
             throw new InvalidArgumentException(msg);
         }
 
-        hd = Math.max(0, hd);
-        vd = Math.max(0, vd);
-
         this.w = w;
         this.h = h;
-        this.hd = hd;
-        this.vd = vd;
+        this.hd = Math.max(0, hd);
+        this.vd = Math.max(0, vd);
 
         c = new GPoint(x, y);
         update();

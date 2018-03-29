@@ -35,7 +35,7 @@ public class MathUtils {
      * @param t parameter
      * @return {@code 0} if {@code t < 0} and {@code 1} otherwise
      */
-    public static double H(double t) {
+    public static double hs(double t) {
         if (t < 0) {
             return 0;
         }

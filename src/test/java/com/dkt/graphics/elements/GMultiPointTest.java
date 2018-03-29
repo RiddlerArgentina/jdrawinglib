@@ -37,7 +37,7 @@ public class GMultiPointTest {
     public void testConstructor1() {
         GMultiPoint mp = new GMultiPoint(10) {
             @Override public GFillableE clone() {return null;}
-            @Override public void draw(Graphics2D g) {}
+            @Override public void draw(Graphics2D g) {/*nothing*/}
         };
         assertNotNull(mp);
     }
@@ -48,7 +48,7 @@ public class GMultiPointTest {
         assertThrows(NegativeArraySizeException.class, () -> {
             GMultiPoint mp = new GMultiPoint(-10) {
                 @Override public GFillableE clone() {return null;}
-                @Override public void draw(Graphics2D g) {}
+                @Override public void draw(Graphics2D g) {/*nothing*/}
             };
             mp.clear();
         });
@@ -62,7 +62,7 @@ public class GMultiPointTest {
         assertThrows(InvalidArgumentException.class, () -> {
             new GMultiPoint(XX, YY) {
                 @Override public GFillableE clone() {return null;}
-                @Override public void draw(Graphics2D g) {}
+                @Override public void draw(Graphics2D g) {/*nothing*/}
             };
         });
     }

@@ -50,11 +50,11 @@ public class GCircle extends GFillableE {
      * @param r radius
      */
     public GCircle(final int x, final int y, int r) {
-        r = Math.abs(r);
-        this.x = x - r;
-        this.y = y - r;
-        this.d = 2 * r;
-        this.r = r;
+        int rr = Math.abs(r);
+        this.x = x - rr;
+        this.y = y - rr;
+        this.d = 2 * rr;
+        this.r = rr;
     }
 
     /**
