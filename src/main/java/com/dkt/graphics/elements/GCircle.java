@@ -27,7 +27,10 @@ import java.awt.geom.Ellipse2D;
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GCircle extends GFillableE {
-    private int x, y, d, r;
+    private int x;
+    private int y;
+    private int d;
+    private int r;
 
     /**
      * Copy constructor
@@ -147,7 +150,7 @@ public class GCircle extends GFillableE {
      * otherwise
      */
     public boolean contains(final int x, final int y) {
-        return Math.hypot(this.x - x, this.y - y) <= r;
+        return Math.hypot(x() - x, y() - y) <= r;
     }
 
     /**
