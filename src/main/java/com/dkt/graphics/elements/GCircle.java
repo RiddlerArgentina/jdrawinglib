@@ -204,22 +204,6 @@ public class GCircle extends GFillableE {
         return Math.PI * d;
     }
 
-    /**
-     * Calculates the area of the intersection of this circle and the one passed
-     * as an argument
-     *
-     * @param circle the circle that intersects
-     * @return area of the intersection
-     * @throws IllegalArgumentException if {@code circle} is {@code null}
-     */
-    public double intersectionArea(final GCircle circle) {
-        if (circle == null){
-            throw new IllegalArgumentException("The circle can't be null");
-        }
-        //@TODO implement me
-        return 0;
-    }
-
     private double discriminant(final GLine line){
         //http://stackoverflow.com/questions/6091728/line-segment-circle-intersection
         final GPoint start = line.getStartPoint();
