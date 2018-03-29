@@ -736,7 +736,7 @@ public class GraphicCreator {
         return new GCircle(x, y, r);
     }
 
-//* circle  [x, y, r]
+//* oval  [x, y, w, h]
     public GOval oval(String[] args) {
         checkArgs(args, 4);
 
