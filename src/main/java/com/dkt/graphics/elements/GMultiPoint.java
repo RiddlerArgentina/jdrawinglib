@@ -55,9 +55,9 @@ public abstract class GMultiPoint extends GFillableE
     protected GMultiPoint(GMultiPoint e) {
         super(e);
 
-        xs   = new int[size];
-        ys   = new int[size];
         size = e.size;
+        xs   = new int[e.xs.length];
+        ys   = new int[e.ys.length];
 
         System.arraycopy(e.xs, 0, xs, 0, size);
         System.arraycopy(e.ys, 0, ys, 0, size);
