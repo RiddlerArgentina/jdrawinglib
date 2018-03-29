@@ -34,7 +34,7 @@ public class LibUtils {
      * @return version string
      */
     public static String versionString(){
-        return "0.3.1";
+        return "0.4.1";
     }
 
     /**
