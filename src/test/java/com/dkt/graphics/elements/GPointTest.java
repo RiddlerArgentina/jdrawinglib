@@ -32,6 +32,22 @@ public class GPointTest {
     public static double DELTA = 1e-8;
     
     @Test
+    @DisplayName("Copy constructor")
+    public void testConstructor() {
+        GPoint p1 = new GPoint(0, 0);
+        GPoint p2 = new GPoint(p1);
+        assertNotNull(p1);
+        assertEquals(p1, p2);
+        assertEquals(p1.hashCode(), p2.hashCode());
+        p2.traslate(1, 1);
+        assertNotEquals(p1, p2);
+        assertNotEquals(p1.hashCode(), p2.hashCode());
+        p2.traslate(-1, -1);
+        assertEquals(p1, p2);
+        assertEquals(p1.hashCode(), p2.hashCode());
+    }
+    
+    @Test
     @DisplayName("Distance to self")
     public void testDistance1() {
         Random r = new Random();
