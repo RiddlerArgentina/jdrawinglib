@@ -172,7 +172,9 @@ public class GCircle extends GFillableE {
     }
 
     /**
-     * Tells if this circle intersects with a line
+     * Tells if this circle intersects with a line.<br>
+     * <b>Note:</b> This will tell if the line intersects the circle NOT the line 
+     * segment!!!
      *
      * @param line The line to check
      * @return {@code true} if they intersect and {@code false} otherwise
