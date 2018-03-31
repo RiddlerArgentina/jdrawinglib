@@ -755,7 +755,7 @@ public class GPointArray extends GMultiPoint {
     }
 
     /**
-     * Removes all duplicate entries in the array.
+     * Removes <b>ALL</b> duplicate entries in the array.
      */
     public void removeDuplicates() {
         //I guess this can be done more efficiently... but I have no idea how...
