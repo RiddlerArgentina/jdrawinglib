@@ -22,6 +22,7 @@ import com.dkt.graphics.elements.GVector;
 import com.dkt.graphics.elements.GraphicE;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * This class creates a Resultant Vector as a result of the sum of a finite
@@ -96,7 +97,7 @@ public class GVectorPolygon extends GraphicE {
             //Traslate all the vectors to the "point" of the previous one
             GVector prev = vectors.get(0);
             for (GVector v : vectors){
-                if (v == prev){
+                if (Objects.equals(v, prev)){
                     //The first vector is on the origin
                     v.traslate(-v.x(), -v.y());
                     continue;

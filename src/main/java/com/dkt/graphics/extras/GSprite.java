@@ -24,6 +24,7 @@ import com.dkt.graphics.exceptions.InvalidArgumentException;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Objects;
 
 /**
  * Creates a simple sprite, if you need help creating the pixmaps, you should
@@ -112,7 +113,7 @@ public class GSprite extends GraphicE implements Iterable<GPixMap> {
             bounds  = null;
         }
 
-        if (current == map) {
+        if (Objects.equals(current, map)) {
             current = frames.get(0);
             bounds  = current.getBounds();
         }

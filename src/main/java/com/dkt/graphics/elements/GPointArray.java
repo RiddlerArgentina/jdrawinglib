@@ -701,6 +701,7 @@ public class GPointArray extends GMultiPoint {
      * Sorts all the points in this array by it's {@code X} value, and breaks
      * ties with the {@code Y} value
      */
+    @Override
     public void sortByX() {
         sort(new Comparator<Integer>() {
             @Override
@@ -754,7 +755,7 @@ public class GPointArray extends GMultiPoint {
     }
 
     /**
-     * Removes all duplicate entries in the array.
+     * Removes <b>ALL</b> duplicate entries in the array.
      */
     public void removeDuplicates() {
         //I guess this can be done more efficiently... but I have no idea how...
@@ -807,7 +808,7 @@ public class GPointArray extends GMultiPoint {
         try{
             if (cs != 0) {
                 g.setStroke(getStroke());
-                for (int i = 0, n = size; i < n; i++){
+                for (int i = 0; i < size; i++){
                     final int x = xs[i];
                     final int y = ys[i];
 
@@ -815,7 +816,7 @@ public class GPointArray extends GMultiPoint {
                     g.drawLine(x     , y - cs, x     , y + cs);
                 }
             } else {
-                for (int i = 0, n = size; i < n; i++){
+                for (int i = 0; i < size; i++){
                     g.drawRect(xs[i], ys[i], 0, 0);
                 }
             }

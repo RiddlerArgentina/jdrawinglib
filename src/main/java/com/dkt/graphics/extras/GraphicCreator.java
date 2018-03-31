@@ -687,7 +687,7 @@ public class GraphicCreator {
     public GPath lpath(String[] args) {
         GPath path = new GPath(args.length / 2);
 
-        for (int i = 1, n = args.length; i < n; i += 2) {
+        for (int i = 1; i < args.length; i += 2) {
             final int x = getInt(args[i]);
             final int y = getInt(args[i + 1]);
 
@@ -918,25 +918,27 @@ public class GraphicCreator {
         }
     }
 
-    private int[] getInterval(int i, int s, int f) {
+    private int[] getInterval(final int i, final int s, final int f) {
         if (s == 0 | i == f) {
             return new int[0];
         }
 
-        s = Math.abs(s);
+        int ii = i;
+        int ss = Math.abs(s);
         int n;
-        if (i > f) {
-            n = (i - f) / s + 1;
-            s = -s;
+
+        if (ii > f) {
+            n = (ii - f) / ss + 1;
+            ss = -ss;
         } else {
-            n = (f - i) / s + 1;
+            n = (f - ii) / ss + 1;
         }
 
         int[] arr = new int[n];
 
         for (int j = 0; j < n; j++) {
-            arr[j] = i;
-            i += s;
+            arr[j] = ii;
+            ii += ss;
         }
 
         return arr;
