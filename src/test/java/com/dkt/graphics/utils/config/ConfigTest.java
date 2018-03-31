@@ -167,6 +167,7 @@ public class ConfigTest {
         Config.remove("conf_2");
         Config.on("conf_1").put("k1", Color.RED);
         Config.on("conf_1").put("k2", 123.3);
+        Config.on("conf_1").put("k3", true);
         Config.on("conf_2").put("k3", 100);
         Config.on("conf_2").put("k4", "Hello World");
         try (FileOutputStream fos = new FileOutputStream("foo2")) {
@@ -182,6 +183,7 @@ public class ConfigTest {
         }
         assertEquals(Color.RED, Config.from("conf_1").getColor("k1"));
         assertEquals(123.3, Config.from("conf_1").getDouble("k2"));
+        assertEquals(true, Config.from("conf_1").getBool("k3"));
         assertEquals(100, Config.from("conf_2").getInt("k3"));
         assertEquals("Hello World", Config.from("conf_2").getString("k4"));
     }
