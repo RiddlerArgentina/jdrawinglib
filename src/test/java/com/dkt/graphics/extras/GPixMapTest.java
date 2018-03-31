@@ -18,9 +18,12 @@
  */
 package com.dkt.graphics.extras;
 
+import com.dkt.graphics.exceptions.IntervalException;
 import com.dkt.graphics.exceptions.InvalidArgumentException;
 import com.dkt.graphics.utils.Utils;
 import java.awt.Color;
+import java.io.File;
+import java.io.InputStream;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -262,8 +265,6 @@ public class GPixMapTest {
         );
     }
 
-
-
     @Test
     @DisplayName("getData")
     public void testGetData() {
@@ -287,5 +288,123 @@ public class GPixMapTest {
         assertArrayEquals(data2, pm2.getColorData());
     }
 
+    @Test
+    @DisplayName("export/import")
+    public void testExportImport() {
+        int[][] data1 = new int[][]{
+            {0xffffff, 0xff000000, 0xff000000},
+            {0xff000000, 0xff000000, 0xffffff},
+            {0xff000000, 0xffffff, 0xff0000ff}
+        };
+        GPixMap pm1 = new GPixMap(data1, true);
+        try {
+            GPixMap.exportMap(pm1, new File("map"));
+        } catch (Exception ex) {
+            fail("Unable to export to " + "map");
+        }
+        try {
+            GPixMap pm2 = GPixMap.importMap(new File("map"));
+            assertEquals(pm1, pm2);
+        } catch (Exception ex) {
+            fail("Unable to import to " + "map");
+        }
+        assertThrows(IllegalArgumentException.class, () -> {
+                GPixMap.exportMap(null, new File("map"));
+            }
+        );
+        assertThrows(IllegalArgumentException.class, () -> {
+                GPixMap.exportMap(pm1, null);
+            }
+        );
+        assertThrows(IllegalArgumentException.class, () -> {
+                GPixMap.importMap((File)null);
+            }
+        );
+        assertThrows(IllegalArgumentException.class, () -> {
+                GPixMap.importMap((InputStream)null);
+            }
+        );
+    }
+
+    @Test
+    @DisplayName("Getters/Setters")
+    public void testGettersSetters() {
+        int[][] data1 = new int[][]{
+            {0xffffff, 0xff000000, 0xff000000},
+            {0xff000000, 0xff000000, 0xffffff},
+            {0xff000000, 0xffffff, 0xff0000ff}
+        };
+        GPixMap pm1 = new GPixMap(data1, true);
+        pm1.setValueAt(0, 0, 0xffffff, true);
+        assertThrows(IntervalException.class, () -> {
+                pm1.setValueAt(-1, 0, 0, true);
+            }
+        );
+        assertThrows(IntervalException.class, () -> {
+                pm1.setValueAt(1, -2, 0, true);
+            }
+        );
+        assertThrows(IllegalArgumentException.class, () -> {
+                pm1.setColorAt(1, 1, null);
+            }
+        );
+    }
+
+    @Test
+    @DisplayName("Intersects")
+    public void testIntersects() {
+        int[][] data1 = new int[][]{
+            {0xffffff, 0xff000000, 0xff000000},
+            {0xff000000, 0xff000000, 0xffffff},
+            {0xff000000, 0xffffff, 0xff0000ff}
+        };
+        GPixMap pm1 = new GPixMap(data1, true);
+        GPixMap pm2 = new GPixMap(data1, true);
+        assertTrue(pm1.intersects(pm1));
+        assertTrue(pm1.intersects(pm2));
+        pm2.traslateUnits(4, 4);
+        assertFalse(pm1.intersects(pm2));
+        pm2.traslateUnits(-2, -2);
+        assertTrue(pm1.intersects(pm2));
+    }
+
+    @Test
+    @DisplayName("Touches")
+    public void testTouches() {
+        int[][] data1 = new int[][]{
+            {0xffffff, 0xff000000, 0xff000000},
+            {0xff000000, 0xff000000, 0xffffff},
+            {0xff000000, 0xffffff, 0xff0000ff}
+        };
+        int[][] data2 = new int[][]{
+            {0xffffff, 0xffffff, 0xffffff},
+            {0xffffff, 0xffffff, 0xffffff},
+            {0xffffff, 0xffffff, 0xffffff}
+        };
+        GPixMap pm1 = new GPixMap(data1, true);
+        GPixMap pm2 = new GPixMap(data2, true);
+
+        assertTrue(pm1.touches(pm1));
+        assertFalse(pm1.touches(pm2));
+        assertFalse(pm2.touches(pm2));
+        pm2.setColorAt(1, 1, Color.BLACK);
+        assertTrue(pm1.touches(pm2));
+        assertTrue(pm2.touches(pm2));
+        pm1.setVisible(false);
+        assertFalse(pm1.touches(pm2));
+        pm1.setVisible(!pm1.isVisible());
+        assertTrue(pm1.touches(pm2));
+        pm2.traslateUnits(2, 2);
+        assertFalse(pm1.touches(pm2));
+        assertThrows(IllegalArgumentException.class, () -> {
+                pm1.touches(null);
+            }
+        );
+        pm1.setPixelSize(20);
+        assertThrows(InvalidArgumentException.class, () -> {
+                pm1.touches(pm2);
+            }
+        );
+    }
 
 }
