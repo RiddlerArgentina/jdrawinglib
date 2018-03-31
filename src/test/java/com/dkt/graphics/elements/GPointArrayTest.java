@@ -98,6 +98,22 @@ public class GPointArrayTest {
     }
 
     @Test
+    @DisplayName("Constructor points")
+    public void testConstructor7() {
+        GPoint[] ar = {
+            new GPoint(0, 4),
+            new GPoint(1, 5),
+            new GPoint(2, 6),
+            new GPoint(3, 7),
+        };
+
+        GPointArray mp = new GPointArray(ar);
+
+        assertNotNull(mp);
+        assertArrayEquals(ar, mp.getPoints());
+    }
+
+    @Test
     @DisplayName("Index of empty")
     public void testIndexOf1() {
         GPointArray mp = new GPointArray(10);
@@ -635,6 +651,9 @@ public class GPointArrayTest {
         for (GPoint pp : pa) {
             assertTrue(p.y() >= pp.y());
         }
+        pa.clear();
+        assertTrue(pa.isEmpty());
+        assertNull(pa.highestPoint());
     }
 
     @Test
@@ -646,6 +665,9 @@ public class GPointArrayTest {
         for (GPoint pp : pa) {
             assertTrue(p.y() <= pp.y());
         }
+        pa.clear();
+        assertTrue(pa.isEmpty());
+        assertNull(pa.lowestPoint());
     }
 
     @Test
@@ -657,6 +679,9 @@ public class GPointArrayTest {
         for (GPoint pp : pa) {
             assertTrue(p.x() <= pp.x());
         }
+        pa.clear();
+        assertTrue(pa.isEmpty());
+        assertNull(pa.leftmostPoint());
     }
 
     @Test
@@ -668,6 +693,9 @@ public class GPointArrayTest {
         for (GPoint pp : pa) {
             assertTrue(p.x() >= pp.x());
         }
+        pa.clear();
+        assertTrue(pa.isEmpty());
+        assertNull(pa.rightmostPoint());
     }
 
     @Test
@@ -690,6 +718,10 @@ public class GPointArrayTest {
         assertTrue(rec.contains(hp));
         assertTrue(rec.contains(ll));
         assertTrue(rec.contains(rp));
+
+        pa.clear();
+        assertTrue(pa.isEmpty());
+        assertNull(pa.getBounds());
     }
 
     @Test
@@ -788,6 +820,105 @@ public class GPointArrayTest {
     }
 
     @Test
+    @DisplayName("Intersects line")
+    public void testIntersects1(){
+        GPointArray pa1 = populate();
+        GPointArray pa2;
+        GLine l1 = new GLine(1000, 1000, 10., 0.);
+        GLine l2 = new GLine(0, 0, 100., 45.);
+        assertFalse(pa1.isEmpty());
+        assertTrue(pa1.intersection(l1).isEmpty());
+        pa2 = pa1.intersection(l2);
+        assertFalse(pa2.isEmpty());
+        for (GPoint p : pa2) {
+            assertTrue(l2.contains(p));
+        }
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.intersection((GLine)null);
+        });
+    }
+
+    @Test
+    @DisplayName("Intersects rectangle")
+    public void testIntersects2(){
+        GPointArray pa1 = populate();
+        GPointArray pa2;
+        GRectangle r1 = new GRectangle(1000, 1000, 10, 10);
+        GRectangle r2 = new GRectangle(0, 0, 30, 30);
+        assertFalse(pa1.isEmpty());
+        assertTrue(pa1.intersection(r1).isEmpty());
+        pa2 = pa1.intersection(r2);
+        assertFalse(pa2.isEmpty());
+        for (GPoint p : pa2) {
+            assertTrue(r2.contains(p));
+        }
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.intersection((GRectangle)null);
+        });
+    }
+
+    @Test
+    @DisplayName("Intersects circle")
+    public void testIntersects3(){
+        GPointArray pa1 = populate();
+        GPointArray pa2;
+        GCircle c1 = new GCircle(1000, 1000, 10);
+        GCircle c2 = new GCircle(0, 0, 20);
+        assertFalse(pa1.isEmpty());
+        assertTrue(pa1.intersection(c1).isEmpty());
+        pa2 = pa1.intersection(c2);
+        assertFalse(pa2.isEmpty());
+        for (GPoint p : pa2) {
+            assertTrue(c2.contains(p));
+        }
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.intersection((GCircle)null);
+        });
+    }
+
+    @Test
+    @DisplayName("Clone")
+    public void testClone(){
+        GPointArray pa1 = populate();;
+        assertFalse(pa1.isEmpty());
+        assertEquals(pa1, pa1.clone());
+        pa1.setCrossSize(3);
+        assertEquals(pa1, pa1.clone());
+    }
+
+    @Test
+    @DisplayName("Closest point")
+    public void testClosestPoint(){
+        GPointArray pa1 = populate();
+        assertNotNull(pa1.closestPoint(new GPoint(0, 0)));
+        assertFalse(pa1.isEmpty());
+        pa1.append(new GPoint(1000, 10000));
+        assertEquals(new GPoint(1000, 10000), pa1.closestPoint(new GPoint(1000, 10000)));
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.closestPoint((GPoint)null);
+        });
+    }
+
+    @Test
+    @DisplayName("Point in radius")
+    public void testPointInRadius(){
+        GPointArray pa1 = populate();
+        GPointArray pa2 = pa1.pointsInRadius(new GPoint(0, 0), 40);
+        assertNotNull(pa2);
+        assertFalse(pa1.isEmpty());
+        assertFalse(pa2.isEmpty());
+        GCircle c = new GCircle(0, 0, 41);
+        for (GPoint p : pa2) {
+            assertTrue(c.contains(p));
+        }
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.pointsInRadius((GPoint)null, 10);
+        });
+        pa1.clear();
+        assertEquals(pa1, pa1.pointsInRadius(new GPoint(0, 0) , 10));
+    }
+
+    @Test
     @DisplayName("Append")
     public void testAppend(){
         GPointArray pa1 = populate();
@@ -810,7 +941,7 @@ public class GPointArrayTest {
         assertEquals(400, pa2.size());
         assertNotEquals(pa1, pa3);
         assertThrows(IllegalArgumentException.class, () -> {
-            pa1.removeAll(null);
+            pa1.append((GPointArray)null);
         });
     }
 
