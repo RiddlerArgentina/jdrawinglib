@@ -926,18 +926,18 @@ public class GraphicCreator {
         int ii = i;
         int ss = Math.abs(s);
         int n;
-        
+
         if (ii > f) {
             n = (ii - f) / ss + 1;
             ss = -ss;
         } else {
-            n = (f - i) / ss + 1;
+            n = (f - ii) / ss + 1;
         }
 
         int[] arr = new int[n];
 
         for (int j = 0; j < n; j++) {
-            arr[j] = i;
+            arr[j] = ii;
             ii += ss;
         }
 
