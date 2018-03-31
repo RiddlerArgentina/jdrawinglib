@@ -115,6 +115,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @return {@code true} if the element is contained and {@code false}
      * otherwise
      * @throws IllegalArgumentException if {@code e} is {@code null}
+     * @see Graphic#flatten()
      */
     public boolean contains(final GraphicE e) {
         if (e == null){
@@ -133,6 +134,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @return {@code true} if the element was contained and {@code false}
      * otherwise
      * @throws IllegalArgumentException if {@code e} is {@code null}
+     * @see Graphic#flatten()
      */
     public boolean remove(final GraphicE e) {
         if (e == null){
@@ -151,6 +153,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @return The index number of the first occurrence of the element, or
      * {@code -1} if the element wasn't found
      * @throws IllegalArgumentException if {@code e} is {@code null}
+     * @see Graphic#flatten()
      */
     public int indexOf(final GraphicE e) {
         if (e == null){
@@ -241,6 +244,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @return a new {@code Graphic} that contains all the elements of the
      * above.
      * @see Graphic#mergeCopy(Graphic...)
+     * @see Graphic#flatten()
      */
     public static Graphic merge(final Graphic... graphics) {
         final Graphic g = new Graphic();
@@ -274,6 +278,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * @return a new {@code Graphic} that contains all the elements of the
      * above.
      * @see Graphic#merge(Graphic...)
+     * @see Graphic#flatten()
      */
     public static Graphic mergeCopy(final Graphic... graphics) {
         final Graphic g = new Graphic();
@@ -306,7 +311,13 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
 
     /**
      * Flattens the structure of a Graphic, this method is very slow, but it will
-     * increase the performance of draw()
+     * increase the performance of draw(). <br>
+     *
+     * This method is specially useful when you use the GraphicCreator, or when
+     * combining several {@code Graphic}. Consider trying to search for a specific
+     * element when having multiple {@code Graphic} objects... basically, you'll
+     * never be able to find them if you need to enter each and every
+     * {@code Graphic} object to check.
      */
     public void flatten() {
         Graphic foo = new Graphic(this.getCount());
