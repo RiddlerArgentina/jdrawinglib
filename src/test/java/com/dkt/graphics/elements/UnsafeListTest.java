@@ -162,6 +162,16 @@ public class UnsafeListTest {
         list.clear();
         assertTrue(list.isEmpty());
         assertEquals(0, list.size());
+        UnsafeList l2 = new UnsafeList(10);
+        l2.addAll(list);
+        assertNotEquals(list, null);
+        assertNotEquals(list, rand);
+        assertEquals(list, list);
+        assertEquals(list, l2);
+        assertEquals(list.hashCode(), l2.hashCode());
+        l2.add(new GPoint(0, 0));
+        assertNotEquals(list, l2);
+        assertNotEquals(list.hashCode(), l2.hashCode());
     }
 
     @Test
@@ -262,7 +272,7 @@ public class UnsafeListTest {
         assertEquals(new GPoint(0, 1), list.get(1));
         assertEquals(new GPoint(0, 2), list.get(2));
     }
-    
+
     @Test
     @DisplayName("Remove repeated element")
     public void testRemoveElement2() {
@@ -280,7 +290,7 @@ public class UnsafeListTest {
         assertEquals(new GPoint(0, 2), list.get(1));
         assertEquals(new GPoint(0, 3), list.get(2));
     }
-    
+
     @Test
     @DisplayName("Remove repeated element (on a row)")
     public void testRemoveElement3() {
@@ -298,7 +308,7 @@ public class UnsafeListTest {
         assertEquals(new GPoint(0, 0), list.get(0));
         assertEquals(new GPoint(0, 2), list.get(1));
     }
-    
+
     @Test
     @DisplayName("Contains null")
     public void testContains1() {
@@ -312,7 +322,7 @@ public class UnsafeListTest {
         assertEquals(6, list.size());
         assertFalse(list.contains(null));
     }
-    
+
     @Test
     @DisplayName("Contains one")
     public void testContains2() {
@@ -326,7 +336,7 @@ public class UnsafeListTest {
         assertEquals(6, list.size());
         assertTrue(list.contains(new GPoint(0, 0)));
     }
-    
+
     @Test
     @DisplayName("Contains none")
     public void testContains3() {
@@ -340,7 +350,7 @@ public class UnsafeListTest {
         assertEquals(6, list.size());
         assertFalse(list.contains(new GPoint(0, 4)));
     }
-    
+
     @Test
     @DisplayName("Contains last")
     public void testContains4() {
@@ -354,7 +364,7 @@ public class UnsafeListTest {
         assertEquals(6, list.size());
         assertTrue(list.contains(new GPoint(0, 2)));
     }
-    
+
     @Test
     @DisplayName("Add all empty")
     public void testAddAll1() {
@@ -370,7 +380,7 @@ public class UnsafeListTest {
         l1.addAll(l2);
         assertEquals(6, l1.size());
     }
-    
+
     @Test
     @DisplayName("Add all null")
     public void testAddAll2() {
@@ -385,7 +395,7 @@ public class UnsafeListTest {
         l1.addAll(null);
         assertEquals(6, l1.size());
     }
-    
+
     @Test
     @DisplayName("Add all this")
     public void testAddAll3() {
@@ -400,7 +410,7 @@ public class UnsafeListTest {
         l1.addAll(l1);
         assertEquals(6, l1.size());
     }
-    
+
     @Test
     @DisplayName("Add all one")
     public void testAddAll4() {
@@ -419,7 +429,7 @@ public class UnsafeListTest {
         assertEquals(7, l1.size());
         assertEquals(1, l2.size());
     }
-    
+
     @Test
     @DisplayName("Add all many")
     public void testAddAll5() {
@@ -453,7 +463,7 @@ public class UnsafeListTest {
         assertEquals(l2.get(3), l1.get(9));
         assertEquals(l2.get(4), l1.get(10));
     }
-    
+
     @Test
     @DisplayName("Iterator empty")
     public void testIterator1() {
@@ -462,7 +472,7 @@ public class UnsafeListTest {
             fail("List not empty! " + e);
         }
     }
-    
+
     @Test
     @DisplayName("Iterator elements")
     public void testIterator2() {
