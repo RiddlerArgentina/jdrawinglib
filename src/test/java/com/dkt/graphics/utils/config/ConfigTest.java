@@ -21,6 +21,7 @@ package com.dkt.graphics.utils.config;
 import java.awt.Color;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -117,7 +118,7 @@ public class ConfigTest {
         Config.on("conf_1").put("k1", "v1");
         Config.on("conf_1").put("k2", "v4");
         Config.on("conf_1").put("k3", "v5");
-        Config.on("conf_1").addListener(new ConfigListener() {
+        ConfigListener listener = new ConfigListener() {
             @Override
             public void somethingChange(ConfigEvent event) {
                 if (event.getChangeType() == ConfigEvent.VALUE_UPDATED) {
@@ -128,10 +129,15 @@ public class ConfigTest {
                     assertEquals("v2", event.getNewValue());
                 }
             }
-        });
+        };
+        Config.on("conf_1").addListener(listener);
         assertFalse(statusUpd);
         Config.on("conf_1").set("k1", "v2");
         assertTrue(statusUpd);
+        statusUpd = false;
+        Config.on("conf_1").removeListener(listener);
+        Config.on("conf_1").set("k1", "v3");
+        assertFalse(statusUpd);
     }
 
     @Test
@@ -186,5 +192,26 @@ public class ConfigTest {
         assertEquals(true, Config.from("conf_1").getBool("k3"));
         assertEquals(100, Config.from("conf_2").getInt("k3"));
         assertEquals("Hello World", Config.from("conf_2").getString("k4"));
+
+        try (FileOutputStream fos = new FileOutputStream("foo3");
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject("This is not a config file");
+        } catch (Exception e) {
+            fail("Unable to write file foo3");
+        }
+        assertTrue(Config.configSet().contains("conf_1"));
+        assertTrue(Config.configSet().contains("conf_2"));
+        assertThrows(IllegalArgumentException.class, () -> {
+                try (FileInputStream fis = new FileInputStream("foo3")) {
+                    Config.read(fis, null);
+                }
+            }
+        );
+        assertThrows(ClassCastException.class, () -> {
+                try (FileInputStream fis = new FileInputStream("foo3")) {
+                    Config.from("conf_2").getIcon("k4");
+                }
+            }
+        );
     }
 }
