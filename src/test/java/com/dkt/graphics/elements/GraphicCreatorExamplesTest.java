@@ -21,9 +21,13 @@ package com.dkt.graphics.elements;
 import com.dkt.graphics.extras.GraphicCreator;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonPrimitive;
+import com.google.gson.JsonSerializationContext;
+import com.google.gson.JsonSerializer;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import org.junit.jupiter.api.Test;
@@ -45,55 +49,56 @@ public class GraphicCreatorExamplesTest {
     @Test
     @DisplayName("Examples")
     public void testExamples() {
-        test("arc_of_a_circle");
-        test("arc_of_an_oval");
-        test("blueprint");
-        test("cartesian_line");
-        test("cartesian_vector");
-        test("chess_2");
-        test("chess_board");
-        test("circles_1");
-        test("circles_2");
-        test("circles_3");
-        test("circuit");
-        test("color_circles");
-        test("gradient");
-        test("line_path");
-        test("line_path_closed");
-        test("lines_1");
-        test("lines_2");
-        test("lines_3");
-        test("lines_4");
-        test("lines_5");
-        test("lines_6");
-        test("music_sheet");
-        test("optical_1");
-        test("optical_2");
-        test("optical_3");
-        test("optical_4");
-        test("optical_5");
-        test("optical_6");
-        test("optical_7");
-        test("oval");
-        test("point");
-        test("polar_line");
-        test("polar_vector");
-        test("polygons");
-        test("rectangles");
-        test("rectangles_2");
-        test("spiral");
-        test("strings");
-        test("strings_2");
-        test("technical");
-        test("test");
-        test("transformer");
+        assertTrue(test("arc_of_a_circle"));
+        assertTrue(test("arc_of_an_oval"));
+        assertTrue(test("blueprint"));
+        assertTrue(test("cartesian_line"));
+        assertTrue(test("cartesian_vector"));
+        assertTrue(test("chess_2"));
+        assertTrue(test("chess_board"));
+        assertTrue(test("circles_1"));
+        assertTrue(test("circles_2"));
+        assertTrue(test("circles_3"));
+        assertTrue(test("circuit"));
+        assertTrue(test("color_circles"));
+        assertTrue(test("gradient"));
+        assertTrue(test("line_path"));
+        assertTrue(test("line_path_closed"));
+        assertTrue(test("lines_1"));
+        assertTrue(test("lines_2"));
+        assertTrue(test("lines_3"));
+        assertTrue(test("lines_4"));
+        assertTrue(test("lines_5"));
+        assertTrue(test("lines_6"));
+        assertTrue(test("music_sheet"));
+        assertTrue(test("optical_1"));
+        assertTrue(test("optical_2"));
+        assertTrue(test("optical_3"));
+        assertTrue(test("optical_4"));
+        assertTrue(test("optical_5"));
+        assertTrue(test("optical_6"));
+        assertTrue(test("optical_7"));
+        assertTrue(test("oval"));
+        assertTrue(test("point"));
+        assertTrue(test("polar_line"));
+        assertTrue(test("polar_vector"));
+        assertTrue(test("polygons"));
+        assertTrue(test("rectangles"));
+        assertTrue(test("rectangles_2"));
+        assertTrue(test("spiral"));
+        assertTrue(test("strings"));
+        assertTrue(test("strings_2"));
+        assertTrue(test("technical"));
+        assertTrue(test("test"));
+        assertTrue(test("transformer"));
     }
 
-    private void test(String file) {
+    private boolean test(String file) {
         String[] exp = readFile("/bin/" + file);
         String[] res =graph("/" + file);
         assertArrayEquals(exp, res);
         assertNotNull(exp);
+        return true;
     }
 
     private String[] readFile(String name) {
@@ -127,6 +132,9 @@ public class GraphicCreatorExamplesTest {
         Graphic g = gc.parse(content);
         g.flatten();
         Gson gson = new GsonBuilder()
+                .registerTypeAdapter(Double.class, (JsonSerializer<Double>)
+                        (Double s, Type t, JsonSerializationContext c)
+                                -> new JsonPrimitive(String.format("%8.6f", s)))
                 .setPrettyPrinting()
                 .create();
         return gson.toJson(g).trim().split("\\n");
