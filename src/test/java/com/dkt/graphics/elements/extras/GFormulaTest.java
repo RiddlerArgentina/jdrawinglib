@@ -27,6 +27,7 @@ import com.dkt.graphics.exceptions.DomainException;
 import com.dkt.graphics.exceptions.IntervalException;
 import com.dkt.graphics.extras.GFormula;
 import com.dkt.graphics.extras.formula.Calculable;
+import java.awt.Color;
 import java.util.Iterator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -168,6 +169,10 @@ public class GFormulaTest {
         });
         assertThrows(IntervalException.class, () -> {
             GFormula formula = new GFormula(eye);
+            formula.calculate(0, 10, -10, null);
+        });
+        assertThrows(IntervalException.class, () -> {
+            GFormula formula = new GFormula(eye);
             formula.calculate(0, 10, -10);
         });
         assertThrows(IntervalException.class, () -> {
@@ -178,5 +183,22 @@ public class GFormulaTest {
             GFormula formula = new GFormula(eye);
             formula.calculate(0, 10, 20);
         });
+    }
+
+    @Test
+    @DisplayName("Test set Fill Paint")
+    public void testFormula6() {
+        Calculable eye = new Calculable() {
+            @Override
+            public double f(double x) throws DomainException {
+                return x;
+            }
+        };
+        assertThrows(IllegalArgumentException.class, () -> {
+            GFormula formula = new GFormula(eye);
+            formula.setAreaPaint(null);
+        });
+        GFormula formula = new GFormula(eye);
+        formula.setAreaPaint(Color.RED);
     }
 }
