@@ -29,13 +29,13 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Since the graphic creator uses almost all of the other classes, this is the
  * closest thing to integration tests.
- * 
+ *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GraphicCreatorExamplesTest {
-    
+
     @Test
-    @DisplayName("Examples->Lines->Lines 1") 
+    @DisplayName("Examples->Lines->Lines 1")
     public void testLines1() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -61,5 +61,5 @@ public class GraphicCreatorExamplesTest {
         assertEquals(g.getCount(), g2.getCount());
         assertEquals(g, g2);
     }
-    
+
 }
