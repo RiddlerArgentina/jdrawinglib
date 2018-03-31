@@ -189,7 +189,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         g.setClip(clip);
         g.setTransform(at);
     }
-    
+
     @Override
     public void traslate(final int x, final int y) {
         synchronized (components){
@@ -304,6 +304,30 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         visible = v;
     }
 
+    /**
+     * Flattens the structure of a Graphic, this method is very slow, but it will
+     * increase the performance of draw()
+     */
+    public void flatten() {
+        Graphic foo = new Graphic(this.getCount());
+        flatten(this, foo);
+        removeAll();
+        components.addAll(foo.components);
+        foo.removeAll();
+    }
+
+    private void flatten(Graphic src, Graphic dest) {
+        for (GraphicE component : src.components) {
+            if (component instanceof Graphic) {
+                flatten((Graphic)component, dest);
+                ((Graphic)component).removeAll();
+            } else {
+                dest.add(component);
+            }
+        }
+
+    }
+
     @Override
     public Iterator<GraphicE> iterator() {
         return components.iterator();
@@ -318,7 +342,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
     public int hashCode() {
         int hash = super.hashCode();
         for (int i = 0; i < components.size(); i++) {
-            hash = 47 * hash + components.get(i).hashCode(); 
+            hash = 47 * hash + components.get(i).hashCode();
         }
         hash = 47 * hash + xOff;
         hash = 47 * hash + yOff;
@@ -332,11 +356,11 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         }
 
         final Graphic other = (Graphic) obj;
-        
+
         for (int i = 0; i < components.size(); i++) {
             if (!Objects.equals(components.get(i), other.components.get(i))) {
                 return false;
-            } 
+            }
         }
 
         return !(
