@@ -1,0 +1,36 @@
+bounds 300 300 center invert_y
+
+# Background
+colorf 35 20 20; rectc 0 0 300 300
+
+# Grid
+stroke 0.1; color 160 160 100;
+for1 -130 20 140 "linep -150   %d 300  0"
+for1 -130 20 140 "linep   %d -150 300 90"
+
+# Border
+color 255 255 255; colorf no
+stroke .8
+arc  20   0 200 300 90  -45
+arc -20   0 200 300 90 -225
+arc   0 -20 300 200 90   45
+arc   0  20 300 200 90  225
+
+linec   96 105  96 -105
+linec  -96 105 -96 -105
+linec -105  97 105   97
+linec -105 -97 105  -97
+
+rectc   0   0 10 10
+rectc  10  10 10 10
+rectc -10  10 10 10
+rectc -10 -10 10 10
+rectc  10 -10 10 10
+
+circle 0 0 30
+
+!for2 -88 16 100 0 20 260 "
+!    color %2$d %2$d %2$d;
+!    colorf %2$d %2$d %2$d;
+!    rectc %1$d 0 16 194
+!"

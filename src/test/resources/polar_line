@@ -1,0 +1,28 @@
+# Command: linep x y l a
+# Arguments: 
+#    'x' (int)   x coordinate of the origin
+#    'y' (int)   y coordinate of the origin
+#    'l' (float) length of the segment
+#    'a' (float) angle in degrees
+# Description: creates a segment based on one point, a length and 
+               an angle
+# Notes: If the 'invert_y' flag is used the angle will be counted
+#        counter clockwise (and viceversa).
+#        If the length is a negative number it will be equivalent to
+#        adding 180° to the angle
+# Use example:
+# Don't pay much attention to this three lines, I just put a 
+# grid on the background to make the example clear.
+# Set the canvas size, center the origin and invert the Y axis
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+linep   0   0  50  45
+linep -50  50  10   0
+linep -50  50  20  45
+linep -50  50  30  90
+linep -50  50  40 135
+linep -50  50  50 180
+linep -20 -50 -30 180
+# There's no real need to align the numbers...

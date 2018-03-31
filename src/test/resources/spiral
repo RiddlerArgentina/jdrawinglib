@@ -1,0 +1,14 @@
+bounds 250 250 center invert_y
+
+for1 5 10 180 "arcc 0 0 %1$d 180 0; arcc 10 0 %1$d 180 180";
+#      ^^ try playing with this numbers!
+
+# The above for will unroll like this:
+#
+#arcc  0 0  5  180 0;arcc 10 0  5  180 180
+#arcc  0 0 10  180 0;arcc 10 0 10  180 180
+#arcc  0 0 15  180 0;arcc 10 0 15  180 180
+#arcc  0 0 20  180 0;arcc 10 0 20  180 180
+#....
+#arcc  0 0 100 180 0;arcc 10 0 100 180 180
+#arcc  0 0 105 180 0;arcc 10 0 105 180 180

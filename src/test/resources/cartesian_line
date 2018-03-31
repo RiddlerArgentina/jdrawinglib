@@ -1,0 +1,24 @@
+# Command: linec x1 y1 x2 y2
+# Arguments:
+#    'x1' (int) x coordinate of the start point
+#    'y1' (int) y coordinate of the start point
+#    'x2' (int) x coordinate of the end point
+#    'y2' (int) y coordinate of the end point
+# Description: creates a line segment based on two points
+# Notes: If the 'invert_y' flag is used the angle will be counted
+#        counter clockwise (and viceversa).
+#        If the length is a negative number it will be equivalent to
+#        adding 180° to the angle
+# Use example:
+# Don't pay much attention to this three lines, I just put a
+# grid on the background to make the example clear.
+# Set the canvas size, center the origin and invert the Y axis
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+linec   0    0  50  50
+linec -30   30 -30 -50
+linec  10 -100 100 -30
+linec -80   70  20  70
+# There's no real need to align the numbers...

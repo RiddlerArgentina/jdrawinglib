@@ -1,0 +1,28 @@
+# Command: vectp x y l a
+# Arguments: 
+#    'x' (int)   x coordinate of the origin
+#    'y' (int)   y coordinate of the origin
+#    'l' (float) length of the vector
+#    'a' (float) angle in degrees
+# Description: creates a vector segment based on one point, a length
+#              and an angle. The tip of the arrow will be pointing
+#              away from the point of origin
+# Notes: If the 'invert_y' flag is used the angle will be counted
+#        counter clockwise (and viceversa).
+#        If the length is a negative number it will be equivalent to
+#        adding 180° to the angle
+# Use example:
+# Don't pay much attention to this three lines, I just put a 
+# grid on the background to make the example clear.
+# Set the canvas size, center the origin and invert the Y axis
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+vectp   0   0 50   45
+vectp -50  50 30    0
+vectp -20  50 40 -120
+vectp -40  15 35  -90
+vectp -40 -20 40  180
+vectp -50  50 75  246
+# There's no real need to align the numbers...

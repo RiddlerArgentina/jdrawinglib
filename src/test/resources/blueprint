@@ -1,0 +1,330 @@
+# Small example showing a blueprint I found on Google Images...
+
+bounds 450 450 center invert_y
+
+traslate -40 -20
+#point 0 0 3
+#color 128 128 128
+#stroke 0.1
+#grid 0 0 630 550 10 10
+
+color 32 32 32
+
+# Outline (circles)
+arcc 0 0 50 -57 15
+stroke 3; arcc 0 0 190 -11 0
+# Middle arcs
+color 32 32 32
+stroke 3
+arcc 0 0 150  -2    0
+arcc 0 0 150  -6  -10
+arcc 0 0 150 -35  -25
+arcc 0 0 150 -25  -65
+arcc 0 0 150  -5 -100
+arcc 0 0 150  -5 -115
+arcc 0 0 150 -20 -130
+arcc 0 0 150  -5 -160
+arcc 0 0 150  -5 -175
+arcc 0 0 150 -20 -190
+arcc 0 0 150  -5 -220
+arcc 0 0 150  -5 -235
+arcc 0 0 150 -15 -250
+arcc 0 0 150 -15 -280
+arcc 0 0 150 -10 -310
+arcc 0 0 150 -10 -350
+
+# Inner arcs
+arcc 0 0 50 -57   15
+arcc 0 0 50 -29  -65
+arcc 0 0 50 -34 -120
+arcc 0 0 50 -35 -180
+arcc 0 0 50 -60 -240
+stroke 0.5 0 5
+circle 0 0 15
+
+# Outer arcs
+stroke 0.5;      arcc 0 0 250 -30 -45
+stroke 3 0 5 10; arcc 0 0 250  -5 -40
+stroke 3;        arcc 0 0 250 -15   0
+stroke 3;        arcc 0 0 250  -5 -35
+stroke 3 3 5 10; arcc 0 0 250 -45  45
+stroke 0.5;      arcc 0 0 200 -25  70
+
+# External wall limits
+clipadd circle 0 0 255
+clipsub circle 0 0 245
+stroke 3
+linep 0 0 400 45
+linep 0 0 400 -45
+clipoff
+
+# Outline (radial inner walls)
+clipadd circle 0 0 150
+clipsub circle 0 0  50
+stroke 3
+linep 0 0 150  40
+linep 0 0 150  80
+linep 0 0 150 140
+linep 0 0 150 200
+linep 0 0 150 260
+clipoff
+
+# Outline (radial outer walls)
+clipadd circle 0 0 250
+clipsub circle 0 0 150
+stroke 0.5; linep   0 0 250 75
+stroke 3;   linep   0 0 250 12
+stroke 3;   linep   0 0 200  0
+stroke 3;   linec 240 0 250  0
+clipoff
+
+clipadd circle 0 0 300
+clipsub circle 0 0 225
+clipadd circle 0 0 175
+clipsub circle 0 0 150
+stroke 3
+linep 0 0 250 40
+clipoff
+clipadd circle 0 0 250
+clipsub circle 0 0 200
+stroke 0.5
+linep 0 0 250 -45
+clipoff
+clipadd circle 0 0 200
+clipsub circle 0 0 150
+stroke 0.5
+linep 0 0 200 -70
+clipoff
+
+# Inner doors
+clipadd circle 0 0 71
+clipsub circle 0 0 50
+stroke 1.5
+linep 0 0 70  65
+linep 0 0 70  95
+linep 0 0 70 155
+linep 0 0 70 215
+stroke 0.5
+arcc  21  46 20 -95   30
+arcc  -4  50 20 -95 -100
+arcc -45  20 20 -95 -155
+arcc -42 -29 20 -95 -220
+clipoff
+
+# Middle doors
+clipadd circle 0 0 175
+clipsub circle 0 0 150
+stroke 2
+linep 0 0 170 10
+linep 0 0 172 17
+stroke 0.5
+arcc 148 27 20 -95 90
+arcc 145 44 21 -95 -20
+clipoff
+
+clipadd circle 0 0 150
+clipsub circle 0 0 117
+stroke 2  ; linep 0 0 200 -50
+stroke 0.5; arcc 98 -120 38 100 128
+clipoff
+
+# Patio door
+stroke 0.5
+clipadd circle 0 0 226
+clipsub circle 0 0 195
+linep 0 0 250 40.4
+clipoff
+clipadd circle 0 0 204
+clipsub circle 0 0 173
+linep 0 0 250 39.2
+clipoff
+
+# Storage door
+stroke 2
+linec 240 0 240 -20
+linec 200 0 200 -20
+stroke 0.5
+arcc 200 0 20 -90  90
+arcc 240 0 20 -90 180
+
+# Windows
+stroke 0.3
+arcc 0 0 148 -230 -60
+arcc 0 0 152 -230 -60
+arcc 0 0 151 -230 -60
+arcc 0 0 148  -30  40
+arcc 0 0 152  -30  40
+arcc 0 0 151  -30  40
+arcc 0 0 248  -40   0
+arcc 0 0 252  -40   0
+arcc 0 0 251  -40   0
+
+# Furniture (kitchen)
+stroke 0.4
+clipadd circle 0 0 150
+clipsub circle 0 0  69
+linep 20 -20 200 40
+arcc 0 0 70 -25 10
+clipoff
+clipadd circle 0 0 70
+clipsub circle 0 0 50
+linep 0 0 70 -10
+clipoff
+transoff
+traslate -40 -25
+rotate 10 0 40
+rectc 110 -5 20 20
+rectc  90 -5 20 20
+rectc 130 -5  2 29
+circle 61 -20 3
+circle 53 -21 3
+circle 56 -28 3
+circle 48 -28 3
+circle 50 -35 3
+transoff
+
+# Furniture (dining)
+clipadd circle 55 -80 50
+clipsub circle 55 -80 21
+stroke 0.5
+rectc  55 -80 10 50
+rectc  55 -80 50 10
+rotate 55 -80 45
+rectc  55 -80 10 50
+rectc  55 -80 50 10
+transoff
+clipoff
+stroke 0.6
+circle 55 -80 20
+
+# Furniture (living)
+traslate -20 -10
+rotate 0 0 -10
+rectc -2 -110 20 50
+rectc  0 -110 14 38
+rectc -4  -78 16  8
+rectc -4 -142 16  8
+transoff
+rectc -20 -153 18 18
+rectc -20 -151 14 14
+traslate -40 -20
+rotate 0 0 20
+rectc -4 -136 18 18
+rectc -4 -134 14 14
+transoff
+circle -10 -125 8
+
+# Furniture (bath)
+stroke 0.4
+traslate -40 -20
+rotate 10 0 80
+clipadd circle 0 0 155
+rectc 130 -5 70 25
+arcc 140 -5 8 180 -90
+lpath 140 3 100 3 100 -12 140 -12
+clipoff
+clipadd circle 0 0 190
+clipsub circle 0 0 130
+arcc 0 0 130 -20 35
+linep 0 0 155 -15
+clipoff
+transoff
+
+# Furniture (bedroom 1)
+stroke 0.4
+traslate -40 -20
+rotate 0 0 80
+rectc  100 30 50 60
+rectc  100 10 40 10
+colorf 200 200 200;
+rectc 133 7 10 10
+rectc  67 7 10 10
+colorf no
+transoff
+traslate -40 -20
+rotate 0 0 140
+rectc  66 -10 30 15
+rectc 120  -7 60 10
+stroke 0.9;
+rectc 120 -12 60 20
+transoff
+
+# Furniture (bedroom 2)
+stroke 0.4
+traslate -40 -20
+rotate 0 0 140
+rectc 80 30 25 60
+rectc 80 10 20 10
+rectc 120 30 25 60
+rectc 120 10 20 10
+colorf 200 200 200
+rectc 140 7 10 10
+rectc  60 7 10 10
+rectc 100 7 10 10
+colorf no
+transoff
+traslate -40 -20
+rotate 0 0 201
+rectc  66 -10 30 15
+rectc 120  -7 60 10
+stroke 0.9
+rectc 120 -12 60 20
+transoff
+
+# Furniture (bedroom 3)
+stroke 0.4
+traslate -40 -20
+rotate 0 0 200
+rectc  100 30 50 60
+rectc  100 10 40 10
+colorf 200 200 200
+rectc 133 7 10 10
+rectc  67 7 10 10
+colorf no
+transoff
+traslate -40 -20
+rotate 0 0 261
+rectc  66 -10 30 15
+rectc 120  -7 60 10
+stroke 0.9
+rectc 120 -12 60 20
+transoff
+
+# Furniture (Patio livingroom)
+stroke 0.4
+rotate 0 0 26
+rectc 185 0 25 60
+rectc 183 0 20 54
+arcc 120 20 10 -180 -45
+arcc 120 20  7 -180 -45
+linec 113 12 127 28
+arcc 120 4 10 -180 -120
+arcc 120 4  7 -180 -120
+linec 113 12 123 -4
+transoff
+rotate 0 0 12
+rectc 155 -6 55 10
+transoff
+
+# Labels (Outer rooms)
+traslate -40 -20
+font dialog 10
+stroke 1
+color 0 0 0
+string  85  160 PATIO
+string 165   90 PATIO
+string 145   80 LIVINGROOM
+string 195   15 STORAGE
+string 145  -90 CARPORT
+
+# Label (Inner rooms)
+stroke 1
+color 0 0 0
+string  -20  18 ATRIUM
+string   40  80 BATH
+string  -75  90 BEDROOM 1
+string -140  10 BEDROOM 2
+string -105 -80 BEDROOM 3
+string   15 -90 LIVING
+string   76 -65 DINING
+string   80  20 KITCHEN

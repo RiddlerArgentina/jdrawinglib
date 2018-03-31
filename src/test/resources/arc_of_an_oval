@@ -1,0 +1,30 @@
+# Command: arc x y w h a o
+# Arguments:
+#    'x' (int) x coordinate of the center
+#    'y' (int) y coordinate of the center
+#    'w' (int) width of the rectangle
+#    'h' (int) height of the rectange
+#    'a' (int) angle in degrees of the arc
+#    'o' (int) angle offset in degrees
+# Description: Creates an arc of an oval
+# Note: If the 'invert_y' the offset angle is counted clockwise.
+#       The dotted lines in the example are placed there just to
+#       illustrate the oval from which the arc was created
+# Use example:
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+arc   0  0  20  40 90  90
+arc   0  0  50  40 90 -90
+arc   0  0 100 130 90   0
+arc -70 30  30 120 80  40
+arc -70 30  30 120 80 210
+# This lines (explained on other files draw the bounds
+# of the example ovals)
+stroke 0.2 0 4 4
+oval   0  0  20  40
+oval   0  0  50  40
+oval   0  0 100 130
+oval -70 30  30 120
+# There's no real need to align the numbers...

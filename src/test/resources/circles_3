@@ -1,0 +1,7 @@
+bounds 250 250 center invert_y 
+color 0 0 0 0;
+for2 100 -1 10 20 4 255 "
+    colorf 10    0 %2$d    0;arcc 0 0 %1$d -60   0;
+    colorf 10    0    0 %2$d;arcc 0 0 %1$d -60 120;
+    colorf 10 %2$d    0    0;arcc 0 0 %1$d -60 240
+"

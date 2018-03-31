@@ -1,0 +1,27 @@
+# Command: oval x y w h
+# Arguments: 
+#    'x' (int) x coordinate of the center
+#    'y' (int) y coordinate of the center
+#    'w' (int) width of the rectangle
+#    'h' (int) height of the rectange
+# Description: creates an oval inscribed in a rectangle
+# Use example:
+# Don't pay much attention to this three lines, I just put a 
+# grid on the background to make the example clear.
+# Set the canvas size, center the origin and invert the Y axis
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+oval   0   0 50 70
+oval -70  70 50 20
+oval  50 -70 50 20
+oval  50 -70 20 50
+oval  60  30 40 40#An oval in a square is basically a circle
+# This lines (explained on other files draw the bounds
+# of the example ovals)
+stroke 0.5 0 4 4
+rectc   0  0 50 70
+rectc -70 70 50 20
+rectc  60 30 40 40
+# There's no real need to align the numbers...

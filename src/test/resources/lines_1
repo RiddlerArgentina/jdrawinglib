@@ -1,0 +1,5 @@
+bounds 300 300
+stroke 3;
+
+for1 0 10 300 "linec 0 %1$d %1$d 0"
+for1 0 10 300 "color 0 %1$d %1$d; linec %1$d 300 300 %1$d"

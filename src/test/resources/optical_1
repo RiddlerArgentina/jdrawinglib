@@ -1,0 +1,13 @@
+bounds 300 300
+
+# Squares
+colorf 0 0 0; color 0 0 0
+for3  20 40 310  0 80 310 "rectc %d %d 20 20"
+for3  25 40 310 20 80 310 "rectc %d %d 20 20"
+for3 -10 40 310 40 80 310 "rectc %d %d 20 20"
+for3  25 40 310 60 80 310 "rectc %d %d 20 20"
+colorf no
+
+# Horizontal lines
+stroke 1.5; color 128 128 128;
+for1 10 20 300 "linec 0 %1$d 300 %1$d"

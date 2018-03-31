@@ -1,0 +1,24 @@
+# Command: point x y [cs]
+# Arguments:
+#    'x'  (int) x coordinate of the point
+#    'y'  (int) y coordinate of the point
+#    'cs' (int)[optional] cross size
+# Description: Draws a point on the canvas
+# Note: If the 'cs' parameter is not passed, then this will
+#       simply paint a pixel on the screen. The 'cs' parameter
+#       specifies a cross size of the point.
+# Use example:
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+point  0  0
+point  5  5
+point -5 -5
+point  5 -5
+point -5  5
+point  40  50  2
+point  40 -50  2
+point -70  20 32
+point -30 -40 15
+# There's no real need to align the numbers...

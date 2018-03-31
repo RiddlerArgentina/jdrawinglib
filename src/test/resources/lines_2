@@ -1,0 +1,19 @@
+bounds 400 400 center invert_y
+
+stroke 0.5
+color 128 160 160
+linec 0 150 0 -150
+linec -150 0 150 0
+
+# Inner lines
+for2 200 -10 0 10 10 200 "linec 0  %d  %d 0"
+for2 200 -10 0 10 10 200 "linec 0  %d -%d 0"
+for2 200 -10 0 10 10 200 "linec 0 -%d  %d 0"
+for2 200 -10 0 10 10 200 "linec 0 -%d -%d 0"
+
+color 100 100 200
+# Outter lines
+for2 200 -10 0 10 10 200 "linec  200  %d  %d  200"
+for2 200 -10 0 10 10 200 "linec -200  %d -%d  200"
+for2 200 -10 0 10 10 200 "linec  200 -%d  %d -200"
+for2 200 -10 0 10 10 200 "linec -200 -%d -%d -200"

@@ -1,0 +1,31 @@
+# Command: string2 x y a str
+# Arguments:
+#    'x'   (int) x coordinate from the lower left corner
+#    'y'   (int) y coordinate from the lower left corner
+#    'a'   (int) angle of the string in degrees
+#    'str' (String) The string to print on the canvas
+# Description: Writes an inclined string on the canvas
+# Notes: The string can't have more than one space between words
+#        (they will be removed), other invalid characters are an
+#        odd number of double quotes ", and note that everything
+#        to the right of a numeral # will be omitted
+#        The font and color of strings can be changed, but that's
+#        in other examples (color, font).
+#        You can also rotate strings with the 'rotate' keyword
+#        but this is not recommended
+#        Strings automatically compensate the 'invert_y' flag, so
+#        it's possible to experience unexpected behavior when
+#        using 'scale' with negative Y arguments.
+#        Strings can have special characters as seen in the
+#        'music sheet' example, but of course this will fail
+#        misserably on winbugs so it's not recommended
+# Use example:
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+string2 -100  100  45 45° degree
+string2 -100 -100 -10 this String has "quotes"!
+# This is a small example of creating a string using fors
+for1 0 90 350 "string2 20 20 %1$d Hello World!"
+# There's no real need to align the numbers...

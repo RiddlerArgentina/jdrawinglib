@@ -1,0 +1,13 @@
+bounds 300 300 center invert_y
+
+# Draw the circles
+stroke 1.5;
+for1 20 13 71 "
+    circle   0  90 %1$d; # upper
+    circle   0 -90 %1$d; # lower
+    circle  90   0 %1$d; # right
+    circle -90   0 %1$d  # left
+"
+
+#Draw the red square
+stroke 2; color 255 0 0; polyn 0 0 62 4 45

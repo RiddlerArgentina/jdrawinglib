@@ -1,0 +1,742 @@
+{
+  "components": {
+    "mutex": {},
+    "elements": [
+      {
+        "x": -5,
+        "y": -5,
+        "w": 10,
+        "h": 10,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 5,
+        "y": -5,
+        "w": 10,
+        "h": 10,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -15,
+        "y": -15,
+        "w": 30,
+        "h": 30,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -5,
+        "y": -15,
+        "w": 30,
+        "h": 30,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -25,
+        "y": -25,
+        "w": 50,
+        "h": 50,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -15,
+        "y": -25,
+        "w": 50,
+        "h": 50,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -35,
+        "y": -35,
+        "w": 70,
+        "h": 70,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -25,
+        "y": -35,
+        "w": 70,
+        "h": 70,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -45,
+        "y": -45,
+        "w": 90,
+        "h": 90,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -35,
+        "y": -45,
+        "w": 90,
+        "h": 90,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -55,
+        "y": -55,
+        "w": 110,
+        "h": 110,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -45,
+        "y": -55,
+        "w": 110,
+        "h": 110,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -65,
+        "y": -65,
+        "w": 130,
+        "h": 130,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -55,
+        "y": -65,
+        "w": 130,
+        "h": 130,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -75,
+        "y": -75,
+        "w": 150,
+        "h": 150,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -65,
+        "y": -75,
+        "w": 150,
+        "h": 150,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -85,
+        "y": -85,
+        "w": 170,
+        "h": 170,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -75,
+        "y": -85,
+        "w": 170,
+        "h": 170,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -95,
+        "y": -95,
+        "w": 190,
+        "h": 190,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -85,
+        "y": -95,
+        "w": 190,
+        "h": 190,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -105,
+        "y": -105,
+        "w": 210,
+        "h": 210,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -95,
+        "y": -105,
+        "w": 210,
+        "h": 210,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -115,
+        "y": -115,
+        "w": 230,
+        "h": 230,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -105,
+        "y": -115,
+        "w": 230,
+        "h": 230,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -125,
+        "y": -125,
+        "w": 250,
+        "h": 250,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -115,
+        "y": -125,
+        "w": 250,
+        "h": 250,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -135,
+        "y": -135,
+        "w": 270,
+        "h": 270,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -125,
+        "y": -135,
+        "w": 270,
+        "h": 270,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -145,
+        "y": -145,
+        "w": 290,
+        "h": 290,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -135,
+        "y": -145,
+        "w": 290,
+        "h": 290,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -155,
+        "y": -155,
+        "w": 310,
+        "h": 310,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -145,
+        "y": -155,
+        "w": 310,
+        "h": 310,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -165,
+        "y": -165,
+        "w": 330,
+        "h": 330,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -155,
+        "y": -165,
+        "w": 330,
+        "h": 330,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -175,
+        "y": -175,
+        "w": 350,
+        "h": 350,
+        "sa": 0,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -165,
+        "y": -175,
+        "w": 350,
+        "h": 350,
+        "sa": 180,
+        "aa": 180,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      }
+    ],
+    "cursor": 36
+  },
+  "visible": true,
+  "xOff": 0,
+  "yOff": 0,
+  "paint": {
+    "value": -16777216,
+    "falpha": 0.0
+  },
+  "stroke": {
+    "width": 1.0,
+    "join": 0,
+    "cap": 2,
+    "miterlimit": 10.0,
+    "dash_phase": 0.0
+  }
+}

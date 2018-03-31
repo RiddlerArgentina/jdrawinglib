@@ -1,0 +1,13 @@
+bounds 320 320
+#http://www.utf8-chartable.de/unicode-utf8-table.pl?start=9728
+# Board
+colorf 0 0 0;
+for3 60 80 300 20 80 300 "rectc %d %d 40 40;"
+for3 20 80 300 60 80 300 "rectc %d %d 40 40;"
+
+# Set black pieces
+color 255 255 255
+font dialo 36
+string 125 32 ♔
+
+string 165 312 ♛

@@ -1,0 +1,1198 @@
+{
+  "components": {
+    "mutex": {},
+    "elements": [
+      {
+        "x": 0,
+        "y": 0,
+        "w": 300,
+        "h": 300,
+        "cx": 150,
+        "cy": 150,
+        "fill": true,
+        "fillPaint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 40,
+        "y": 40,
+        "d": 20,
+        "r": 10,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 30,
+        "y": 30,
+        "d": 40,
+        "r": 20,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 20,
+        "y": 20,
+        "d": 60,
+        "r": 30,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 10,
+        "y": 10,
+        "d": 80,
+        "r": 40,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "d": 100,
+        "r": 50,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 40,
+        "y": 140,
+        "d": 20,
+        "r": 10,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 30,
+        "y": 130,
+        "d": 40,
+        "r": 20,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 20,
+        "y": 120,
+        "d": 60,
+        "r": 30,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 10,
+        "y": 110,
+        "d": 80,
+        "r": 40,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 0,
+        "y": 100,
+        "d": 100,
+        "r": 50,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 40,
+        "y": 240,
+        "d": 20,
+        "r": 10,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 30,
+        "y": 230,
+        "d": 40,
+        "r": 20,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 20,
+        "y": 220,
+        "d": 60,
+        "r": 30,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 10,
+        "y": 210,
+        "d": 80,
+        "r": 40,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 0,
+        "y": 200,
+        "d": 100,
+        "r": 50,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 140,
+        "y": 40,
+        "d": 20,
+        "r": 10,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 130,
+        "y": 30,
+        "d": 40,
+        "r": 20,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 120,
+        "y": 20,
+        "d": 60,
+        "r": 30,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 110,
+        "y": 10,
+        "d": 80,
+        "r": 40,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 100,
+        "y": 0,
+        "d": 100,
+        "r": 50,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 140,
+        "y": 140,
+        "d": 20,
+        "r": 10,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 130,
+        "y": 130,
+        "d": 40,
+        "r": 20,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 120,
+        "y": 120,
+        "d": 60,
+        "r": 30,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 110,
+        "y": 110,
+        "d": 80,
+        "r": 40,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 100,
+        "y": 100,
+        "d": 100,
+        "r": 50,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 140,
+        "y": 240,
+        "d": 20,
+        "r": 10,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 130,
+        "y": 230,
+        "d": 40,
+        "r": 20,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 120,
+        "y": 220,
+        "d": 60,
+        "r": 30,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 110,
+        "y": 210,
+        "d": 80,
+        "r": 40,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 100,
+        "y": 200,
+        "d": 100,
+        "r": 50,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 240,
+        "y": 40,
+        "d": 20,
+        "r": 10,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 230,
+        "y": 30,
+        "d": 40,
+        "r": 20,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 220,
+        "y": 20,
+        "d": 60,
+        "r": 30,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 210,
+        "y": 10,
+        "d": 80,
+        "r": 40,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 200,
+        "y": 0,
+        "d": 100,
+        "r": 50,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 240,
+        "y": 140,
+        "d": 20,
+        "r": 10,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 230,
+        "y": 130,
+        "d": 40,
+        "r": 20,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 220,
+        "y": 120,
+        "d": 60,
+        "r": 30,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 210,
+        "y": 110,
+        "d": 80,
+        "r": 40,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 200,
+        "y": 100,
+        "d": 100,
+        "r": 50,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 240,
+        "y": 240,
+        "d": 20,
+        "r": 10,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 230,
+        "y": 230,
+        "d": 40,
+        "r": 20,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 220,
+        "y": 220,
+        "d": 60,
+        "r": 30,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 210,
+        "y": 210,
+        "d": 80,
+        "r": 40,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 200,
+        "y": 200,
+        "d": 100,
+        "r": 50,
+        "fill": false,
+        "paint": {
+          "value": -4315106,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 50,
+        "y": 50,
+        "r": 50,
+        "n": 4,
+        "a": 0.0,
+        "modCount": 3,
+        "mutex": {
+          "sync": {
+            "state": 0
+          }
+        },
+        "size": 4,
+        "xs": [
+          100,
+          50,
+          0,
+          50
+        ],
+        "ys": [
+          50,
+          100,
+          50,
+          0
+        ],
+        "fill": false,
+        "paint": {
+          "value": -1,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 50,
+        "y": 150,
+        "r": 50,
+        "n": 4,
+        "a": 0.0,
+        "modCount": 3,
+        "mutex": {
+          "sync": {
+            "state": 0
+          }
+        },
+        "size": 4,
+        "xs": [
+          100,
+          50,
+          0,
+          50
+        ],
+        "ys": [
+          150,
+          200,
+          150,
+          100
+        ],
+        "fill": false,
+        "paint": {
+          "value": -1,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 50,
+        "y": 250,
+        "r": 50,
+        "n": 4,
+        "a": 0.0,
+        "modCount": 3,
+        "mutex": {
+          "sync": {
+            "state": 0
+          }
+        },
+        "size": 4,
+        "xs": [
+          100,
+          50,
+          0,
+          50
+        ],
+        "ys": [
+          250,
+          300,
+          250,
+          200
+        ],
+        "fill": false,
+        "paint": {
+          "value": -1,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 150,
+        "y": 50,
+        "r": 50,
+        "n": 4,
+        "a": 0.0,
+        "modCount": 3,
+        "mutex": {
+          "sync": {
+            "state": 0
+          }
+        },
+        "size": 4,
+        "xs": [
+          200,
+          150,
+          100,
+          150
+        ],
+        "ys": [
+          50,
+          100,
+          50,
+          0
+        ],
+        "fill": false,
+        "paint": {
+          "value": -1,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 150,
+        "y": 150,
+        "r": 50,
+        "n": 4,
+        "a": 0.0,
+        "modCount": 3,
+        "mutex": {
+          "sync": {
+            "state": 0
+          }
+        },
+        "size": 4,
+        "xs": [
+          200,
+          150,
+          100,
+          150
+        ],
+        "ys": [
+          150,
+          200,
+          150,
+          100
+        ],
+        "fill": false,
+        "paint": {
+          "value": -1,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 150,
+        "y": 250,
+        "r": 50,
+        "n": 4,
+        "a": 0.0,
+        "modCount": 3,
+        "mutex": {
+          "sync": {
+            "state": 0
+          }
+        },
+        "size": 4,
+        "xs": [
+          200,
+          150,
+          100,
+          150
+        ],
+        "ys": [
+          250,
+          300,
+          250,
+          200
+        ],
+        "fill": false,
+        "paint": {
+          "value": -1,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 250,
+        "y": 50,
+        "r": 50,
+        "n": 4,
+        "a": 0.0,
+        "modCount": 3,
+        "mutex": {
+          "sync": {
+            "state": 0
+          }
+        },
+        "size": 4,
+        "xs": [
+          300,
+          250,
+          200,
+          250
+        ],
+        "ys": [
+          50,
+          100,
+          50,
+          0
+        ],
+        "fill": false,
+        "paint": {
+          "value": -1,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 250,
+        "y": 150,
+        "r": 50,
+        "n": 4,
+        "a": 0.0,
+        "modCount": 3,
+        "mutex": {
+          "sync": {
+            "state": 0
+          }
+        },
+        "size": 4,
+        "xs": [
+          300,
+          250,
+          200,
+          250
+        ],
+        "ys": [
+          150,
+          200,
+          150,
+          100
+        ],
+        "fill": false,
+        "paint": {
+          "value": -1,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 250,
+        "y": 250,
+        "r": 50,
+        "n": 4,
+        "a": 0.0,
+        "modCount": 3,
+        "mutex": {
+          "sync": {
+            "state": 0
+          }
+        },
+        "size": 4,
+        "xs": [
+          300,
+          250,
+          200,
+          250
+        ],
+        "ys": [
+          250,
+          300,
+          250,
+          200
+        ],
+        "fill": false,
+        "paint": {
+          "value": -1,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      }
+    ],
+    "cursor": 55
+  },
+  "visible": true,
+  "xOff": 0,
+  "yOff": 0,
+  "paint": {
+    "value": -16777216,
+    "falpha": 0.0
+  },
+  "stroke": {
+    "width": 1.0,
+    "join": 0,
+    "cap": 2,
+    "miterlimit": 10.0,
+    "dash_phase": 0.0
+  }
+}

@@ -1,0 +1,27 @@
+bounds 300 300 center invert_y
+
+color 128 12 158; colorf 128 255 205
+gradient -150 150 150 -150;
+color 0 0 0 0
+rectc 0 0 300 300
+
+reset
+stroke 2 25 50 50;
+rectc 0 0 100 100
+
+colorf 255 0 0 255; color 0 200 200 200
+stroke 10;
+gradient -100 100 100 100
+linec -100 100 100 100
+gradient 100 100 100 -100
+linec 100 100 100 -100
+gradient  100 -100 -100 -100
+linec 100 -100 -100 -100
+gradient -100 -100 -100 100
+linec -100 -100 -100 100
+
+color 128 150 328
+colorf 18 250 100
+gradient -100 0 100 0
+font dialog bold 30
+string -100 0 Hello World

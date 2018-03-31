@@ -1,0 +1,339 @@
+{
+  "components": {
+    "mutex": {},
+    "elements": [
+      {
+        "drawCross": false,
+        "cs": 3,
+        "x": 0,
+        "y": 0,
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -120,
+        "y": -120,
+        "d": 240,
+        "r": 120,
+        "fill": true,
+        "fillPaint": {
+          "value": -13482426,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -110,
+        "y": -110,
+        "d": 220,
+        "r": 110,
+        "fill": true,
+        "fillPaint": {
+          "value": -12827066,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -100,
+        "y": -100,
+        "d": 200,
+        "r": 100,
+        "fill": true,
+        "fillPaint": {
+          "value": -12171706,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -90,
+        "y": -90,
+        "d": 180,
+        "r": 90,
+        "fill": true,
+        "fillPaint": {
+          "value": -11516346,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -80,
+        "y": -80,
+        "d": 160,
+        "r": 80,
+        "fill": true,
+        "fillPaint": {
+          "value": -10860986,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -70,
+        "y": -70,
+        "d": 140,
+        "r": 70,
+        "fill": true,
+        "fillPaint": {
+          "value": -10205626,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -60,
+        "y": -60,
+        "d": 120,
+        "r": 60,
+        "fill": true,
+        "fillPaint": {
+          "value": -9550266,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -50,
+        "y": -50,
+        "d": 100,
+        "r": 50,
+        "fill": true,
+        "fillPaint": {
+          "value": -8894906,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -40,
+        "y": -40,
+        "d": 80,
+        "r": 40,
+        "fill": true,
+        "fillPaint": {
+          "value": -8239546,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -30,
+        "y": -30,
+        "d": 60,
+        "r": 30,
+        "fill": true,
+        "fillPaint": {
+          "value": -7584186,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -20,
+        "y": -20,
+        "d": 40,
+        "r": 20,
+        "fill": true,
+        "fillPaint": {
+          "value": -6928826,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -10,
+        "y": -10,
+        "d": 20,
+        "r": 10,
+        "fill": true,
+        "fillPaint": {
+          "value": -6273466,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "cursor": 13
+  },
+  "visible": true,
+  "xOff": 0,
+  "yOff": 0,
+  "paint": {
+    "value": -16777216,
+    "falpha": 0.0
+  },
+  "stroke": {
+    "width": 1.0,
+    "join": 0,
+    "cap": 2,
+    "miterlimit": 10.0,
+    "dash_phase": 0.0
+  }
+}
