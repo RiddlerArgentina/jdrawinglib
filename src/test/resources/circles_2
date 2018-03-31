@@ -1,0 +1,19 @@
+bounds 250 250 center invert_y
+
+for2 18 1 255 125 1 0 "
+    color  %1$d 10 10;
+    colorf %1$d 10 10;
+    circle 0 0 %2$d
+"
+
+#for2 18 1 255 125 1 0 "
+#    color  10 %1$d %1$d;
+#    colorf 10 %1$d %1$d;
+#    circle 0 0 %2$d
+#"
+
+#for2 18 1 255 125 1 0 "
+#    color  %1$d 10 %1$d ;
+#    colorf %1$d 10 %1$d;
+#    circle 0 0 %2$d
+#"

@@ -1,0 +1,29 @@
+bounds 300 300 center invert_y
+
+
+color 128 128 128
+for2 0 10 145 140 10 0 "linec  %1$d  150  150  %2$d"
+for2 0 10 145 140 10 0 "linec  %1$d -150  150 -%2$d"
+for2 0 10 145 140 10 0 "linec -%1$d -150 -150 -%2$d"
+for2 0 10 145 140 10 0 "linec -%1$d  150 -150  %2$d"
+
+color 0 0 0
+clipadd circle 0 0 156
+linec -150 -150  150  150
+linec -150  150  150 -150
+linec    0 -150    0  150
+linec  150    0 -150    0
+clipoff
+
+clipadd circle 0 0 156
+for2 5 5 145 145 5 0 "linec -%1$d  %1$d     0  %2$d"
+for2 5 5 145 145 5 0 "linec -%1$d  %1$d -%2$d     0"
+clipoff 
+for2 5 5 145 145 5 0 "linec -%1$d -%1$d -%2$d     0"
+for2 5 5 145 145 5 0 "linec -%1$d -%1$d     0 -%2$d"
+clipadd circle 0 0 156
+for2 5 5 145 145 5 0 "linec  %1$d -%1$d     0 -%2$d"
+for2 5 5 145 145 5 0 "linec  %1$d -%1$d  %2$d     0"
+clipoff
+for2 5 5 145 145 5 0 "linec  %1$d  %1$d  %2$d     0"
+for2 5 5 145 145 5 0 "linec  %1$d  %1$d     0  %2$d"

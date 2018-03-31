@@ -1,0 +1,23 @@
+# Transformer diagram
+bounds 80 80
+color 0 0 0
+
+# Primary coil
+linec 10 10 25 10; linec 25 10 25 20
+for1 27 13 55 "arc 25 %d 13 13 180 270"
+linec 25 60 25 70; linec 25 70 10 70
+
+# Secondary coil
+linec 70 10 56 10; linec 56 10 56 21
+for1 27 13 55 "arc 55 %d 13 13 180 90"
+linec 56 60 56 70; linec 56 70 70 70
+
+#middle lines
+for1 35 5 45 "linec %1$d 21 %1$d 60"
+
+#pins
+color 255 0 0 # Paint the pins red
+circle 10 10 3
+circle 70 70 3
+circle 10 70 3
+circle 70 10 3

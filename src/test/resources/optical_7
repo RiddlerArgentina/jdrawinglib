@@ -1,0 +1,16 @@
+bounds 300 300
+
+# Paint the background
+colorf 0 0 0
+rectc 150 150 300 300
+colorf no
+
+stroke 2
+
+# Draw the cirles
+color 190 40 30;
+for4 50 100 300 50 100 300 10 10 50 "circle %d %d %d"
+
+# Draw squares
+color 255 255 255
+for3 50 100 300 50 100 300 "polyn %d %d 50 4"

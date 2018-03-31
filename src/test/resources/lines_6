@@ -1,0 +1,20 @@
+bounds 250 230 center invert_y
+
+color 128 128 128
+
+for1 -120 20 125 "linec -125 %1$d 125 %1$d"
+for1 -120 40 120 "linec %1$d  120 %1$d  100"
+for1 -120 40 120 "linec %1$d   80 %1$d   60"
+for1 -120 40 120 "linec %1$d   40 %1$d   20"
+for1 -120 40 120 "linec %1$d    0 %1$d  -20"
+for1 -120 40 120 "linec %1$d  -40 %1$d  -60"
+for1 -120 40 120 "linec %1$d  -80 %1$d -100"
+for1 -120 40 120 "linec %1$d -120 %1$d -140"
+
+for1 -100 40 120 "linec %1$d  140 %1$d  120"
+for1 -100 40 120 "linec %1$d  100 %1$d   80"
+for1 -100 40 120 "linec %1$d   60 %1$d   40"
+for1 -100 40 120 "linec %1$d   20 %1$d    0"
+for1 -100 40 120 "linec %1$d  -20 %1$d  -40"
+for1 -100 40 120 "linec %1$d  -60 %1$d  -80"
+for1 -100 40 120 "linec %1$d -100 %1$d -120"

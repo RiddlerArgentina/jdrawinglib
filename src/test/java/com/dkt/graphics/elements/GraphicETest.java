@@ -27,12 +27,12 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * 
+ *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GraphicETest {
     @Test
-    @DisplayName("Copy constructor") 
+    @DisplayName("Copy constructor")
     public void testConstructor1() {
         GraphicE ge1 = new GraphicEImpl();
         GraphicE ge2 = new GraphicEImpl(ge1);
@@ -40,18 +40,19 @@ public class GraphicETest {
         assertEquals(ge1, ge2);
         assertEquals(ge1.hashCode(), ge2.hashCode());
     }
-    
+
     @Test
-    @DisplayName("Copy constructor null") 
+    @DisplayName("Copy constructor null")
     public void testConstructor2() {
         assertThrows(IllegalArgumentException.class, () -> {
                 new GraphicEImpl(null);
             }
         );
+        assertNotEquals(new GraphicEImpl(), new Object());
     }
-    
+
     @Test
-    @DisplayName("get/set paint") 
+    @DisplayName("get/set paint")
     public void testPaint() {
         GraphicE ge1 = new GraphicEImpl();
         GraphicE ge2 = new GraphicEImpl(ge1);
@@ -68,9 +69,9 @@ public class GraphicETest {
             }
         );
     }
-    
+
     @Test
-    @DisplayName("get/set stroke") 
+    @DisplayName("get/set stroke")
     public void testStroke() {
         GraphicE ge1 = new GraphicEImpl();
         GraphicE ge2 = new GraphicEImpl(ge1);
@@ -87,7 +88,7 @@ public class GraphicETest {
             }
         );
     }
-    
+
     private static class GraphicEImpl extends GraphicE {
         public GraphicEImpl(GraphicE e) throws IllegalArgumentException {
             super(e);
@@ -96,7 +97,7 @@ public class GraphicETest {
         public GraphicEImpl() {
             super();
         }
-        
+
         @Override public void traslate(int x, int y) {/*do nothing*/}
         @Override public void draw(Graphics2D g) {/*do nothing*/}
         @Override public GraphicE clone() {return null;/*do nothing*/}

@@ -1,0 +1,280 @@
+{
+  "components": {
+    "mutex": {},
+    "elements": [
+      {
+        "x": -150,
+        "y": -150,
+        "w": 300,
+        "h": 300,
+        "cx": 0,
+        "cy": 0,
+        "fill": true,
+        "fillPaint": {
+          "p1": {
+            "x": -150.0,
+            "y": 150.0
+          },
+          "p2": {
+            "x": 150.0,
+            "y": -150.0
+          },
+          "color1": {
+            "value": -8385378,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -8323123,
+            "falpha": 0.0
+          },
+          "cyclic": false
+        },
+        "paint": {
+          "value": 0,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -50,
+        "y": -50,
+        "w": 100,
+        "h": 100,
+        "cx": 0,
+        "cy": 0,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 2.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 0.0,
+          "dash": [
+            50.0,
+            50.0
+          ],
+          "dash_phase": 25.0
+        }
+      },
+      {
+        "x1": -100,
+        "y1": 100,
+        "x2": 100,
+        "y2": 100,
+        "paint": {
+          "p1": {
+            "x": -100.0,
+            "y": 100.0
+          },
+          "p2": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "color1": {
+            "value": 13158600,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "cyclic": false
+        },
+        "stroke": {
+          "width": 10.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 100,
+        "y1": 100,
+        "x2": 100,
+        "y2": -100,
+        "paint": {
+          "p1": {
+            "x": 100.0,
+            "y": 100.0
+          },
+          "p2": {
+            "x": 100.0,
+            "y": -100.0
+          },
+          "color1": {
+            "value": 13158600,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "cyclic": false
+        },
+        "stroke": {
+          "width": 10.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 100,
+        "y1": -100,
+        "x2": -100,
+        "y2": -100,
+        "paint": {
+          "p1": {
+            "x": 100.0,
+            "y": -100.0
+          },
+          "p2": {
+            "x": -100.0,
+            "y": -100.0
+          },
+          "color1": {
+            "value": 13158600,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "cyclic": false
+        },
+        "stroke": {
+          "width": 10.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -100,
+        "y1": -100,
+        "x2": -100,
+        "y2": 100,
+        "paint": {
+          "p1": {
+            "x": -100.0,
+            "y": -100.0
+          },
+          "p2": {
+            "x": -100.0,
+            "y": 100.0
+          },
+          "color1": {
+            "value": 13158600,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "cyclic": false
+        },
+        "stroke": {
+          "width": 10.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "Hello World",
+        "font": {
+          "name": "dialog",
+          "style": 1,
+          "size": 30,
+          "pointSize": 30.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -100,
+        "y": 0,
+        "a": "0.000000",
+        "paint": {
+          "p1": {
+            "x": -100.0,
+            "y": 0.0
+          },
+          "p2": {
+            "x": 100.0,
+            "y": 0.0
+          },
+          "color1": {
+            "value": -8349953,
+            "falpha": 0.0
+          },
+          "color2": {
+            "value": -15533468,
+            "falpha": 0.0
+          },
+          "cyclic": false
+        },
+        "stroke": {
+          "width": 10.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "cursor": 7
+  },
+  "visible": true,
+  "xOff": 0,
+  "yOff": 0,
+  "paint": {
+    "value": -16777216,
+    "falpha": 0.0
+  },
+  "stroke": {
+    "width": 1.0,
+    "join": 0,
+    "cap": 2,
+    "miterlimit": 10.0,
+    "dash_phase": 0.0
+  }
+}

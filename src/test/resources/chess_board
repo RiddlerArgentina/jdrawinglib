@@ -1,0 +1,5 @@
+bounds 320 320
+
+colorf 0 0 0
+for3 60 80 300 20 80 300 "rectc %d %d 40 40"
+for3 20 80 300 60 80 300 "rectc %d %d 40 40"

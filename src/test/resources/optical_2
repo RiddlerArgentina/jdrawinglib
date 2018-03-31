@@ -1,0 +1,27 @@
+bounds 300 300 center invert_y
+color 0 0 0; stroke 1.5
+
+# As long as the first double quote is in the same line as the for
+# call, you can easily expand the for to another line, for instance
+# writing this:
+
+for1 80 10 160 "
+    linec -%1$d  -150  %1$d   150;
+    linec  %1$d  -150 -%1$d   150;
+"
+
+for1 0 10 150 "
+    linec  -150 -%1$d   150  %1$d;
+    linec  -150  %1$d   150 -%1$d
+"
+
+# is the same as this four separate fors:
+#for1 80 10 160 "linec -%1$d  -150  %1$d   150"
+#for1 80 10 160 "linec  %1$d  -150 -%1$d   150"
+#for1  0 10 150 "linec  -150 -%1$d   150  %1$d"
+#for1  0 10 150 "linec  -150  %1$d   150 -%1$d"
+
+# Draw the vertical red lines
+color 255 0 0
+linec -55 150 -35 -150
+linec  55 150  35 -150

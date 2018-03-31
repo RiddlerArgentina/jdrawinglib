@@ -30,7 +30,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class UtilsTest {
     @Test
-    @DisplayName("Color with alpha") 
+    @DisplayName("Color with alpha")
     public void testColorWithAlpha() {
         Color c1 = Color.CYAN;
         Color c2 = Utils.getColorWithAlpha(c1, 0);
@@ -53,5 +53,8 @@ public class UtilsTest {
         assertEquals(c2.getRed(),   c1.getRed());
         assertEquals(c2.getGreen(), c1.getGreen());
         assertEquals(c2.getBlue(),  c1.getBlue());
+        assertThrows(IllegalArgumentException.class, () -> {
+            Utils.getColorWithAlpha(null, 19284);
+        });
     }
 }

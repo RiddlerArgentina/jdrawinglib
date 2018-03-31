@@ -1,0 +1,6 @@
+bounds 300 300 center invert_y
+
+# Draw circles
+stroke 1.5; for1 0 15 150 "circle 0 0 %d"
+# Draw square
+stroke 1.5; color 255 0 0; polyn 0 0 111 4

@@ -1,0 +1,21 @@
+# Command: polyp x1 y1 x2 y2 [... xn yn]
+# Arguments: 
+#    'x1' (int) x coordinate of the first point
+#    'y1' (int) y coordinate of the first point
+#    'x2' (int) x coordinate of the second point
+#    'y2' (int) y coordinate of the second point
+#    'xn, yn' (int) extra points that follow the path
+# Description: Creates a closed line path from a sequence 
+#              of points, where the last point will be 
+#              connected to the first point
+# Use example:
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+polyp  4 85 25 77  52 56  83  46 34  86 54 62 64 91 
+polyp 50 50 40 20 -40 20 -50 -40 76 -89
+# Small example of filled line paths
+colorf 90 32 32 32
+polyp 0 0 80 20 100 -40
+# There's no real need to align the numbers...

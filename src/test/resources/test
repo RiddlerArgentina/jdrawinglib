@@ -1,0 +1,58 @@
+bounds 300 300 center invert_y
+
+# Draw grid
+color 160 160 160; stroke .6
+grid 300 300 25 25
+# Alternative Grid form
+#for1 -150 25 150 "linec -150 %1$d 150 %1$d"
+#for1 -150 25 150 "linec %1$d -150 %1$d 150"
+
+# Vertical red lines
+color 255 100 100; stroke 1
+linec  -95 150  -95 -150
+linec -100 150 -100 -150
+
+# Hole
+colorf 0 0 0; color 0 0 0
+circle -125 0 9
+
+# Formula 1
+color 90 120 225
+string -90 128 1) y = x
+string -38 138 2
+
+# Formula 2
+string -90 102 2) y = 2x
+string -30 112 3
+
+# Formula 3
+string -90 76 3) What's the
+string -90 51 best drawing
+string -90 27 library for Java?
+
+# Axis
+vectc  0   0 100   0
+vectc 50 -100  50 100
+string 90 -15 x
+string 35  90 y
+
+# Answer 1
+colorf no; color 200 0 0; stroke 1.5
+arc 50 100 50 200 180 0
+# Answer 2
+colorf no; color 0 200 0; stroke 1.5
+arc 50  100 100 200 90   0
+arc 50 -100 100 200 90 180
+# Answer 3
+color 200 100 50
+font dialog bolditalic 16
+string -90 01 jDrawingLib!
+
+# Doodle
+
+# Grade
+color 255 0 0; colorf no
+stroke 5
+circle 100 100 30
+font dialog bold 50
+string2 91 76 -30 A

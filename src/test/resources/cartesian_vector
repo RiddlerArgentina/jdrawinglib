@@ -1,0 +1,17 @@
+# Command: vectc x1 y1 x2 y2
+# Description: creates a vector segment based on two points
+#              the tip of the vector will be pointing to the
+#              second point
+# Use example:
+# Don't pay much attention to this lines, I just put a
+# grid on the background to make the example clear.
+# Set the bounds, center the origin and invert the Y axis
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+vectc   0    0  50  50
+vectc -30   30 -30 -50
+vectc  10 -100 100 -30
+vectc -80   70  20  70
+# There's no real need to align the numbers...

@@ -36,12 +36,8 @@ import java.awt.Paint;
  */
 public class GFormula extends Graphic {
     private final Calculable formula;
-    
-    private Paint area;
 
-    private GFormula(){
-        formula = null;
-    }
+    private Paint area;
 
     /**
      * Creates a new {@code GFormula} for the given {@link Calculable} object
@@ -88,7 +84,7 @@ public class GFormula extends Graphic {
         int i   = 0;
         int lx  = Integer.MAX_VALUE;
         int lfx = Integer.MAX_VALUE;
-        
+
         for (double xx = xs; xx < xf; xx = xs + i * sx, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
@@ -145,10 +141,10 @@ public class GFormula extends Graphic {
         final double sx = formula.scaleX();
         final double sy = formula.scaleY();
 
-        int i   = 0; 
+        int i   = 0;
         int lx  = Integer.MAX_VALUE;
         int lfx = Integer.MAX_VALUE;
-        
+
         for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
@@ -196,7 +192,7 @@ public class GFormula extends Graphic {
         int i   = 0;
         int lx  = Integer.MAX_VALUE;
         int lfx = Integer.MAX_VALUE;
-        
+
         for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));
@@ -265,7 +261,7 @@ public class GFormula extends Graphic {
         int i   = 0;
         int lx  = Integer.MAX_VALUE;
         int lfx = Integer.MAX_VALUE;
-        
+
         for (double xx = xs; xx < xf; xx = xs + i * step, i++){
             final int x  = (int)(sx * xx);
             final int fx = (int)(sy * formula.f(xx));

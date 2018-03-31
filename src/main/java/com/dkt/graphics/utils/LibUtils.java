@@ -34,7 +34,7 @@ public class LibUtils {
      * @return version string
      */
     public static String versionString(){
-        return "0.4.1";
+        return "0.4.2";
     }
 
     /**
@@ -43,7 +43,7 @@ public class LibUtils {
      * @return URL
      */
     public static String url(){
-        return "https://launchpad.net/jdrawinglib";
+        return "https://github.com/dktcoding/jdrawinglib";
     }
 
     /**

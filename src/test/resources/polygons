@@ -1,0 +1,25 @@
+# Command: polyn x y r n [o]
+# Arguments: 
+#    'x' (int) x coordinate of the origin
+#    'y' (int) y coordinate of the origin
+#    'r' (int) radius of the circle
+#    'n' (int) number of sides
+#    'o' (int)[optional] offset angle
+# Description: Creates a regular polygon inscribed in a
+#              circle.
+# Note: There will always be a point of the polygon where
+#       the circle intersects a line that goes from
+#       (x, y) to (r + x, y)
+# Use example:
+bounds 210 210 center invert_y
+stroke 0.3;color 200 200 200;grid 200 200 10 10
+color 0 0 0; stroke 1
+# Example starts
+polyn -70 -70 10 3  0
+polyn  70  70 30 5 20
+polyn  70 -70 25 8
+polyn  70 -70 25 8
+# Advanced example, creating polygons with a for loop
+for2 3  1  6 20 15 100 "polyn   0  0 %2$d %1$d"
+for1 0 30 60           "polyn -70 70   30    4 %d"
+# There's no real need to align the numbers...

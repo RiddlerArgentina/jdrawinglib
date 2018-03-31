@@ -1,0 +1,12 @@
+bounds 300 300
+
+# Paint the background gray
+color 200 200 200; colorf 200 200 200; rectc 150 150 300 300
+
+# Draw the black squares
+colorf 0 0 0;
+for3  0 30 320  0 30 320 "rectc %d %d 25 25"
+
+# Draw the white dots
+color -1; colorf -1;
+for3 15 30 320 15 30 320 "circle %d %d 3"

@@ -1,0 +1,15 @@
+bounds 250 250 center invert_y
+
+color 128 128 128; point 0 0 3
+color  128 128 128; colorf  50 70 70; circle 0 0 120
+color  128 128 128; colorf  60 70 70; circle 0 0 110
+color  128 128 128; colorf  70 70 70; circle 0 0 100
+color  128 128 128; colorf  80 70 70; circle 0 0 90
+color  128 128 128; colorf  90 70 70; circle 0 0 80
+color  128 128 128; colorf 100 70 70; circle 0 0 70
+color  128 128 128; colorf 110 70 70; circle 0 0 60
+color  128 128 128; colorf 120 70 70; circle 0 0 50
+color  128 128 128; colorf 130 70 70; circle 0 0 40
+color  128 128 128; colorf 140 70 70; circle 0 0 30
+color  128 128 128; colorf 150 70 70; circle 0 0 20
+color  128 128 128; colorf 160 70 70; circle 0 0 10

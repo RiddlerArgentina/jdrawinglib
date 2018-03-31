@@ -1,0 +1,110 @@
+bounds 300 300 center invert_y
+
+# Background
+colorf 35 20 20; rectc 0 0 300 300
+
+# Grid
+stroke 0.1; color 160 160 100;
+for1 -130 20 140 "linep -150   %d 300  0"
+for1 -130 20 140 "linep   %d -150 300 90"
+
+# Resistors
+stroke 2; color 95 255 95;
+lpath -80 110 -75 108 -85 104 -75 100 -85 96 -75 92 -85 88 -80 86
+lpath -30 110 -25 108 -35 104 -25 100 -35 96 -25 92 -35 88 -30 86
+lpath  20 110  25 108  15 104  25 100  15 96  25 92  15 88  20 86
+lpath  70 110  75 108  65 104  75 100  65 96  75 92  65 88  70 86
+
+# Capacitors
+stroke 2; color 95 255 95;
+linec -80 70 -58 70
+linec -58 80 -58 60
+linec -52 80 -52 60
+linec -52 70 -30 70
+linec  20 70  42 70
+linec  42 80  42 60
+linec  48 80  48 60
+linec  48 70  70 70
+
+# Transitors
+stroke 4; linec 55  5 55 35
+stroke 2; linec 55 22 70 35
+          vectc 55 18 70 5
+
+stroke 4; linec -65  5 -65 35
+stroke 2; linec -65 22 -80 35
+          vectc -65 18 -80 5
+
+# Grounds
+color -1; colorf -1; point 70 -20 3
+stroke 2; color 95 255 95;
+
+linec 82 -20  58 -20
+linec 78 -25  62 -25
+linec 73 -30  67 -30
+
+linec -92 -20 -68 -20
+linec -88 -25 -72 -25
+linec -83 -30 -77 -30
+
+# Upper conductors
+linec -100 130  70 130
+linec  -80 130 -80 110
+linec  -30 130 -30 110
+linec   20 130  20 110
+linec   70 130  70 110
+
+# Middle conductors
+linec -80 86 -80 70
+linec -30 86 -30 70
+linec  20 86  20 70
+linec  70 86  70 70
+
+# Lower conductors
+linec -80  70 -80  35
+linec -30  70  20  20
+linec  20  70 -30  20
+linec  70  70  70  35
+linec -65  20 -30  20
+linec  20  20  55  20
+linec  70   5  70 -20
+linec -80   5 -80 -20
+
+# Upper dots
+color -1; colorf -1;
+circle -100 130 2
+circle  -80 130 2
+circle  -30 130 2
+circle   20 130 2
+circle   70 130 2
+
+# Middle dots
+circle -80 70 2
+circle -30 70 2
+circle  20 70 2
+circle  70 70 2
+
+# Labels
+stroke 1;
+color 255 255 0; string -100 15 Q1
+color 255 255 0; string   70 15 Q2
+color 255 0 255; string   37 45 C1
+color 255 0 255; string  -64 45 C2
+color 0 255 255; string2 -90 88 -90 R1
+color 0 255 255; string2 -40 88 -90 R2
+color 0 255 255; string2  10 88 -90 R3
+color 0 255 255; string2  60 88 -90 R4
+
+# Border
+colorf no; stroke 2; color -1;
+rectc -10 -90 200 60
+
+# Message
+color -1
+string -80 -80 This is an example of
+font dialog bold 16
+string -60 -105 jDrawingLib!
+linec -50 -110 30 -110 # underline
+
+font no
+string2 110 -145 -45 by DKT!

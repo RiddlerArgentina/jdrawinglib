@@ -48,7 +48,7 @@ import javax.swing.Timer;
  * useless... they are...<br><br>
  *
  * Within the canvas there are 2 types of {@link GraphicE}, fixed and mobile.
- * fixed elements are only redrawn when the canvas is resized or when 
+ * fixed elements are only redrawn when the canvas is resized or when
  * specifically told to.
  *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
@@ -83,7 +83,7 @@ public class Canvas extends JPanel implements ActionListener {
         repaintTimer.setRepeats(true);
         repaintTimer.setCoalesce(true);
         repaintTimer.setDelay(repaintDelay);
-        
+
         setBackground(Color.LIGHT_GRAY);
         setIgnoreRepaint(true);
         addComponentListener(new ComponentAdapter() {
@@ -185,7 +185,7 @@ public class Canvas extends JPanel implements ActionListener {
      */
     public void setUseFullArea(boolean fullArea) {
         this.fullArea = fullArea;
-        
+
         if (fullArea) {
             final Dimension dim = getSize();
             xSize = dim.width;
@@ -504,7 +504,7 @@ public class Canvas extends JPanel implements ActionListener {
 
     /**
      * Turns anti-aliasing <tt>on</tt> or <tt>off</tt>
-     * 
+     *
      * @param useAntiAliasing {@code true} to turn anti-aliasing on, and {@code
      * false} to turn it off.
      */
@@ -604,7 +604,7 @@ public class Canvas extends JPanel implements ActionListener {
         }
         this.showFPS = show;
     }
-    
+
     private void redraw(boolean with_background){
         calcTransform();
 
@@ -812,7 +812,9 @@ public class Canvas extends JPanel implements ActionListener {
      * {@code false} otherwise
      */
     public boolean inDrawingArea(int x, int y) {
-        final int xOff, yOff;
+        final int xOff;
+        final int yOff;
+        
         if (centerBounds){
             xOff = (getWidth () - xSize) / 2;
             yOff = (getHeight() - ySize) / 2;

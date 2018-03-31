@@ -172,7 +172,7 @@ public abstract class GMultiPoint extends GFillableE
     {
         mutex.lock();
         try{
-            for (int i = start, n = size; i < n; i++){
+            for (int i = start; i < size; i++){
                 if (xs[i] == x & ys[i] == y){
                     return i;
                 }
@@ -289,7 +289,7 @@ public abstract class GMultiPoint extends GFillableE
         try{
             final GPoint[] points = new GPoint[size];
 
-            for (int i = 0, n = size; i < n; i++){
+            for (int i = 0; i < size; i++){
                 points[i] = new GPoint(xs[i], ys[i]);
             }
 
@@ -458,7 +458,7 @@ public abstract class GMultiPoint extends GFillableE
             }
         });
     }
- 
+
     private void sort(final Comparator<Integer> comparator) {
         final Integer[] idxs = new Integer[size];
         for( int i = 0 ; i < size; i++ ) {
@@ -535,8 +535,8 @@ public abstract class GMultiPoint extends GFillableE
         int hash = super.hashCode();
         hash = 53 * hash + size;
         for (int i = 0; i < size(); i++) {
-            hash = 53 * hash + xs[i]; 
-            hash = 53 * hash + ys[i]; 
+            hash = 53 * hash + xs[i];
+            hash = 53 * hash + ys[i];
         }
         return hash;
     }
@@ -551,7 +551,7 @@ public abstract class GMultiPoint extends GFillableE
         if (size != other.size) {
             return false;
         }
-        
+
         for (int i = 0; i < size; i++) {
             if (xs[i] != other.xs[i] ||
                 ys[i] != other.ys[i]) {

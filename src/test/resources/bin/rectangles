@@ -1,0 +1,1014 @@
+{
+  "components": {
+    "mutex": {},
+    "elements": [
+      {
+        "grid": {
+          "components": {
+            "mutex": {},
+            "elements": [
+              {
+                "x1": -100,
+                "y1": 0,
+                "x2": 100,
+                "y2": 0,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 0,
+                "y1": -100,
+                "x2": 0,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 10,
+                "y1": -100,
+                "x2": 10,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -10,
+                "y1": -100,
+                "x2": -10,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 20,
+                "y1": -100,
+                "x2": 20,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -20,
+                "y1": -100,
+                "x2": -20,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 30,
+                "y1": -100,
+                "x2": 30,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -30,
+                "y1": -100,
+                "x2": -30,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 40,
+                "y1": -100,
+                "x2": 40,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -40,
+                "y1": -100,
+                "x2": -40,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 50,
+                "y1": -100,
+                "x2": 50,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -50,
+                "y1": -100,
+                "x2": -50,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 60,
+                "y1": -100,
+                "x2": 60,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -60,
+                "y1": -100,
+                "x2": -60,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 70,
+                "y1": -100,
+                "x2": 70,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -70,
+                "y1": -100,
+                "x2": -70,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 80,
+                "y1": -100,
+                "x2": 80,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -80,
+                "y1": -100,
+                "x2": -80,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": 90,
+                "y1": -100,
+                "x2": 90,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -90,
+                "y1": -100,
+                "x2": -90,
+                "y2": 100,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": 10,
+                "x2": 100,
+                "y2": 10,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": -10,
+                "x2": 100,
+                "y2": -10,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": 20,
+                "x2": 100,
+                "y2": 20,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": -20,
+                "x2": 100,
+                "y2": -20,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": 30,
+                "x2": 100,
+                "y2": 30,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": -30,
+                "x2": 100,
+                "y2": -30,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": 40,
+                "x2": 100,
+                "y2": 40,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": -40,
+                "x2": 100,
+                "y2": -40,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": 50,
+                "x2": 100,
+                "y2": 50,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": -50,
+                "x2": 100,
+                "y2": -50,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": 60,
+                "x2": 100,
+                "y2": 60,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": -60,
+                "x2": 100,
+                "y2": -60,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": 70,
+                "x2": 100,
+                "y2": 70,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": -70,
+                "x2": 100,
+                "y2": -70,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": 80,
+                "x2": 100,
+                "y2": 80,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": -80,
+                "x2": 100,
+                "y2": -80,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": 90,
+                "x2": 100,
+                "y2": 90,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              {
+                "x1": -100,
+                "y1": -90,
+                "x2": 100,
+                "y2": -90,
+                "paint": {
+                  "value": -3618616,
+                  "falpha": 0.0
+                },
+                "stroke": {
+                  "width": 0.3,
+                  "join": 2,
+                  "cap": 2,
+                  "miterlimit": 10.0,
+                  "dash_phase": 0.0
+                }
+              },
+              null,
+              null,
+              null
+            ],
+            "cursor": 38
+          },
+          "visible": true,
+          "xOff": 0,
+          "yOff": 0,
+          "paint": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "stroke": {
+            "width": 1.0,
+            "join": 0,
+            "cap": 2,
+            "miterlimit": 10.0,
+            "dash_phase": 0.0
+          }
+        },
+        "c": {
+          "drawCross": true,
+          "cs": 0,
+          "x": 0,
+          "y": 0,
+          "paint": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "stroke": {
+            "width": 1.0,
+            "join": 0,
+            "cap": 2,
+            "miterlimit": 10.0,
+            "dash_phase": 0.0
+          }
+        },
+        "w": 200,
+        "h": 200,
+        "hd": 10,
+        "vd": 10,
+        "paint": {
+          "value": -3618616,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 0.3,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 0,
+        "y": -45,
+        "w": 40,
+        "h": 30,
+        "cx": 20,
+        "cy": -30,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -60,
+        "y": -75,
+        "w": 20,
+        "h": 50,
+        "cx": -50,
+        "cy": -50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -65,
+        "y": 35,
+        "w": 30,
+        "h": 30,
+        "cx": -50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 10,
+        "y": -100,
+        "w": 80,
+        "h": 20,
+        "cx": 50,
+        "cy": -90,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 48,
+        "y": 48,
+        "w": 5,
+        "h": 5,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 43,
+        "y": 43,
+        "w": 15,
+        "h": 15,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 38,
+        "y": 38,
+        "w": 25,
+        "h": 25,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 33,
+        "y": 33,
+        "w": 35,
+        "h": 35,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 28,
+        "y": 28,
+        "w": 45,
+        "h": 45,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 23,
+        "y": 23,
+        "w": 55,
+        "h": 55,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 18,
+        "y": 18,
+        "w": 65,
+        "h": 65,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 13,
+        "y": 13,
+        "w": 75,
+        "h": 75,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 8,
+        "y": 8,
+        "w": 85,
+        "h": 85,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 3,
+        "y": 3,
+        "w": 95,
+        "h": 95,
+        "cx": 50,
+        "cy": 50,
+        "fill": false,
+        "paint": {
+          "value": -16777216,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 2,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "cursor": 15
+  },
+  "visible": true,
+  "xOff": 0,
+  "yOff": 0,
+  "paint": {
+    "value": -16777216,
+    "falpha": 0.0
+  },
+  "stroke": {
+    "width": 1.0,
+    "join": 0,
+    "cap": 2,
+    "miterlimit": 10.0,
+    "dash_phase": 0.0
+  }
+}

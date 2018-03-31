@@ -1,0 +1,2794 @@
+{
+  "components": {
+    "mutex": {},
+    "elements": [
+      {
+        "x": -125,
+        "y": -125,
+        "d": 250,
+        "r": 125,
+        "fill": true,
+        "fillPaint": {
+          "value": -15594998,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15594998,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -124,
+        "y": -124,
+        "d": 248,
+        "r": 124,
+        "fill": true,
+        "fillPaint": {
+          "value": -15529462,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15529462,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -123,
+        "y": -123,
+        "d": 246,
+        "r": 123,
+        "fill": true,
+        "fillPaint": {
+          "value": -15463926,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15463926,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -122,
+        "y": -122,
+        "d": 244,
+        "r": 122,
+        "fill": true,
+        "fillPaint": {
+          "value": -15398390,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15398390,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -121,
+        "y": -121,
+        "d": 242,
+        "r": 121,
+        "fill": true,
+        "fillPaint": {
+          "value": -15332854,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15332854,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -120,
+        "y": -120,
+        "d": 240,
+        "r": 120,
+        "fill": true,
+        "fillPaint": {
+          "value": -15267318,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15267318,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -119,
+        "y": -119,
+        "d": 238,
+        "r": 119,
+        "fill": true,
+        "fillPaint": {
+          "value": -15201782,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15201782,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -118,
+        "y": -118,
+        "d": 236,
+        "r": 118,
+        "fill": true,
+        "fillPaint": {
+          "value": -15136246,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15136246,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -117,
+        "y": -117,
+        "d": 234,
+        "r": 117,
+        "fill": true,
+        "fillPaint": {
+          "value": -15070710,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15070710,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -116,
+        "y": -116,
+        "d": 232,
+        "r": 116,
+        "fill": true,
+        "fillPaint": {
+          "value": -15005174,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -15005174,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -115,
+        "y": -115,
+        "d": 230,
+        "r": 115,
+        "fill": true,
+        "fillPaint": {
+          "value": -14939638,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14939638,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -114,
+        "y": -114,
+        "d": 228,
+        "r": 114,
+        "fill": true,
+        "fillPaint": {
+          "value": -14874102,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14874102,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -113,
+        "y": -113,
+        "d": 226,
+        "r": 113,
+        "fill": true,
+        "fillPaint": {
+          "value": -14808566,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14808566,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -112,
+        "y": -112,
+        "d": 224,
+        "r": 112,
+        "fill": true,
+        "fillPaint": {
+          "value": -14743030,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14743030,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -111,
+        "y": -111,
+        "d": 222,
+        "r": 111,
+        "fill": true,
+        "fillPaint": {
+          "value": -14677494,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14677494,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -110,
+        "y": -110,
+        "d": 220,
+        "r": 110,
+        "fill": true,
+        "fillPaint": {
+          "value": -14611958,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14611958,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -109,
+        "y": -109,
+        "d": 218,
+        "r": 109,
+        "fill": true,
+        "fillPaint": {
+          "value": -14546422,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14546422,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -108,
+        "y": -108,
+        "d": 216,
+        "r": 108,
+        "fill": true,
+        "fillPaint": {
+          "value": -14480886,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14480886,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -107,
+        "y": -107,
+        "d": 214,
+        "r": 107,
+        "fill": true,
+        "fillPaint": {
+          "value": -14415350,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14415350,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -106,
+        "y": -106,
+        "d": 212,
+        "r": 106,
+        "fill": true,
+        "fillPaint": {
+          "value": -14349814,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14349814,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -105,
+        "y": -105,
+        "d": 210,
+        "r": 105,
+        "fill": true,
+        "fillPaint": {
+          "value": -14284278,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14284278,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -104,
+        "y": -104,
+        "d": 208,
+        "r": 104,
+        "fill": true,
+        "fillPaint": {
+          "value": -14218742,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14218742,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -103,
+        "y": -103,
+        "d": 206,
+        "r": 103,
+        "fill": true,
+        "fillPaint": {
+          "value": -14153206,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14153206,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -102,
+        "y": -102,
+        "d": 204,
+        "r": 102,
+        "fill": true,
+        "fillPaint": {
+          "value": -14087670,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14087670,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -101,
+        "y": -101,
+        "d": 202,
+        "r": 101,
+        "fill": true,
+        "fillPaint": {
+          "value": -14022134,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -14022134,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -100,
+        "y": -100,
+        "d": 200,
+        "r": 100,
+        "fill": true,
+        "fillPaint": {
+          "value": -13956598,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13956598,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -99,
+        "y": -99,
+        "d": 198,
+        "r": 99,
+        "fill": true,
+        "fillPaint": {
+          "value": -13891062,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13891062,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -98,
+        "y": -98,
+        "d": 196,
+        "r": 98,
+        "fill": true,
+        "fillPaint": {
+          "value": -13825526,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13825526,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -97,
+        "y": -97,
+        "d": 194,
+        "r": 97,
+        "fill": true,
+        "fillPaint": {
+          "value": -13759990,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13759990,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -96,
+        "y": -96,
+        "d": 192,
+        "r": 96,
+        "fill": true,
+        "fillPaint": {
+          "value": -13694454,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13694454,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -95,
+        "y": -95,
+        "d": 190,
+        "r": 95,
+        "fill": true,
+        "fillPaint": {
+          "value": -13628918,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13628918,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -94,
+        "y": -94,
+        "d": 188,
+        "r": 94,
+        "fill": true,
+        "fillPaint": {
+          "value": -13563382,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13563382,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -93,
+        "y": -93,
+        "d": 186,
+        "r": 93,
+        "fill": true,
+        "fillPaint": {
+          "value": -13497846,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13497846,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -92,
+        "y": -92,
+        "d": 184,
+        "r": 92,
+        "fill": true,
+        "fillPaint": {
+          "value": -13432310,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13432310,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -91,
+        "y": -91,
+        "d": 182,
+        "r": 91,
+        "fill": true,
+        "fillPaint": {
+          "value": -13366774,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13366774,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -90,
+        "y": -90,
+        "d": 180,
+        "r": 90,
+        "fill": true,
+        "fillPaint": {
+          "value": -13301238,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13301238,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -89,
+        "y": -89,
+        "d": 178,
+        "r": 89,
+        "fill": true,
+        "fillPaint": {
+          "value": -13235702,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13235702,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -88,
+        "y": -88,
+        "d": 176,
+        "r": 88,
+        "fill": true,
+        "fillPaint": {
+          "value": -13170166,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13170166,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -87,
+        "y": -87,
+        "d": 174,
+        "r": 87,
+        "fill": true,
+        "fillPaint": {
+          "value": -13104630,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13104630,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -86,
+        "y": -86,
+        "d": 172,
+        "r": 86,
+        "fill": true,
+        "fillPaint": {
+          "value": -13039094,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -13039094,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -85,
+        "y": -85,
+        "d": 170,
+        "r": 85,
+        "fill": true,
+        "fillPaint": {
+          "value": -12973558,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12973558,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -84,
+        "y": -84,
+        "d": 168,
+        "r": 84,
+        "fill": true,
+        "fillPaint": {
+          "value": -12908022,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12908022,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -83,
+        "y": -83,
+        "d": 166,
+        "r": 83,
+        "fill": true,
+        "fillPaint": {
+          "value": -12842486,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12842486,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -82,
+        "y": -82,
+        "d": 164,
+        "r": 82,
+        "fill": true,
+        "fillPaint": {
+          "value": -12776950,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12776950,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -81,
+        "y": -81,
+        "d": 162,
+        "r": 81,
+        "fill": true,
+        "fillPaint": {
+          "value": -12711414,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12711414,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -80,
+        "y": -80,
+        "d": 160,
+        "r": 80,
+        "fill": true,
+        "fillPaint": {
+          "value": -12645878,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12645878,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -79,
+        "y": -79,
+        "d": 158,
+        "r": 79,
+        "fill": true,
+        "fillPaint": {
+          "value": -12580342,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12580342,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -78,
+        "y": -78,
+        "d": 156,
+        "r": 78,
+        "fill": true,
+        "fillPaint": {
+          "value": -12514806,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12514806,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -77,
+        "y": -77,
+        "d": 154,
+        "r": 77,
+        "fill": true,
+        "fillPaint": {
+          "value": -12449270,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12449270,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -76,
+        "y": -76,
+        "d": 152,
+        "r": 76,
+        "fill": true,
+        "fillPaint": {
+          "value": -12383734,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12383734,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -75,
+        "y": -75,
+        "d": 150,
+        "r": 75,
+        "fill": true,
+        "fillPaint": {
+          "value": -12318198,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12318198,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -74,
+        "y": -74,
+        "d": 148,
+        "r": 74,
+        "fill": true,
+        "fillPaint": {
+          "value": -12252662,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12252662,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -73,
+        "y": -73,
+        "d": 146,
+        "r": 73,
+        "fill": true,
+        "fillPaint": {
+          "value": -12187126,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12187126,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -72,
+        "y": -72,
+        "d": 144,
+        "r": 72,
+        "fill": true,
+        "fillPaint": {
+          "value": -12121590,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12121590,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -71,
+        "y": -71,
+        "d": 142,
+        "r": 71,
+        "fill": true,
+        "fillPaint": {
+          "value": -12056054,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -12056054,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -70,
+        "y": -70,
+        "d": 140,
+        "r": 70,
+        "fill": true,
+        "fillPaint": {
+          "value": -11990518,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11990518,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -69,
+        "y": -69,
+        "d": 138,
+        "r": 69,
+        "fill": true,
+        "fillPaint": {
+          "value": -11924982,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11924982,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -68,
+        "y": -68,
+        "d": 136,
+        "r": 68,
+        "fill": true,
+        "fillPaint": {
+          "value": -11859446,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11859446,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -67,
+        "y": -67,
+        "d": 134,
+        "r": 67,
+        "fill": true,
+        "fillPaint": {
+          "value": -11793910,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11793910,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -66,
+        "y": -66,
+        "d": 132,
+        "r": 66,
+        "fill": true,
+        "fillPaint": {
+          "value": -11728374,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11728374,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -65,
+        "y": -65,
+        "d": 130,
+        "r": 65,
+        "fill": true,
+        "fillPaint": {
+          "value": -11662838,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11662838,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -64,
+        "y": -64,
+        "d": 128,
+        "r": 64,
+        "fill": true,
+        "fillPaint": {
+          "value": -11597302,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11597302,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -63,
+        "y": -63,
+        "d": 126,
+        "r": 63,
+        "fill": true,
+        "fillPaint": {
+          "value": -11531766,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11531766,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -62,
+        "y": -62,
+        "d": 124,
+        "r": 62,
+        "fill": true,
+        "fillPaint": {
+          "value": -11466230,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11466230,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -61,
+        "y": -61,
+        "d": 122,
+        "r": 61,
+        "fill": true,
+        "fillPaint": {
+          "value": -11400694,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11400694,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -60,
+        "y": -60,
+        "d": 120,
+        "r": 60,
+        "fill": true,
+        "fillPaint": {
+          "value": -11335158,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11335158,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -59,
+        "y": -59,
+        "d": 118,
+        "r": 59,
+        "fill": true,
+        "fillPaint": {
+          "value": -11269622,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11269622,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -58,
+        "y": -58,
+        "d": 116,
+        "r": 58,
+        "fill": true,
+        "fillPaint": {
+          "value": -11204086,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11204086,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -57,
+        "y": -57,
+        "d": 114,
+        "r": 57,
+        "fill": true,
+        "fillPaint": {
+          "value": -11138550,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11138550,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -56,
+        "y": -56,
+        "d": 112,
+        "r": 56,
+        "fill": true,
+        "fillPaint": {
+          "value": -11073014,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11073014,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -55,
+        "y": -55,
+        "d": 110,
+        "r": 55,
+        "fill": true,
+        "fillPaint": {
+          "value": -11007478,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -11007478,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -54,
+        "y": -54,
+        "d": 108,
+        "r": 54,
+        "fill": true,
+        "fillPaint": {
+          "value": -10941942,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10941942,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -53,
+        "y": -53,
+        "d": 106,
+        "r": 53,
+        "fill": true,
+        "fillPaint": {
+          "value": -10876406,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10876406,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -52,
+        "y": -52,
+        "d": 104,
+        "r": 52,
+        "fill": true,
+        "fillPaint": {
+          "value": -10810870,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10810870,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -51,
+        "y": -51,
+        "d": 102,
+        "r": 51,
+        "fill": true,
+        "fillPaint": {
+          "value": -10745334,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10745334,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -50,
+        "y": -50,
+        "d": 100,
+        "r": 50,
+        "fill": true,
+        "fillPaint": {
+          "value": -10679798,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10679798,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -49,
+        "y": -49,
+        "d": 98,
+        "r": 49,
+        "fill": true,
+        "fillPaint": {
+          "value": -10614262,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10614262,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -48,
+        "y": -48,
+        "d": 96,
+        "r": 48,
+        "fill": true,
+        "fillPaint": {
+          "value": -10548726,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10548726,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -47,
+        "y": -47,
+        "d": 94,
+        "r": 47,
+        "fill": true,
+        "fillPaint": {
+          "value": -10483190,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10483190,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -46,
+        "y": -46,
+        "d": 92,
+        "r": 46,
+        "fill": true,
+        "fillPaint": {
+          "value": -10417654,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10417654,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -45,
+        "y": -45,
+        "d": 90,
+        "r": 45,
+        "fill": true,
+        "fillPaint": {
+          "value": -10352118,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10352118,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -44,
+        "y": -44,
+        "d": 88,
+        "r": 44,
+        "fill": true,
+        "fillPaint": {
+          "value": -10286582,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10286582,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -43,
+        "y": -43,
+        "d": 86,
+        "r": 43,
+        "fill": true,
+        "fillPaint": {
+          "value": -10221046,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10221046,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -42,
+        "y": -42,
+        "d": 84,
+        "r": 42,
+        "fill": true,
+        "fillPaint": {
+          "value": -10155510,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10155510,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -41,
+        "y": -41,
+        "d": 82,
+        "r": 41,
+        "fill": true,
+        "fillPaint": {
+          "value": -10089974,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10089974,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -40,
+        "y": -40,
+        "d": 80,
+        "r": 40,
+        "fill": true,
+        "fillPaint": {
+          "value": -10024438,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10024438,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -39,
+        "y": -39,
+        "d": 78,
+        "r": 39,
+        "fill": true,
+        "fillPaint": {
+          "value": -9958902,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9958902,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -38,
+        "y": -38,
+        "d": 76,
+        "r": 38,
+        "fill": true,
+        "fillPaint": {
+          "value": -9893366,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9893366,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -37,
+        "y": -37,
+        "d": 74,
+        "r": 37,
+        "fill": true,
+        "fillPaint": {
+          "value": -9827830,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9827830,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -36,
+        "y": -36,
+        "d": 72,
+        "r": 36,
+        "fill": true,
+        "fillPaint": {
+          "value": -9762294,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9762294,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -35,
+        "y": -35,
+        "d": 70,
+        "r": 35,
+        "fill": true,
+        "fillPaint": {
+          "value": -9696758,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9696758,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -34,
+        "y": -34,
+        "d": 68,
+        "r": 34,
+        "fill": true,
+        "fillPaint": {
+          "value": -9631222,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9631222,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -33,
+        "y": -33,
+        "d": 66,
+        "r": 33,
+        "fill": true,
+        "fillPaint": {
+          "value": -9565686,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9565686,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -32,
+        "y": -32,
+        "d": 64,
+        "r": 32,
+        "fill": true,
+        "fillPaint": {
+          "value": -9500150,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9500150,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -31,
+        "y": -31,
+        "d": 62,
+        "r": 31,
+        "fill": true,
+        "fillPaint": {
+          "value": -9434614,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9434614,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -30,
+        "y": -30,
+        "d": 60,
+        "r": 30,
+        "fill": true,
+        "fillPaint": {
+          "value": -9369078,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9369078,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -29,
+        "y": -29,
+        "d": 58,
+        "r": 29,
+        "fill": true,
+        "fillPaint": {
+          "value": -9303542,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9303542,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -28,
+        "y": -28,
+        "d": 56,
+        "r": 28,
+        "fill": true,
+        "fillPaint": {
+          "value": -9238006,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9238006,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -27,
+        "y": -27,
+        "d": 54,
+        "r": 27,
+        "fill": true,
+        "fillPaint": {
+          "value": -9172470,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9172470,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -26,
+        "y": -26,
+        "d": 52,
+        "r": 26,
+        "fill": true,
+        "fillPaint": {
+          "value": -9106934,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9106934,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -25,
+        "y": -25,
+        "d": 50,
+        "r": 25,
+        "fill": true,
+        "fillPaint": {
+          "value": -9041398,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -9041398,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -24,
+        "y": -24,
+        "d": 48,
+        "r": 24,
+        "fill": true,
+        "fillPaint": {
+          "value": -8975862,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8975862,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -23,
+        "y": -23,
+        "d": 46,
+        "r": 23,
+        "fill": true,
+        "fillPaint": {
+          "value": -8910326,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8910326,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -22,
+        "y": -22,
+        "d": 44,
+        "r": 22,
+        "fill": true,
+        "fillPaint": {
+          "value": -8844790,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8844790,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -21,
+        "y": -21,
+        "d": 42,
+        "r": 21,
+        "fill": true,
+        "fillPaint": {
+          "value": -8779254,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8779254,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -20,
+        "y": -20,
+        "d": 40,
+        "r": 20,
+        "fill": true,
+        "fillPaint": {
+          "value": -8713718,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8713718,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -19,
+        "y": -19,
+        "d": 38,
+        "r": 19,
+        "fill": true,
+        "fillPaint": {
+          "value": -8648182,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8648182,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -18,
+        "y": -18,
+        "d": 36,
+        "r": 18,
+        "fill": true,
+        "fillPaint": {
+          "value": -8582646,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8582646,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -17,
+        "y": -17,
+        "d": 34,
+        "r": 17,
+        "fill": true,
+        "fillPaint": {
+          "value": -8517110,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8517110,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -16,
+        "y": -16,
+        "d": 32,
+        "r": 16,
+        "fill": true,
+        "fillPaint": {
+          "value": -8451574,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8451574,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -15,
+        "y": -15,
+        "d": 30,
+        "r": 15,
+        "fill": true,
+        "fillPaint": {
+          "value": -8386038,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8386038,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -14,
+        "y": -14,
+        "d": 28,
+        "r": 14,
+        "fill": true,
+        "fillPaint": {
+          "value": -8320502,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8320502,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -13,
+        "y": -13,
+        "d": 26,
+        "r": 13,
+        "fill": true,
+        "fillPaint": {
+          "value": -8254966,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8254966,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -12,
+        "y": -12,
+        "d": 24,
+        "r": 12,
+        "fill": true,
+        "fillPaint": {
+          "value": -8189430,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8189430,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -11,
+        "y": -11,
+        "d": 22,
+        "r": 11,
+        "fill": true,
+        "fillPaint": {
+          "value": -8123894,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8123894,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -10,
+        "y": -10,
+        "d": 20,
+        "r": 10,
+        "fill": true,
+        "fillPaint": {
+          "value": -8058358,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -8058358,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -9,
+        "y": -9,
+        "d": 18,
+        "r": 9,
+        "fill": true,
+        "fillPaint": {
+          "value": -7992822,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7992822,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -8,
+        "y": -8,
+        "d": 16,
+        "r": 8,
+        "fill": true,
+        "fillPaint": {
+          "value": -7927286,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7927286,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -7,
+        "y": -7,
+        "d": 14,
+        "r": 7,
+        "fill": true,
+        "fillPaint": {
+          "value": -7861750,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7861750,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -6,
+        "y": -6,
+        "d": 12,
+        "r": 6,
+        "fill": true,
+        "fillPaint": {
+          "value": -7796214,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7796214,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -5,
+        "y": -5,
+        "d": 10,
+        "r": 5,
+        "fill": true,
+        "fillPaint": {
+          "value": -7730678,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7730678,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -4,
+        "y": -4,
+        "d": 8,
+        "r": 4,
+        "fill": true,
+        "fillPaint": {
+          "value": -7665142,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7665142,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -3,
+        "y": -3,
+        "d": 6,
+        "r": 3,
+        "fill": true,
+        "fillPaint": {
+          "value": -7599606,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7599606,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -2,
+        "y": -2,
+        "d": 4,
+        "r": 2,
+        "fill": true,
+        "fillPaint": {
+          "value": -7534070,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7534070,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -1,
+        "y": -1,
+        "d": 2,
+        "r": 1,
+        "fill": true,
+        "fillPaint": {
+          "value": -7468534,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7468534,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 0,
+        "y": 0,
+        "d": 0,
+        "r": 0,
+        "fill": true,
+        "fillPaint": {
+          "value": -7402998,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -7402998,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      }
+    ],
+    "cursor": 126
+  },
+  "visible": true,
+  "xOff": 0,
+  "yOff": 0,
+  "paint": {
+    "value": -16777216,
+    "falpha": 0.0
+  },
+  "stroke": {
+    "width": 1.0,
+    "join": 0,
+    "cap": 2,
+    "miterlimit": 10.0,
+    "dash_phase": 0.0
+  }
+}

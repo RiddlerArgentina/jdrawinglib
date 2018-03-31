@@ -1,0 +1,20 @@
+bounds 300 300 center invert_y
+
+color 128 128 128
+
+linec 0 0  150  150
+linec 0 0 -150  150
+linec 0 0    0 -150
+
+# Middle
+for2 5 5 150 150 5 0 "color %2$d %1$d %1$d; linec -%1$d %1$d %2$d  %2$d"
+for2 5 5 150 150 5 0 "color %1$d %1$d %2$d; linec  %1$d %1$d    0 -%2$d"
+for2 5 5 150 150 5 0 "color %1$d %2$d %1$d; linec -%1$d %1$d    0 -%2$d"
+
+# Left
+for2 150 -10 0 0 10 150 "color %1$d 0 %2$d;linec -150  %1$d -%1$d -%2$d"
+for2 150 -10 0 0 10 150 "color %1$d 0 %2$d;linec -150 -%1$d -%1$d -%2$d"
+
+# Right
+for2 150 -10 0 0 10 150 "color %1$d 0 %2$d;linec 150  %1$d %1$d -%2$d"
+for2 150 -10 0 0 10 150 "color %1$d 0 %2$d;linec 150 -%1$d %1$d -%2$d"

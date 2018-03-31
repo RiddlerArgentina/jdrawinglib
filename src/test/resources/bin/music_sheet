@@ -1,0 +1,1859 @@
+{
+  "components": {
+    "mutex": {},
+    "elements": [
+      {
+        "x1": -136,
+        "y1": 100,
+        "x2": 136,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -120,
+        "y1": 150,
+        "x2": -120,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -104,
+        "y1": 150,
+        "x2": -104,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -88,
+        "y1": 150,
+        "x2": -88,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -72,
+        "y1": 150,
+        "x2": -72,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -56,
+        "y1": 150,
+        "x2": -56,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -40,
+        "y1": 150,
+        "x2": -40,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -24,
+        "y1": 150,
+        "x2": -24,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -8,
+        "y1": 150,
+        "x2": -8,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 8,
+        "y1": 150,
+        "x2": 8,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 24,
+        "y1": 150,
+        "x2": 24,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 40,
+        "y1": 150,
+        "x2": 40,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 56,
+        "y1": 150,
+        "x2": 56,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 72,
+        "y1": 150,
+        "x2": 72,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 88,
+        "y1": 150,
+        "x2": 88,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 104,
+        "y1": 150,
+        "x2": 104,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 120,
+        "y1": 150,
+        "x2": 120,
+        "y2": 100,
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -125,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": -120,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -109,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": -104,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -77,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": -72,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -61,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": -56,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -45,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": -40,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -13,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": -8,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 3,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": 8,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 35,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": 40,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 51,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": 56,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 67,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": 72,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 99,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": 104,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": 115,
+        "y": 120,
+        "w": 10,
+        "h": 30,
+        "cx": 120,
+        "cy": 135,
+        "fill": true,
+        "fillPaint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -10461088,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "C-",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -136,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "D",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -117,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "E",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -101,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "F",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -85,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "G",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -69,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "A",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -52,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "B",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -37,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "C",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -21,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "D",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -5,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "E",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": 11,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "F",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": 28,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "G",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": 43,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "A",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": 60,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "B",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": 75,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "C\u0027",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": 90,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "D",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": 107,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "E",
+        "font": {
+          "name": "Dialog",
+          "style": 0,
+          "size": 14,
+          "pointSize": 14.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": 123,
+        "y": 102,
+        "a": "0.000000",
+        "paint": {
+          "value": -14671840,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 80,
+        "x2": 135,
+        "y2": 80,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 75,
+        "x2": 135,
+        "y2": 75,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 70,
+        "x2": 135,
+        "y2": 70,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 65,
+        "x2": 135,
+        "y2": 65,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 60,
+        "x2": 135,
+        "y2": 60,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 40,
+        "x2": 135,
+        "y2": 40,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 35,
+        "x2": 135,
+        "y2": 35,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 30,
+        "x2": 135,
+        "y2": 30,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 25,
+        "x2": 135,
+        "y2": 25,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 20,
+        "x2": 135,
+        "y2": 20,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 80,
+        "x2": -135,
+        "y2": 20,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 135,
+        "y1": 80,
+        "x2": 135,
+        "y2": 20,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -141,
+        "y": 21,
+        "w": 4,
+        "h": 58,
+        "cx": -139,
+        "cy": 50,
+        "fill": true,
+        "fillPaint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "𝄞",
+        "font": {
+          "name": "dialog",
+          "style": 0,
+          "size": 30,
+          "pointSize": 30.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -115,
+        "y": 60,
+        "a": "0.000000",
+        "paint": {
+          "value": -12566464,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "𝄢",
+        "font": {
+          "name": "dialog",
+          "style": 0,
+          "size": 30,
+          "pointSize": 30.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -115,
+        "y": 15,
+        "a": "0.000000",
+        "paint": {
+          "value": -12566464,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 0,
+        "x2": 135,
+        "y2": 0,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -5,
+        "x2": 135,
+        "y2": -5,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -10,
+        "x2": 135,
+        "y2": -10,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -15,
+        "x2": 135,
+        "y2": -15,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -20,
+        "x2": 135,
+        "y2": -20,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -40,
+        "x2": 135,
+        "y2": -40,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -45,
+        "x2": 135,
+        "y2": -45,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -50,
+        "x2": 135,
+        "y2": -50,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -55,
+        "x2": 135,
+        "y2": -55,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -60,
+        "x2": 135,
+        "y2": -60,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": 0,
+        "x2": -135,
+        "y2": -60,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 135,
+        "y1": 0,
+        "x2": 135,
+        "y2": -60,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -141,
+        "y": -59,
+        "w": 4,
+        "h": 58,
+        "cx": -139,
+        "cy": -30,
+        "fill": true,
+        "fillPaint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "𝄞",
+        "font": {
+          "name": "dialog",
+          "style": 0,
+          "size": 30,
+          "pointSize": 30.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -115,
+        "y": -20,
+        "a": "0.000000",
+        "paint": {
+          "value": -12566464,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "𝄢",
+        "font": {
+          "name": "dialog",
+          "style": 0,
+          "size": 30,
+          "pointSize": 30.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -115,
+        "y": -65,
+        "a": "0.000000",
+        "paint": {
+          "value": -12566464,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -80,
+        "x2": 135,
+        "y2": -80,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -85,
+        "x2": 135,
+        "y2": -85,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -90,
+        "x2": 135,
+        "y2": -90,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -95,
+        "x2": 135,
+        "y2": -95,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -100,
+        "x2": 135,
+        "y2": -100,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -120,
+        "x2": 135,
+        "y2": -120,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -125,
+        "x2": 135,
+        "y2": -125,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -130,
+        "x2": 135,
+        "y2": -130,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -135,
+        "x2": 135,
+        "y2": -135,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -140,
+        "x2": 135,
+        "y2": -140,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": -135,
+        "y1": -80,
+        "x2": -135,
+        "y2": -140,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x1": 135,
+        "y1": -80,
+        "x2": 135,
+        "y2": -140,
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "x": -141,
+        "y": -139,
+        "w": 4,
+        "h": 58,
+        "cx": -139,
+        "cy": -110,
+        "fill": true,
+        "fillPaint": {
+          "value": -8355712,
+          "falpha": 0.0
+        },
+        "paint": {
+          "value": -6250336,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "𝄞",
+        "font": {
+          "name": "dialog",
+          "style": 0,
+          "size": 30,
+          "pointSize": 30.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -115,
+        "y": -100,
+        "a": "0.000000",
+        "paint": {
+          "value": -12566464,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "𝄢",
+        "font": {
+          "name": "dialog",
+          "style": 0,
+          "size": 30,
+          "pointSize": 30.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -115,
+        "y": -145,
+        "a": "0.000000",
+        "paint": {
+          "value": -12566464,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      },
+      {
+        "string": "This example will probably fail on MS Winbugs",
+        "font": {
+          "name": "dialog",
+          "style": 0,
+          "size": 9,
+          "pointSize": 9.0,
+          "fontSerializedDataVersion": 1
+        },
+        "x": -115,
+        "y": -149,
+        "a": "0.000000",
+        "paint": {
+          "value": -12566464,
+          "falpha": 0.0
+        },
+        "stroke": {
+          "width": 1.0,
+          "join": 0,
+          "cap": 2,
+          "miterlimit": 10.0,
+          "dash_phase": 0.0
+        }
+      }
+    ],
+    "cursor": 92
+  },
+  "visible": true,
+  "xOff": 0,
+  "yOff": 0,
+  "paint": {
+    "value": -16777216,
+    "falpha": 0.0
+  },
+  "stroke": {
+    "width": 1.0,
+    "join": 0,
+    "cap": 2,
+    "miterlimit": 10.0,
+    "dash_phase": 0.0
+  }
+}
