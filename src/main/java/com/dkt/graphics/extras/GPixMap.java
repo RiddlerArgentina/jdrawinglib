@@ -497,35 +497,7 @@ public final class GPixMap extends GraphicE {
 
         return map;
     }
-
-    /**
-     * Retrieves a new {@code GPixMap} which is the result of rotating this one
-     * clockwise 180°.<pre>
-     *       +-------+            +-------+
-     *       | ***** |            |     * |
-     *       | *     |     -&gt;     |     * |
-     *       | *     |            | ***** |
-     *       +-------+            +-------+</pre>
-     *
-     * @return Clockwise turn of this {@code GPixMap} twice
-     */
-    public GPixMap rotateCW2() {
-        final int sx = getXSize();
-        final int sy = getYSize();
-        final Color[][] foo = new Color[sy][sx];
-
-        for (int i = 0; i < sy; i++) {
-            for (int j = 0; j < sx; j++) {
-                foo[sy - i - 1][sx - j - 1] = data[i][j];
-            }
-        }
-
-        final GPixMap map = new GPixMap(foo);
-        copy(map);
-
-        return map;
-    }
-
+    
     /**
      * Retrieves a new {@code GPixMap} which is the result of rotating this one
      * counter clockwise 90°.<pre>
