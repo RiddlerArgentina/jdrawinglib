@@ -167,9 +167,9 @@ public class GFormulaTest {
         assertThrows(IllegalArgumentException.class, () -> {
             new GFormula(null);
         });
-        assertThrows(IntervalException.class, () -> {
+        assertThrows(IllegalArgumentException.class, () -> {
             GFormula formula = new GFormula(eye);
-            formula.calculate(0, 10, -10, null);
+            formula.calculate(0, 10, 1, null);
         });
         assertThrows(IntervalException.class, () -> {
             GFormula formula = new GFormula(eye);
