@@ -879,7 +879,7 @@ public class GPointArrayTest {
     @Test
     @DisplayName("Clone")
     public void testClone(){
-        GPointArray pa1 = populate();;
+        GPointArray pa1 = populate();
         assertFalse(pa1.isEmpty());
         assertEquals(pa1, pa1.clone());
         pa1.setCrossSize(3);
