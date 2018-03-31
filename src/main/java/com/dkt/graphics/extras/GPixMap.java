@@ -60,7 +60,7 @@ public final class GPixMap extends GraphicE {
         super(e);
 
         data = new Color[e.data.length][e.data[0].length];
-        for (int i = 0, n = data.length; i < n; i++) {
+        for (int i = 0; i < data.length; i++) {
             System.arraycopy(e.data[i], 0, data[i], 0, data[0].length);
         }
         bounds = e.bounds.clone();
@@ -486,8 +486,8 @@ public final class GPixMap extends GraphicE {
         final int sy = getYSize();
         final Color[][] foo = new Color[sx][sy];
 
-        for (int i = 0, n = sy; i < n; i++) {
-            for (int j = 0, m = sx; j < m; j++) {
+        for (int i = 0; i < sy; i++) {
+            for (int j = 0; j < sx; j++) {
                 foo[j][sy - i - 1] = data[i][j];
             }
         }
@@ -730,7 +730,7 @@ public final class GPixMap extends GraphicE {
     public Color[][] getColorData() {
         final Color[][] nData = new Color[getYSize()][getXSize()];
 
-        for (int i = 0, n = getYSize(); i < n; i++) {
+        for (int i = 0; i < getYSize(); i++) {
             System.arraycopy(data[i], 0, nData[i], 0, data[i].length);
         }
 

@@ -446,7 +446,8 @@ public class GraphicCreator {
 
         StringBuilder foo = new StringBuilder(txt.length() * (f1 - i1) / s1 * 2);
 
-        for (int i = 0, n = Math.min(int1.length, int2.length); i < n; i++) {
+        final int n = Math.min(int1.length, int2.length);
+        for (int i = 0; i < n; i++) {
            foo.append(String.format(txt, int1[i], int2[i])).append("\n");
         }
 

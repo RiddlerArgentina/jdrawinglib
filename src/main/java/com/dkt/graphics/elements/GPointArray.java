@@ -603,7 +603,7 @@ public class GPointArray extends GMultiPoint {
 
         mutex.lock();
         try{
-            for (int i = 0, n = array.size; i < n; i++){
+            for (int i = 0; i < array.size; i++){
                 if (indexOf(array.xs[i], array.ys[i]) >= 0){
                     arr.append(array.xs[i], array.ys[i]);
                 }
@@ -635,7 +635,7 @@ public class GPointArray extends GMultiPoint {
 
         mutex.lock();
         try{
-            for (int i = 0, n = size; i < n; i++){
+            for (int i = 0; i < size; i++){
                 if (r.contains(xs[i], ys[i])){
                     arr.append(xs[i], ys[i]);
                 }

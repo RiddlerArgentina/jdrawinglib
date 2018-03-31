@@ -160,7 +160,7 @@ public class Gif {
             snapshots.add(new Wrapper(Utils.getImage(canvas, true), num));
         }
     }
-    
+
     /**
      * Writes the image to a file, if this method fails it will return {@code
      * false} and the exception will be saved.
@@ -181,7 +181,7 @@ public class Gif {
 
         ArrayList<BufferedImage> imgs = new ArrayList<>(size() * 2);
         for (Wrapper wrap : snapshots) {
-            for (int i = 0, n = wrap.num; i < n; i++) {
+            for (int i = 0; i < wrap.num; i++) {
                 imgs.ensureCapacity(imgs.size() + wrap.num);
                 imgs.add(wrap.image);
             }
