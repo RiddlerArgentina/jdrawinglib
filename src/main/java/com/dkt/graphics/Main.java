@@ -19,6 +19,7 @@
 package com.dkt.graphics;
 
 import com.dkt.graphics.extras.examples.IExample;
+import java.lang.reflect.InvocationTargetException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
@@ -37,9 +38,7 @@ public class Main {
                 SwingUtilities.invokeLater(contruct(arg));
                 needHelp = false;
                 break;
-            } catch (ClassNotFoundException |
-                     InstantiationException |
-                     IllegalAccessException ex) {
+            } catch (Exception ex) {
                 Logger.getLogger("Main").log(Level.SEVERE, null, ex);
                 System.out.format("Unrecognized option '%s'%n", arg);
             }
@@ -59,19 +58,19 @@ public class Main {
                 String name = String.format("Example%02d", i);
                 String desc = contruct(name).getName();
                 System.out.format("\t %s -> %s%n", name, desc);
-            } catch (ClassNotFoundException |
-                     InstantiationException |
-                     IllegalAccessException ex) {
+            } catch (Exception ex) {
                 Logger.getLogger("Main").log(Level.SEVERE, null, ex);
             }
         }
         System.out.println();
     }
 
-    public static IExample contruct(String name) throws ClassNotFoundException,
+    public static IExample contruct(String name) throws InvocationTargetException,
+                                                        ClassNotFoundException,
                                                         InstantiationException,
-                                                        IllegalAccessException {
+                                                        IllegalAccessException,
+                                                        NoSuchMethodException {
         Class<?> c = Class.forName("com.dkt.graphics.extras.examples." + name);
-        return (IExample) c.newInstance();
+        return (IExample) c.getDeclaredConstructor().newInstance();
     }
 }
