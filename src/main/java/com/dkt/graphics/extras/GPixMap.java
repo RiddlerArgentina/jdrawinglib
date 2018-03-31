@@ -106,7 +106,7 @@ public final class GPixMap extends GraphicE {
         checkSize(data);
 
         this.data = new Color[data.length][data[0].length];
-        for (int i = 0, n = data.length; i < n; i++) {
+        for (int i = 0; i < data.length; i++) {
             System.arraycopy(data[i], 0, this.data[i], 0, data[0].length);
         }
 
@@ -134,8 +134,8 @@ public final class GPixMap extends GraphicE {
         checkSize(data);
 
         this.data = new Color[data.length][data[0].length];
-        for (int i = 0, n = data.length; i < n; i++) {
-            for (int j = 0, m = data[0].length; j < m; j++) {
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[0].length; j++) {
                 this.data[i][j] = new Color(data[i][j], hasAlpha);
             }
         }
@@ -514,8 +514,8 @@ public final class GPixMap extends GraphicE {
         final int sy = getYSize();
         final Color[][] foo = new Color[sy][sx];
 
-        for (int i = 0, n = sy; i < n; i++) {
-            for (int j = 0, m = sx; j < m; j++) {
+        for (int i = 0; i < sy; i++) {
+            for (int j = 0; j < sx; j++) {
                 foo[sy - i - 1][sx - j - 1] = data[i][j];
             }
         }
@@ -544,8 +544,8 @@ public final class GPixMap extends GraphicE {
         final int sy = getYSize();
         final Color[][] fooMat = new Color[sx][sy];
 
-        for (int i = 0, n = sy; i < n; i++) {
-            for (int j = 0, m = sx; j < m; j++) {
+        for (int i = 0; i < sy; i++) {
+            for (int j = 0; j < sx; j++) {
                 fooMat[sx - j - 1][i] = data[i][j];
             }
         }
@@ -600,7 +600,7 @@ public final class GPixMap extends GraphicE {
         final int sy = getYSize();
         final Color[][] fooMat = new Color[sy][sx];
 
-        for (int i = 0, n = sy; i < n; i++) {
+        for (int i = 0; i < sy; i++) {
             System.arraycopy(data[i], 0, fooMat[sy - i - 1], 0, sx);
         }
 
@@ -728,9 +728,11 @@ public final class GPixMap extends GraphicE {
      * @return color data
      */
     public Color[][] getColorData() {
-        final Color[][] nData = new Color[getYSize()][getXSize()];
+        final int ys = getYSize();
+        final int xs = getXSize();
+        final Color[][] nData = new Color[ys][xs];
 
-        for (int i = 0; i < getYSize(); i++) {
+        for (int i = 0; i < ys; i++) {
             System.arraycopy(data[i], 0, nData[i], 0, data[i].length);
         }
 
@@ -743,10 +745,12 @@ public final class GPixMap extends GraphicE {
      * @return color data
      */
     public int[][] getData() {
-        final int[][] nData = new int[getYSize()][getXSize()];
+        final int ys = getYSize();
+        final int xs = getXSize();
+        final int[][] nData = new int[ys][xs];
 
-        for (int i = 0, n = getYSize(); i < n; i++) {
-            for (int j = 0, m = getXSize(); j < m; j++) {
+        for (int i = 0; i < ys; i++) {
+            for (int j = 0; j < xs; j++) {
                 nData[i][j] = data[i][j].getRGB();
             }
         }
