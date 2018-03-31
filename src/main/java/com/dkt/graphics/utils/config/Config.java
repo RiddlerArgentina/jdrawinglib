@@ -25,46 +25,46 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
-import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Objects;
 import java.util.Set;
 import javax.swing.ImageIcon;
 
 /**
- * This class represents a generic Configuration class, with change listeners. 
- * This class supports a {@link ConfigListener} that is fired when key-values 
+ * This class represents a generic Configuration class, with change listeners.
+ * This class supports a {@link ConfigListener} that is fired when key-values
  * are updated, added or removed on a <i>per config</i> basis.
  *
  * @author Federico Vera {@literal <dktcoding [at] gmail>}
  */
 public class Config implements Serializable {
+    private static final long serialVersionUID = 6450068842696620740L;
+
     private static final HashMap<String, Config> CONFIGS = new HashMap<>(8);
     private final        HashMap<String, Object> data    = new HashMap<>(16);
-    
-    private final LinkedList<WeakReference<ConfigListener>> listeners = new 
-LinkedList<>();
-    
+
+    private final ArrayList<ConfigListener> listeners = new
+ArrayList<>(4);
+
     /**
      * Don't let anyone else initialize this class
      */
     private Config () {
-        
+
     }
-    
+
     /**
      * A wrapper for {@link Config#on(String)}
-     * 
+     *
      * @param name config name
      * @return {@code Config} object
-     * @see Config#on(String) 
+     * @see Config#on(String)
      */
-    public static synchronized Config from(String name) {
+    public static Config from(String name) {
         return on(name);
     }
-    
+
     /**
      * Retrieves a {@code Config} instance associated with a given {@code name},
      * this is usually the module/plugin name.<br>
@@ -78,12 +78,14 @@ LinkedList<>();
      * @param name config name
      * @return {@code Config} object
      */
-    public static synchronized Config on(String name) {
-        if (!CONFIGS.containsKey(name)) {
-            CONFIGS.put(name, new Config());
-        }
+    public static Config on(String name) {
+        synchronized(CONFIGS) {
+            if (!CONFIGS.containsKey(name)) {
+                CONFIGS.put(name, new Config());
+            }
 
-        return CONFIGS.get(name);
+            return CONFIGS.get(name);
+        }
     }
 
     /**
@@ -94,26 +96,26 @@ LinkedList<>();
      * @param name config name
      */
     public static void remove(String name) {
-        final Config conf;
-        
         synchronized(CONFIGS) {
-            conf = CONFIGS.remove(name);
-        }
+            final Config conf = CONFIGS.remove(name);
 
-        if (conf != null) {
-            conf.listeners.clear();
-            conf.data.clear();
+            if (conf != null) {
+                conf.listeners.clear();
+                conf.data.clear();
+            }
         }
     }
-    
+
     /**
      * Retrieves a {@link Set} with all the available {@link Config} objects
      * @return Set of configs
      */
     public static Set<String> configSet() {
-        return CONFIGS.keySet();
+        synchronized(CONFIGS) {
+            return CONFIGS.keySet();
+        }
     }
-    
+
     /**
      * Retrieves the number of created {@link Config} objects.
      * @return number of configs
@@ -124,46 +126,44 @@ LinkedList<>();
 
     /**
      * A wrapper for {@code Config.put(String,Object)}
-     * 
-     * @param key {@code key} 
-     * @param value {@code value} 
+     *
+     * @param key {@code key}
+     * @param value {@code value}
      * @see Config#put(String,Object)
      * @see Config#addListener(ConfigListener)
      */
     public void set(String key, Object value) {
         put(key, value);
     }
-    
+
     /**
      * Set's a config {@code key,value} pair. This values can be exported and
      * imported.<br>
      * <i>Note: </i> every <b>change</b> in this values will trigger a {@link
      * ConfigEvent} on all the registered {@link ConfigListener}s.
      *
-     * @param key {@code key} 
-     * @param value {@code value} 
+     * @param key {@code key}
+     * @param value {@code value}
      * @see Config#addListener(ConfigListener)
      */
     public void put(String key, Object value) {
-        final Object old;
-
         synchronized (data) {
-            old = data.get(key);
+            final Object old = data.get(key);
 
             if (value == null){
                 data.remove(key);
             } else {
                 data.put(key, value);
             }
-        }
 
-        fireEvent(key, old, value);
+            fireEvent(key, old, value);
+        }
     }
 
     /**
      * Retrieves a raw {@code value} for a given {@code key}
      *
-     * @param key {@code key} 
+     * @param key {@code key}
      * @return {@code value}
      */
     public Object get(String key) {
@@ -184,7 +184,7 @@ LinkedList<>();
     /**
      * Retrieves the {@code value} for a given {@code key} as a {@code boolean}
      *
-     * @param key {@code key} 
+     * @param key {@code key}
      * @return value as {@link Boolean}
      * @throws ClassCastException if the {@code value} isn't a {@link Boolean}
      */
@@ -195,7 +195,7 @@ LinkedList<>();
     /**
      * Retrieves the {@code value} for a given {@code key} as a {@code double}
      *
-     * @param key {@code key} 
+     * @param key {@code key}
      * @return value as {@link Double}
      * @throws ClassCastException if the {@code value} isn't a {@link Double}
      */
@@ -207,7 +207,7 @@ LinkedList<>();
      * Retrieves the {@code value} for a given {@code key} as an
      * {@code ImageIcon}
      *
-     * @param key {@code key} 
+     * @param key {@code key}
      * @return value as {@link ImageIcon}
      * @throws ClassCastException if the {@code value} isn't a {@link ImageIcon}
      */
@@ -218,7 +218,7 @@ LinkedList<>();
     /**
      * Retrieves the {@code value} for a given {@code key} as an {@code int}
      *
-     * @param key {@code key} 
+     * @param key {@code key}
      * @return value as {@link Integer}
      * @throws ClassCastException if the {@code value} isn't a {@link Integer}
      */
@@ -229,7 +229,7 @@ LinkedList<>();
     /**
      * Retrieves the {@code value} for a given {@code key} as a {@code String}
      *
-     * @param key {@code key} 
+     * @param key {@code key}
      * @return value as {@link String}
      * @throws ClassCastException if the {@code value} isn't a {@link String}
      */
@@ -246,7 +246,7 @@ LinkedList<>();
      */
     public void addListener(ConfigListener listener) {
         synchronized (listeners) {
-            listeners.add(new WeakReference<>(listener));
+            listeners.add(listener);
         }
     }
 
@@ -257,12 +257,7 @@ LinkedList<>();
      */
     public void removeListener(ConfigListener listener) {
         synchronized (listeners) {
-            for (WeakReference<ConfigListener> element : listeners) {
-                if (element.get() == listener) {
-                    element.clear();
-                    break;
-                }
-            }
+            listeners.remove(listener);
         }
     }
 
@@ -283,7 +278,7 @@ LinkedList<>();
 
         if (oval == null && nval != null) {
             type = ConfigEvent.VALUE_ADDED;
-        } else if (nval == null) {
+        } else if (oval != null && nval == null) {
             type = ConfigEvent.VALUE_REMOVED;
         } else {
             type = ConfigEvent.VALUE_UPDATED;
@@ -297,45 +292,21 @@ LinkedList<>();
             @Override public boolean isKey(String k) {return key.equals(k);}
         };
 
-        int nullCount = 0;
-
-        for (final WeakReference<ConfigListener> ref : listeners) {
-            final ConfigListener lr = ref.get();
-            if (lr != null) {
+        synchronized(listeners) {
+            for (ConfigListener lr : listeners) {
                 lr.somethingChange(evt);
-            } else {
-                nullCount++;
             }
-        }
-
-        if (nullCount != 0){
-            cleanListeners();
         }
     }
 
-    private void cleanListeners() {
-        final ArrayList<WeakReference<ConfigListener>> foo;
-        foo = new ArrayList<>(listeners.size());
-
-        for (final WeakReference<ConfigListener> ref : listeners) {
-            if (ref.get() != null) {
-                foo.add(ref);
-            }
-        }
-
-        listeners.clear();
-        listeners.addAll(foo);
-        foo.clear();
-    }
-    
     /**
      * Saves all the available Configs in the given {@code OutputStream}.
-     * <p><i>Note:</i> all of the values of the {@code Config} object must be {@link Serializable} 
+     * <p><i>Note:</i> all of the values of the {@code Config} object must be {@link Serializable}
      * for this to work</p>
      * @param os {@code OutputStream} on which to write
      * @throws IOException in case an I/O error occurs
-     * @see Config#save(java.io.OutputStream) 
-     * @see Config#read(java.io.InputStream, java.lang.String) 
+     * @see Config#save(java.io.OutputStream)
+     * @see Config#read(java.io.InputStream, java.lang.String)
      */
     public static void saveAll(OutputStream os) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(os)) {
@@ -345,31 +316,31 @@ LinkedList<>();
 
     /**
      * Saves {@code this} {@code Config} in the given {@code OutputStream}.
-     * <p><i>Note:</i> all of the values of the {@code Config} object must be {@link Serializable} 
+     * <p><i>Note:</i> all of the values of the {@code Config} object must be {@link Serializable}
      * for this to work</p>
      * @param os {@code OutputStream} on which to write
      * @throws IOException in case an I/O error occurs
-     * @see Config#saveAll(java.io.OutputStream) 
-     * @see Config#read(java.io.InputStream, java.lang.String) 
+     * @see Config#saveAll(java.io.OutputStream)
+     * @see Config#read(java.io.InputStream, java.lang.String)
      */
     public void save(OutputStream os) throws IOException {
         try (ObjectOutputStream oos = new ObjectOutputStream(os)) {
             oos.writeObject(this);
         }
     }
-    
+
     /**
      * Read a {@code Config} or {@code Map} of configs from the given {@link InputStream}.
-     * 
+     *
      * @param is {@code InputStream} from which to read
      * @param name If reading a single {@code Config} this is the name it will have when calling
-     * {@link Config#from(java.lang.String)}, it should be {@code null} when reading a set of 
+     * {@link Config#from(java.lang.String)}, it should be {@code null} when reading a set of
      * configs.
      * @throws IOException in case an I/O error occurs
-     * @throws ClassNotFoundException If the {@code InputStream} doesn't point to an appropriate 
+     * @throws ClassNotFoundException If the {@code InputStream} doesn't point to an appropriate
      * {@code Config}
-     * @see Config#save(java.io.OutputStream) 
-     * @see Config#saveAll(java.io.OutputStream) 
+     * @see Config#save(java.io.OutputStream)
+     * @see Config#saveAll(java.io.OutputStream)
      */
     @SuppressWarnings("unchecked")
     public static void read(InputStream is, String name) throws IOException, ClassNotFoundException {
