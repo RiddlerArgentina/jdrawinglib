@@ -20,6 +20,7 @@ package com.dkt.graphics.elements;
 
 import com.dkt.graphics.exceptions.InvalidArgumentException;
 import java.util.Iterator;
+import java.util.Random;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -526,6 +527,33 @@ public class GPointArrayTest {
         assertEquals(3, mp.indexOf(3, 8));
         assertEquals(4, mp.indexOf(3, 8), 4);
         assertEquals(5, mp.indexOf(4, 9));
+        mp.removeDuplicates();
+        assertEquals(4, mp.size());
+        assertFalse(mp.isEmpty());
+    }
+
+    @Test
+    @DisplayName("Sort by Y")
+    public void testSortByY() {
+        int[] XX = {5, 6, 7, 8, 9, 8};
+        int[] YY = {0, 1, 2, 3, 4, 3};
+        GPointArray mp = new GPointArray(XX, YY);
+
+        assertNotNull(mp);
+        assertEquals(6, mp.size());
+        assertFalse(mp.isEmpty());
+        mp.sortByY();
+        assertEquals(6, mp.size());
+        assertFalse(mp.isEmpty());
+        assertEquals(0, mp.indexOf(5, 0));
+        assertEquals(1, mp.indexOf(6, 1));
+        assertEquals(2, mp.indexOf(7, 2));
+        assertEquals(3, mp.indexOf(8, 3));
+        assertEquals(4, mp.indexOf(8, 3), 4);
+        assertEquals(5, mp.indexOf(9, 4));
+        mp.removeDuplicates();
+        assertEquals(4, mp.size());
+        assertFalse(mp.isEmpty());
     }
 
     @Test
@@ -596,6 +624,206 @@ public class GPointArrayTest {
         for (int i = 0; i < YY.length; i++) {
             assertEquals(mp.getPointAt(i), points[i]);
         }
+    }
+
+    @Test
+    @DisplayName("Highest point")
+    public void testHighestPoint(){
+        GPointArray pa = populate();
+        GPoint p = pa.highestPoint();
+        assertFalse(pa.isEmpty());
+        for (GPoint pp : pa) {
+            assertTrue(p.y() >= pp.y());
+        }
+    }
+
+    @Test
+    @DisplayName("Lowest point")
+    public void testLowestPoint(){
+        GPointArray pa = populate();
+        GPoint p = pa.lowestPoint();
+        assertFalse(pa.isEmpty());
+        for (GPoint pp : pa) {
+            assertTrue(p.y() <= pp.y());
+        }
+    }
+
+    @Test
+    @DisplayName("Leftmost point")
+    public void testLeftmostPoint(){
+        GPointArray pa = populate();
+        GPoint p = pa.leftmostPoint();
+        assertFalse(pa.isEmpty());
+        for (GPoint pp : pa) {
+            assertTrue(p.x() <= pp.x());
+        }
+    }
+
+    @Test
+    @DisplayName("Rightmost point")
+    public void testRightmostPoint(){
+        GPointArray pa = populate();
+        GPoint p = pa.rightmostPoint();
+        assertFalse(pa.isEmpty());
+        for (GPoint pp : pa) {
+            assertTrue(p.x() >= pp.x());
+        }
+    }
+
+    @Test
+    @DisplayName("Bounds")
+    public void testGetBounds(){
+        GPointArray pa = populate();
+        GRectangle rec = pa.getBounds();
+        assertNotNull(rec);
+
+        GPoint lp = pa.lowestPoint();
+        GPoint hp = pa.highestPoint();
+        GPoint ll = pa.leftmostPoint();
+        GPoint rp = pa.rightmostPoint();
+        lp.traslate( 0,  1);
+        hp.traslate( 0, -1);
+        ll.traslate( 1,  0);
+        rp.traslate(-1,  0);
+
+        assertTrue(rec.contains(lp));
+        assertTrue(rec.contains(hp));
+        assertTrue(rec.contains(ll));
+        assertTrue(rec.contains(rp));
+    }
+
+    @Test
+    @DisplayName("Higher than point")
+    public void testHigherThanPoint(){
+        GPointArray pa1 = populate();
+        GPointArray pa2 = pa1.higherThan(new GPoint(0, 0));
+        assertFalse(pa1.isEmpty());
+        assertFalse(pa2.isEmpty());
+        for (GPoint pp : pa2) {
+            assertTrue(pp.y() > 0);
+        }
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.higherThan(null);
+        });
+        pa1.clear();
+        assertEquals(0, pa1.size());
+        assertEquals(pa1, pa1.higherThan(new GPoint(0, 0)));
+    }
+
+    @Test
+    @DisplayName("Lower than point")
+    public void testLowerThanPoint(){
+        GPointArray pa1 = populate();
+        GPointArray pa2 = pa1.lowerThan(new GPoint(0, 0));
+        assertFalse(pa1.isEmpty());
+        assertFalse(pa2.isEmpty());
+        for (GPoint pp : pa2) {
+            assertTrue(pp.y() < 0);
+        }
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.lowerThan(null);
+        });
+        pa1.clear();
+        assertEquals(0, pa1.size());
+        assertEquals(pa1, pa1.lowerThan(new GPoint(0, 0)));
+    }
+
+    @Test
+    @DisplayName("Left than point")
+    public void testLeftThanPoint(){
+        GPointArray pa1 = populate();
+        GPointArray pa2 = pa1.leftThan(new GPoint(0, 0));
+        assertFalse(pa1.isEmpty());
+        assertFalse(pa2.isEmpty());
+        for (GPoint pp : pa2) {
+            assertTrue(pp.x() < 0);
+        }
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.leftThan(null);
+        });
+        pa1.clear();
+        assertEquals(0, pa1.size());
+        assertEquals(pa1, pa1.leftThan(new GPoint(0, 0)));
+    }
+
+    @Test
+    @DisplayName("Right than point")
+    public void testRightThanPoint(){
+        GPointArray pa1 = populate();
+        GPointArray pa2 = pa1.rightThan(new GPoint(0, 0));
+        assertFalse(pa1.isEmpty());
+        assertFalse(pa2.isEmpty());
+        for (GPoint pp : pa2) {
+            assertTrue(pp.x() > 0);
+        }
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.rightThan(null);
+        });
+        pa1.clear();
+        assertEquals(0, pa1.size());
+        assertEquals(pa1, pa1.rightThan(new GPoint(0, 0)));
+    }
+
+    @Test
+    @DisplayName("Remove all")
+    public void testRemoveAll1(){
+        GPointArray pa1 = populate();
+        GPointArray pa2 = pa1.rightThan(new GPoint(0, 0));
+        assertFalse(pa1.isEmpty());
+        assertFalse(pa2.isEmpty());
+        pa1.removeAll(pa2);
+        assertEquals(pa1, pa1.leftThan(new GPoint(1, 0)));
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.removeAll(null);
+        });
+    }
+
+    @Test
+    @DisplayName("Remove all")
+    public void testRemoveAll2(){
+        GPointArray pa1 = populate();
+        assertFalse(pa1.isEmpty());
+        pa1.removeAll(pa1);
+        assertTrue(pa1.isEmpty());
+    }
+
+    @Test
+    @DisplayName("Append")
+    public void testAppend(){
+        GPointArray pa1 = populate();
+        GPointArray pa2 = populate();
+        GPointArray pa3 = new GPointArray(pa1);
+
+        assertFalse(pa1.isEmpty());
+        assertEquals(400, pa1.size());
+        assertFalse(pa2.isEmpty());
+        assertEquals(400, pa2.size());
+        assertFalse(pa3.isEmpty());
+        assertEquals(400, pa2.size());
+        assertEquals(pa1, pa3);
+        pa1.append(pa2);
+        assertFalse(pa1.isEmpty());
+        assertEquals(800, pa1.size());
+        assertFalse(pa2.isEmpty());
+        assertEquals(400, pa2.size());
+        assertFalse(pa3.isEmpty());
+        assertEquals(400, pa2.size());
+        assertNotEquals(pa1, pa3);
+        assertThrows(IllegalArgumentException.class, () -> {
+            pa1.removeAll(null);
+        });
+    }
+
+    private GPointArray populate() {
+        Random r = new Random();
+        GPointArray pa = new GPointArray();
+        for (int i = 0; i < 400; i++) {
+            pa.append(new GPoint(
+                    r.nextInt(500) - 250,
+                    r.nextInt(500) - 250)
+            );
+        }
+        return pa;
     }
 
 }
