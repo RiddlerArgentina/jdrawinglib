@@ -152,8 +152,8 @@ public class GRegPoly extends GPoly {
         try{
             double d0n = Math.hypot(xs[0] - xs[n - 1], ys[0] - ys[n - 1]);
 
-            for (int i = 0, j = 1, m = size - 1; i < m; i++, j++){
-                d0n += Math.hypot(xs[i] - xs[j], ys[i] - ys[j]);
+            for (int i = 0; i < size - 1; i++){
+                d0n += Math.hypot(xs[i] - xs[i + 1], ys[i] - ys[i + 1]);
             }
 
             return d0n;

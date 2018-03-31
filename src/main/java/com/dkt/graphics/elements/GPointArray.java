@@ -547,7 +547,7 @@ public class GPointArray extends GMultiPoint {
         mutex.lock();
         try {
             //@FIXME this should be done more gracefully.
-            for (int i = 0, n = arr.size; i < n; i++){
+            for (int i = 0; i < arr.size; i++){
                 int idx = 0;
 
                 while ((idx = indexOf(arr.xs[i], arr.ys[i], idx)) >= 0){
@@ -667,7 +667,7 @@ public class GPointArray extends GMultiPoint {
 
         mutex.lock();
         try{
-            for (int i = 0, n = size; i < n; i++){
+            for (int i = 0; i < size; i++){
                 if (l.contains(xs[i], ys[i])){
                     arr.append(xs[i], ys[i]);
                 }
