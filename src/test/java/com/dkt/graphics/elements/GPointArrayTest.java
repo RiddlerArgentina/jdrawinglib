@@ -844,7 +844,7 @@ public class GPointArrayTest {
         GPointArray pa1 = populate();
         GPointArray pa2;
         GRectangle r1 = new GRectangle(1000, 1000, 10, 10);
-        GRectangle r2 = new GRectangle(0, 0, 30, 30);
+        GRectangle r2 = new GRectangle(0, 0, 40, 40);
         assertFalse(pa1.isEmpty());
         assertTrue(pa1.intersection(r1).isEmpty());
         pa2 = pa1.intersection(r2);
@@ -863,7 +863,7 @@ public class GPointArrayTest {
         GPointArray pa1 = populate();
         GPointArray pa2;
         GCircle c1 = new GCircle(1000, 1000, 10);
-        GCircle c2 = new GCircle(0, 0, 20);
+        GCircle c2 = new GCircle(0, 0, 50);
         assertFalse(pa1.isEmpty());
         assertTrue(pa1.intersection(c1).isEmpty());
         pa2 = pa1.intersection(c2);
