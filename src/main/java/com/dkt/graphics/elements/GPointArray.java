@@ -701,6 +701,7 @@ public class GPointArray extends GMultiPoint {
      * Sorts all the points in this array by it's {@code X} value, and breaks
      * ties with the {@code Y} value
      */
+    @Override
     public void sortByX() {
         sort(new Comparator<Integer>() {
             @Override
