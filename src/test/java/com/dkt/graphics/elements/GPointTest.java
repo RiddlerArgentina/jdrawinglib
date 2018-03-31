@@ -25,12 +25,12 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * 
+ *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GPointTest {
     public static double DELTA = 1e-8;
-    
+
     @Test
     @DisplayName("Copy constructor")
     public void testConstructor() {
@@ -46,7 +46,7 @@ public class GPointTest {
         assertEquals(p1, p2);
         assertEquals(p1.hashCode(), p2.hashCode());
     }
-    
+
     @Test
     @DisplayName("Distance to self")
     public void testDistance1() {
@@ -54,7 +54,7 @@ public class GPointTest {
         GPoint p1 = new GPoint(r.nextInt(), r.nextInt());
         assertEquals(0, p1.distance(p1), DELTA);
     }
-    
+
     @Test
     @DisplayName("Distance to ortho x 1")
     public void testDistance2() {
@@ -63,7 +63,7 @@ public class GPointTest {
         assertEquals(1, p1.distance(p2), DELTA);
         assertNotEquals(p1, p2);
     }
-    
+
     @Test
     @DisplayName("Distance to ortho y 1")
     public void testDistance3() {
@@ -72,7 +72,7 @@ public class GPointTest {
         assertEquals(1, p1.distance(p2), DELTA);
         assertNotEquals(p1, p2);
     }
-    
+
     @Test
     @DisplayName("Distance to diagonal")
     public void testDistance4() {
@@ -81,7 +81,7 @@ public class GPointTest {
         assertEquals(Math.sqrt(2), p1.distance(p2), DELTA);
         assertNotEquals(p1, p2);
     }
-    
+
     @Test
     @DisplayName("Distance to self")
     public void testDistance5() {
@@ -89,28 +89,28 @@ public class GPointTest {
         GPoint p1 = new GPoint(r.nextInt(), r.nextInt());
         assertEquals(0, p1.distance(p1.x(), p1.y()), DELTA);
     }
-    
+
     @Test
     @DisplayName("Distance to ortho x 1")
     public void testDistance6() {
         GPoint p1 = new GPoint(0, 0);
         assertEquals(1, p1.distance(1, 0), DELTA);
     }
-    
+
     @Test
     @DisplayName("Distance to ortho y 1")
     public void testDistance7() {
         GPoint p1 = new GPoint(4, 4);
         assertEquals(1, p1.distance(4, 5), DELTA);
     }
-    
+
     @Test
     @DisplayName("Distance to diagonal")
     public void testDistance8() {
         GPoint p1 = new GPoint(0, 0);
         assertEquals(Math.sqrt(2), p1.distance(1, 1), DELTA);
     }
-    
+
     @Test
     @DisplayName("CCW collinear")
     public void testCcw1() {
@@ -119,7 +119,7 @@ public class GPointTest {
         GPoint p3 = new GPoint(2, 2);
         assertEquals(0, GPoint.ccw(p1, p2, p3));
     }
-    
+
     @Test
     @DisplayName("CCW counterclockwise")
     public void testCcw2() {
@@ -128,7 +128,7 @@ public class GPointTest {
         GPoint p3 = new GPoint(-1, 2);
         assertEquals(1, GPoint.ccw(p1, p2, p3));
     }
-    
+
     @Test
     @DisplayName("CCW clockwise")
     public void testCcw3() {
