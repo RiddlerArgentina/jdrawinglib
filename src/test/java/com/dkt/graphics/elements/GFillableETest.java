@@ -27,12 +27,12 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * 
+ *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GFillableETest {
     @Test
-    @DisplayName("Copy constructor") 
+    @DisplayName("Copy constructor")
     public void testConstructor1() {
         GFillableE ge1 = new GFillableEImpl();
         GFillableE ge2 = new GFillableEImpl(ge1);
@@ -40,18 +40,19 @@ public class GFillableETest {
         assertEquals(ge1, ge2);
         assertEquals(ge1.hashCode(), ge2.hashCode());
     }
-    
+
     @Test
-    @DisplayName("Copy constructor null") 
+    @DisplayName("Copy constructor null")
     public void testConstructor2() {
         assertThrows(IllegalArgumentException.class, () -> {
                 new GFillableEImpl(null);
             }
         );
+        assertNotEquals(new GFillableEImpl(), new Object());
     }
-    
+
     @Test
-    @DisplayName("get/set fillable") 
+    @DisplayName("get/set fillable")
     public void testFillPaint() {
         GFillableE ge1 = new GFillableEImpl();
         GFillableE ge2 = new GFillableEImpl(ge1);
@@ -68,9 +69,9 @@ public class GFillableETest {
             }
         );
     }
-    
+
     @Test
-    @DisplayName("get/set fill") 
+    @DisplayName("get/set fill")
     public void testFill() {
         GFillableE ge1 = new GFillableEImpl();
         GFillableE ge2 = new GFillableEImpl(ge1);
@@ -83,7 +84,7 @@ public class GFillableETest {
         assertNotEquals(ge1, ge2);
         assertNotEquals(ge1.hashCode(), ge2.hashCode());
     }
-    
+
     private static class GFillableEImpl extends GFillableE {
         public GFillableEImpl(GFillableE e) throws IllegalArgumentException {
             super(e);
@@ -92,7 +93,7 @@ public class GFillableETest {
         public GFillableEImpl() {
             super();
         }
-        
+
         @Override public void traslate(int x, int y) {/*do nothing*/}
         @Override public void draw(Graphics2D g) {/*do nothing*/}
         @Override public Area getShape()  {return null;/*do nothing*/}
