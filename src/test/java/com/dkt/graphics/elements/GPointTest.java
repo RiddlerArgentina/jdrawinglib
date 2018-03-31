@@ -112,6 +112,18 @@ public class GPointTest {
     }
 
     @Test
+    @DisplayName("Distance to null")
+    public void testDistance9() {
+        Random r = new Random();
+        GPoint p1 = new GPoint(r.nextInt(), r.nextInt());
+        assertEquals(0, p1.distance(p1), DELTA);
+        assertThrows(IllegalArgumentException.class, () -> {
+                p1.distance(null);
+            }
+        );
+    }
+
+    @Test
     @DisplayName("CCW collinear")
     public void testCcw1() {
         GPoint p1 = new GPoint(0, 0);
@@ -136,6 +148,16 @@ public class GPointTest {
         GPoint p2 = new GPoint(1, 1);
         GPoint p3 = new GPoint(-1, 2);
         assertEquals(-1, GPoint.ccw(p3, p2, p1));
+    }
+
+    @Test
+    @DisplayName("to String")
+    public void testToString() {
+        assertEquals("(0, 0)", new GPoint(0,0).toString());
+        assertEquals("(-3, 4)", new GPoint(-3,4).toString());
+        GPoint p = new GPoint(0,0);
+        p.move(30, 30);
+        assertEquals("(30, 30)", p.toString());
     }
 
 }
