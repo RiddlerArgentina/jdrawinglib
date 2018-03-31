@@ -320,23 +320,26 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
      * {@code Graphic} object to check.
      */
     public void flatten() {
-        Graphic foo = new Graphic(this.getCount());
-        flatten(this, foo);
-        removeAll();
-        components.addAll(foo.components);
-        foo.removeAll();
+        synchronized (components){
+            Graphic foo = new Graphic(this.getCount());
+            flatten(this, foo);
+            removeAll();
+            components.addAll(foo.components);
+            foo.removeAll();
+        }
     }
 
     private void flatten(Graphic src, Graphic dest) {
-        for (GraphicE component : src.components) {
-            if (component instanceof Graphic) {
-                flatten((Graphic)component, dest);
-                ((Graphic)component).removeAll();
-            } else {
-                dest.add(component);
+        synchronized (src.components){
+            for (GraphicE component : src.components) {
+                if (component instanceof Graphic) {
+                    flatten((Graphic)component, dest);
+                    ((Graphic)component).removeAll();
+                } else {
+                    dest.add(component);
+                }
             }
         }
-
     }
 
     @Override
