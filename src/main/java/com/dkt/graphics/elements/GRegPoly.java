@@ -126,7 +126,9 @@ public class GRegPoly extends GPoly {
             //The are is calculated as the sum of the areas of the triangles
             //formed between two consecutive points and the center of the circle
             double area = 0;
-            for (int i = 0, m = size - 1; i <= m; i++){
+            final int m = size - 1;
+
+            for (int i = 0; i <= m; i++){
                 final int j = i == m ? 0 : i + 1;
 
                 area += triangleArea(x, y, xs[i], ys[i], xs[j], ys[j]);
@@ -220,7 +222,9 @@ public class GRegPoly extends GPoly {
 
         mutex.lock();
         try {
-            for (int i = 0, j, m = n - 1; i <= m; i++){
+            final int m = n - 1;
+            int j;
+            for (int i = 0; i <= m; i++){
                 j = i == m ? 0 : i + 1;
 
                 if (triangleContains(xx, yy, xs[i], ys[i], xs[j], ys[j], x, y)){
