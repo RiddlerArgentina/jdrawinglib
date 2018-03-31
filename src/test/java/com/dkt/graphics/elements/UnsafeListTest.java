@@ -159,19 +159,34 @@ public class UnsafeListTest {
             assertFalse(list.isEmpty());
             assertEquals(i, list.size());
         }
-        list.clear();
-        assertTrue(list.isEmpty());
-        assertEquals(0, list.size());
         UnsafeList l2 = new UnsafeList(10);
+        assertEquals(0, l2.size());
         l2.addAll(list);
+        assertEquals(19, l2.size());
         assertNotEquals(list, null);
         assertNotEquals(list, rand);
         assertEquals(list, list);
         assertEquals(list, l2);
         assertEquals(list.hashCode(), l2.hashCode());
         l2.add(new GPoint(0, 0));
+        assertEquals(20, l2.size());
         assertNotEquals(list, l2);
         assertNotEquals(list.hashCode(), l2.hashCode());
+        assertNotNull(l2.remove(l2.size() - 1));
+        assertEquals(19, l2.size());
+        assertEquals(list, l2);
+        assertEquals(list.hashCode(), l2.hashCode());
+        assertNotNull(l2.remove(l2.size() - 1));
+        assertEquals(18, l2.size());
+        assertNotEquals(list, l2);
+        assertNotEquals(list.hashCode(), l2.hashCode());
+        l2.add(new GLine(0, 0, 10, 10));
+        assertEquals(19, l2.size());
+        assertNotEquals(list, l2);
+        assertNotEquals(list.hashCode(), l2.hashCode());
+        list.clear();
+        assertTrue(list.isEmpty());
+        assertEquals(0, list.size());
     }
 
     @Test
