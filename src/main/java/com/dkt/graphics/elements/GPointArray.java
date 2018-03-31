@@ -807,7 +807,7 @@ public class GPointArray extends GMultiPoint {
         try{
             if (cs != 0) {
                 g.setStroke(getStroke());
-                for (int i = 0, n = size; i < n; i++){
+                for (int i = 0; i < size; i++){
                     final int x = xs[i];
                     final int y = ys[i];
 
@@ -815,7 +815,7 @@ public class GPointArray extends GMultiPoint {
                     g.drawLine(x     , y - cs, x     , y + cs);
                 }
             } else {
-                for (int i = 0, n = size; i < n; i++){
+                for (int i = 0; i < size; i++){
                     g.drawRect(xs[i], ys[i], 0, 0);
                 }
             }
