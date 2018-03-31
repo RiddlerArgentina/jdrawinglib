@@ -844,7 +844,7 @@ public class GPointArrayTest {
         GPointArray pa1 = populate();
         GPointArray pa2;
         GRectangle r1 = new GRectangle(1000, 1000, 10, 10);
-        GRectangle r2 = new GRectangle(0, 0, 40, 40);
+        GRectangle r2 = new GRectangle(0, 0, 100, 100);
         assertFalse(pa1.isEmpty());
         assertTrue(pa1.intersection(r1).isEmpty());
         pa2 = pa1.intersection(r2);
