@@ -12,8 +12,9 @@
 
 ```
 cd dist
-java -jar jDrawingLib.jar
-java -jar jDrawingLib.jar Example01
+java -jar jdrawinglib-0.4.2.jar
+java -jar jdrawinglib-0.4.2.jar Example01
 ```
 
 [Ant]: http://ant.apache.org/manual/install.html
+
