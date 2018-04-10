@@ -224,70 +224,33 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
     }
 
     /**
-     * This method merges all of the elements of a given set of {@code Graphic}
-     * components, and returns a new {@code Graphic} element.<br>
-     * This could also be accompished by using something like:<pre>
-     *
-     *         Graphic[] array = new Graphic[n];
-     *         //Populate your Graphics
-     *
-     *         Graphic merged = new Graphic();
-     *         for (Graphic graphic : array){
-     *             merged.add(graphic);
-     *         }
-     * </pre>
-     * The actual implementation of {@code merge} differs from the approach
-     * described above, but the effect on the graphic itself is pretty much the
-     * same.
+     * This method adds all of the elements of a given set of {@code Graphic}
+     * components into the current element.<br>
      *
      * @param graphics array of graphics to merge
-     * @return a new {@code Graphic} that contains all the elements of the
-     * above.
-     * @see Graphic#mergeCopy(Graphic...)
      * @see Graphic#flatten()
      */
-    public static Graphic merge(final Graphic... graphics) {
-        final Graphic g = new Graphic();
-
-        for (final Graphic graph : graphics){
-            g.components.addAll(graph.components);
+    public void addAll(final Graphic... graphics) {
+        synchronized (components){
+            for (final Graphic graph : graphics){
+                components.addAll(graph.components);
+            }
         }
-
-        return g;
     }
 
     /**
-     * This method merges all of the elements of a given set of {@code Graphic}
-     * components, and returns a new {@code Graphic} element that contains
-     * copies of all the elements on the given set of {@code Graphic}s.<br>
-     * This could also be accomplished by using something like:<pre>
-     *
-     *         Graphic[] array = new Graphic[n];
-     *         //Populate your Graphics
-     *
-     *         Graphic merged = new Graphic();
-     *         for (Graphic graphic : array){
-     *             merged.add(graphic.copy());
-     *         }
-     * </pre>
-     * The actual implementation of {@code merge} differs from the approach
-     * described above, but the effect on the graphic itself is pretty much the
-     * same.
+     * This method adds all of the elements of a given set of {@code Graphic}
+     * components into the current element.<br>
      *
      * @param graphics array of graphics to merge
-     * @return a new {@code Graphic} that contains all the elements of the
-     * above.
-     * @see Graphic#merge(Graphic...)
      * @see Graphic#flatten()
      */
-    public static Graphic mergeCopy(final Graphic... graphics) {
-        final Graphic g = new Graphic();
-
-        for (final Graphic graph : graphics){
-            g.components.addAll(graph.clone().components);
+    public void addCopyOfAll(final Graphic... graphics) {
+        synchronized (components){
+            for (final Graphic graph : graphics){
+                components.addAll(graph.clone().components);
+            }
         }
-
-        return g;
     }
 
     /**
