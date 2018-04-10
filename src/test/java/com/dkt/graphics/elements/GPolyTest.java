@@ -35,8 +35,11 @@ public class GPolyTest {
     @Test
     @DisplayName("Test constructor")
     public void testConstructor1() {
-        GPoly mp = new GPoly(10);
-        assertNotNull(mp);
+        GPoly mp1 = new GPoly(10);
+        assertNotNull(mp1);
+        GPoly mp2 = mp1.clone();
+        assertEquals(mp1, mp2);
+        assertEquals(mp1.hashCode(), mp2.hashCode());
     }
 
     @Test
