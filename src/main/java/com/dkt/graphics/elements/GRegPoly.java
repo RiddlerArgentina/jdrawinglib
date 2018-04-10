@@ -115,10 +115,6 @@ public class GRegPoly extends GPoly {
      * @return area of the polygon
      */
     public double area() {
-        if (size <= 1){
-            return 0;
-        }
-
         return r * r * n * Math.sin(Math.PI * 2 / n) / 2;
     }
 
@@ -128,10 +124,6 @@ public class GRegPoly extends GPoly {
      * @return perimeter
      */
     public double perimeter() {
-        if (size <= 1){
-            return 0;
-        }
-
         return n * 2 * r * Math.sin(Math.PI / n);
     }
 

@@ -112,12 +112,4 @@ public class MathUtils {
         final int n31 = n >> 31;
         return (n + n31) ^ n31;
     }
-
-    public static double dot(int x1, int y1, int x2, int y2){
-        return (x1 * x2) + (y1 * y2);
-    }
-
-    public static double cross(int x1, int y1, int x2, int y2){
-        return (x1 * y2) - (y1 * x2);
-    }
 }
