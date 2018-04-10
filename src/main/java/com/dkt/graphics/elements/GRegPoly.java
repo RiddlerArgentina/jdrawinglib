@@ -121,23 +121,7 @@ public class GRegPoly extends GPoly {
             return 0;
         }
 
-        mutex.lock();
-        try{
-            //The are is calculated as the sum of the areas of the triangles
-            //formed between two consecutive points and the center of the circle
-            double area = 0;
-            final int m = size - 1;
-
-            for (int i = 0; i <= m; i++){
-                final int j = i == m ? 0 : i + 1;
-
-                area += triangleArea(x, y, xs[i], ys[i], xs[j], ys[j]);
-            }
-
-            return area;
-        } finally {
-            mutex.unlock();
-        }
+        return r * r * n * Math.sin(Math.PI * 2 / n) / 2;
     }
 
     /**
@@ -150,42 +134,7 @@ public class GRegPoly extends GPoly {
             return 0;
         }
 
-        mutex.lock();
-        try{
-            double d0n = Math.hypot(xs[0] - xs[n - 1], ys[0] - ys[n - 1]);
-
-            for (int i = 0; i < size - 1; i++){
-                d0n += Math.hypot(xs[i] - xs[i + 1], ys[i] - ys[i + 1]);
-            }
-
-            return d0n;
-        } finally {
-            mutex.unlock();
-        }
-    }
-
-    private double triangleArea(
-            int x1, int y1,
-            int x2, int y2,
-            int x3, int y3)
-    {
-        //About this... it works... I honestly can't remember how did I came up
-        //with this, it's a mix of the cross product, some weired theorem found
-        //on wikipedia and something I read on stackoverflow. Unfortunately I
-        //wrote this around 4 years ago, and I can't recall the references...
-        final double d12 = Math.hypot(x1 - x2, y1 - y2);
-        final double d23 = Math.hypot(x2 - x3, y3 - y3);
-        final double d31 = Math.hypot(x3 - x1, y3 - y1);
-
-        final double peri2 = (d12 + d23 + d31) / 2;
-
-        double area = peri2;
-
-        area *= peri2 - d12;
-        area *= peri2 - d23;
-        area *= peri2 - d31;
-
-        return Math.sqrt(area);
+        return n * 2 * r * Math.sin(Math.PI / n);
     }
 
     /**
