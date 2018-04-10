@@ -752,8 +752,9 @@ public class GraphicCreator {
 //* polyp  [x1, y1, x2, y2, ..., xn, yn]
     public GPoly polyp(String[] args) {
         final GPoly poly = new GPoly(args.length / 2);
+        final int n = args.length;
 
-        for (int i = 1, n = args.length; i < n; i += 2) {
+        for (int i = 1; i < n; i += 2) {
             final int x = getInt(args[i]);
             final int y = getInt(args[i + 1]);
 
