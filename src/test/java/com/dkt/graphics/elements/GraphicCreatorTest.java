@@ -28,12 +28,12 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Since the graphic creator uses almost all of the other classes, this is the
  * closest thing to integration tests.
- * 
+ *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GraphicCreatorTest {
     @Test
-    @DisplayName("point") 
+    @DisplayName("point")
     public void testPoint1() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse("point 0 0");
@@ -51,9 +51,9 @@ public class GraphicCreatorTest {
         assertEquals(0, p.x());
         assertEquals(0, p.y());
     }
-    
+
     @Test
-    @DisplayName("point cross") 
+    @DisplayName("point cross")
     public void testPoint2() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse("point 0 0 3");
@@ -64,9 +64,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(1, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("points") 
+    @DisplayName("points")
     public void testPoint3() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -81,9 +81,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(2, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("points one commented") 
+    @DisplayName("points one commented")
     public void testPoint4() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -97,9 +97,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(2, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("Lines") 
+    @DisplayName("Lines")
     public void testLines() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -118,9 +118,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(4, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("Path") 
+    @DisplayName("Path")
     public void testLinePath() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -140,9 +140,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(1, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("Polygon") 
+    @DisplayName("Polygon")
     public void testLinePoly() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -162,9 +162,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(1, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("Rectangles") 
+    @DisplayName("Rectangles")
     public void testLineRectangles() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -179,9 +179,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(2, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("Regular Polygon") 
+    @DisplayName("Regular Polygon")
     public void testRegPoly() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -200,9 +200,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(4, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("Vectors") 
+    @DisplayName("Vectors")
     public void testVectors() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -221,9 +221,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(4, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("Circles") 
+    @DisplayName("Circles")
     public void testCircles() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
@@ -240,9 +240,9 @@ public class GraphicCreatorTest {
         assertEquals(0, gc.getErrorCount());
         assertEquals(3, gc.getTotalLineCount());
     }
-    
+
     @Test
-    @DisplayName("Arcs") 
+    @DisplayName("Arcs")
     public void testArcs() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(

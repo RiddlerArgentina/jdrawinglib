@@ -29,15 +29,15 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
-public class GPolyTest {
+public class GPathTest {
     public static double DELTA = 1e-8;
 
     @Test
     @DisplayName("Test constructor")
     public void testConstructor1() {
-        GPoly mp1 = new GPoly(10);
+        GPath mp1 = new GPath(10);
         assertNotNull(mp1);
-        GPoly mp2 = mp1.clone();
+        GPath mp2 = mp1.clone();
         assertEquals(mp1, mp2);
         assertEquals(mp1.hashCode(), mp2.hashCode());
     }
@@ -46,7 +46,7 @@ public class GPolyTest {
     @DisplayName("Test constructor < 0")
     public void testConstructor2() {
         assertThrows(NegativeArraySizeException.class, () -> {
-            GPoly mp = new GPoly(-10);
+            GPath mp = new GPath(-10);
             mp.clear();
         });
     }
@@ -57,7 +57,7 @@ public class GPolyTest {
         int[] XX = {0, 1, 2, 3, 4, 5};
         int[] YY = {0, 1, 2, 3, 4, 5, 6};
         assertThrows(InvalidArgumentException.class, () -> {
-            new GPoly(XX, YY);
+            new GPath(XX, YY);
         });
     }
 
@@ -67,7 +67,7 @@ public class GPolyTest {
         int[] XX = {0, 1, 2, 3, 4, 5, 6};
         int[] YY = {0, 1, 2, 3, 4, 5};
         assertThrows(InvalidArgumentException.class, () -> {
-                new GPoly(XX, YY);
+                new GPath(XX, YY);
             }
         );
     }
@@ -77,7 +77,7 @@ public class GPolyTest {
     public void testConstructor5() {
         int[] XX = {0, 1, 2, 3, 4};
         int[] YY = {5, 6, 7, 8, 9};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(5, mp.size());
@@ -90,8 +90,8 @@ public class GPolyTest {
     public void testConstructor6() {
         int[] XX = {0, 1, 2, 3, 4};
         int[] YY = {5, 6, 7, 8, 9};
-        GPoly mp  = new GPoly(XX, YY);
-        GPoly mp2 = new GPoly(mp);
+        GPath mp  = new GPath(XX, YY);
+        GPath mp2 = new GPath(mp);
 
         assertNotNull(mp);
         assertNotNull(mp2);
@@ -101,7 +101,7 @@ public class GPolyTest {
     @Test
     @DisplayName("Index of empty")
     public void testIndexOf1() {
-        GPoly mp = new GPoly(10);
+        GPath mp = new GPath(10);
 
         assertNotNull(mp);
         assertEquals(-1, mp.indexOf(new GPoint(0, 0)));
@@ -112,7 +112,7 @@ public class GPolyTest {
     public void testIndexOf2() {
         int[] XX = {0, 1, 2, 3, 4};
         int[] YY = {5, 6, 7, 8, 9};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(5, mp.size());
@@ -124,7 +124,7 @@ public class GPolyTest {
     public void testIndexOf3() {
         int[] XX = {0, 1, 2, 3, 4};
         int[] YY = {5, 6, 7, 8, 9};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(5, mp.size());
@@ -140,7 +140,7 @@ public class GPolyTest {
     public void testIndexOf4() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -154,7 +154,7 @@ public class GPolyTest {
     public void testRemove1() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -170,7 +170,7 @@ public class GPolyTest {
     public void testRemove2() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -184,7 +184,7 @@ public class GPolyTest {
     @Test
     @DisplayName("Remove out of bounds")
     public void testRemove3() {
-        GPoly mp = new GPoly(4);
+        GPath mp = new GPath(4);
 
         assertNotNull(mp);
         assertEquals(0, mp.size());
@@ -200,7 +200,7 @@ public class GPolyTest {
     public void testRemove4() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -223,7 +223,7 @@ public class GPolyTest {
     public void testRemove5() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -246,7 +246,7 @@ public class GPolyTest {
     public void testRemove6() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -269,7 +269,7 @@ public class GPolyTest {
     public void testRemove7() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -292,7 +292,7 @@ public class GPolyTest {
     public void testRemove8() {
         int[] XX = {0, 1, 2, 3, 4};
         int[] YY = {5, 6, 7, 8, 9};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(5, mp.size());
@@ -315,7 +315,7 @@ public class GPolyTest {
     public void testRemove9() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -338,7 +338,7 @@ public class GPolyTest {
     public void testRemove10() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -362,7 +362,7 @@ public class GPolyTest {
     public void testRemove11() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -385,7 +385,7 @@ public class GPolyTest {
     public void testRemove12() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -409,7 +409,7 @@ public class GPolyTest {
     public void testRemove13() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -423,7 +423,7 @@ public class GPolyTest {
     @Test
     @DisplayName("Append to empty")
     public void testAppend1() {
-        GPoly mp = new GPoly(0);
+        GPath mp = new GPath(0);
 
         assertNotNull(mp);
         assertEquals(0, mp.size());
@@ -449,7 +449,7 @@ public class GPolyTest {
     public void testAppend2() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -469,7 +469,7 @@ public class GPolyTest {
     @Test
     @DisplayName("AppendNR to empty")
     public void testAppendNR1() {
-        GPoly mp = new GPoly(0);
+        GPath mp = new GPath(0);
 
         assertNotNull(mp);
         assertEquals(0, mp.size());
@@ -494,7 +494,7 @@ public class GPolyTest {
     public void testAppendNR2() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -514,7 +514,7 @@ public class GPolyTest {
     public void testSortByX() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
 
         assertNotNull(mp);
         assertEquals(6, mp.size());
@@ -535,8 +535,8 @@ public class GPolyTest {
     public void testHashCode() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
-        GPoly mp2 = new GPoly(mp);
+        GPath mp = new GPath(XX, YY);
+        GPath mp2 = new GPath(mp);
         assertNotNull(mp);
         assertNotNull(mp2);
         assertEquals(mp, mp2);
@@ -554,8 +554,8 @@ public class GPolyTest {
     public void testTraslate1() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
-        GPoly mp2 = new GPoly(mp);
+        GPath mp = new GPath(XX, YY);
+        GPath mp2 = new GPath(mp);
         assertNotNull(mp);
         assertNotNull(mp2);
         assertEquals(mp, mp2);
@@ -568,8 +568,8 @@ public class GPolyTest {
     public void testTraslate2() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
-        GPoly mp2 = new GPoly(mp);
+        GPath mp = new GPath(XX, YY);
+        GPath mp2 = new GPath(mp);
         assertNotNull(mp);
         assertNotNull(mp2);
         assertEquals(mp, mp2);
@@ -588,7 +588,7 @@ public class GPolyTest {
     public void testGetPoints() {
         int[] XX = {0, 1, 2, 3, 4, 3};
         int[] YY = {5, 6, 7, 8, 9, 8};
-        GPoly mp = new GPoly(XX, YY);
+        GPath mp = new GPath(XX, YY);
         assertNotNull(mp);
 
         GPoint[] points = mp.getPoints();
