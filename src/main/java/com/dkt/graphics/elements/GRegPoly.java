@@ -18,8 +18,6 @@
  */
 package com.dkt.graphics.elements;
 
-import com.dkt.graphics.utils.MathUtils;
-
 /**
  *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
@@ -121,23 +119,7 @@ public class GRegPoly extends GPoly {
             return 0;
         }
 
-        mutex.lock();
-        try{
-            //The are is calculated as the sum of the areas of the triangles
-            //formed between two consecutive points and the center of the circle
-            double area = 0;
-            final int m = size - 1;
-
-            for (int i = 0; i <= m; i++){
-                final int j = i == m ? 0 : i + 1;
-
-                area += triangleArea(x, y, xs[i], ys[i], xs[j], ys[j]);
-            }
-
-            return area;
-        } finally {
-            mutex.unlock();
-        }
+        return r * r * n * Math.sin(Math.PI * 2 / n) / 2;
     }
 
     /**
@@ -150,42 +132,7 @@ public class GRegPoly extends GPoly {
             return 0;
         }
 
-        mutex.lock();
-        try{
-            double d0n = Math.hypot(xs[0] - xs[n - 1], ys[0] - ys[n - 1]);
-
-            for (int i = 0; i < size - 1; i++){
-                d0n += Math.hypot(xs[i] - xs[i + 1], ys[i] - ys[i + 1]);
-            }
-
-            return d0n;
-        } finally {
-            mutex.unlock();
-        }
-    }
-
-    private double triangleArea(
-            int x1, int y1,
-            int x2, int y2,
-            int x3, int y3)
-    {
-        //About this... it works... I honestly can't remember how did I came up
-        //with this, it's a mix of the cross product, some weired theorem found
-        //on wikipedia and something I read on stackoverflow. Unfortunately I
-        //wrote this around 4 years ago, and I can't recall the references...
-        final double d12 = Math.hypot(x1 - x2, y1 - y2);
-        final double d23 = Math.hypot(x2 - x3, y3 - y3);
-        final double d31 = Math.hypot(x3 - x1, y3 - y1);
-
-        final double peri2 = (d12 + d23 + d31) / 2;
-
-        double area = peri2;
-
-        area *= peri2 - d12;
-        area *= peri2 - d23;
-        area *= peri2 - d31;
-
-        return Math.sqrt(area);
+        return n * 2 * r * Math.sin(Math.PI / n);
     }
 
     /**
@@ -213,13 +160,16 @@ public class GRegPoly extends GPoly {
      * otherwise
      */
     public boolean contains(final int xx, final int yy) {
+        if (xx == x && yy == y) {
+            return true;
+        }
+
         //Quick check (point vs outter circle)
         if (Math.hypot(xx - x, xx - y) > r) {
             return false;
         }
 
         //@TODO Quick check (point vs incircle) would be a nice addition...
-
         mutex.lock();
         try {
             final int m = n - 1;
@@ -244,30 +194,14 @@ public class GRegPoly extends GPoly {
             int x2, int y2,
             int x3, int y3)
     {
-        //@TODO Test me
-        //http://www.blackpawn.com/texts/pointinpoly/
-        // Compute vectors
-        final int v0x = x3 - x1;
-        final int v0y = y3 - y1;
-        final int v1x = x2 - x1;
-        final int v1y = y2 - y1;
-        final int v2x = xx - x1;
-        final int v2y = yy - y1;
-
-        // Compute dot products
-        final double d00 = MathUtils.dot(v0x, v0y, v0x, v0y);
-        final double d01 = MathUtils.dot(v0x, v0y, v1x, v1y);
-        final double d02 = MathUtils.dot(v0x, v0y, v2x, v2y);
-        final double d11 = MathUtils.dot(v1x, v1y, v1x, v1y);
-        final double d12 = MathUtils.dot(v1x, v1y, v2x, v2y);
-
-        // Compute barycentric coordinates
-        final double id = 1 / (d00 * d11 - d01 * d01);
-        final double u = (d11 * d02 - d01 * d12) * id;
-        final double v = (d00 * d12 - d01 * d02) * id;
-
-        // Check if point is in triangle
-        return (u >= 0) & (v >= 0) & (u + v < 1);
+        //https://stackoverflow.com/questions/2049582/
+        //how-to-determine-if-a-point-is-in-a-2d-triangle#2049593
+        final int asx = xx - x1;
+        final int asy = yy - y1;
+        final boolean sab = (x2 - x1) * asy - (y2 - y1) * asx > 0;
+        final boolean co1 = (x3 - x1) * asy - (y3 - y1) * asx > 0;
+        final boolean co2 = (x3 - x2) * (yy - y2) - (y3 - y2) * (xx - x2) > 0;
+        return !((co1 == sab) || (co2 != sab));
     }
 
     /**
