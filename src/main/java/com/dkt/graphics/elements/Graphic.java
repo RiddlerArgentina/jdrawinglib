@@ -323,6 +323,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         }
         hash = 47 * hash + xOff;
         hash = 47 * hash + yOff;
+        hash = 47 * hash + (visible ? 1 : 0);
         return hash;
     }
 
@@ -341,6 +342,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
         }
 
         return !(
+            visible != other.visible |
             xOff != other.xOff |
             yOff != other.yOff
         );
