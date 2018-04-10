@@ -18,7 +18,6 @@
  */
 package com.dkt.graphics.elements;
 
-import com.dkt.graphics.utils.MathUtils;
 import java.awt.Graphics2D;
 import java.util.Arrays;
 
@@ -39,10 +38,10 @@ public class GVector extends GraphicE {
     private int y1;
     private int x2;
     private int y2;
-    
+
     private double l;
     private double a;
-    
+
     private int aw = 10;
     private int n = 3;
 
@@ -169,7 +168,7 @@ public class GVector extends GraphicE {
         final int xx2 = v.getXComponent();
         final int yy2 = v.getYComponent();
 
-        return MathUtils.dot(xx1, yy1, xx2, yy2);
+        return (xx1 * xx2) + (yy1 * yy2);
     }
 
     /**
@@ -191,7 +190,7 @@ public class GVector extends GraphicE {
         final int xx2 = v.getXComponent();
         final int yy2 = v.getYComponent();
 
-        return MathUtils.cross(xx1, yy1, xx2, yy2);
+        return (xx1 * yy2) - (yy1 * xx2);
     }
 
     /**
