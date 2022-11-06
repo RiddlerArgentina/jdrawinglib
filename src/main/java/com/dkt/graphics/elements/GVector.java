@@ -279,7 +279,7 @@ public class GVector extends GraphicE {
     }
 
     /**
-     * Sets the a new angle for the tip of the arrow (in degrees).
+     * Sets the new angle for the tip of the arrow (in degrees).
      *
      * @param arrowAngle angle in degrees.
      */

@@ -175,7 +175,7 @@ public class GImage extends GraphicE implements Paint {
      * the image.
      * <li>If {@code scaleX/Y} is more than 1 then the image will be bigger.
      * </ul>
-     * <i>Note:</i> Scaling is not accumulative, it always refer to the original
+     * <i>Note:</i> Scaling is not accumulative, it always refers to the original
      * image.
      *
      * @param sx Horizontal scale

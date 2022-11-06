@@ -26,7 +26,7 @@ public class LibUtils {
     /**
      * Don't let anyone initialize this class
      */
-    private LibUtils(){};
+    private LibUtils(){}
 
     /**
      * Retrieves a String representing the library's version

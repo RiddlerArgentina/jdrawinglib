@@ -30,7 +30,7 @@ public final class TicToc {
     private long total;
 
     public TicToc() {
-        //Calling the methods before hand helps to get a better results
+        //Calling the methods beforehand helps to get a better results
         //http://www.artima.com/insidejvm/ed2/jvmP.html
         tic();
         toc();
@@ -72,7 +72,7 @@ public final class TicToc {
     /**
      * @return elapsed time in ms
      */
-    public double getMilisTime(){
+    public double getMillisTime(){
         return getNanoTime() / 1000000;
     }
 
@@ -90,7 +90,7 @@ public final class TicToc {
             return String.format("%5.3fs", time);
         }
 
-        time = getMilisTime();
+        time = getMillisTime();
         if (time > 1){
             return String.format("%5.3fms", time);
         }

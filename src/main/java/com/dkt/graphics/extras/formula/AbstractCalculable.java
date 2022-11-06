@@ -118,7 +118,7 @@ public abstract class AbstractCalculable {
     }
 
     /**
-     * Sets a getScale for both x and y axis.
+     * Sets a getScale for both x-axis and y-axis.
      *
      * @param scale new getScale
      * @deprecated this method was deprecated because now we have individual

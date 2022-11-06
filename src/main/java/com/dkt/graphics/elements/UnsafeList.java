@@ -183,7 +183,7 @@ class UnsafeList implements Iterable<GraphicE> {
     public boolean remove(GraphicE e) {
         synchronized(mutex) {
             boolean status = false;
-            while (remove(indexOf(e)) != null) status |= true;
+            while (remove(indexOf(e)) != null) status = true;
             return status;
         }
     }

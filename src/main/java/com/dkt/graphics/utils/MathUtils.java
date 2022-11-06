@@ -26,7 +26,7 @@ public class MathUtils {
     /**
      * Don't let anyone initialize this class
      */
-    private MathUtils(){};
+    private MathUtils(){}
 
     /**
      * This class is the Heaviside step function omitting the value of

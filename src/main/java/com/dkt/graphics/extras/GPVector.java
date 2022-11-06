@@ -33,9 +33,9 @@ import java.awt.Paint;
  */
 public class GPVector extends GraphicE {
     private final Graphic vector = new Graphic(3);
-    private GVector main;
-    private GVector xPro;
-    private GVector yPro;
+    private final GVector main;
+    private final GVector xPro;
+    private final GVector yPro;
 
     public GPVector(GPVector e){
         super(e);
@@ -49,7 +49,7 @@ public class GPVector extends GraphicE {
      * Creates a new {@code GPVector} based on the {@code GVector} passed
      * as argument. <br>
      * <i>Note:</i> this constructor uses a COPY of the vector, so if you need
-     * to change some of the parameters of the vector, you'll need to use:<ul>
+     * to change some parameters of the vector, you'll need to use:<ul>
      * <li>{@link GPVector#setArgument(double)}
      * <li>{@link GPVector#setModulus(double)}
      * <li>{@link GPVector#setModulus(double, double)}

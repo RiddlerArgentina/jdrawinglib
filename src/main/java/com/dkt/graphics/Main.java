@@ -35,7 +35,7 @@ public class Main {
 
         for (String arg : args) {
             try {
-                SwingUtilities.invokeLater(contruct(arg));
+                SwingUtilities.invokeLater(construct(arg));
                 needHelp = false;
                 break;
             } catch (Exception ex) {
@@ -56,7 +56,7 @@ public class Main {
         for (int i = 1; i < 18; i++) {
             try {
                 String name = String.format("Example%02d", i);
-                String desc = contruct(name).getName();
+                String desc = construct(name).getName();
                 System.out.format("\t %s -> %s%n", name, desc);
             } catch (Exception ex) {
                 Logger.getLogger("Main").log(Level.SEVERE, null, ex);
@@ -65,11 +65,11 @@ public class Main {
         System.out.println();
     }
 
-    public static IExample contruct(String name) throws InvocationTargetException,
-                                                        ClassNotFoundException,
-                                                        InstantiationException,
-                                                        IllegalAccessException,
-                                                        NoSuchMethodException {
+    public static IExample construct(String name) throws InvocationTargetException,
+                                                         ClassNotFoundException,
+                                                         InstantiationException,
+                                                         IllegalAccessException,
+                                                         NoSuchMethodException {
         Class<?> c = Class.forName("com.dkt.graphics.extras.examples." + name);
         return (IExample) c.getDeclaredConstructor().newInstance();
     }

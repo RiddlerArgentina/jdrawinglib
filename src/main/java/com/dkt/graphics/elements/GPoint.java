@@ -27,7 +27,7 @@ import java.awt.Graphics2D;
  */
 public class GPoint extends GraphicE {
     private final boolean drawCross;
-    private int cs;
+    private final int cs;
     private int x, y;
 
     /**

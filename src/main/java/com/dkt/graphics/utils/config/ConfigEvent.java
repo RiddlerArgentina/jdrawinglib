@@ -19,7 +19,7 @@
 package com.dkt.graphics.utils.config;
 
 /**
- * This events are triggered from the {@link Config} class each time something
+ * These events are triggered from the {@link Config} class each time something
  * is added, updated or removed.
  *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}

@@ -57,7 +57,7 @@ public abstract class AbstractTimer<T extends AbstractCalculable> extends Graphi
      * This interface contains all the methods that will be executed
      * after starting, pausing, resuming and stopping a timer.
      */
-    public static interface Action {
+    public interface Action {
         /**
          * This method will be executed immediately after the timer starts and
          * all threads are created and running.
@@ -189,7 +189,7 @@ public abstract class AbstractTimer<T extends AbstractCalculable> extends Graphi
     }
 
     /**
-     * Starts the timer with all of it's threads.<br>
+     * Starts the timer with all of its threads.<br>
      * <i>Note: </i> This method will remove all of the {@link GraphicE} of the
      * {@link Graphic}
      *

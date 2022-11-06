@@ -224,7 +224,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
     }
 
     /**
-     * This method merges all of the elements of a given set of {@code Graphic}
+     * This method merges all the elements of a given set of {@code Graphic}
      * components, and returns a new {@code Graphic} element.<br>
      * This could also be accompished by using something like:<pre>
      *
@@ -257,7 +257,7 @@ public class Graphic extends GraphicE implements Iterable<GraphicE> {
     }
 
     /**
-     * This method merges all of the elements of a given set of {@code Graphic}
+     * This method merges all the elements of a given set of {@code Graphic}
      * components, and returns a new {@code Graphic} element that contains
      * copies of all the elements on the given set of {@code Graphic}s.<br>
      * This could also be accomplished by using something like:<pre>

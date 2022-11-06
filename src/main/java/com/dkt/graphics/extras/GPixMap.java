@@ -117,7 +117,7 @@ public final class GPixMap extends GraphicE {
      * Constructs a new {@code GPixMap} from a given {@code int} matrix
      *
      * @param data The data that will form the {@code GPixMap} all this data
-     * will be converted to {@link Color} objects so they should have the form
+     * will be converted to {@link Color} objects, so they should have the form
      * {@code ARGB}
      * @param hasAlpha Tells if the ints represent a color with alpha
      * @throws IllegalArgumentException if {@code data} is {@code null} or if any
@@ -500,7 +500,7 @@ public final class GPixMap extends GraphicE {
     
     /**
      * Retrieves a new {@code GPixMap} which is the result of rotating this one
-     * counter clockwise 90°.<pre>
+     * counterclockwise 90°.<pre>
      *                            +-----+
      *       +-------+            | *   |
      *       | ***** |            | *   |
@@ -509,7 +509,7 @@ public final class GPixMap extends GraphicE {
      *       +-------+            | *** |
      *                            +-----+</pre>
      *
-     * @return Counter clockwise turn of this {@code GPixMap}
+     * @return Counterclockwise turn of this {@code GPixMap}
      */
     public GPixMap rotateCCW() {
         final int sx = getXSize();
@@ -591,7 +591,7 @@ public final class GPixMap extends GraphicE {
      * <i>Note:</i> This method will most likely fail miserably when combined
      * with {@link GTransform}s.<br>
      * <i>Note 2:</i> There are some issues when the traslation step is
-     * different than the pixel size, but that should be a non issue, since it's
+     * different from the pixel size, but that should be a non issue, since it's
      * a <u>"very rare"</u> scenario, and that's why we have a
      * {@link GPixMap#traslateUnits(int, int)} method.
      * Oops... it appears to be a more common scenario than predicted... my bad.

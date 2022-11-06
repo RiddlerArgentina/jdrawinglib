@@ -36,10 +36,10 @@ import java.util.Objects;
  */
 public class GAxis extends GraphicE {
     private final Graphic axis = new Graphic();
-    private int xs;
-    private int xf;
-    private int ys;
-    private int yf;
+    private final int xs;
+    private final int xf;
+    private final int ys;
+    private final int yf;
     
     private int mtx = 10;
     private int Mtx = 50;

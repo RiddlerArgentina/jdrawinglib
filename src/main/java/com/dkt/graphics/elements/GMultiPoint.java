@@ -114,7 +114,7 @@ public abstract class GMultiPoint extends GFillableE
      *
      * @param point point to check
      * @return first index of the point or -1 if the point is not one of the
-     * paths 's vertices
+     * path's vertices
      * @throws IllegalArgumentException if {@code point} is {@code null}
      */
     public int indexOf(final GPoint point) {
@@ -132,7 +132,7 @@ public abstract class GMultiPoint extends GFillableE
      * @param point point to check
      * @param start starting point of the search
      * @return first index of the point or -1 if the point is not one of the
-     * paths 's vertices
+     * path's vertices
      * @throws IllegalArgumentException if {@code point} is {@code null}
      */
     public int indexOf(final GPoint point, final int start) {
@@ -149,7 +149,7 @@ public abstract class GMultiPoint extends GFillableE
      * @param x y coordinate of the point
      * @param y y coordinate of the point
      * @return first index of the point or -1 if the point is not one of the
-     * paths 's vertices
+     * path's vertices
      */
     public int indexOf(final int x, final int y) {
         return indexOf(x, y, 0);
@@ -163,7 +163,7 @@ public abstract class GMultiPoint extends GFillableE
      * @param y y coordinate of the point
      * @param start starting point of the search
      * @return first index of the point or -1 if the point is not one of the
-     * paths 's vertices
+     * path's vertices
      */
     public int indexOf(
             final int x,

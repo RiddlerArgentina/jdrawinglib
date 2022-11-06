@@ -51,7 +51,7 @@ public class GPointArrayTest {
     }
 
     @Test
-    @DisplayName("Test constructor different lenghts")
+    @DisplayName("Test constructor different lengths")
     public void testConstructor3() {
         int[] XX = {0, 1, 2, 3, 4, 5};
         int[] YY = {0, 1, 2, 3, 4, 5, 6};
@@ -61,7 +61,7 @@ public class GPointArrayTest {
     }
 
     @Test
-    @DisplayName("Test constructor different lenghts")
+    @DisplayName("Test constructor different lengths")
     public void testConstructor4() {
         int[] XX = {0, 1, 2, 3, 4, 5, 6};
         int[] YY = {0, 1, 2, 3, 4, 5};

@@ -117,7 +117,7 @@ public class GPointArray extends GMultiPoint {
 
     /**
      * Retrieves a new {@code GPointArray} with all the points that are
-     * contained in the circle with center {@code p} and and radius {@code r}.
+     * contained in the circle with center {@code p} and radius {@code r}.
      *
      * @param p {@link GPoint} of the center
      * @param r radius
@@ -137,7 +137,7 @@ public class GPointArray extends GMultiPoint {
 
     /**
      * Retrieves a new {@code GPointArray} with all the points that are
-     * contained in the circle with center in {@code (x, y)} and and radius
+     * contained in the circle with center in {@code (x, y)} and radius
      * {@code r}.
      *
      * @param x X coordinate of the center
@@ -348,7 +348,7 @@ public class GPointArray extends GMultiPoint {
     }
 
     /**
-     * Retrieves {@link GRectangle} that contains all of the points in this
+     * Retrieves {@link GRectangle} that contains all the points in this
      * array
      *
      * @return rectangle containing all the points

@@ -23,7 +23,8 @@ package com.dkt.graphics.elements;
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GRegPoly extends GPoly {
-    private int x, y, r, n;
+    private int x, y;
+    private final int r, n;
     private double a;
 
     /**

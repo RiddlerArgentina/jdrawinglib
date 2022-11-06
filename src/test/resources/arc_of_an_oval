@@ -3,7 +3,7 @@
 #    'x' (int) x coordinate of the center
 #    'y' (int) y coordinate of the center
 #    'w' (int) width of the rectangle
-#    'h' (int) height of the rectange
+#    'h' (int) height of the rectangle
 #    'a' (int) angle in degrees of the arc
 #    'o' (int) angle offset in degrees
 # Description: Creates an arc of an oval

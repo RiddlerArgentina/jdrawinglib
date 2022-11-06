@@ -422,7 +422,7 @@ public class Canvas extends JPanel implements ActionListener {
      * physics since it gives a more <i>natural</i> way of drawing. But should
      * be ignored most of the time, since it might break other transforms.
      * <br><br>
-     * <i><b>WARNING: </b></i> this method does it's magic using an
+     * <i><b>WARNING: </b></i> this method does its magic using an
      * {@link AffineTransform}, so this basically means that it draws in the
      * conventional way and then invert the image, so text and images will
      * appear inverted.
@@ -589,7 +589,7 @@ public class Canvas extends JPanel implements ActionListener {
 
     /**
      * This method tells the canvas to print the current FPS value on the screen
-     * (it will be painted on the upper left corner above all other elements).
+     * (it will be painted in the upper left corner above all other elements).
      * <br><i>Note:</i> if {@code showFPS} is set to {@code true} it will most
      * likely have a small impact on performance (usually we draw hundreds of
      * thousands of {@link GraphicE}, but in small applications with very high

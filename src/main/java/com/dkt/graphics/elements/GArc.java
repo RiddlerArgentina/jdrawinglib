@@ -27,7 +27,8 @@ import java.awt.geom.Area;
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GArc extends GFillableE {
-    private int x, y, w, h, sa, aa;
+    private int x, y;
+    private final int w, h, sa, aa;
 
     /**
      * Copy constructor

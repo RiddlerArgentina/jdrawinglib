@@ -82,7 +82,7 @@ public class GClip extends GraphicE {
     }
 
     /**
-     * Adds the given element to the the clipping area
+     * Adds the given element to the clipping area
      *
      * @param e element to add
      */
@@ -92,7 +92,7 @@ public class GClip extends GraphicE {
     }
 
     /**
-     * Subtracts the given element from the the clipping area
+     * Subtracts the given element from the clipping area
      *
      * @param e element to subtract
      */
@@ -127,7 +127,7 @@ public class GClip extends GraphicE {
 
     private static class Action {
         private final int a;
-        private GFillableE e;
+        private final GFillableE e;
 
         Action(GFillableE e, int a){
             this.e = e;

@@ -244,7 +244,7 @@ public class GraphicCreator {
             }
         }
 
-        final float arr[] = new float[dashes.size()];
+        final float[] arr = new float[dashes.size()];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = dashes.get(i);
         }
@@ -256,7 +256,7 @@ public class GraphicCreator {
      * Clears the global configurations {@code color}, {@code colorf}, {@code
      * stroke}, {@code paint} and {@code font}
      *
-     * @param args this are ignored
+     * @param args these are ignored
      * @return {@code null}
      */
     public Object reset(String[] args) {
@@ -285,7 +285,7 @@ public class GraphicCreator {
     }
 
     /**
-     * Set's the global fill color. I the argument is {@code no} then it will
+     * Set's the global fill color. If the argument is {@code no} then it will
      * reset the fill color. If this color is set all {@link GFillableE} will
      * be set to fill.<br>This color is also used as the secondary color on
      * gradients.<br><ul>
@@ -622,7 +622,6 @@ public class GraphicCreator {
      *
      * @param args point arguments
      * @return {@code point}
-     * @see GPoint#cs
      */
     public GPoint point(String[] args) {
         checkArgs(args, 2, 3);

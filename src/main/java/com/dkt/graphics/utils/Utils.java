@@ -40,7 +40,7 @@ public class Utils {
     /**
      * Don't let anyone initialize this class
      */
-    private Utils(){};
+    private Utils(){}
 
     /**
      * Generates a new {@link Color} based on the color but with the given
@@ -146,7 +146,7 @@ public class Utils {
     }
 
     /**
-     * Trims a given image to it's minimum size without loosing any part of the
+     * Trims a given image to its minimum size without loosing any part of the
      * drawing.
      *
      * @param img The image to trim

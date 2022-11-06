@@ -26,7 +26,7 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Since the graphic creator uses almost all of the other classes, this is the
+ * Since the graphic creator uses almost all the other classes, this is the
  * closest thing to integration tests.
  *
  * @author Federico Vera {@literal<fede@riddler.com.ar>}

@@ -126,8 +126,7 @@ public class GLine extends GraphicE {
      * @return Orthogonal {@code GLine}
      */
     public GLine getOrthogal(final int x, final int y) {
-        final GLine line = new GLine(x, y, modulus(), 90 + getArgument());
-        return line;
+        return new GLine(x, y, modulus(), 90 + getArgument());
     }
 
     /**
@@ -139,8 +138,7 @@ public class GLine extends GraphicE {
      * @return Orthogonal {@code GLine}
      */
     public GLine getParallel(final int x, final int y) {
-        final GLine line = new GLine(x, y, modulus(), getArgument());
-        return line;
+        return new GLine(x, y, modulus(), getArgument());
     }
 
     /**

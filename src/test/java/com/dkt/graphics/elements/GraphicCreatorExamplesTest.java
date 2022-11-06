@@ -36,7 +36,7 @@ import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Since the graphic creator uses almost all of the other classes, this is the
+ * Since the graphic creator uses almost all the other classes, this is the
  * closest thing to integration tests.<br>
  * Since all of this examples show the correct output on GraphicCreator (it's
  * visually comparable), the easiest way to test that the examples are correct

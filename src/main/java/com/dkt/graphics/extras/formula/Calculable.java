@@ -30,7 +30,7 @@ import com.dkt.graphics.extras.GFormula;
 public abstract class Calculable extends AbstractCalculable {
     /**
      * This method should f the function's value.<br>
-     * It's not <i>strictly</i> necessary, but the idea is for this functions to
+     * It's not <i>strictly</i> necessary, but the idea is for these functions to
      * be deterministic since they are usually plotted as fixed elements on the
      * canvas
      *
