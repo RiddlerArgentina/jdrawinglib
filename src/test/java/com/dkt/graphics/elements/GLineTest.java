@@ -43,7 +43,7 @@ public class GLineTest {
         assertEquals(l1, l2);
         assertEquals(l1.hashCode(), l2.hashCode());
     }
-    
+
     @Test
     @DisplayName("Copy constructor with point")
     public void testConstructor2() {
@@ -59,7 +59,7 @@ public class GLineTest {
         assertEquals(l1, l2);
         assertEquals(l1.hashCode(), l2.hashCode());
     }
-    
+
     @Test
     @DisplayName("Clone")
     public void testClone() {
@@ -75,7 +75,7 @@ public class GLineTest {
         assertEquals(l1, l2);
         assertEquals(l1.hashCode(), l2.hashCode());
     }
-    
+
     @Test
     @DisplayName("Middle Point on zero lenght")
     public void testMiddlePoint1() {
@@ -175,6 +175,7 @@ public class GLineTest {
         GLine l = new GLine(0, 0, 0, 10);
         GLine o = l.getOrthogal(0, 5);
         assertEquals(l.getArgument() + 90, o.getArgument(), 1e-9);
+        assertEquals(l.getRadArgument() + Math.PI / 2, o.getRadArgument(), 1e-9);
         assertTrue(o.contains(0, 5));
     }
 
@@ -184,7 +185,18 @@ public class GLineTest {
         GLine l = new GLine(13, 20, 10, 10);
         GLine o = l.getOrthogal(0, 5);
         assertEquals(l.getArgument() + 90, o.getArgument(), 1e-9);
+        assertEquals(l.getRadArgument() + Math.PI / 2, o.getRadArgument(), 1e-9);
         assertTrue(o.contains(0, 5));
+    }
+
+    @Test
+    @DisplayName("Orthogonal origin")
+    public void testOrthogonal4() {
+        GLine l = new GLine(13, 20, 10, 10);
+        GLine o = l.getOrthogal();
+        assertEquals(l.getArgument() + 90, o.getArgument(), 1e-9);
+        assertEquals(l.getRadArgument() + Math.PI / 2, o.getRadArgument(), 1e-9);
+        assertTrue(o.contains(0, 0));
     }
 
     @Test
@@ -193,6 +205,7 @@ public class GLineTest {
         GLine l = new GLine(0, 0, 10, 0);
         GLine o = l.getParallel(5, 0);
         assertEquals(l.getArgument(), o.getArgument(), 1e-9);
+        assertEquals(l.getRadArgument(), o.getRadArgument(), 1e-9);
         assertTrue(l.contains(5, 0));
         assertTrue(o.contains(5, 0));
     }
@@ -200,6 +213,20 @@ public class GLineTest {
     @Test
     @DisplayName("Parallel y axis")
     public void testParallel2() {
+        GLine l = new GLine(0, 0, 0, 10);
+        GLine o = l.getParallel(0, 5);
+        assertEquals(l.getArgument(), o.getArgument(), 1e-9);
+        assertEquals(l.getRadArgument(), o.getRadArgument(), 1e-9);
+        assertTrue(o.contains(0, 5));
+        assertThrows(IllegalArgumentException.class, () -> {
+                o.contains(null);
+            }
+        );
+    }
+
+    @Test
+    @DisplayName("Parallel y axis")
+    public void testContains() {
         GLine l = new GLine(0, 0, 0, 10);
         GLine o = l.getParallel(0, 5);
         assertEquals(l.getArgument(), o.getArgument(), 1e-9);

@@ -73,5 +73,13 @@ public class GraphicTest {
 
         assertEquals(g1, g2);
         assertEquals(g1.hashCode(), g2.hashCode());
+        g1.setVisible(false);
+        assertNotEquals(g1, g2);
+        assertNotEquals(g1.hashCode(), g2.hashCode());
+        assertNotEquals(g1.isVisible(), g2.isVisible());
+        g1.setVisible(true);
+        assertEquals(g1, g2);
+        assertEquals(g1.hashCode(), g2.hashCode());
     }
+
 }
