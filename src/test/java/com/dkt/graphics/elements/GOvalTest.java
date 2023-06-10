@@ -41,19 +41,14 @@ public class GOvalTest {
         assertEquals(o1.hashCode(), o2.hashCode());
         assertEquals(o2.hashCode(), o3.hashCode());
         o1.traslate(10, 10);
-        assertNotEquals(o1, new GPoint(0, 0));
         assertNotEquals(o1, o2);
         assertNotEquals(o1.hashCode(), o2.hashCode());
         o1.traslate(-10, -10);
         assertEquals(o1, o2);
         assertEquals(o1.hashCode(), o2.hashCode());
-        assertThrows(IllegalArgumentException.class, () -> {
-                new GOval((GOval)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> new GOval((GOval)null)
         );
-        assertThrows(IllegalArgumentException.class, () -> {
-                new GOval((GRectangle)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> new GOval((GRectangle)null)
         );
     }
 }

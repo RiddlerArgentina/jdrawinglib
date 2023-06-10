@@ -58,9 +58,8 @@ public class GFormulaTest {
         }
         while (iter.hasNext()) {
             GraphicE e = iter.next();
-            if (e instanceof GPointArray) {
+            if (e instanceof GPointArray o) {
                 status = true;
-                GPointArray o = (GPointArray)e;
                 assertEquals(exp, o);
             }
         }
@@ -84,9 +83,8 @@ public class GFormulaTest {
         int i = -5;
         while (iter.hasNext()) {
             GraphicE e = iter.next();
-            if (e instanceof GPoint) {
+            if (e instanceof GPoint o) {
                 status = true;
-                GPoint o = (GPoint)e;
                 assertEquals(new GPoint(i, i), o);
                 i++;
             }
@@ -113,9 +111,8 @@ public class GFormulaTest {
         }
         while (iter.hasNext()) {
             GraphicE e = iter.next();
-            if (e instanceof GPath) {
+            if (e instanceof GPath o) {
                 status = true;
-                GPath o = (GPath)e;
                 assertEquals(exp, o);
             }
         }
@@ -146,9 +143,8 @@ public class GFormulaTest {
         exp.append(4, 0);
         while (iter.hasNext()) {
             GraphicE e = iter.next();
-            if (e instanceof GPoly) {
+            if (e instanceof GPoly o) {
                 status = true;
-                GPoly o = (GPoly)e;
                 assertEquals(exp, o);
             }
         }
@@ -164,9 +160,7 @@ public class GFormulaTest {
                 return x;
             }
         };
-        assertThrows(IllegalArgumentException.class, () -> {
-            new GFormula(null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> new GFormula(null));
         assertThrows(IllegalArgumentException.class, () -> {
             GFormula formula = new GFormula(eye);
             formula.calculate(0, 10, 1, null);

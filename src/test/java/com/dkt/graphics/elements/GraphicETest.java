@@ -44,9 +44,7 @@ public class GraphicETest {
     @Test
     @DisplayName("Copy constructor null")
     public void testConstructor2() {
-        assertThrows(IllegalArgumentException.class, () -> {
-                new GraphicEImpl(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> new GraphicEImpl(null)
         );
         assertNotEquals(new GraphicEImpl(), new Object());
     }
@@ -64,9 +62,7 @@ public class GraphicETest {
         assertEquals(Color.CYAN, ge1.getPaint());
         assertNotEquals(ge1, ge2);
         assertNotEquals(ge1.hashCode(), ge2.hashCode());
-        assertThrows(IllegalArgumentException.class, () -> {
-                ge1.setPaint(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> ge1.setPaint(null)
         );
     }
 
@@ -83,9 +79,7 @@ public class GraphicETest {
         assertEquals(new BasicStroke(2), ge1.getStroke());
         assertNotEquals(ge1, ge2);
         assertNotEquals(ge1.hashCode(), ge2.hashCode());
-        assertThrows(IllegalArgumentException.class, () -> {
-                ge1.setStroke(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> ge1.setStroke(null)
         );
     }
 

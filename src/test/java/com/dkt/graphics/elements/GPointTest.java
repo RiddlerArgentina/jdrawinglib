@@ -29,7 +29,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GPointTest {
-    public static double DELTA = 1e-8;
+    public static final double DELTA = 1e-8;
 
     @Test
     @DisplayName("Copy constructor")
@@ -117,9 +117,7 @@ public class GPointTest {
         Random r = new Random();
         GPoint p1 = new GPoint(r.nextInt(), r.nextInt());
         assertEquals(0, p1.distance(p1), DELTA);
-        assertThrows(IllegalArgumentException.class, () -> {
-                p1.distance(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> p1.distance(null)
         );
     }
 

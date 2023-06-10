@@ -824,7 +824,7 @@ public final class GPixMap extends GraphicE {
             while ((line = br.readLine()) != null) {
                 int j = 0;
                 for (final String dat : line.split(" ")) {
-                    data[i][j] = (int)(Long.parseLong(dat, 16) & 0xFFFFFFFF);
+                    data[i][j] = (int)(Long.parseLong(dat, 16) & 0xFFFFFFFFL);
                     j++;
                 }
                 i++;

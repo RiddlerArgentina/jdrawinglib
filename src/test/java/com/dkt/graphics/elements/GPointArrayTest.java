@@ -19,7 +19,7 @@
 package com.dkt.graphics.elements;
 
 import com.dkt.graphics.exceptions.InvalidArgumentException;
-import java.util.Iterator;
+
 import java.util.Random;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
@@ -55,9 +55,7 @@ public class GPointArrayTest {
     public void testConstructor3() {
         int[] XX = {0, 1, 2, 3, 4, 5};
         int[] YY = {0, 1, 2, 3, 4, 5, 6};
-        assertThrows(InvalidArgumentException.class, () -> {
-            new GPointArray(XX, YY);
-        });
+        assertThrows(InvalidArgumentException.class, () -> new GPointArray(XX, YY));
     }
 
     @Test
@@ -65,9 +63,7 @@ public class GPointArrayTest {
     public void testConstructor4() {
         int[] XX = {0, 1, 2, 3, 4, 5, 6};
         int[] YY = {0, 1, 2, 3, 4, 5};
-        assertThrows(InvalidArgumentException.class, () -> {
-                new GPointArray(XX, YY);
-            }
+        assertThrows(InvalidArgumentException.class, () -> new GPointArray(XX, YY)
         );
     }
 
@@ -175,9 +171,7 @@ public class GPointArrayTest {
         assertEquals(6, mp.size());
         assertFalse(mp.isEmpty());
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            mp.remove(-1);
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> mp.remove(-1));
     }
 
     @Test
@@ -191,9 +185,7 @@ public class GPointArrayTest {
         assertEquals(6, mp.size());
         assertFalse(mp.isEmpty());
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            mp.remove(10);
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> mp.remove(10));
     }
 
     @Test
@@ -205,9 +197,7 @@ public class GPointArrayTest {
         assertEquals(0, mp.size());
         assertTrue(mp.isEmpty());
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            mp.remove(1);
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> mp.remove(1));
     }
 
     @Test
@@ -430,9 +420,7 @@ public class GPointArrayTest {
         assertEquals(6, mp.size());
         assertFalse(mp.isEmpty());
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            mp.remove(null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> mp.remove(null));
     }
 
     @Test
@@ -618,9 +606,8 @@ public class GPointArrayTest {
         mp.traslate(1, 1);
         assertNotEquals(mp, mp2);
         int i = 0;
-        Iterator<GPoint> it = mp.iterator();
-        while (it.hasNext()) {
-            assertEquals(new GPoint(XX[i] +1, YY[i] +1), it.next());
+        for (GPoint gPoint : mp) {
+            assertEquals(new GPoint(XX[i] + 1, YY[i] + 1), gPoint);
             i++;
         }
     }
@@ -734,9 +721,7 @@ public class GPointArrayTest {
         for (GPoint pp : pa2) {
             assertTrue(pp.y() > 0);
         }
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.higherThan(null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.higherThan(null));
         pa1.clear();
         assertEquals(0, pa1.size());
         assertEquals(pa1, pa1.higherThan(new GPoint(0, 0)));
@@ -752,9 +737,7 @@ public class GPointArrayTest {
         for (GPoint pp : pa2) {
             assertTrue(pp.y() < 0);
         }
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.lowerThan(null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.lowerThan(null));
         pa1.clear();
         assertEquals(0, pa1.size());
         assertEquals(pa1, pa1.lowerThan(new GPoint(0, 0)));
@@ -770,9 +753,7 @@ public class GPointArrayTest {
         for (GPoint pp : pa2) {
             assertTrue(pp.x() < 0);
         }
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.leftThan(null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.leftThan(null));
         pa1.clear();
         assertEquals(0, pa1.size());
         assertEquals(pa1, pa1.leftThan(new GPoint(0, 0)));
@@ -788,9 +769,7 @@ public class GPointArrayTest {
         for (GPoint pp : pa2) {
             assertTrue(pp.x() > 0);
         }
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.rightThan(null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.rightThan(null));
         pa1.clear();
         assertEquals(0, pa1.size());
         assertEquals(pa1, pa1.rightThan(new GPoint(0, 0)));
@@ -805,9 +784,7 @@ public class GPointArrayTest {
         assertFalse(pa2.isEmpty());
         pa1.removeAll(pa2);
         assertEquals(pa1, pa1.leftThan(new GPoint(1, 0)));
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.removeAll(null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.removeAll(null));
     }
 
     @Test
@@ -833,9 +810,7 @@ public class GPointArrayTest {
         for (GPoint p : pa2) {
             assertTrue(l2.contains(p));
         }
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.intersection((GLine)null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.intersection((GLine)null));
     }
 
     @Test
@@ -852,9 +827,7 @@ public class GPointArrayTest {
         for (GPoint p : pa2) {
             assertTrue(r2.contains(p));
         }
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.intersection((GRectangle)null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.intersection((GRectangle)null));
     }
 
     @Test
@@ -871,9 +844,7 @@ public class GPointArrayTest {
         for (GPoint p : pa2) {
             assertTrue(c2.contains(p));
         }
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.intersection((GCircle)null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.intersection((GCircle)null));
     }
 
     @Test
@@ -894,9 +865,7 @@ public class GPointArrayTest {
         assertFalse(pa1.isEmpty());
         pa1.append(new GPoint(1000, 10000));
         assertEquals(new GPoint(1000, 10000), pa1.closestPoint(new GPoint(1000, 10000)));
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.closestPoint((GPoint)null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.closestPoint(null));
     }
 
     @Test
@@ -911,9 +880,7 @@ public class GPointArrayTest {
         for (GPoint p : pa2) {
             assertTrue(c.contains(p));
         }
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.pointsInRadius((GPoint)null, 10);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.pointsInRadius(null, 10));
         pa1.clear();
         assertEquals(pa1, pa1.pointsInRadius(new GPoint(0, 0) , 10));
     }
@@ -940,9 +907,7 @@ public class GPointArrayTest {
         assertFalse(pa3.isEmpty());
         assertEquals(400, pa2.size());
         assertNotEquals(pa1, pa3);
-        assertThrows(IllegalArgumentException.class, () -> {
-            pa1.append((GPointArray)null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> pa1.append((GPointArray)null));
     }
 
     private GPointArray populate() {

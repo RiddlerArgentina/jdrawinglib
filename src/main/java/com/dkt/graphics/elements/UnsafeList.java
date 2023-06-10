@@ -257,8 +257,9 @@ class UnsafeList implements Iterable<GraphicE> {
 
     @Override
     public Iterator<GraphicE> iterator() {
-        return new Iterator<GraphicE>() {
+        return new Iterator<>() {
             private int idx = -1;
+
             @Override
             public boolean hasNext() {
                 return idx != cursor - 1;
@@ -268,7 +269,7 @@ class UnsafeList implements Iterable<GraphicE> {
             public GraphicE next() {
                 try {
                     return elements[++idx];
-                } catch (Exception e){
+                } catch (Exception e) {
                     return null;
                 }
             }

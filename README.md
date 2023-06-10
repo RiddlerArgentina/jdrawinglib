@@ -5,10 +5,10 @@
 ## Building From Source
 
 1. Install [Ant]
-1. Checkout the code at Github `git clone https://github.com/RiddlerArgentina/jdrawinglib.git`
-1. Open the folder `cd jdrawinglib`
-1. Package it with ant `ant jar`
-1. Run some examples:
+2. Checkout the code at Github `git clone https://github.com/RiddlerArgentina/jdrawinglib.git`
+3. Open the folder `cd jdrawinglib`
+4. Package it with ant `ant jar`
+5. Run some examples:
 
 ```
 cd dist

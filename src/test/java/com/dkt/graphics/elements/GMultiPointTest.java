@@ -20,7 +20,7 @@ package com.dkt.graphics.elements;
 
 import com.dkt.graphics.exceptions.InvalidArgumentException;
 import java.awt.Graphics2D;
-import java.util.Iterator;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -54,9 +54,7 @@ public class GMultiPointTest {
     public void testConstructor3() {
         int[] XX = {0, 1, 2, 3, 4, 5};
         int[] YY = {0, 1, 2, 3, 4, 5, 6};
-        assertThrows(InvalidArgumentException.class, () -> {
-            new GMPTest(XX, YY);
-        });
+        assertThrows(InvalidArgumentException.class, () -> new GMPTest(XX, YY));
     }
 
     @Test
@@ -64,9 +62,7 @@ public class GMultiPointTest {
     public void testConstructor4() {
         int[] XX = {0, 1, 2, 3, 4, 5, 6};
         int[] YY = {0, 1, 2, 3, 4, 5};
-        assertThrows(InvalidArgumentException.class, () -> {
-                new GMPTest(XX, YY);
-            }
+        assertThrows(InvalidArgumentException.class, () -> new GMPTest(XX, YY)
         );
     }
 
@@ -158,9 +154,7 @@ public class GMultiPointTest {
         assertEquals(6, mp.size());
         assertFalse(mp.isEmpty());
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            mp.remove(-1);
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> mp.remove(-1));
     }
 
     @Test
@@ -174,9 +168,7 @@ public class GMultiPointTest {
         assertEquals(6, mp.size());
         assertFalse(mp.isEmpty());
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            mp.remove(10);
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> mp.remove(10));
     }
 
     @Test
@@ -188,9 +180,7 @@ public class GMultiPointTest {
         assertEquals(0, mp.size());
         assertTrue(mp.isEmpty());
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            mp.remove(1);
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> mp.remove(1));
     }
 
     @Test
@@ -413,9 +403,7 @@ public class GMultiPointTest {
         assertEquals(6, mp.size());
         assertFalse(mp.isEmpty());
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            mp.remove(null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> mp.remove(null));
     }
 
     @Test
@@ -574,9 +562,8 @@ public class GMultiPointTest {
         mp.traslate(1, 1);
         assertNotEquals(mp, mp2);
         int i = 0;
-        Iterator<GPoint> it = mp.iterator();
-        while (it.hasNext()) {
-            assertEquals(new GPoint(XX[i] +1, YY[i] +1), it.next());
+        for (GPoint gPoint : mp) {
+            assertEquals(new GPoint(XX[i] + 1, YY[i] + 1), gPoint);
             i++;
         }
     }

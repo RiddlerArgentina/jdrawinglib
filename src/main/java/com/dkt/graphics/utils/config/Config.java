@@ -19,12 +19,7 @@
 package com.dkt.graphics.utils.config;
 
 import java.awt.Color;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
@@ -39,6 +34,7 @@ import javax.swing.ImageIcon;
  * @author Federico Vera {@literal <dktcoding [at] gmail>}
  */
 public class Config implements Serializable {
+    @Serial
     private static final long serialVersionUID = 6450068842696620740L;
 
     private static final HashMap<String, Config> CONFIGS = new HashMap<>(8);
@@ -276,9 +272,9 @@ ArrayList<>(4);
 
         final int type;
 
-        if (oval == null && nval != null) {
+        if (oval == null) {
             type = ConfigEvent.VALUE_ADDED;
-        } else if (oval != null && nval == null) {
+        } else if (nval == null) {
             type = ConfigEvent.VALUE_REMOVED;
         } else {
             type = ConfigEvent.VALUE_UPDATED;

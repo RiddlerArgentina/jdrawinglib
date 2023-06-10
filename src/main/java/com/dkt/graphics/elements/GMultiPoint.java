@@ -450,12 +450,9 @@ public abstract class GMultiPoint extends GFillableE
      * ties with the {@code Y} value
      */
     public void sortByX() {
-        sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer n1, Integer n2) {
-                final int status = Integer.compare(xs[n1], xs[n2]);
-                return status == 0 ? Integer.compare(ys[n1], ys[n2]) : status;
-            }
+        sort((n1, n2) -> {
+            final int status = Integer.compare(xs[n1], xs[n2]);
+            return status == 0 ? Integer.compare(ys[n1], ys[n2]) : status;
         });
     }
 
@@ -489,14 +486,15 @@ public abstract class GMultiPoint extends GFillableE
 
     @Override
     public Iterator<GPoint> iterator() {
-        return new Iterator<GPoint>() {
+        return new Iterator<>() {
             private final int modifications = modCount.get();
 
             //The cursor must be BEFORE the first item
             private int idx = -1;
+
             @Override
             public boolean hasNext() {
-                if (modifications != modCount.get()){
+                if (modifications != modCount.get()) {
                     throw new ConcurrentModificationException();
                 }
 
@@ -505,11 +503,11 @@ public abstract class GMultiPoint extends GFillableE
 
             @Override
             public GPoint next() {
-                if (idx >= size - 1){
+                if (idx >= size - 1) {
                     throw new NoSuchElementException();
                 }
 
-                if (modifications != modCount.get()){
+                if (modifications != modCount.get()) {
                     throw new ConcurrentModificationException();
                 }
 
@@ -521,12 +519,12 @@ public abstract class GMultiPoint extends GFillableE
                 //Unless this is the last item on the loop, this will always
                 //end in a ConcurrentModificationException
                 //Should we change modifications to modCount?
-                if (modifications != modCount.get()){
+                if (modifications != modCount.get()) {
                     throw new ConcurrentModificationException();
                 }
 
                 GMultiPoint.this.remove(getPointAt(idx));
-            };
+            }
         };
     }
 

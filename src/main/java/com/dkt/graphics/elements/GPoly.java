@@ -22,7 +22,7 @@ import com.dkt.graphics.exceptions.InvalidArgumentException;
 import java.awt.Graphics2D;
 
 /**
- * http://erich.realtimerendering.com/ptinpoly/
+ * <a href="http://erich.realtimerendering.com/ptinpoly/">...</a>
  * @author Federico Vera {@literal<fede@riddler.com.ar>}
  */
 public class GPoly extends GMultiPoint {

@@ -37,7 +37,7 @@ public class GVectorPolygon extends GraphicE {
     public GVectorPolygon(GVectorPolygon e) {
         super(e);
 
-        resultant = new GVector(resultant);
+        resultant = new GVector(e.resultant);
         for (GVector v : e.vectors) {
             vectors.add(new GVector(v));
         }

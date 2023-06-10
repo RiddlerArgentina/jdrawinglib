@@ -703,12 +703,9 @@ public class GPointArray extends GMultiPoint {
      */
     @Override
     public void sortByX() {
-        sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer n1, Integer n2) {
-                final int status = Integer.compare(xs[n1], xs[n2]);
-                return status == 0 ? Integer.compare(ys[n1], ys[n2]) : status;
-            }
+        sort((n1, n2) -> {
+            final int status = Integer.compare(xs[n1], xs[n2]);
+            return status == 0 ? Integer.compare(ys[n1], ys[n2]) : status;
         });
     }
 
@@ -717,12 +714,9 @@ public class GPointArray extends GMultiPoint {
      * ties with the {@code X} value
      */
     public void sortByY() {
-        sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer n1, Integer n2) {
-                final int status = Integer.compare(ys[n1], ys[n2]);
-                return status == 0 ? Integer.compare(xs[n1], xs[n2]) : status;
-            }
+        sort((n1, n2) -> {
+            final int status = Integer.compare(ys[n1], ys[n2]);
+            return status == 0 ? Integer.compare(xs[n1], xs[n2]) : status;
         });
     }
 
@@ -764,12 +758,7 @@ public class GPointArray extends GMultiPoint {
             idxs[i] = i;
         }
 
-        Arrays.sort(idxs, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer n1, Integer n2) {
-                return Integer.compare(xs[n1], xs[n2]);
-            }
-        });
+        Arrays.sort(idxs, (n1, n2) -> Integer.compare(xs[n1], xs[n2]));
 
         final GPointArray parr = new GPointArray();
 

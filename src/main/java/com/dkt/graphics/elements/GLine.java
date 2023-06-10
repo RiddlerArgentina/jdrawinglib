@@ -217,7 +217,7 @@ public class GLine extends GraphicE {
         
         //http://stackoverflow.com/questions/17581738/
         // check-if-a-point-projected-on-a-line-segment-is-not-outside-it
-        final double m  = (y2 - y1) / (x2 - x1);
+        final double m  = (double) (y2 - y1) / (x2 - x1);
         final double r1 = y1 + m * x1;
         final double r2 = y2 + m * x2;
         final double r  = y + m * x;

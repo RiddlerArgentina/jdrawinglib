@@ -185,10 +185,11 @@ public class GraphicCreatorTest {
     public void testRegPoly() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
-                  "polyn 10 10 60 5\n" +
-                  "polyn 10 10 60 5 20\n" +
-                  "polyn 10 10 60 5 40\n" +
-                  "polyn 10 10 60 5 60"
+                """
+                        polyn 10 10 60 5
+                        polyn 10 10 60 5 20
+                        polyn 10 10 60 5 40
+                        polyn 10 10 60 5 60"""
         );
         Graphic g2 = new Graphic();
         g2.add(new GRegPoly(10, 10, 60, 5, 0));
@@ -246,13 +247,14 @@ public class GraphicCreatorTest {
     public void testArcs() {
         GraphicCreator gc = new GraphicCreator();
         Graphic g = gc.parse(
-                  "arcc   0  0 75  90  90\n" +
-                  "arcc   0  0 75  90 -90\n" +
-                  "arcc   0  0 50  90   0\n" +
-                  "arcc   0  0 50  90 180\n" +
-                  "arcc   0  0 25  90  90\n" +
-                  "arcc   0  0 25  90 -90\n" +
-                  "arcc -70 70 30 280  80"
+                """
+                        arcc   0  0 75  90  90
+                        arcc   0  0 75  90 -90
+                        arcc   0  0 50  90   0
+                        arcc   0  0 50  90 180
+                        arcc   0  0 25  90  90
+                        arcc   0  0 25  90 -90
+                        arcc -70 70 30 280  80"""
         );
         Graphic g2 = new Graphic();
         g2.add(new GArc(0, 0, 75, 90, 90));

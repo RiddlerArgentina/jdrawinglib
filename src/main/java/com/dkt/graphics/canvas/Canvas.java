@@ -493,10 +493,10 @@ public class Canvas extends JPanel implements ActionListener {
     }
 
     /**
-     * Tells if the canvas is rendering using anti-aliasing.<br>
+     * Tells if the canvas is rendering using antialiasing.<br>
      * <i>Note:</i> the default value is {@code true}
      *
-     * @return {@code true} if anti-alising is on and {@code false} otherwise
+     * @return {@code true} if antialiasing is on and {@code false} otherwise
      */
     public boolean useAntiAliasing() {
         return useAntiAliasing;
@@ -505,7 +505,7 @@ public class Canvas extends JPanel implements ActionListener {
     /**
      * Turns anti-aliasing <tt>on</tt> or <tt>off</tt>
      *
-     * @param useAntiAliasing {@code true} to turn anti-aliasing on, and {@code
+     * @param useAntiAliasing {@code true} to turn antialiasing on, and {@code
      * false} to turn it off.
      */
     public void setUseAntiAliasing(boolean useAntiAliasing) {

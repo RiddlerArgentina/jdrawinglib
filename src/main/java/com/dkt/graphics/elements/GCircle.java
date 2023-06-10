@@ -29,8 +29,8 @@ import java.awt.geom.Ellipse2D;
 public class GCircle extends GFillableE {
     private int x;
     private int y;
-    private int d;
-    private int r;
+    private final int d;
+    private final int r;
 
     /**
      * Copy constructor
@@ -41,10 +41,10 @@ public class GCircle extends GFillableE {
     public GCircle(GCircle e) {
         super(e);
 
-        e.r = r;
-        e.d = d;
-        e.x = x;
-        e.y = y;
+        this.r = e.r;
+        this.d = e.d;
+        this.x = e.x;
+        this.y = e.y;
     }
 
     /**

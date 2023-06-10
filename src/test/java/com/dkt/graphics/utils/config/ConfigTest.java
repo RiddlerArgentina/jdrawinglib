@@ -63,16 +63,13 @@ public class ConfigTest {
         Config.on("conf_1").put("k3", "v5");
         Config.on("conf_2").put("k1", "v1");
         Config.on("conf_2").put("k3", "v5");
-        Config.on("conf_1").addListener(new ConfigListener() {
-            @Override
-            public void somethingChange(ConfigEvent event) {
-                if (event.getChangeType() == ConfigEvent.VALUE_ADDED) {
-                    statusNew = true;
-                    assertTrue(event.isKey("k2"));
-                    assertEquals("k2", event.getChangedKey());
-                    assertEquals(null, event.getOldValue());
-                    assertEquals("v2", event.getNewValue());
-                }
+        Config.on("conf_1").addListener(event -> {
+            if (event.getChangeType() == ConfigEvent.VALUE_ADDED) {
+                statusNew = true;
+                assertTrue(event.isKey("k2"));
+                assertEquals("k2", event.getChangedKey());
+                assertNull(event.getOldValue());
+                assertEquals("v2", event.getNewValue());
             }
         });
         assertFalse(statusNew);
@@ -91,16 +88,13 @@ public class ConfigTest {
         Config.on("conf_1").put("k1", "v1");
         Config.on("conf_1").put("k2", "v4");
         Config.on("conf_1").put("k3", "v5");
-        Config.on("conf_1").addListener(new ConfigListener() {
-            @Override
-            public void somethingChange(ConfigEvent event) {
-                if (event.getChangeType() == ConfigEvent.VALUE_REMOVED) {
-                    statusRem = true;
-                    assertTrue(event.isKey("k1"));
-                    assertEquals("k1", event.getChangedKey());
-                    assertEquals("v1", event.getOldValue());
-                    assertEquals(null, event.getNewValue());
-                }
+        Config.on("conf_1").addListener(event -> {
+            if (event.getChangeType() == ConfigEvent.VALUE_REMOVED) {
+                statusRem = true;
+                assertTrue(event.isKey("k1"));
+                assertEquals("k1", event.getChangedKey());
+                assertEquals("v1", event.getOldValue());
+                assertNull(event.getNewValue());
             }
         });
         assertFalse(statusRem);
@@ -118,16 +112,13 @@ public class ConfigTest {
         Config.on("conf_1").put("k1", "v1");
         Config.on("conf_1").put("k2", "v4");
         Config.on("conf_1").put("k3", "v5");
-        ConfigListener listener = new ConfigListener() {
-            @Override
-            public void somethingChange(ConfigEvent event) {
-                if (event.getChangeType() == ConfigEvent.VALUE_UPDATED) {
-                    statusUpd = true;
-                    assertTrue(event.isKey("k1"));
-                    assertEquals("k1", event.getChangedKey());
-                    assertEquals("v1", event.getOldValue());
-                    assertEquals("v2", event.getNewValue());
-                }
+        ConfigListener listener = event -> {
+            if (event.getChangeType() == ConfigEvent.VALUE_UPDATED) {
+                statusUpd = true;
+                assertTrue(event.isKey("k1"));
+                assertEquals("k1", event.getChangedKey());
+                assertEquals("v1", event.getOldValue());
+                assertEquals("v2", event.getNewValue());
             }
         };
         Config.on("conf_1").addListener(listener);
@@ -189,7 +180,7 @@ public class ConfigTest {
         }
         assertEquals(Color.RED, Config.from("conf_1").getColor("k1"));
         assertEquals(123.3, Config.from("conf_1").getDouble("k2"));
-        assertEquals(true, Config.from("conf_1").getBool("k3"));
+        assertTrue(Config.from("conf_1").getBool("k3"));
         assertEquals(100, Config.from("conf_2").getInt("k3"));
         assertEquals("Hello World", Config.from("conf_2").getString("k4"));
 

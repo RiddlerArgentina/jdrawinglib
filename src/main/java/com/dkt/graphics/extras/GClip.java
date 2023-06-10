@@ -125,13 +125,6 @@ public class GClip extends GraphicE {
         return new GClip(this);
     }
 
-    private static class Action {
-        private final int a;
-        private final GFillableE e;
-
-        Action(GFillableE e, int a){
-            this.e = e;
-            this.a = a;
-        }
+    private record Action(GFillableE e, int a) {
     }
 }

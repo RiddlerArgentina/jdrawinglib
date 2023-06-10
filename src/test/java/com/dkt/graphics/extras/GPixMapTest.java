@@ -47,13 +47,9 @@ public class GPixMapTest {
         assertEquals(Color.RED, pm.colorAt(0, 0));
         assertEquals(Color.BLUE, pm.colorAt(1, 1));
 
-        assertThrows(InvalidArgumentException.class, () -> {
-                new GPixMap(-2, 3);
-            }
+        assertThrows(InvalidArgumentException.class, () -> new GPixMap(-2, 3)
         );
-        assertThrows(InvalidArgumentException.class, () -> {
-                new GPixMap(2, -3);
-            }
+        assertThrows(InvalidArgumentException.class, () -> new GPixMap(2, -3)
         );
     }
 
@@ -72,13 +68,9 @@ public class GPixMapTest {
         assertEquals(Color.YELLOW, pm.colorAt(0, 0));
         assertEquals(Color.YELLOW, pm.colorAt(1, 1));
         assertEquals(Color.YELLOW, pm.colorAt(2, 2));
-        assertThrows(IllegalArgumentException.class, () -> {
-                new GPixMap((Color[][])null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> new GPixMap((Color[][])null)
         );
-        assertThrows(InvalidArgumentException.class, () -> {
-                new GPixMap(new Color[0][0]);
-            }
+        assertThrows(InvalidArgumentException.class, () -> new GPixMap(new Color[0][0])
         );
     }
 
@@ -113,7 +105,6 @@ public class GPixMapTest {
         assertNotNull(pm1);
         assertEquals(pm1, pm2);
         assertEquals(pm1.hashCode(), pm2.hashCode());
-        assertEquals(pm3, pm3);
         assertEquals(pm3.hashCode(), pm3.hashCode());
     }
 
@@ -259,9 +250,7 @@ public class GPixMapTest {
         assertNotEquals(pm1, pm2);
         pm2.setPixelSize(pm1.pixelSize());
         assertEquals(pm1, pm2);
-        assertThrows(InvalidArgumentException.class, () -> {
-                pm2.setPixelSize(-10);
-            }
+        assertThrows(InvalidArgumentException.class, () -> pm2.setPixelSize(-10)
         );
     }
 
@@ -308,21 +297,13 @@ public class GPixMapTest {
         } catch (Exception ex) {
             fail("Unable to import to " + "map");
         }
-        assertThrows(IllegalArgumentException.class, () -> {
-                GPixMap.exportMap(null, new File("map"));
-            }
+        assertThrows(IllegalArgumentException.class, () -> GPixMap.exportMap(null, new File("map"))
         );
-        assertThrows(IllegalArgumentException.class, () -> {
-                GPixMap.exportMap(pm1, null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> GPixMap.exportMap(pm1, null)
         );
-        assertThrows(IllegalArgumentException.class, () -> {
-                GPixMap.importMap((File)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> GPixMap.importMap((File)null)
         );
-        assertThrows(IllegalArgumentException.class, () -> {
-                GPixMap.importMap((InputStream)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> GPixMap.importMap((InputStream)null)
         );
     }
 
@@ -336,17 +317,11 @@ public class GPixMapTest {
         };
         GPixMap pm1 = new GPixMap(data1, true);
         pm1.setValueAt(0, 0, 0xffffff, true);
-        assertThrows(IntervalException.class, () -> {
-                pm1.setValueAt(-1, 0, 0, true);
-            }
+        assertThrows(IntervalException.class, () -> pm1.setValueAt(-1, 0, 0, true)
         );
-        assertThrows(IntervalException.class, () -> {
-                pm1.setValueAt(1, -2, 0, true);
-            }
+        assertThrows(IntervalException.class, () -> pm1.setValueAt(1, -2, 0, true)
         );
-        assertThrows(IllegalArgumentException.class, () -> {
-                pm1.setColorAt(1, 1, null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> pm1.setColorAt(1, 1, null)
         );
     }
 
@@ -396,14 +371,10 @@ public class GPixMapTest {
         assertTrue(pm1.touches(pm2));
         pm2.traslateUnits(2, 2);
         assertFalse(pm1.touches(pm2));
-        assertThrows(IllegalArgumentException.class, () -> {
-                pm1.touches(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> pm1.touches(null)
         );
         pm1.setPixelSize(20);
-        assertThrows(InvalidArgumentException.class, () -> {
-                pm1.touches(pm2);
-            }
+        assertThrows(InvalidArgumentException.class, () -> pm1.touches(pm2)
         );
     }
 

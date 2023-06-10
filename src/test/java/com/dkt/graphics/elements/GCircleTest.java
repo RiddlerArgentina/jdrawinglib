@@ -40,6 +40,9 @@ public class GCircleTest {
         assertNotEquals(c1, c2);
         assertNotEquals(c1.hashCode(), c2.hashCode());
         c1.move(0, 0);
+        assertNotEquals(c1, c2);
+        assertNotEquals(c1.hashCode(), c2.hashCode());
+        c1.move(-10, -10);
         assertEquals(c1, c2);
         assertEquals(c1.hashCode(), c2.hashCode());
         
@@ -48,9 +51,7 @@ public class GCircleTest {
     @Test
     @DisplayName("Copy constructor null") 
     public void testConstructor2() {
-        assertThrows(IllegalArgumentException.class, () -> {
-                new GCircle(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> new GCircle(null)
         );
     }
     
@@ -90,9 +91,7 @@ public class GCircleTest {
         c2.move(20, 20);
         assertFalse(c1.contains(c2));
         assertFalse(c2.contains(c1));
-        assertThrows(IllegalArgumentException.class, () -> {
-                c1.contains((GCircle)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> c1.contains((GCircle)null)
         );
     }
     
@@ -104,9 +103,7 @@ public class GCircleTest {
         assertTrue(c.contains(p));
         p.traslate(20, 20);
         assertFalse(c.contains(p));
-        assertThrows(IllegalArgumentException.class, () -> {
-                c.contains((GPoint)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> c.contains((GPoint)null)
         );
     }
     
@@ -126,9 +123,7 @@ public class GCircleTest {
         assertTrue(c.contains(l));
         l.traslate(20, 20);
         assertFalse(c.contains(l));
-        assertThrows(IllegalArgumentException.class, () -> {
-                c.contains((GLine)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> c.contains((GLine)null)
         );
     }
     
@@ -140,9 +135,7 @@ public class GCircleTest {
         assertTrue(c.intersects(l));
         l.traslate(200, 100);
         assertFalse(c.intersects(l));
-        assertThrows(IllegalArgumentException.class, () -> {
-                c.intersects((GLine)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> c.intersects((GLine)null)
         );
     }
     
@@ -160,9 +153,7 @@ public class GCircleTest {
         assertFalse(c1.intersects(c4));
         assertFalse(c1.contains(c4));
         
-        assertThrows(IllegalArgumentException.class, () -> {
-                c1.intersects((GCircle)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> c1.intersects((GCircle)null)
         );
     }
     

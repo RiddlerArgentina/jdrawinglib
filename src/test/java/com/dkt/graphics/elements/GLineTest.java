@@ -218,9 +218,7 @@ public class GLineTest {
         assertEquals(l.getArgument(), o.getArgument(), 1e-9);
         assertEquals(l.getRadArgument(), o.getRadArgument(), 1e-9);
         assertTrue(o.contains(0, 5));
-        assertThrows(IllegalArgumentException.class, () -> {
-                o.contains(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> o.contains(null)
         );
     }
 

@@ -44,9 +44,7 @@ public class GFillableETest {
     @Test
     @DisplayName("Copy constructor null")
     public void testConstructor2() {
-        assertThrows(IllegalArgumentException.class, () -> {
-                new GFillableEImpl(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> new GFillableEImpl(null)
         );
         assertNotEquals(new GFillableEImpl(), new Object());
     }
@@ -64,9 +62,7 @@ public class GFillableETest {
         assertEquals(Color.CYAN, ge1.getFillPaint());
         assertNotEquals(ge1, ge2);
         assertNotEquals(ge1.hashCode(), ge2.hashCode());
-        assertThrows(IllegalArgumentException.class, () -> {
-                ge1.setFillPaint(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> ge1.setFillPaint(null)
         );
     }
 

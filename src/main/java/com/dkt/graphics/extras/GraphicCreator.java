@@ -120,8 +120,7 @@ public class GraphicCreator {
         for (final String line : lines) {
             final Object out = parseOne(line);
 
-            if (out instanceof GraphicE) {
-                final GraphicE ge = (GraphicE)out;
+            if (out instanceof GraphicE ge) {
                 graphic.add(ge);
 
                 if (stroke != null) {
@@ -132,9 +131,7 @@ public class GraphicCreator {
                     ge.setPaint(color);
                 }
 
-                if (out instanceof GFillableE) {
-                    final GFillableE gf = (GFillableE)out;
-
+                if (out instanceof GFillableE gf) {
                     if (paint != null) {
                         gf.setFillPaint(paint);
                         gf.setFill(true);
@@ -183,9 +180,8 @@ public class GraphicCreator {
 
             final String[] foo  = linespl.split(lline);
             final Method method = GCC.getMethod(foo[0], SAC);
-            final Object out    = method.invoke(this, (Object)foo);
 
-            return out;
+            return method.invoke(this, (Object)foo);
 
         } catch (SecurityException |
                  NoSuchMethodException |
@@ -228,19 +224,20 @@ public class GraphicCreator {
         for (int i = 2; i < args.length; i++) {
             String arg = args[i].toLowerCase();
             switch (arg) {
-                case "cap_butt"   : cap  = BasicStroke.CAP_BUTT  ; break;
-                case "cap_round"  : cap  = BasicStroke.CAP_ROUND ; break;
-                case "cap_square" : cap  = BasicStroke.CAP_SQUARE; break;
-                case "join_bevel" : join = BasicStroke.JOIN_BEVEL; break;
-                case "join_mitter": join = BasicStroke.JOIN_MITER; break;
-                case "join_round" : join = BasicStroke.JOIN_ROUND; break;
-                default:
-                    if (!offsetSet){
+                case "cap_butt"    -> cap = BasicStroke.CAP_BUTT;
+                case "cap_round"   -> cap = BasicStroke.CAP_ROUND;
+                case "cap_square"  -> cap = BasicStroke.CAP_SQUARE;
+                case "join_bevel"  -> join = BasicStroke.JOIN_BEVEL;
+                case "join_mitter" -> join = BasicStroke.JOIN_MITER;
+                case "join_round"  -> join = BasicStroke.JOIN_ROUND;
+                default -> {
+                    if (!offsetSet) {
                         offset = Float.parseFloat(arg);
                         offsetSet = true;
                     } else {
                         dashes.add(Float.parseFloat(arg));
                     }
+                }
             }
         }
 
@@ -328,18 +325,17 @@ public class GraphicCreator {
      */
     public Color color(String[] args) {
         checkArgs(args, 1, 3, 4);
-        switch(args.length -1) {
-            case 1: //[argb]
+        switch (args.length - 1) {
+            case 1 -> { //[argb]
                 return new Color(getInt(args[1]), true);
-            case 3: //[r, g, b]
-            {
+            }
+            case 3 -> { //[r, g, b]
                 final int r = getInt(args[1], 0, 255);
                 final int g = getInt(args[2], 0, 255);
                 final int b = getInt(args[3], 0, 255);
                 return new Color(r, g, b);
             }
-            case 4: //[a, r, g, b]
-            {
+            case 4 -> { //[a, r, g, b]
                 final int a = getInt(args[1], 0, 255);
                 final int r = getInt(args[2], 0, 255);
                 final int g = getInt(args[3], 0, 255);
@@ -626,20 +622,17 @@ public class GraphicCreator {
     public GPoint point(String[] args) {
         checkArgs(args, 2, 3);
         switch (args.length - 1) {
-            case 2://[x, y]
-            {
+            case 2 -> { //[x, y]
                 final int x = getInt(args[1]);
                 final int y = getInt(args[2]);
                 return new GPoint(x, y);
             }
-            case 3://[x, y, cs]
-            {
+            case 3 -> { //[x, y, cs]
                 final int x = getInt(args[1]);
                 final int y = getInt(args[2]);
                 final int c = getInt(args[3]);
                 return new GPoint(x, y, c);
             }
-
         }
         return null;
     }

@@ -188,7 +188,7 @@ public class Gif {
         }
 
         try {
-            write(path, delay, imgs.toArray(new BufferedImage[imgs.size()]));
+            write(path, delay, imgs.toArray(new BufferedImage[0]));
         } catch (IOException ex) {
             Logger.getLogger("Gif").log(Level.SEVERE, null, ex);
             exception = ex;
@@ -240,14 +240,7 @@ public class Gif {
         }
     }
 
-    private static class Wrapper {
-        private final BufferedImage image;
-        private final int num;
-
-        public Wrapper (BufferedImage image, int num) {
-            this.image = image;
-            this.num   = num;
-        }
+    private record Wrapper(BufferedImage image, int num) {
     }
 
     /**

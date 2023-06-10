@@ -127,7 +127,7 @@ public class GPoint extends GraphicE {
      * @param c third point
      * @return {@code {-1, 0, +1}} if {@code a->b->c} is respectively a
      * clockwise, collinear; counterclockwise turn
-     * @author http://algs4.cs.princeton.edu/25applications/Point2D.java.html
+     * @author <a href="http://algs4.cs.princeton.edu/25applications/Point2D.java.html">...</a>
      */
     public static int ccw(
             final GPoint a,

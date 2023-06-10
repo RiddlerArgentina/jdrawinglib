@@ -73,7 +73,7 @@ public class MathUtils {
      * operations instead of branching (which is somewhat slower, but it's
      * mainly here for educational purposes)<br>
      * The original code can be found in:
-     * http://graphics.stanford.edu/~seander/bithacks.html#IntegerMinOrMax
+     * <a href="http://graphics.stanford.edu/~seander/bithacks.html#IntegerMinOrMax">...</a>
      *
      * @param a first value to compare
      * @param b second value to compare
@@ -89,7 +89,7 @@ public class MathUtils {
      * operation instead of branching (which is somewhat slower, but it's mainly
      * here for educational purposes)<br>
      * The original code can be found in:
-     * http://graphics.stanford.edu/~seander/bithacks.html#IntegerMinOrMax
+     * <a href="http://graphics.stanford.edu/~seander/bithacks.html#IntegerMinOrMax">...</a>
      *
      * @param a first value to compare
      * @param b second value to compare
@@ -103,7 +103,7 @@ public class MathUtils {
     /**
      * Computes the absolute value of a number without branching<br>
      * The original code can be found in:
-     * http://graphics.stanford.edu/~seander/bithacks.html#IntegerAbs
+     * <a href="http://graphics.stanford.edu/~seander/bithacks.html#IntegerAbs">...</a>
      *
      * @param n number
      * @return the absolute value of this number

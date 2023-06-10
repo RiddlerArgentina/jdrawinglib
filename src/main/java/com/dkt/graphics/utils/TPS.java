@@ -139,11 +139,11 @@ public class TPS {
      * @return average time in ns
      */
     public long cAvgNanos(){
-        return avg(times, i < SIZE ? i : SIZE);
+        return avg(times, Math.min(i, SIZE));
     }
 
     /**
-     * Resets the current object to it's original state
+     * Resets the current object to its original state
      */
     public void reset(){
         lastTime = 0;

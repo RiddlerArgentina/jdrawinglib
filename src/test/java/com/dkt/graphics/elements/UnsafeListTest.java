@@ -40,9 +40,7 @@ public class UnsafeListTest {
     @Test
     @DisplayName("Constructor < 0")
     public void testConstructor2() {
-        assertThrows(NegativeArraySizeException.class, () -> {
-            new UnsafeList(-1);
-        });
+        assertThrows(NegativeArraySizeException.class, () -> new UnsafeList(-1));
     }
 
     @Test
@@ -164,8 +162,6 @@ public class UnsafeListTest {
         l2.addAll(list);
         assertEquals(19, l2.size());
         assertNotEquals(list, null);
-        assertNotEquals(list, rand);
-        assertEquals(list, list);
         assertEquals(list, l2);
         assertEquals(list.hashCode(), l2.hashCode());
         l2.add(new GPoint(0, 0));

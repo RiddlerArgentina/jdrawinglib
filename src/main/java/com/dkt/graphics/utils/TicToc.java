@@ -59,7 +59,7 @@ public final class TicToc {
      * @return elapsed time in ns
      */
     public double getNanoTime(){
-        return total / iter;
+        return (double) total / iter;
     }
 
     /**

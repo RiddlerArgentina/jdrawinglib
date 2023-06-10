@@ -123,9 +123,7 @@ public class GRegPolyTest {
         assertFalse(rp1.contains(new GPoint(11, 2)));
         assertFalse(rp1.contains(new GPoint(20, 2)));
         //Needs more tests
-        assertThrows(IllegalArgumentException.class, () -> {
-                rp1.contains(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> rp1.contains(null)
         );
     }
 

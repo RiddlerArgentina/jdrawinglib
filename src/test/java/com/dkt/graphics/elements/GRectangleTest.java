@@ -37,21 +37,13 @@ public class GRectangleTest {
         assertNotNull(r1);
         assertEquals(r1, r2);
         assertEquals(r1.hashCode(), r2.hashCode());
-        assertThrows(IllegalArgumentException.class, () -> {
-                new GRectangle(null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> new GRectangle(null)
         );
-        assertThrows(InvalidArgumentException.class, () -> {
-                new GRectangle(-1);
-            }
+        assertThrows(InvalidArgumentException.class, () -> new GRectangle(-1)
         );
-        assertThrows(InvalidArgumentException.class, () -> {
-                new GRectangle(0, 0, 10, -10);
-            }
+        assertThrows(InvalidArgumentException.class, () -> new GRectangle(0, 0, 10, -10)
         );
-        assertThrows(InvalidArgumentException.class, () -> {
-                new GRectangle(0, 0, -10, 10);
-            }
+        assertThrows(InvalidArgumentException.class, () -> new GRectangle(0, 0, -10, 10)
         );
     }
     
@@ -109,9 +101,7 @@ public class GRectangleTest {
         assertTrue(r.contains(new GPoint(25, 20)));
         assertFalse(r.contains(new GPoint(-10, 20)));
         assertFalse(r.contains(new GPoint(100, 100)));
-        assertThrows(IllegalArgumentException.class, () -> {
-                r.contains((GPoint)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> r.contains((GPoint)null)
         );
     }
     
@@ -125,9 +115,7 @@ public class GRectangleTest {
         assertTrue(r.contains(l1));
         assertFalse(r.contains(l2));
         assertFalse(r.contains(l3));
-        assertThrows(IllegalArgumentException.class, () -> {
-                r.contains((GLine)null);
-            }
+        assertThrows(IllegalArgumentException.class, () -> r.contains((GLine)null)
         );
     }
     

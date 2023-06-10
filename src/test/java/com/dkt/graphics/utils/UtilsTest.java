@@ -53,8 +53,6 @@ public class UtilsTest {
         assertEquals(c2.getRed(),   c1.getRed());
         assertEquals(c2.getGreen(), c1.getGreen());
         assertEquals(c2.getBlue(),  c1.getBlue());
-        assertThrows(IllegalArgumentException.class, () -> {
-            Utils.getColorWithAlpha(null, 19284);
-        });
+        assertThrows(IllegalArgumentException.class, () -> Utils.getColorWithAlpha(null, 19284));
     }
 }
